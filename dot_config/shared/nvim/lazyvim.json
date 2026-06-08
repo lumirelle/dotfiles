@@ -1,0 +1,35 @@
+{
+  "extras": [
+    "lazyvim.plugins.extras.coding.mini-surround",
+    "lazyvim.plugins.extras.coding.yanky",
+    "lazyvim.plugins.extras.dap.core",
+    "lazyvim.plugins.extras.editor.telescope",
+    "lazyvim.plugins.extras.lang.git",
+    "lazyvim.plugins.extras.lang.markdown",
+    "lazyvim.plugins.extras.lang.toml",
+    "lazyvim.plugins.extras.lang.yaml",
+    "lazyvim.plugins.extras.test.core",
+    "lazyvim.plugins.extras.ui.alpha",
+    "lazyvim.plugins.extras.ui.edgy",
+    "lazyvim.plugins.extras.util.gitui",
+    "lazyvim.plugins.extras.util.mini-hipatterns",
+    "lazyvim.plugins.extras.util.octo",
+    "lazyvim.plugins.extras.util.project",
+    "lazyvim.plugins.extras.util.rest",
+    "plugins.extras.editor.filebrowser",
+    "plugins.extras.editor.git-blame",
+    "plugins.extras.editor.git-conflict",
+    "plugins.extras.editor.scope",
+    "plugins.extras.editor.tidy",
+    "plugins.extras.editor.undo-mode",
+    "plugins.extras.lang.nodejs",
+    "plugins.extras.test.coverage",
+    "plugins.extras.ui.ayu-theme",
+    "plugins.extras.util.diffview"
+  ],
+  "install_version": 7,
+  "news": {
+    "NEWS.md": "11866"
+  },
+  "version": 8
+}

@@ -1,0 +1,91 @@
+// cSpell:disable
+{
+  // #region UI
+  // Theme
+  "theme": {
+    "mode": "system",
+    "dark": "ayu-darker",
+    "light": "ayu-darker"
+  },
+  "icon_theme": "Catppuccin Mocha",
+  // Layout
+  "use_system_prompts": false,
+  "use_system_path_prompts": false,
+  "indent_guides": {
+    "coloring": "indent_aware"
+  },
+  "relative_line_numbers": "enabled",
+  "soft_wrap": "editor_width",
+  "wrap_guides": [
+    100,
+    200
+  ],
+  "show_whitespaces": "boundary",
+  "colorize_brackets": true,
+  // Font
+  "ui_font_family": "Geist",
+  "ui_font_fallbacks": [
+    "Symbols Nerd Font",
+    "Maple Mono CN"
+  ],
+  "ui_font_size": 16,
+  "buffer_font_family": "Geist Mono",
+  "buffer_font_fallbacks": [
+    "Symbols Nerd Font Mono",
+    "Maple Mono CN"
+  ],
+  "buffer_font_size": 16,
+  "buffer_font_features": {
+    "calt": true,
+    "liga": true
+  },
+  // #endregion
+  // #region Lens & Hint
+  // Hint
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": false
+  },
+  // #endregion
+
+  // #region Behavior
+  // Trust
+  "session": {
+    "trust_all_worktrees": true
+  },
+  // Vim Mode
+  "vim_mode": true,
+  "which_key": {
+    "enabled": true
+  },
+  // File Associations
+  "file_types": {
+    "env": [
+      ".env.!(js|ts|mhs|cjs|mts|cts)"
+    ]
+  },
+  // Editor
+  "close_on_file_delete": true,
+  // Terminal
+  "terminal": {
+    "shell": {
+      "program": "nu"
+    }
+  },
+  // Minimap
+  "minimap": {
+    "display_in": "all_editors",
+    "show": "always"
+  },
+  // Scroll
+  "scroll_sensitivity": 2,
+  "fast_scroll_sensitivity": 3,
+  // #endregion
+
+  // #region Code Quality
+  "formatter": [
+    { "language_server": { "name": "oxfmt" } }
+  ],
+  "format_on_save": "on"
+  // #endregion
+}

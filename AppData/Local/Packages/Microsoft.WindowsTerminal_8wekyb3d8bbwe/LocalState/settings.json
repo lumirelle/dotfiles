@@ -1,0 +1,75 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": 
+            {
+                "action": "sendInput",
+                "input": "\u001b[46;5u"
+            },
+            "id": "User.sendInput.3B9D7849"
+        }
+    ],
+    "centerOnLaunch": true,
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
+    "keybindings": 
+    [
+        {
+            "id": "Terminal.DuplicatePaneAuto",
+            "keys": "alt+shift+d"
+        },
+        {
+            "id": "User.sendInput.3B9D7849",
+            "keys": "ctrl+period"
+        }
+    ],
+    "launchMode": "maximized",
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "backgroundImage": "desktopWallpaper",
+            "backgroundImageOpacity": 0.3,
+            "colorScheme": "One Half Dark",
+            "font": 
+            {
+                "face": "'Geist Mono', 'Symbols Nerd Font Mono', 'Maple Mono CN'"
+            },
+            "intenseTextStyle": "all",
+            "rightClickContextMenu": true,
+            "useAcrylic": true
+        },
+        "list": 
+        [
+            {
+                "commandline": "\"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -nologo",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false
+            },
+            {
+                "guid": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
+                "hidden": false,
+                "name": "Nushell",
+                "source": "nu"
+            }
+        ]
+    },
+    "schemes": [],
+    "themes": []
+}

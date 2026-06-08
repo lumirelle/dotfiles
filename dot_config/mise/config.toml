@@ -1,0 +1,20 @@
+[settings]
+experimental = true
+
+npm.package_manager = "aube"
+
+[tools]
+# -- Dotfiles Manager
+chezmoi = "latest"
+# -- JS/TS
+bun = "latest"
+aube = "latest"
+node = "24.16.0"
+"npm:taze" = { version = "latest", depends = "node" }
+"npm:@sxzz/create" = { version = "latest", depends = "node" }
+# -- Zig
+zig = "0.16.0"
+# -- Java
+java = "graalvm-community-25.0.2"
+# -- C/C++ Compiler - Windows
+"github:niXman/mingw-builds-binaries" = { os = [ "windows" ], version = "16.1.0-rt_v14-rev1", version_prefix = "", asset_pattern = "x86_64-*-release-posix-seh-ucrt-*.7z" }

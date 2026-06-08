@@ -1,0 +1,163 @@
+# User Information
+[user]
+name = Lumirelle
+email = shabbyacc@outlook.com
+[credential "https://gitee.com"]
+provider = generic
+
+# Core Settings
+[core]
+ignorecase = false
+editor = nvim # Or replace with your preferred editor.
+[feature]
+# Will enable some default configurations to better handle a large number of files, include "index.version=4".
+# See https://git-scm.com/docs/git-config#Documentation/git-config.txt-featuremanyFiles.
+manyFiles = true
+
+# Include additional configuration files based on the current repository path.
+[includeIf "gitdir:~/work/"]
+path = .gitconfig-work
+
+# Repository Initialization
+[init]
+defaultBranch = main
+
+# Working with Branches
+[branch]
+sort = -committerdate
+[diff]
+algorithm = histogram
+context = 5
+[merge]
+autostash = true
+conflictstyle = zdiff3
+ff = no
+[rebase]
+autostash = true
+autosquash = true
+[rerere]
+enabled = true
+[tag]
+sort = taggerdate
+
+# Working with Remotes
+[fetch]
+prune = true
+pruneTags = true
+[pull]
+rebase = true
+[push]
+autoSetupRemote = true
+default = current
+followTags = true
+
+# Log
+[log]
+date = short
+decoration = short
+
+# Aliases
+# We use -?/--? to trigger the help message for each alias, which is implemented in the corresponding shell function.
+[alias]
+# @aliasGroup User Info
+me = "!echo \"$(git config get user.name) <$(git config get user.email)>\""
+# @aliasGroup Discard
+# @alias Discard
+# @description Discard changes from specified file path(s).
+#   - If a file under this path is tracked, then restore it to the index.
+#   - If a file under this path is untracked, then remove it.
+# @parameters One or more paths.
+discard = "!f() { \
+  arg_help=false; \
+  declare -i value_count=0; \
+  \
+  for arg in \"$@\"; do \
+    case \"$arg\" in \
+      -\\?|--\\?) arg_help=true ;; \
+      *) value_count=value_count+1 ;; \
+    esac; \
+  done; \
+  \
+  if \"$arg_help\"; then \
+    echo 'Usage: git discard <...path>'; \
+    return 0; \
+  fi; \
+  \
+  if [[ \"$value_count\" -eq 0 ]]; then \
+    echo 'Nothing specified, nothing discarded.'; \
+    YELLOW='\\e[0;33m'; \
+    NC='\\e[0m'; \
+    echo -e \"${YELLOW}hint: Maybe you wanted to say 'git discard .'?${NC}\"; \
+    return 0; \
+  fi; \
+  \
+  for path in \"$@\"; do \
+    if git ls-files --error-unmatch -- \"$path\" >/dev/null 2>&1; then \
+      if git restore --staged --worktree -- \"$path\" >/dev/null 2>&1; then \
+        echo \"Restoring tracked file(s) from path: $path\"; \
+      fi; \
+    fi; \
+    if [[ -e \"$path\" ]]; then \
+      if git clean -fd -- \"$path\" >/dev/null 2>&1; then \
+        echo \"Removing untracked file(s) from path: $path\"; \
+      fi; \
+    else \
+      echo \"Path does not exist: $path\"; \
+    fi; \
+  done; \
+}; f"
+# @aliasGroup Disadd
+disadd = "!f() { \
+  arg_help=false; \
+  declare -i value_count=0; \
+  \
+  for arg in \"$@\"; do \
+    case \"$arg\" in \
+      -\\?|--\\?) arg_help=true ;; \
+      *) value_count=value_count+1 ;; \
+    esac; \
+  done; \
+  \
+  if \"$arg_help\"; then \
+    echo 'Usage: git disadd <...path>'; \
+    return 0; \
+  fi; \
+  \
+  if [[ \"$value_count\" -eq 0 ]]; then \
+    echo 'Nothing specified, nothing disadded.'; \
+    YELLOW='\\e[0;33m'; \
+    NC='\\e[0m'; \
+    echo -e \"${YELLOW}hint: Maybe you wanted to say 'git disadd .'?${NC}\"; \
+    return 0; \
+  fi; \
+  \
+  git reset HEAD -- \"$@\"; \
+}; f"
+# @aliasGroup Uncommit
+uncommit = reset --soft HEAD^ # Back to the staging area
+# @aliasGroup Predefined Frequently Used Commits
+commit-wip = "!commit --message 'wip: working in progress'"
+commit-readme = "!commit --message 'docs: update README.md'"
+commit-deps = "!commit --message 'chore: update non-major dependencies'"
+commit-snap = "!commit --message 'test: update snapshots'"
+# @aliasGroup Merge
+# It's HIGHLY RECOMMENDED to use "Pull Request" on hosting platforms for merging branches,
+# but this alias can be helpful when you do want to merge locally.
+justmerge = "!f() { \
+  current_branch=$(git branch --show-current); \
+  merge_branches=$(); \
+  for arg in \"$@\"; do \
+    case \"$arg\" in \
+      -\\?|--\\?) echo 'Usage: git justmerge <branch1> <branch2> ...'; return 0 ;; \
+      -*|--*) ;; \
+      *) merge_branches+=\"$arg \" ;; \
+    esac; \
+  done; \
+  if git $arg_command --message \"chore: merge $merge_branches into $current_branch\" \"$@\"; then \
+    echo \"Merged \"$merge_branches\" into current $current_branch with default message!\"; \
+  fi; \
+}; f"
+# @aliasGroup Log
+log1 = log -1 HEAD --stat
+logs = log HEAD --stat
+logg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit

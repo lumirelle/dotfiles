@@ -1,0 +1,51 @@
+// cspell:disable
+{
+  "recommendations": [
+    // #region Appearance / Editor
+    // Lens
+    "yoavbls.pretty-ts-errors",
+    // Hint
+    "ruban-s.fast-import-cost",
+    "antfu.pnpm-catalog-lens",
+    "wallabyjs.console-ninja",
+    "antfu.iconify",
+    // #endregion
+
+    // #region Behavior / Sidebar / Addons
+    // Excercises
+    "yrm.type-challenges",
+    // #endregion
+
+    // #region Behavior / Commands / Addons
+    "jasonnutter.search-node-modules", // CTRL+K CTRL+N
+    // #endregion
+
+    // #region Behavior / Dev Experience
+    // JavaScript / TypeScript
+    "johnsoncodehk.vscode-tsconfig-helper",
+    "npmx-dev.vscode-npmx",
+    // Vue
+    "vue.volar",
+    "nuxtr.nuxtr-vscode",
+    "alimozdemir.vscode-nuxt-dx-tools",
+    "antfu.goto-alias", // F12
+    "antfu.slidev",
+    // Atomic CSS Frameworks
+    "antfu.unocss",
+    "bradlc.vscode-tailwindcss",
+    // Testing
+    "vitest.explorer",
+    // I18n
+    "lokalise.i18n-ally",
+    // REST Client
+    "humao.rest-client",
+    // #endregion
+
+    // #region Behavior / Lint
+    "dbaeumer.vscode-eslint"
+    // #endregion
+  ]
+  // Extension Count
+  // VSCODE: 20 + $DEFAULT_VSCODE = 55
+  // CURSOR: 20 + $DEFAULT_CURSOR = 55
+}
