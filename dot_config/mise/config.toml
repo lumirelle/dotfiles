@@ -18,3 +18,5 @@ java = "graalvm-community-25.0.2"
 "github:niXman/mingw-builds-binaries" = { os = [
   "windows",
 ], version = "16.1.0-rt_v14-rev1", version_prefix = "", asset_pattern = "x86_64-*-release-posix-seh-ucrt-*.7z" }
+# -- Benchmarking
+hyperfine = "latest"
