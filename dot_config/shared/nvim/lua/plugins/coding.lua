@@ -6,7 +6,7 @@ return {
       local cmp = require("cmp")
       opts.mapping = vim.tbl_deep_extend("force", opts.mapping, {
         ["<C-j>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-        ["<C-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
+        ["<C-k>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
       })
     end,
   },
@@ -32,10 +32,10 @@ return {
           "just",
           "make",
           "mermaid",
-          "sql"
+          "sql",
         })
       end
-    end
+    end,
   },
 
   -- use copilot binary instead of nodejs script
@@ -44,8 +44,9 @@ return {
     optional = true,
     opts = {
       server = {
-        type = "binary"
-      }
-    }
+        type = "binary",
+      },
+    },
   },
 }
+

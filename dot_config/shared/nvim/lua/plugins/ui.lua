@@ -13,10 +13,10 @@ return {
         opts = {
           mode = "colorscheme",
           dark_mode_colorscheme = "tokyonight-storm",
-          light_mode_colorscheme = "tokyonight-day"
+          light_mode_colorscheme = "tokyonight-day",
         },
-      }
-    }
+      },
+    },
   },
 
   -- notify customization
@@ -26,7 +26,7 @@ return {
       stages = "fade_in_slide_out",
       timeout = 3000,
       render = "compact",
-    }
+    },
   },
 
   -- bufferline
@@ -42,11 +42,10 @@ return {
         show_close_icon = false,
         show_tab_indicators = true,
         separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' },
-        color_icons = false,
         diagnostics = false,
         highlights = {
           buffer_selected = {
-            gui = "none"
+            gui = "none",
           },
         },
         offsets = {
@@ -60,11 +59,11 @@ return {
             filetype = "Outline",
             text = "Symbols Outline",
             highlight = "TSType",
-            text_align = "left"
-          }
-        }
-      }
-    }
+            text_align = "left",
+          },
+        },
+      },
+    },
   },
 
   -- scrollbar for Neovim
@@ -75,7 +74,7 @@ return {
       excluded_filetypes = { "alpha", "dashboard", "neo-tree" },
       current_only = true,
       winblend = 75,
-    }
+    },
   },
 
   -- theme toggle
@@ -91,7 +90,8 @@ return {
       vim.cmd("colorscheme " .. colorscheme)
     end,
     keys = {
-      { "<leader>ub",
+      {
+        "<leader>ub",
         function()
           if vim.o.background ~= "light" then
             vim.g.NV_UI_MODE = "dark"
@@ -100,19 +100,19 @@ return {
           end
           vim.cmd([[DarkLightSwitch]])
         end,
-        desc = "Toggle Background"
+        desc = "Toggle Background",
       },
-    }
+    },
   },
 
   -- dashboard
   {
     "nvimdev/dashboard-nvim",
     optional = true,
-    opts = function(_, opts)
+    opts = function(_, _)
       -- show dashboard when new tab page is opened
-      vim.api.nvim_create_autocmd('TabNewEntered', { command = 'Dashboard' })
-    end
+      vim.api.nvim_create_autocmd("TabNewEntered", { command = "Dashboard" })
+    end,
   },
 
   -- alpha
@@ -143,54 +143,32 @@ return {
           end,
         })
       end
-    end
+    end,
   },
 
   -- project
-  {
-    "ahmedkhalf/project.nvim",
-    optional = true,
-    opts = function(_, opts)
-      opts.manual_mode = false
-      opts.detection_methods = { "lsp", "pattern" }
-      opts.patterns = {
-        ".git",
-        ".hg",
-        ".svn",
-      }
-    end
-  },
+  { "ahmedkhalf/project.nvim", optional = true },
 
   -- rest
   {
     "mistweaverco/kulala.nvim",
     optional = true,
     opts = {
-      -- default_view, body or headers
-      default_view = "body",
       -- dev, test, prod, can be anything
       -- see: https://learn.microsoft.com/en-us/aspnet/core/test/http-files?view=aspnetcore-8.0#environment-files
       default_env = "dev",
-      -- enable/disable debug mode
-      debug = false,
-      -- default formatters for different content types
-      formatters = {
-        json = { "jq", "." },
-        xml = { "xmllint", "--format", "-" },
-        html = { "xmllint", "--format", "--html", "-" },
-      },
-      -- default icons
-      icons = {
-        inlay = {
-          loading = "󰔟 ",
-          done = " "
-        },
-        lualine = "󱂛",
-      },
-      -- additional cURL options
-      -- e.g. { "--insecure", "-A", "Mozilla/5.0" }
-      additional_curl_options = {},
-    },
 
-  }
+      ui = {
+        -- default icons
+        icons = {
+          inlay = {
+            loading = "󰔟 ",
+            done = " ",
+          },
+          lualine = "󱂛",
+        },
+      },
+    },
+  },
 }
+
