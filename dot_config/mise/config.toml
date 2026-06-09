@@ -14,6 +14,7 @@ aube = "latest"
 node = "24.16.0"
 "npm:taze" = { version = "latest", depends = "node" }
 "npm:@sxzz/create" = { version = "latest", depends = "node" }
+"npm:tree-sitter-cli" = { version = "latest", depends = "node" }
 # -- Zig
 zig = "0.16.0"
 # -- Java
