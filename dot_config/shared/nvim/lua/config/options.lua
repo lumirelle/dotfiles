@@ -7,7 +7,11 @@ vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
 
-vim.cmd[[nnoremap <ScrollWheelRight> <Nop>]]
-vim.cmd[[nnoremap <ScrollWheelLeft> <Nop>]]
-vim.cmd[[nnoremap <S-ScrollWheelUp> <ScrollWheelRight>]]
-vim.cmd[[nnoremap <S-ScrollWheelDown> <ScrollWheelLeft>]]
+-- Use Nushell for cross-platform
+vim.o.shell = "nu"
+
+vim.cmd([[nnoremap <ScrollWheelRight> <Nop>]])
+vim.cmd([[nnoremap <ScrollWheelLeft> <Nop>]])
+vim.cmd([[nnoremap <S-ScrollWheelUp> <ScrollWheelRight>]])
+vim.cmd([[nnoremap <S-ScrollWheelDown> <ScrollWheelLeft>]])
+
