@@ -5,6 +5,9 @@ $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [Text.E
 Invoke-Expression (&starship init powershell)
 
 # Environment Variables
+if (where.exe chezmoi > $null 2>&1) {
+  $env:CHEZMOI_HOME = (&chezmoi source-path)
+}
 ## Mise, https://mise.jdx.dev/
 (&mise activate pwsh) | Out-String | Invoke-Expression
 ## Podman
@@ -13,11 +16,11 @@ $env:PODMAN_COMPOSE_WARNING_LOGS = $false
 # Commands Aliases
 # `which`: Show the path of commands
 New-Alias -Name which -Value where.exe
-# `touch`: Create a file, using `touch` instead of `ni` (We use `ni` for `@antfu/ni`)
-Remove-Item Alias:ni -Force -ErrorAction Ignore
 New-Alias -Name touch -Value New-Item
-# `grep`
-New-Alias -Name grep -Value Select-String
+New-Alias -Name tochezmoi -Value To-Chezmoi
+function To-Chezmoi {
+    cd $env:CHEZMOI_HOME
+  }
 # For container management
 New-Alias -Name docker -Value podman
 function Podman-Compose {
