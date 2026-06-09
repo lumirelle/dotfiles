@@ -1,13 +1,9 @@
 return {
-  -- disable file explorer as it has some issues with
-  -- opening files in tabs
-  { "nvim-neo-tree/neo-tree.nvim", enabled = false },
-
   -- customize telescope
   {
     "nvim-telescope/telescope.nvim",
     opts = {
-      defaults = require('telescope.themes').get_ivy({
+      defaults = require("telescope.themes").get_ivy({
         prompt_prefix = " ",
         selection_caret = " ",
         layout_config = {
@@ -23,7 +19,7 @@ return {
             end,
             ["<C-p>"] = function(...)
               return require("telescope.actions.layout").toggle_preview(...)
-            end
+            end,
           },
           n = {
             ["j"] = function(...)
@@ -40,10 +36,11 @@ return {
             end,
             ["<C-p>"] = function(...)
               return require("telescope.actions.layout").toggle_preview(...)
-            end
-          }
+            end,
+          },
         },
       }),
     },
   },
 }
+
