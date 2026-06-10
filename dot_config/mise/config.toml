@@ -5,12 +5,16 @@ npm.package_manager = "aube"
 
 [tools]
 # -- Search Tool
+fzf = "latest"
 ripgrep = "latest"
+fd = "latest"
 # -- Benchmarking
 hyperfine = "latest"
+# -- Website Certification
+mkcert = "latest"
 # -- JS/TS
 bun = "latest"
-aube = "latest"
+"github:jdx/aube" = "latest"
 node = "24.16.0"
 "npm:taze" = { version = "latest", depends = "node" }
 "npm:@sxzz/create" = { version = "latest", depends = "node" }
