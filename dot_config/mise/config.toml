@@ -1,8 +1,6 @@
 [settings]
 experimental = true
 
-npm.package_manager = "aube"
-
 [tools]
 # -- LSP
 tree-sitter = "latest"
@@ -17,10 +15,8 @@ hyperfine = "latest"
 mkcert = "latest"
 # -- JS/TS
 bun = "latest"
-"github:jdx/aube" = "latest"
 node = "24.16.0"
-"npm:taze" = { version = "latest", depends = "node" }
-"npm:@sxzz/create" = { version = "latest", depends = "node" }
+"github:jdx/aube" = "latest"
 # -- Zig
 zig = "0.16.0"
 # -- Go
