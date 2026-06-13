@@ -3,13 +3,15 @@ experimental = true
 lockfile = true
 
 [tools]
-# -- LSP
-tree-sitter = "latest"
+# -- Version Control
+lazygit = "latest"
+hk = "latest"
 # -- Search Tool
 fzf = "latest"
 ripgrep = "latest"
 fd = "latest"
-lazygit = "latest"
+# -- LSP
+tree-sitter = "latest"
 # -- Benchmarking
 hyperfine = "latest"
 # -- Website Certification

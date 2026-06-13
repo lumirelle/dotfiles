@@ -161,3 +161,9 @@ justmerge = "!f() { \
 log1 = log -1 HEAD --stat
 logs = log HEAD --stat
 logg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+# Global Hooks
+[hook "hk-pre-commit"]
+  command = "if [[ \"${HK:-1}\" = \"0\" ]] && [[ -e hk.pkl ]]; then hk run pre-commit --from-hook \"$@\"; fi"
+	event = pre-commit
+
