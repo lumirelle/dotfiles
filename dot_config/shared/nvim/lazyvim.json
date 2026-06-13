@@ -16,7 +16,6 @@
     "lazyvim.plugins.extras.lang.tailwind",
     "lazyvim.plugins.extras.lang.toml",
     "lazyvim.plugins.extras.lang.typescript",
-    "lazyvim.plugins.extras.lang.typescript.oxc",
     "lazyvim.plugins.extras.lang.typescript.tsgo",
     "lazyvim.plugins.extras.lang.typescript.vtsls",
     "lazyvim.plugins.extras.lang.vue",
@@ -25,7 +24,8 @@
     "lazyvim.plugins.extras.test.core",
     "lazyvim.plugins.extras.util.chezmoi",
     "lazyvim.plugins.extras.util.dot",
-    "plugins.extras.ui.ayu-theme"
+    "plugins.extras.ui.ayu-theme",
+    "plugins.extras.lang.typescript.oxc"
   ],
   "install_version": 8,
   "news": {
