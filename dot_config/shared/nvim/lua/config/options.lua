@@ -5,8 +5,11 @@
 -- Set default shell to Nushell, to get the cross-platform experience
 vim.o.shell = "nu"
 
--- disable some extension providers
+-- Disable some extension providers
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
+
+-- Enable ESLint auto format
+vim.g.lazyvim_eslint_auto_format = true
