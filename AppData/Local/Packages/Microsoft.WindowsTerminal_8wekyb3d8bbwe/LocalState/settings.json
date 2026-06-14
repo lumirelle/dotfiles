@@ -1,10 +1,10 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
+    "actions":
     [
         {
-            "command": 
+            "command":
             {
                 "action": "sendInput",
                 "input": "\u001b[46;5u"
@@ -16,7 +16,7 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
-    "keybindings": 
+    "keybindings":
     [
         {
             "id": "Terminal.DuplicatePaneAuto",
@@ -28,28 +28,28 @@
         }
     ],
     "launchMode": "maximized",
-    "newTabMenu": 
+    "newTabMenu":
     [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": 
+    "profiles":
     {
-        "defaults": 
+        "defaults":
         {
             "backgroundImage": "desktopWallpaper",
             "backgroundImageOpacity": 0.3,
             "colorScheme": "One Half Dark",
-            "font": 
+            "font":
             {
-                "face": "'Geist Mono', 'Symbols Nerd Font Mono', 'Maple Mono CN'"
+                "face": "'0xProto', 'Symbols Nerd Font Mono', 'Maple Mono WD CN'"
             },
             "intenseTextStyle": "all",
             "rightClickContextMenu": true,
             "useAcrylic": true
         },
-        "list": 
+        "list":
         [
             {
                 "commandline": "\"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -nologo",

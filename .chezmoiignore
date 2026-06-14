@@ -1,3 +1,5 @@
+.lazy.lua
+
 {{ if ne .chezmoi.os "windows" }}
 AppData
 Documents

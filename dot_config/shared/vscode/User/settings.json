@@ -15,7 +15,7 @@
   // #region Appearance / Font
   "custom-ui-style.font.monospace": "'Geist', 'Symbols Nerd Font Mono', 'Maple Mono CN', monospace",
   "custom-ui-style.font.sansSerif": "'Geist', 'Symbols Nerd Font', 'Maple Mono CN', sans-serif",
-  "editor.fontFamily": "'Geist Mono', 'Symbols Nerd Font Mono', 'Maple Mono CN', monospace",
+  "editor.fontFamily": "'0xProto', 'Symbols Nerd Font Mono', 'Maple Mono WD CN', monospace",
   "markdown.preview.fontFamily": "'Geist', 'Symbols Nerd Font', 'Maple Mono CN', monospace",
   "editor.fontSize": 16,
   "terminal.integrated.fontSize": 14,
