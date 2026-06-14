@@ -4,8 +4,8 @@
   // Theme
   "theme": {
     "mode": "system",
-    "dark": "ayu-darker",
-    "light": "ayu-darker"
+    "dark": "Catppuccin Mocha",
+    "light": "Catppuccin Lattie"
   },
   "icon_theme": "Catppuccin Mocha",
   // Layout
