@@ -2,6 +2,8 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
+vim.o.guifont = "0xProto, Symbols Nerd Font, Maple Mono WD CN"
+
 -- Set default shell to Nushell, to get the cross-platform experience
 vim.o.shell = "nu"
 
