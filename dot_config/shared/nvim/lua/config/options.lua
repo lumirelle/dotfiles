@@ -18,5 +18,4 @@ vim.g.loaded_perl_provider = 0
 vim.g.lazyvim_eslint_auto_format = true
 
 -- Neovide specific config
-vim.g.neovide_fullscreen = true
 vim.g.neovide_title_background_color = "#1f2430"
