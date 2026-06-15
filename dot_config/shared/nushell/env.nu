@@ -6,6 +6,9 @@ starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.n
 mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
 $env.PODMAN_COMPOSE_WARNING_LOGS = false
 
+# Kits
+zoxide init nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
+
 # Commands Aliases
 # For container management
 alias docker = podman

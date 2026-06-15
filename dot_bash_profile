@@ -7,6 +7,9 @@ eval "$(mise activate bash)"
 ## Podman
 export PODMAN_COMPOSE_WARNING_LOGS=false
 
+# Kits
+eval "$(zoxide init bash)"
+
 # Commands Aliases
 # For container management
 alias docker='podman'

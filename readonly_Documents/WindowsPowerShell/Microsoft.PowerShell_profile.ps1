@@ -10,6 +10,9 @@ Invoke-Expression (&starship init powershell)
 ## Podman
 $env:PODMAN_COMPOSE_WARNING_LOGS = $false
 
+# Kits
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
+
 # Commands Aliases
 # `which`: Show the path of commands
 New-Alias -Name which -Value where.exe
