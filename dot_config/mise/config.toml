@@ -6,20 +6,20 @@ lockfile = true
 # -- Version Control
 lazygit = "latest"
 hk = "latest"
-# -- Search Tools
+# -- Explorers
+zoxide = "latest"
 ripgrep = "latest"
 fd = "latest"
 yazi = "latest"
 # -- LSP
 tree-sitter = "latest"
-# -- Benchmarking
+# -- Others
 hyperfine = "latest"
-# -- Website Certification
 mkcert = "latest"
 # -- JS/TS
 bun = "latest"
 node = "24.16.0"
-"github:jdx/aube" = "latest"
+aube = "latest"
 # -- Zig
 zig = "0.16.0"
 # -- Go
@@ -30,4 +30,3 @@ java = "graalvm-community-25.0.2"
 "github:niXman/mingw-builds-binaries" = { os = [
   "windows",
 ], version = "16.1.0-rt_v14-rev1", version_prefix = "", asset_pattern = "x86_64-*-release-posix-seh-ucrt-*.7z" }
-zoxide = "latest"
