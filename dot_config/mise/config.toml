@@ -6,8 +6,7 @@ lockfile = true
 # -- Version Control
 lazygit = "latest"
 hk = "latest"
-# -- Search Tool
-fzf = "latest"
+# -- Search Tools
 ripgrep = "latest"
 fd = "latest"
 yazi = "latest"
