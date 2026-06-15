@@ -10,6 +10,7 @@ hk = "latest"
 fzf = "latest"
 ripgrep = "latest"
 fd = "latest"
+yazi = "latest"
 # -- LSP
 tree-sitter = "latest"
 # -- Benchmarking
