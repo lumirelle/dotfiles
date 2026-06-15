@@ -1,0 +1,44 @@
+amends "package://github.com/jdx/hk/releases/download/v1.48.0/hk@1.48.0#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.48.0/hk@1.48.0#/Builtins.pkl"
+
+local linters = new Mapping<String, Step> {
+  // JS & TS & ...
+  ["oxlint"] = (Builtins.ox_lint) {
+    glob = List("**/*")
+    check = "oxlint --no-error-on-unmatched-pattern --deny-warnings {{ files }}"
+    fix = "oxlint --no-error-on-unmatched-pattern --deny-warnings --fix {{ files }}"
+  }
+  ["eslint"] = (Builtins.eslint) {
+    batch = false
+    glob = List("**/*")
+    check = "eslint --no-warn-ignored {{ files }}"
+    fix = "eslint --no-warn-ignored --fix {{ files }}"
+    depends = List("oxlint")
+  }
+
+  // Configurations
+  ["pkl"] = (Builtins.pkl) {
+    glob = List("**/*.pkl")
+    check = "pkl eval {{files}}"
+  }
+  ["pkl-format"] {
+    glob = List("**/*.pkl")
+    check = "pkl format --diff-name-only {{ files }}"
+    fix = "pkl format --write {{ files }}"
+  }
+}
+
+hooks {
+  ["pre-commit"] {
+    fix = true
+    stash = "git"
+    steps = linters
+  }
+  ["fix"] {
+    fix = true
+    steps = linters
+  }
+  ["check"] {
+    steps = linters
+  }
+}

@@ -1,0 +1,28 @@
+[env]
+_.path = [ "./node_modules/.bin" ]
+
+[tools]
+# Environments
+bun = "latest"
+aube = "latest"
+# Linters & Formatters
+pkl = "latest"
+hk = "latest"
+
+[deps.bun-aube]
+description = "Automatically install dependencies via aube & bun's lockfile."
+sources = [
+  "package.json",
+  "bun.lock"
+]
+outputs = [ "node_modules/" ]
+# Because aube's output lockfile has bugs,
+# we use `bun install --lockfile-only` to generate a lockfile
+run = "bun install --lockfile-only && aube install"
+auto = true
+
+[tasks.check]
+run = "hk check --all"
+
+[tasks.fix]
+run = "hk fix --all"

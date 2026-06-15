@@ -1,4 +1,14 @@
 .lazy.lua
+.oxlintrc.json
+eslint.config.js
+taze.config.ts
+package.json
+mise.toml
+bun.lock
+hk.pkl
+mise.lock
+node_modules
+tsconfig.json
 
 {{ if ne .chezmoi.os "windows" }}
 AppData
