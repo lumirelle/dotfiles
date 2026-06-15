@@ -166,6 +166,6 @@ logg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 [hook "hk-pre-commit"]
   # It seems like --from-hook does not work well (maybe this is caused by using Windows)
   # So we test hk.pkl here explicitly
-  command = test "${HK:-1}" = "0" || test -e hk.pkl && hk run pre-commit --from-hook "$@"
+  command = test "${HK:-1}" = "0" || test -e hk.pkl || hk run pre-commit --from-hook "$@"
   event = pre-commit
 
