@@ -9,6 +9,7 @@ hk.pkl
 mise.lock
 node_modules
 tsconfig.json
+scripts/**
 
 {{ if ne .chezmoi.os "windows" }}
 AppData

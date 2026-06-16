@@ -4,7 +4,14 @@ import oxlint from 'eslint-plugin-oxlint'
 
 export default antfu(
   {
+    // Strict lib type
     type: 'lib',
+    // Keep rime config style as it is,
+    // to reduce the differences while updating.
+    // The same for WindowsTerminal.
+    ignores: ['**/rime/**/*', '**/Microsoft.WindowsTerminal_8wekyb3d8bbwe/**/*'],
+
+    // Overrides
     perfectionist: {
       overrides: {
         'perfectionist/sort-imports': [
