@@ -136,10 +136,9 @@ disadd = "!f() { \
 # @aliasGroup Uncommit
 uncommit = reset --soft HEAD^ # Back to the staging area
 # @aliasGroup Predefined Frequently Used Commits
-commit-wip = "!commit --message 'wip: working in progress'"
-commit-readme = "!commit --message 'docs: update README.md'"
-commit-deps = "!commit --message 'chore: update non-major dependencies'"
-commit-snap = "!commit --message 'test: update snapshots'"
+commit-wip = commit --message 'wip: working in progress'
+commit-readme = commit --message 'docs: update README.md'
+commit-deps = commit --message 'chore: update non-major dependencies'
 # @aliasGroup Merge
 # It's HIGHLY RECOMMENDED to use "Pull Request" on hosting platforms for merging branches,
 # but this alias can be helpful when you do want to merge locally.
