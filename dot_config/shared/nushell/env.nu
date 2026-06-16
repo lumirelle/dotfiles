@@ -15,7 +15,7 @@ alias docker = podman
 alias compose = podman compose
 
 # TODO: Sorting order support...
-def count-extensions [] {
+def rank-file-exts [] {
   let files = ls ...(glob **/* --exclude [**/node_modules/**, **/.git/**]) | where type == file
   let file_basenames = $files | get name | path basename
   let file_extnames = $file_basenames | each { | it | if ($it | str index-of . --end) > 0 { $it | str substring ($it | str index-of . --end)..-1 } else { $it | str substring 0..-1 } }
