@@ -5,6 +5,24 @@ local AP = {}
 -- 注释缓存：text -> comment（只给中文造词用）
 local comment_cache = {}
 
+-- 工具：是否纯英文（ASCII 且至少 1 个字母）
+local function is_ascii_word(text)
+    if not text or text == "" then
+        return false
+    end
+    local has_alpha = false
+    for i = 1, #text do
+        local b = text:byte(i)
+        if b > 127 then
+            return false
+        end
+        if (b >= 65 and b <= 90) or (b >= 97 and b <= 122) then
+            has_alpha = true
+        end
+    end
+    return has_alpha
+end
+
 -- 判断字符是否为汉字（原逻辑）
 function AP.is_chinese_only(text)
     local non_chinese_pattern = "[%w%p]"
@@ -40,15 +58,18 @@ function AP.init(env)
     local enable_user_dict  =
         config:get_bool("add_user_dict/enable_user_dict") or false
 
-    -- 中文：add_user_dict
+    -- 中文：add_user_dict（受 add_* 开关影响）
     if enable_auto_phrase and enable_user_dict then
         env.memory = Memory(env.engine, env.engine.schema, "add_user_dict")
     else
         env.memory = nil
     end
 
-    -- 挂上 commit/delete 通知
-    if env.memory then
+    -- 英文：enuser（不受 add_* 开关影响，始终尝试启用）
+    env.en_memory = Memory(env.engine, env.engine.schema, "wanxiang_english")
+
+    -- 只要有一边需要，就挂上 commit/delete 通知
+    if env.en_memory or env.memory then
         env._commit_conn = ctx.commit_notifier:connect(function(c)
             AP.commit_handler(c, env)
         end)
@@ -74,6 +95,11 @@ function AP.fini(env)
         env.memory:disconnect()
         env.memory = nil
     end
+
+    if env.en_memory then
+        env.en_memory:disconnect()
+        env.en_memory = nil
+    end
 end
 
 function AP.save_comment_cache(cand, genuine)
@@ -87,10 +113,14 @@ end
 
 -- 入口
 function AP.func(input, env)
+    local config  = env.engine.schema.config
+    local context = env.engine.context
+
     local use_comment_cache = env.memory ~= nil  -- 只有中文造词才需要缓存注释
 
     for cand in input:iter() do
-        local genuine_cand = cand:get_genuine()
+        local genuine_cand    = cand:get_genuine()
+        local initial_comment = genuine_cand.comment
 
         if use_comment_cache then
             AP.save_comment_cache(cand, genuine_cand)
@@ -112,6 +142,35 @@ function AP.commit_handler(ctx, env)
     local commit_text    = ctx:get_commit_text() or ""
     local raw_input      = ctx.input or ""
 
+    ---------------------------------------------------
+    -- ① 英文造词（保持原样，仍用硬编码 "\"）
+    ---------------------------------------------------
+    if raw_input ~= "" and raw_input:sub(-1) == "\\" and is_ascii_word(commit_text) then
+        local code_body = raw_input:gsub("\\+$", "")
+        code_body = code_body:gsub("%s+$", "")
+        local clean_commit_text = commit_text:gsub("\\+$", "")
+        if code_body ~= "" and clean_commit_text ~= "" and env.en_memory then
+            local function save_entry(code)
+                local entry = DictEntry()
+                entry.text        = clean_commit_text
+                entry.weight      = 1
+                entry.custom_code = code .. " "
+                env.en_memory:update_userdict(entry, 1, "")
+            end
+            save_entry(code_body)
+            local lower_code = string.lower(code_body)
+            if lower_code ~= code_body then
+                save_entry(lower_code)
+            end
+        end
+
+        comment_cache = {}
+        return
+    end
+
+    ---------------------------------------------------
+    -- ② 中文自动造词
+    ---------------------------------------------------
     if not env.memory then
         comment_cache = {}
         return

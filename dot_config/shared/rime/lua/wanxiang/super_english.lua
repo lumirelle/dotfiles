@@ -328,11 +328,25 @@ function F.func(input, env)
         end
         return 
     end
-
+    -- ===
     local has_valid_candidate = false
     local best_candidate_saved = false
     local code_len = #curr_input
 
+    -- [Feature] 强制英文造词
+    if code_len > 2 and sub(curr_input, -2) == symbol .. symbol then
+        local raw_text = sub(curr_input, 1, code_len - 2)
+        if is_ascii_phrase_fast(raw_text) then
+            if ctx.composition and not ctx.composition:empty() then
+                ctx.composition:back().prompt = "〔英文造词〕"
+            end
+            local cand = Candidate("english", 0, code_len, raw_text, "")
+            cand.preedit = raw_text 
+            yield(cand)
+            return 
+        end
+    end
+    
     local break_signal = (_G.english_spacing_break == true)
     local effective_prev_is_eng = env.prev_commit_is_eng
 

@@ -587,13 +587,16 @@ end
 
 -- [Select Character] 以词定字逻辑 (New!)
 local function handle_select_character(key, env, ctx)
-    -- 1. 检查配置是否存在
+    -- 检查配置是否存在
     if not (env.sc_first_key or env.sc_last_key) then return false end
-    
-    -- 2. 状态检查：必须在输入中或有候选菜单
+    -- 判断是否在命令模式，如果是，则关闭以词定字，释放占用的按键/符号
+    if wanxiang.is_function_mode_active and wanxiang.is_function_mode_active(ctx) then
+        return false
+    end
+    -- 状态检查：必须在输入中或有候选菜单
     if not (ctx:is_composing() or ctx:has_menu()) then return false end
 
-    -- 3. 键值与字符双重匹配（解决 Rime 返回 "bracketleft" 无法匹配 "[" 的问题）
+    -- 键值与字符双重匹配（解决 Rime 返回 "bracketleft" 无法匹配 "[" 的问题）
     local repr = key:repr()
     local ch = ""
     if key.keycode >= 0x20 and key.keycode <= 0x7E then
@@ -604,12 +607,12 @@ local function handle_select_character(key, env, ctx)
     local is_last  = (env.sc_last_key and (repr == env.sc_last_key or ch == env.sc_last_key))
     if not (is_first or is_last) then return false end
 
-    -- 4. 获取当前选中的候选词或输入
+    -- 获取当前选中的候选词或输入
     local text = ctx.input
     local cand = ctx:get_selected_candidate()
     if cand then text = cand.text end
 
-    -- 5. 执行上屏
+    -- 执行上屏
     if utf8.len(text) > 1 then
         if is_first then
             -- 上屏第一个字 (sub: 1 到 第二个字偏移量-1)
