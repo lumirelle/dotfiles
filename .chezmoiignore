@@ -10,6 +10,7 @@ mise.lock
 node_modules
 tsconfig.json
 scripts/**
+README.md
 
 {{ if ne .chezmoi.os "windows" }}
 AppData
