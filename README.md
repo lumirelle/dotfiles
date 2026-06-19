@@ -4,8 +4,6 @@ My dotfiles (also application files), out-of-box (for me).
 
 - Network Tools
   - Clash Verge Rev
-- Input Method
-  - Rime (CJK)
 - Terminal
   - Windows Terminal (Windows Only)
 - Shell

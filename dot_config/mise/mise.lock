@@ -268,6 +268,14 @@ url = "https://github.com/jdx/hk/releases/download/v1.48.0/hk-x86_64-pc-windows-
 checksum = "sha256:6349ab27cd7a9c07e68edc7c2af0859c8a540482e97a5b7306e9e88460a5ca43"
 url = "https://github.com/jdx/hk/releases/download/v1.48.0/hk-x86_64-pc-windows-msvc.zip"
 
+[[tools."http:im-select"]]
+version = "1.0.1"
+backend = "http:im-select"
+
+[tools."http:im-select"."platforms.windows-x64"]
+checksum = "blake3:e8d327582ad3b1cfc8ab8295699bc93f78f570a448d90fbde31c7e6ce4af7a84"
+url = "https://github.com/daipeihust/im-select/raw/refs/heads/master/win/out/x64/im-select.exe"
+
 [[tools.hyperfine]]
 version = "1.20.0"
 backend = "aqua:sharkdp/hyperfine"

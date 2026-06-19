@@ -29,7 +29,6 @@ Library
 
 {{ if ne .chezmoi.os "linux" }}
 .local
-.config/ibus
 .config/nushell
 .config/Code
 .config/Cursor

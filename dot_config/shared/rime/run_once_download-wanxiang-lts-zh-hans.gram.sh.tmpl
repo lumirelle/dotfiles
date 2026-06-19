@@ -1,6 +1,0 @@
-{{ if stat (joinPath .chezmoi.targetFile "../wanxiang-lts-zh-hans.gram") }}
-echo wanxiang gram file already downloaded!
-{{ else }}
-echo Downloading wanxiang gram file...
-curl -L -O https://github.com/amzxyz/RIME-LMDG/releases/download/LTS/wanxiang-lts-zh-hans.gram
-{{ end }}

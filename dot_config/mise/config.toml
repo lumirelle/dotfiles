@@ -13,6 +13,8 @@ fd = "latest"
 yazi = "latest"
 # -- LSP
 tree-sitter = "latest"
+# -- IME
+"http:im-select" = { os = "windows", version = "1.0.1", url = "https://github.com/daipeihust/im-select/raw/refs/heads/master/win/out/x64/im-select.exe" }
 # -- Others
 hyperfine = "latest"
 mkcert = "latest"
@@ -27,4 +29,4 @@ go = "1.26.4"
 # -- Java
 java = "graalvm-community-25.0.2"
 # -- C/C++ Compiler - Windows
-"github:niXman/mingw-builds-binaries" = { os = [ "windows", ], version = "16.1.0-rt_v14-rev1", version_prefix = "", asset_pattern = "x86_64-*-release-posix-seh-ucrt-*.7z" }
+"github:niXman/mingw-builds-binaries" = { os = "windows", version = "16.1.0-rt_v14-rev1", version_prefix = "", asset_pattern = "x86_64-*-release-posix-seh-ucrt-*.7z" }

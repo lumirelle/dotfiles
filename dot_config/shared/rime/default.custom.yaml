@@ -1,9 +1,0 @@
-# After you applying this custom configuration,
-# don't forget to "deploy" Rime and wait for few seconds/minutes.
-patch:
-  key_binder/bindings/+:
-    - {when: always, accept: Release+Escape, toggle: ascii_mode}
-  # We don't actually need to switch schemas, so we don't need hotkeys.
-  # Release hotkeys to avoid conflict.
-  switcher/hotkeys: []
-  switches/@0/reset: 1
