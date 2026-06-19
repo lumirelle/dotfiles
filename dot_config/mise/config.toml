@@ -2,31 +2,73 @@
 experimental = true
 lockfile = true
 
-[tools]
 # -- Version Control
-lazygit = "latest"
-hk = "latest"
+[tools.lazygit]
+version = "latest"
+
 # -- Explorers
-zoxide = "latest"
-ripgrep = "latest"
-fd = "latest"
-yazi = "latest"
-# -- LSP
-tree-sitter = "latest"
+[tools.zoxide]
+version = "latest"
+
+[tools.ripgrep]
+version = "latest"
+
+[tools.fd]
+version = "latest"
+
+[tools.yazi]
+version = "latest"
+
 # -- IME
-"http:im-select" = { os = "windows", version = "1.0.1", url = "https://github.com/daipeihust/im-select/raw/refs/heads/master/win/out/x64/im-select.exe" }
-# -- Others
-hyperfine = "latest"
-mkcert = "latest"
-# -- JS/TS
-bun = "latest"
-node = "24.16.0"
-aube = "latest"
+[tools."http:im-select"]
+os = "windows"
+version = "1.0.1"
+url = "https://github.com/daipeihust/im-select/raw/refs/heads/master/win/out/x64/im-select.exe"
+
+[tools."github:laishulu/macism"]
+version = "3.1.1"
+os = "macos"
+
+[tools."github:laishulu/macism".platforms]
+macos-arm64 = { asset_pattern = "macism-arm64" }
+macos-x64 = { asset_pattern = "macism-x86_64" }
+
+# -- Editor
+[tools.tree-sitter]
+version = "latest"
+
+# -- Quality
+[tools.hyperfine]
+version = "latest"
+
+[tools.hk]
+version = "latest"
+
+# -- JS / TS
+[tools.bun]
+version = "latest"
+
+[tools.node]
+version = "24"
+
+[tools.aube]
+version = "latest"
+
 # -- Zig
-zig = "0.16.0"
+[tools.zig]
+version = "latest"
+
 # -- Go
-go = "1.26.4"
+[tools.go]
+version = "latest"
+
 # -- Java
-java = "graalvm-community-25.0.2"
-# -- C/C++ Compiler - Windows
-"github:niXman/mingw-builds-binaries" = { os = "windows", version = "16.1.0-rt_v14-rev1", version_prefix = "", asset_pattern = "x86_64-*-release-posix-seh-ucrt-*.7z" }
+[tools.java]
+version = "graalvm-community-25"
+
+# -- C / C++
+[tools."github:niXman/mingw-builds-binaries"]
+os = "windows"
+version = "16.1.0-rt_v14-rev1"
+version_prefix = ""
+asset_pattern = "x86_64-*-release-posix-seh-ucrt-*.7z"
