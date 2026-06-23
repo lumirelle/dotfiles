@@ -41,30 +41,24 @@ version = "latest"
 [tools.hyperfine]
 version = "latest"
 
-[tools.hk]
-version = "latest"
-
 # -- JS / TS
 [tools.bun]
-version = "latest"
+version = "1.3.14"
 
 [tools.node]
-version = "24"
-
-[tools.aube]
-version = "latest"
+version = "24.17.0"
 
 # -- Zig
 [tools.zig]
-version = "latest"
+version = "0.16.0"
 
 # -- Go
 [tools.go]
-version = "latest"
+version = "1.26.4"
 
 # -- Java
 [tools.java]
-version = "graalvm-community-25"
+version = "graalvm-community-25.0.2"
 
 # -- C / C++
 [tools."github:niXman/mingw-builds-binaries"]
