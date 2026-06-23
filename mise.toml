@@ -3,11 +3,10 @@ _.path = [ "./node_modules/.bin" ]
 
 [tools]
 # Environments
-bun = "latest"
-aube = "latest"
+bun = "1.3.14"
+aube = "1.22.0"
 # Linters & Formatters
-pkl = "latest"
-hk = "latest"
+hk = "1.48.0"
 
 [deps.bun-aube]
 description = "Automatically install dependencies via aube & bun's lockfile."
