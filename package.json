@@ -5,7 +5,7 @@
   "packageManager": "aube@1.22.0",
   "devDependencies": {
     "@antfu/eslint-config": "^9.0.0",
-    "@lumirelle/oxlint-config": "^0.9.1",
+    "@lumirelle/oxlint-config": "^0.10.1",
     "@lumirelle/tsconfig": "^0.1.5",
     "eslint": "^10.5.0",
     "eslint-plugin-oxlint": "^1.71.0",
