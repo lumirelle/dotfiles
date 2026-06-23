@@ -7,6 +7,8 @@ bun = "1.3.14"
 aube = "1.22.0"
 # Linters & Formatters
 hk = "1.48.0"
+stylua = "2.5.2"
+pkl = "0.31.1"
 
 [deps.bun-aube]
 description = "Automatically install dependencies via aube & bun's lockfile."
