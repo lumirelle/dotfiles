@@ -2,8 +2,8 @@
 {
   // #region Appearance / Theme
   "window.autoDetectColorScheme": true,
-  "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
-  "workbench.preferredLightColorTheme": "Catppuccin Latte",
+  "workbench.preferredDarkColorTheme": "Everforest Pro Dark",
+  "workbench.preferredLightColorTheme": "Everforest Pro Light",
   "workbench.productIconTheme": "icons-carbon",
   "workbench.iconTheme": "catppuccin-mocha",
   "workbench.colorCustomizations": {
