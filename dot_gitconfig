@@ -22,6 +22,12 @@ path = .gitconfig-work
 [init]
 defaultBranch = main
 
+[blame]
+ignoreRevsFile = :(optional).git-blame-ignore-revs
+# See https://www.michaelheap.com/git-ignore-rev/
+markIgnoredLines = true
+markUnblamableLines = true
+
 # Working with Branches
 [branch]
 sort = -committerdate
