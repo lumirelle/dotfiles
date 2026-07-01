@@ -34,7 +34,7 @@ macos-arm64 = { asset_pattern = "macism-arm64" }
 macos-x64 = { asset_pattern = "macism-x86_64" }
 
 [tools."github:lumirelle/input-tip"]
-version = "4.0.0"
+version = "4.1.0"
 os = "windows"
 asset_pattern = "input-tip.zip"
 

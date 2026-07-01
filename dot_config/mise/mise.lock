@@ -93,66 +93,66 @@ version = "3.1.1"
 backend = "github:laishulu/macism"
 
 [[tools."github:lumirelle/input-tip"]]
-version = "4.0.0"
+version = "4.1.0"
 backend = "github:lumirelle/input-tip"
 
 [tools."github:lumirelle/input-tip".options]
 asset_pattern = "input-tip.zip"
 
 [tools."github:lumirelle/input-tip"."platforms.linux-arm64"]
-checksum = "sha256:f5abefb17757ab9bafce236e385dd8b3bf2892acffe0535b0ba8f98d67ea29f8"
-url = "https://github.com/lumirelle/input-tip/releases/download/v4.0.0/input-tip.zip"
-url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462310677"
+checksum = "sha256:13aba462ca5a94b664a5ca1592a08db45640a01ba17058ba60c35f77eddfecc0"
+url = "https://github.com/lumirelle/input-tip/releases/download/v4.1.0/input-tip.zip"
+url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462683516"
 
 [tools."github:lumirelle/input-tip"."platforms.linux-arm64-musl"]
-checksum = "sha256:f5abefb17757ab9bafce236e385dd8b3bf2892acffe0535b0ba8f98d67ea29f8"
-url = "https://github.com/lumirelle/input-tip/releases/download/v4.0.0/input-tip.zip"
-url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462310677"
+checksum = "sha256:13aba462ca5a94b664a5ca1592a08db45640a01ba17058ba60c35f77eddfecc0"
+url = "https://github.com/lumirelle/input-tip/releases/download/v4.1.0/input-tip.zip"
+url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462683516"
 
 [tools."github:lumirelle/input-tip"."platforms.linux-x64"]
-checksum = "sha256:f5abefb17757ab9bafce236e385dd8b3bf2892acffe0535b0ba8f98d67ea29f8"
-url = "https://github.com/lumirelle/input-tip/releases/download/v4.0.0/input-tip.zip"
-url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462310677"
+checksum = "sha256:13aba462ca5a94b664a5ca1592a08db45640a01ba17058ba60c35f77eddfecc0"
+url = "https://github.com/lumirelle/input-tip/releases/download/v4.1.0/input-tip.zip"
+url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462683516"
 
 [tools."github:lumirelle/input-tip"."platforms.linux-x64-baseline"]
-checksum = "sha256:f5abefb17757ab9bafce236e385dd8b3bf2892acffe0535b0ba8f98d67ea29f8"
-url = "https://github.com/lumirelle/input-tip/releases/download/v4.0.0/input-tip.zip"
-url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462310677"
+checksum = "sha256:13aba462ca5a94b664a5ca1592a08db45640a01ba17058ba60c35f77eddfecc0"
+url = "https://github.com/lumirelle/input-tip/releases/download/v4.1.0/input-tip.zip"
+url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462683516"
 
 [tools."github:lumirelle/input-tip"."platforms.linux-x64-musl"]
-checksum = "sha256:f5abefb17757ab9bafce236e385dd8b3bf2892acffe0535b0ba8f98d67ea29f8"
-url = "https://github.com/lumirelle/input-tip/releases/download/v4.0.0/input-tip.zip"
-url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462310677"
+checksum = "sha256:13aba462ca5a94b664a5ca1592a08db45640a01ba17058ba60c35f77eddfecc0"
+url = "https://github.com/lumirelle/input-tip/releases/download/v4.1.0/input-tip.zip"
+url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462683516"
 
 [tools."github:lumirelle/input-tip"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:f5abefb17757ab9bafce236e385dd8b3bf2892acffe0535b0ba8f98d67ea29f8"
-url = "https://github.com/lumirelle/input-tip/releases/download/v4.0.0/input-tip.zip"
-url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462310677"
+checksum = "sha256:13aba462ca5a94b664a5ca1592a08db45640a01ba17058ba60c35f77eddfecc0"
+url = "https://github.com/lumirelle/input-tip/releases/download/v4.1.0/input-tip.zip"
+url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462683516"
 
 [tools."github:lumirelle/input-tip"."platforms.macos-arm64"]
-checksum = "sha256:f5abefb17757ab9bafce236e385dd8b3bf2892acffe0535b0ba8f98d67ea29f8"
-url = "https://github.com/lumirelle/input-tip/releases/download/v4.0.0/input-tip.zip"
-url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462310677"
+checksum = "sha256:13aba462ca5a94b664a5ca1592a08db45640a01ba17058ba60c35f77eddfecc0"
+url = "https://github.com/lumirelle/input-tip/releases/download/v4.1.0/input-tip.zip"
+url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462683516"
 
 [tools."github:lumirelle/input-tip"."platforms.macos-x64"]
-checksum = "sha256:f5abefb17757ab9bafce236e385dd8b3bf2892acffe0535b0ba8f98d67ea29f8"
-url = "https://github.com/lumirelle/input-tip/releases/download/v4.0.0/input-tip.zip"
-url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462310677"
+checksum = "sha256:13aba462ca5a94b664a5ca1592a08db45640a01ba17058ba60c35f77eddfecc0"
+url = "https://github.com/lumirelle/input-tip/releases/download/v4.1.0/input-tip.zip"
+url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462683516"
 
 [tools."github:lumirelle/input-tip"."platforms.macos-x64-baseline"]
-checksum = "sha256:f5abefb17757ab9bafce236e385dd8b3bf2892acffe0535b0ba8f98d67ea29f8"
-url = "https://github.com/lumirelle/input-tip/releases/download/v4.0.0/input-tip.zip"
-url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462310677"
+checksum = "sha256:13aba462ca5a94b664a5ca1592a08db45640a01ba17058ba60c35f77eddfecc0"
+url = "https://github.com/lumirelle/input-tip/releases/download/v4.1.0/input-tip.zip"
+url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462683516"
 
 [tools."github:lumirelle/input-tip"."platforms.windows-x64"]
-checksum = "sha256:f5abefb17757ab9bafce236e385dd8b3bf2892acffe0535b0ba8f98d67ea29f8"
-url = "https://github.com/lumirelle/input-tip/releases/download/v4.0.0/input-tip.zip"
-url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462310677"
+checksum = "sha256:13aba462ca5a94b664a5ca1592a08db45640a01ba17058ba60c35f77eddfecc0"
+url = "https://github.com/lumirelle/input-tip/releases/download/v4.1.0/input-tip.zip"
+url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462683516"
 
 [tools."github:lumirelle/input-tip"."platforms.windows-x64-baseline"]
-checksum = "sha256:f5abefb17757ab9bafce236e385dd8b3bf2892acffe0535b0ba8f98d67ea29f8"
-url = "https://github.com/lumirelle/input-tip/releases/download/v4.0.0/input-tip.zip"
-url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462310677"
+checksum = "sha256:13aba462ca5a94b664a5ca1592a08db45640a01ba17058ba60c35f77eddfecc0"
+url = "https://github.com/lumirelle/input-tip/releases/download/v4.1.0/input-tip.zip"
+url_api = "https://api.github.com/repos/lumirelle/input-tip/releases/assets/462683516"
 
 [[tools."github:niXman/mingw-builds-binaries"]]
 version = "16.1.0-rt_v14-rev1"
