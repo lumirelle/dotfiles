@@ -15,6 +15,7 @@ README.md
 {{ if ne .chezmoi.os "windows" }}
 AppData
 Documents
+**/*.reg
 **/*.cmd
 **/*.ps1
 {{ else }}
