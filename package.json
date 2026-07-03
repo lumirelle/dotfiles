@@ -2,7 +2,7 @@
   "name": "chezmoi",
   "type": "module",
   "private": true,
-  "packageManager": "aube@1.22.0",
+  "packageManager": "aube@1.25.2",
   "devDependencies": {
     "@antfu/eslint-config": "^9.0.0",
     "@lumirelle/oxlint-config": "^0.10.1",
