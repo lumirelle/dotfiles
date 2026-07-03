@@ -19,6 +19,13 @@ version = "latest"
 [tools.yazi]
 version = "latest"
 
+# -- Appearance
+[tools."github:Tatsu-syo/noMeiryoUI"]
+os = "windows"
+version_prefix = "TAG-"
+version = "3.4.2"
+asset_pattern = "noMeiryoUI*.zip"
+
 # -- IME
 [tools."http:im-select"]
 os = "windows"
