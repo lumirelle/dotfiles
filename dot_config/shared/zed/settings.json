@@ -23,7 +23,7 @@
   "show_whitespaces": "boundary",
   "colorize_brackets": true,
   // Font
-  "ui_font_family": "Geist",
+  "ui_font_family": "Fraunces 9pt",
   "ui_font_fallbacks": [
     "Symbols Nerd Font",
     "Maple Mono CN"
