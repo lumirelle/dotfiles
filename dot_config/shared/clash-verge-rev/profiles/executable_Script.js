@@ -190,32 +190,28 @@ function customDns() {
   const DEFAULT_NAMESERVERS = [
     // AliDNS
     '223.5.5.5',
-    // DNSPod
-    '119.29.29.29',
+    '223.6.6.6',
     // 114DNS
     '114.114.114.114',
+    '114.114.115.115',
     // Cloudflare DNS
     '1.1.1.1',
-    // Google DNS
-    '8.8.8.8',
+    '1.0.0.1',
   ]
   const NAMESERVERS = [
-    // AliDNS DoH
-    'https://dns.alidns.com/dns-query',
-    // DNSPod DoH
-    'https://doh.pub/dns-query',
-    // Cloudflare DoH
-    'https://dns.cloudflare.com/dns-query',
-    // Google DoH
-    'https://dns.google/dns-query',
-    // AliDNS DoT
+    // AliDNS
+    '223.5.5.5',
+    '223.6.6.6',
     'tls://dns.alidns.com:853',
-    // DNSPod DoT
-    'tls://dot.pub:853',
-    // Cloudflare DoT
+    'https://dns.alidns.com/dns-query',
+    // 114DNS
+    '114.114.114.114',
+    '114.114.115.115',
+    // Cloudflare DNS
+    '1.1.1.1',
+    '1.0.0.1',
     'tls://dns.cloudflare.com:853',
-    // Google DoT
-    'tls://dns.google:853',
+    'https://dns.cloudflare.com/dns-query',
   ]
   const dns = {
     'enable': true,
@@ -227,22 +223,7 @@ function customDns() {
     'fake-ip-range': '198.18.0.1/16',
     // Domains that should not use fake ip
     'fake-ip-filter': [
-      // Local network
-      '+.lan',
-      '+.local',
-      '+.internal',
-      // Microsoft NCSI
-      '+.msftconnecttest.com',
-      '+.msftncsi.com',
-      // QQ quick login check
-      'localhost.ptlogin2.qq.com',
-      'localhost.sec.qq.com',
-      // WeChat quick login check
-      'localhost.work.weixin.qq.com',
-      // NTP
-      '+.ntp.org',
-      '+.ntp.org.cn',
-      'time.windows.com',
+      'rule-set:fake-ip-filter-set',
     ],
     // Default nameservers, used to resolve other dns servers
     'default-nameserver': DEFAULT_NAMESERVERS,
@@ -268,6 +249,12 @@ function customProvidersAndRules() {
     interval: 86_400,
   }
   const ruleProviders = {
+    'fake-ip-filter-set': {
+      ...BASIC_RULE_PROVIDER_OPTIONS,
+      behavior: 'domain',
+      url: 'https://github.com/silver716/fake-ip-filter/raw/master/fake_ip_filter_set.yaml',
+      path: './ruleset/silver716/fake-ip-filter-set.yaml',
+    },
     'reject': {
       ...BASIC_RULE_PROVIDER_OPTIONS,
       behavior: 'domain',
@@ -289,7 +276,7 @@ function customProvidersAndRules() {
     'google': {
       ...BASIC_RULE_PROVIDER_OPTIONS,
       behavior: 'domain',
-      url: 'https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt',
+      url: 'https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/googl e.txt',
       path: './ruleset/loyalsoldier/google.yaml',
     },
     'proxy': {
