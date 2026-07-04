@@ -10,5 +10,7 @@ Windows Registry Editor Version 5.00
 "Segoe UI Symbol (TrueType)"=""
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes]
-
 "Segoe UI"="Fraunces 9pt"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\XAML]
+"AutoFontFamily"="Fraunces 9pt"

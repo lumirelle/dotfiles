@@ -23,5 +23,7 @@ Windows Registry Editor Version 5.00
 "Segoe Script Bold (TrueType)"="segoescb.ttf"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes]
-
 "Segoe UI"=-
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\XAML]
+"AutoFontFamily"=-
