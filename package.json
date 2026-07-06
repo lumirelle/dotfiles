@@ -4,13 +4,13 @@
   "private": true,
   "packageManager": "aube@1.25.2",
   "devDependencies": {
-    "@antfu/eslint-config": "^9.0.0",
-    "@lumirelle/oxlint-config": "^0.10.1",
+    "@antfu/eslint-config": "^9.1.0",
+    "@lumirelle/oxlint-config": "^0.11.0",
     "@lumirelle/tsconfig": "^0.1.5",
-    "eslint": "^10.5.0",
-    "eslint-plugin-oxlint": "^1.71.0",
-    "oxlint": "^1.71.0",
-    "oxlint-tsgolint": "^0.23.0",
+    "eslint": "^10.6.0",
+    "eslint-plugin-oxlint": "^1.72.0",
+    "oxlint": "^1.72.0",
+    "oxlint-tsgolint": "^0.24.0",
     "taze": "^19.14.1",
     "typescript": "^6.0.3"
   }
