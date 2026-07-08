@@ -19,7 +19,7 @@ def --env degit [
   repo: string
   dest?: string
 ] {
-  let branch = ($repo | parse "{r}#{b}" | get -i b | default "main" | get 0)
+  let branch = ($repo | parse "{r}#{b}" | get -o b | default "main" | get 0)
   let clean_repo = ($repo | split row "#" | get 0)
   let url = $"https://github.com/($clean_repo)/archive/refs/heads/($branch).tar.gz"
   let target = ($dest | default ".")
