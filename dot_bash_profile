@@ -14,3 +14,15 @@ eval "$(zoxide init bash)"
 # For container management
 alias docker='podman'
 alias compose='podman compose'
+
+# Custom Commands
+degit() {
+  local repo="$1" dest="${2:-.}"
+  local branch="main"
+  if [[ "$repo" == *#* ]]; then
+    branch="${repo#*#}"
+    repo="${repo%%#*}"
+  fi
+  local url="https://github.com/$repo/archive/refs/heads/$branch.tar.gz"
+  curl -sL "$url" | tar xz --strip-components=1 -C "$dest"
+}

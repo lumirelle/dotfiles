@@ -14,6 +14,17 @@ zoxide init nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.
 alias docker = podman
 alias compose = podman compose
 
+# Custom Commands
+def --env degit [
+  repo: string
+  dest?: string
+] {
+  let branch = ($repo | parse "{r}#{b}" | get -i b | default "main" | get 0)
+  let clean_repo = ($repo | split row "#" | get 0)
+  let url = $"https://github.com/($clean_repo)/archive/refs/heads/($branch).tar.gz"
+  let target = ($dest | default ".")
+  http get $url | tar xz --strip-components=1 -C $target
+}
 # TODO: Sorting order support...
 def rank-file-exts [] {
   let files = ls ...(glob **/* --exclude [**/node_modules/**, **/.git/**] --no-dir)

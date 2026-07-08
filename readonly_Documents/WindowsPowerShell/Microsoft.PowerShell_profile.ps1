@@ -23,3 +23,15 @@ function Podman-Compose {
   podman compose @args
 }
 New-Alias -Name compose -Value Podman-Compose
+
+# Custom Commands
+function degit {
+  param([string]$repo, [string]$dest = ".")
+  $branch = "main"
+  if ($repo -match "#(.+)") {
+    $branch = $Matches[1]
+    $repo = $repo -replace "#.+", ""
+  }
+  $url = "https://github.com/$repo/archive/refs/heads/$branch.tar.gz"
+  curl.exe -sL $url | tar xz --strip-components=1 -C $dest
+}
