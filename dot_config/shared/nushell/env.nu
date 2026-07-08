@@ -3,6 +3,7 @@ mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 
 # Environment
+## Mise, https://mise.jdx.dev/
 mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
 $env.PODMAN_COMPOSE_WARNING_LOGS = false
 
@@ -17,17 +18,25 @@ alias compose = podman compose
 # Custom Commands
 def --env degit [
   repo: string
-  dest?: string
+  dest: string = "."
 ] {
-  let target = ($dest | default ".")
-  if ($target | path exists) and ($target | is-not-empty) {
-    echo "Target directory is not empty. Please specify an empty directory or a new directory."
-    return
+  if ($dest | path exists) {
+    if (ls -a $dest | is-not-empty) {
+      let span = (metadata $dest).span;
+      error make {
+        msg: "Target directory is not empty. Please specify an empty directory or a new directory.",
+        label: { text: "Target directory is not empty", span: $span }
+      }
+    }
+  } else {
+    mkdir $dest
   }
-  let branch = ($repo | parse "{r}#{b}" | get -o b | default "main" | get 0)
+  let branch = ($repo | parse "{r}#{b}" | get b | default [ "main" ] --empty | get 0)
   let clean_repo = ($repo | split row "#" | get 0)
   let url = $"https://github.com/($clean_repo)/archive/refs/heads/($branch).tar.gz"
-  http get $url | tar xz --strip-components=1 -C $target
+  print $"Creating project from ($url)..."
+  http get $url | tar xz --strip-components=1 -C $dest
+  print "Done!"
 }
 # TODO: Sorting order support...
 def rank-file-exts [] {

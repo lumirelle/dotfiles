@@ -1,4 +1,4 @@
-# Prompt UI
+# UI
 eval "$(starship init bash)"
 
 # Environment
@@ -18,9 +18,13 @@ alias compose='podman compose'
 # Custom Commands
 degit() {
   local repo="$1" dest="${2:-.}"
-  if [[ -d "$dest" && "$(ls -A "$dest")" ]]; then
-    echo "Target directory is not empty. Please specify an empty directory or a new directory."
-    return 1
+  if [[ -d "$dest" ]]; then
+    if [[ -n "$(ls -A "$dest")" ]]; then
+      echo -e "\033[31mTarget directory is not empty. Please specify an empty directory or a new directory.\033[0m"
+      return 1
+    fi
+  else
+    mkdir -p "$dest"
   fi
   local branch="main"
   if [[ "$repo" == *#* ]]; then
@@ -28,5 +32,10 @@ degit() {
     repo="${repo%%#*}"
   fi
   local url="https://github.com/$repo/archive/refs/heads/$branch.tar.gz"
-  curl -sL "$url" | tar xz --strip-components=1 -C "$dest"
+  echo "Creating project from $url..."
+  tmpfile=$(mktemp)
+  curl -sL "$url" -o "$tmpfile"
+  tar -xzf "$tmpfile" --strip-components=1 -C "$dest"
+  rm "$tmpfile"
+  echo "Done!"
 }
