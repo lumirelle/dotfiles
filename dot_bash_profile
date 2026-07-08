@@ -18,6 +18,10 @@ alias compose='podman compose'
 # Custom Commands
 degit() {
   local repo="$1" dest="${2:-.}"
+  if [[ -d "$dest" && "$(ls -A "$dest")" ]]; then
+    echo "Target directory is not empty. Please specify an empty directory or a new directory."
+    return 1
+  fi
   local branch="main"
   if [[ "$repo" == *#* ]]; then
     branch="${repo#*#}"

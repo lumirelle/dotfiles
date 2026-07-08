@@ -19,10 +19,14 @@ def --env degit [
   repo: string
   dest?: string
 ] {
+  let target = ($dest | default ".")
+  if ($target | path exists) and ($target | is-not-empty) {
+    echo "Target directory is not empty. Please specify an empty directory or a new directory."
+    return
+  }
   let branch = ($repo | parse "{r}#{b}" | get -o b | default "main" | get 0)
   let clean_repo = ($repo | split row "#" | get 0)
   let url = $"https://github.com/($clean_repo)/archive/refs/heads/($branch).tar.gz"
-  let target = ($dest | default ".")
   http get $url | tar xz --strip-components=1 -C $target
 }
 # TODO: Sorting order support...

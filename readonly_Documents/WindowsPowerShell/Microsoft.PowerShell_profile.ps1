@@ -27,6 +27,10 @@ New-Alias -Name compose -Value Podman-Compose
 # Custom Commands
 function degit {
   param([string]$repo, [string]$dest = ".")
+  if (Test-Path $dest -PathType Container -and (Get-ChildItem -Path $dest | Measure-Object).Count -gt 0) {
+    Write-Host "Target directory is not empty. Please specify an empty directory or a new directory."
+    return
+  }
   $branch = "main"
   if ($repo -match "#(.+)") {
     $branch = $Matches[1]
