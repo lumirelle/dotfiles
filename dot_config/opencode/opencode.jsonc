@@ -1,0 +1,30 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "disabled_providers": [],
+  "provider": {
+    "xiaoxi": {
+      "name": "Xiaoxi",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "https://njlitellm.xiaoxitech.com/v1"
+      },
+      "models": {
+        "xiaoxi/GLM-5.2": {
+          "name": "GLM-5.2"
+        }
+      }
+    },
+    "xiaoxi-hk": {
+      "name": "Xiaoxi HK",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "https://hklitellm.xiaoxitech.com/v1"
+      },
+      "models": {
+        "anthropic/claude-opus-4.7": {
+          "name": "Claude Opus 4.7"
+        }
+      }
+    }
+  }
+}
