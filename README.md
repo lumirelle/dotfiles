@@ -22,7 +22,6 @@ My dotfiles (also application files), out-of-box (for me).
 - Editors
   - Neovim
   - VSCode
-  - Cursor
   - Zed
 - Linter
   - CSpell
