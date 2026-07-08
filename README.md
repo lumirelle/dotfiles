@@ -17,8 +17,6 @@ My dotfiles (also application files), out-of-box (for me).
   - Mise
 - Package Manager
   - Maven (JVM Language)
-- Devtools
-  - @sxzz/create
 - Editors
   - Neovim
   - VSCode
