@@ -26,7 +26,7 @@
   "ui_font_family": "Fraunces 9pt",
   "ui_font_fallbacks": [
     "Symbols Nerd Font",
-    "Source Han Serif Medium"
+    "Resource Han Rounded SC"
   ],
   "ui_font_size": 16,
   "buffer_font_family": "0xProto",
