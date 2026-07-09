@@ -23,7 +23,7 @@ path = .gitconfig-work
 defaultBranch = main
 
 [blame]
-ignoreRevsFile = :(optional).git-blame-ignore-revs
+ignoreRevsFile = ":(optional).git-blame-ignore-revs"
 # See https://www.michaelheap.com/git-ignore-rev/
 markIgnoredLines = true
 markUnblamableLines = true
@@ -169,8 +169,7 @@ logg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 
 # Global Hooks
 [hook "hk-pre-commit"]
-  # It seems like --from-hook does not work well (maybe this is caused by using Windows)
-  # So we test hk.pkl here explicitly
-  command = test "${HK:-1}" = "0" || ! test -e hk.pkl || hk run pre-commit --from-hook "$@"
-  event = pre-commit
-
+# It seems like --from-hook does not work well (maybe this is caused by using Windows)
+# So we test hk.pkl here explicitly
+command = test "${HK:-1}" = "0" || ! test -e hk.pkl || hk run pre-commit --from-hook "$@"
+event = pre-commit

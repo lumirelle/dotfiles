@@ -53,7 +53,7 @@ local linters = new Mapping<String, Step> {
     fix = "nufmt {{ files }}"
   }
   ["shfmt"] = (Builtins.shfmt) {
-    glob = List("dot_bash_profile")
+    glob = List("dot_gitconfig", "dot_bash_profile")
   }
 }
 
