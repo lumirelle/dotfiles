@@ -7,24 +7,21 @@ Invoke-Expression (&starship init powershell)
 # Environment
 ## Mise, https://mise.jdx.dev/
 (&mise activate pwsh) | Out-String | Invoke-Expression
+## Zoxide, https://github.com/ajeetdsouza/zoxide
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
 ## Podman
 $env:PODMAN_COMPOSE_WARNING_LOGS = $false
 
-# Kits
-Invoke-Expression (& { (zoxide init powershell | Out-String) })
-
-# Commands Aliases
-# `which`: Show the path of commands
-New-Alias -Name which -Value where.exe
-New-Alias -Name touch -Value New-Item
-# For container management
+# Aliases & Custom Commands
+New-Alias -Name cz -Value chezmoi
 New-Alias -Name docker -Value podman
 function Podman-Compose {
   podman compose @args
 }
 New-Alias -Name compose -Value Podman-Compose
-
-# Custom Commands
+## GNU flavor
+New-Alias -Name which -Value where.exe
+New-Alias -Name touch -Value New-Item
 function degit {
   param([string]$repo, [string]$dest = ".")
   if (Test-Path $dest -PathType Container) {

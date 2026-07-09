@@ -6,19 +6,18 @@ starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.n
 ## Mise, https://mise.jdx.dev/
 mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
 $env.PODMAN_COMPOSE_WARNING_LOGS = false
-
-# Kits
+## Zoxide, https://github.com/ajeetdsouza/zoxide
 zoxide init nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
 
-# Commands Aliases
-# For container management
+# Aliases & Custom Commands
+alias cz = chezmoi
 alias docker = podman
 alias compose = podman compose
-
-# Custom Commands
+# Create a new project from a GitHub repository without cloning the entire repository history.
+@example "Create a new project from a GitHub repository" {degit user/repo#branch dest}
 def --env degit [
-  repo: string
-  dest: string = "."
+  repo: string # The GitHub repository in the format "user/repo#branch". the branch is optional, defaults to "main"
+  dest: string = "." # The destination directory where the project will be created
 ] {
   if ($dest | path exists) {
     if (ls -a $dest | is-not-empty) {

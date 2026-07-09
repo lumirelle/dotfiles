@@ -4,18 +4,15 @@ eval "$(starship init bash)"
 # Environment
 ## Mise, https://mise.jdx.dev/
 eval "$(mise activate bash)"
+## Zoxide, https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init bash)"
 ## Podman
 export PODMAN_COMPOSE_WARNING_LOGS=false
 
-# Kits
-eval "$(zoxide init bash)"
-
-# Commands Aliases
-# For container management
+# Aliases & Custom Commands
+alias cz='chezmoi'
 alias docker='podman'
 alias compose='podman compose'
-
-# Custom Commands
 degit() {
   local repo="$1" dest="${2:-.}"
   if [[ -d "$dest" ]]; then
