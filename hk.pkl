@@ -23,10 +23,10 @@ local linters = new Mapping<String, Step> {
   ["shfmt"] = (Builtins.shfmt) {
     glob =
       List(
-        ".editorconfig",
-        ".gitattributes",
-        ".gitignore",
-        ".npmrc",
+        "**/.editorconfig",
+        "**/.gitattributes",
+        "**/.gitignore",
+        "**/.npmrc",
         "dot_gitconfig",
         "dot_bash_profile",
       )
