@@ -35,7 +35,7 @@ def --env degit [
   let clean_repo = ($repo | split row "#" | get 0)
   let url = $"https://github.com/($clean_repo)/archive/refs/heads/($branch).tar.gz"
   print $"Creating project from ($url)..."
-  http get $url | tar xz --strip-components=1 -C $dest
+  http get $url | tar -xz --strip-components=1 -C $dest
   print "Done!"
 }
 # TODO: Sorting order support...
