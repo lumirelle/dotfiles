@@ -13,6 +13,7 @@ hk = "1.50.0"
 stylua = "2.5.2"
 pkl = "0.31.1"
 "cargo:https://github.com/nushell/nufmt" = "branch:main"
+shfmt = "latest"
 
 [deps.bun-aube]
 description = "Automatically install dependencies via aube & bun's lockfile."
