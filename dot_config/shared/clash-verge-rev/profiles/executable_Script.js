@@ -1,3 +1,4 @@
+// oxlint-disable no-console
 // If you want to learn about clash verge config example, please visit:
 // https://github.com/MetaCubeX/mihomo/blob/Meta/docs/config.yaml
 
@@ -7,9 +8,6 @@ function main(config) {
   config.proxies = proxies
   config['proxy-groups'] = proxyGroups
 
-  const { dns } = customDns()
-  config.dns = dns
-
   const { ruleProviders, rules } = customProvidersAndRules()
   config['rule-providers'] = ruleProviders
   config.rules = rules
@@ -17,162 +15,122 @@ function main(config) {
   return config
 }
 
-const NO_STANDARD_PROXY_REG = /官\s*网|说明|提示|剩余|套餐|导航/
+const NO_STANDARD_PROXY_REG = /官\s*网|流量|到期|重置|订阅|说明|提示|剩余|套餐|导航|Traffic|Expire|Reset/
 /**
- * Custom proxy groups
+ * Custom proxies and groups
  *
  * @param {object} config Original config object
- * @returns {object} Custom proxy groups
+ * @returns {object} Custom proxies and groups
  */
 function customProxiesAndGroups(config) {
   // Proxies
   const proxies = (config.proxies ?? []).filter(p => !NO_STANDARD_PROXY_REG.test(p.name))
 
-  // Group options
+  // Proxy group options
   const BASIC_GROUP_OPTIONS = {
+    'url': 'http://www.gstatic.com/generate_204 ',
     'interval': 300,
-    'timeout': 3000,
-    'url': 'https://www.google.com/generate_204',
+    'timeout': 3_000,
     'lazy': true,
     'max-failed-times': 3,
     'hidden': false,
   }
 
   // Proxy groups
-  const COUNTRY_REGION_CONFIG = [
-    { name: '🇹🇼 台湾', filter: 'TW|🇹🇼|台湾' },
-    { name: '🇭🇰 香港', filter: 'HK|🇭🇰|香港' },
-    { name: '🇸🇬 新加坡', filter: 'SG|🇸🇬|新加坡' },
-    { name: '🇯🇵 日本', filter: 'JP|🇯🇵|日本' },
-    { name: '🇺🇸 美国', filter: 'US|🇺🇸|美国' },
-  ]
-  const BASIC_GROUPS = COUNTRY_REGION_CONFIG.flatMap(({ name, filter }) => [{
-    ...BASIC_GROUP_OPTIONS,
-    'type': 'select',
-    'include-all-proxies': true,
-    name,
-    filter,
-  }])
-  const BASIC_GROUP_NAMES = BASIC_GROUPS.map(g => g.name)
-
+  const CHAT_GPT_FILTER = 'AF|🇦🇫|AX|🇦🇽|AL|🇦🇱|DZ|🇩🇿|AD|🇦🇩|AO|🇦🇴|AG|🇦🇬|AR|🇦🇷|阿根廷|AM|🇦🇲|AW|🇦🇼|AU|🇦🇺|澳大利亚|澳大利亞|AT|🇦🇹|AZ|🇦🇿|BS|🇧🇸|BH|🇧🇭|BD|🇧🇩|BB|🇧🇧|BE|🇧🇪|BZ|🇧🇿|BM|🇧🇲|BJ|🇧🇯|BT|🇧🇹|BO|🇧🇴|BA|🇧🇦|BW|🇧🇼|BR|🇧🇷|巴西|BN|🇧🇳|文莱|汶萊|BG|🇧🇬|BF|🇧🇫|BI|🇧🇮|CV|🇨🇻|KH|🇰🇭|CM|🇨🇲|CA|🇨🇦|加拿大|KY|🇰🇾|CF|🇨🇫|TD|🇹🇩|CL|🇨🇱|智利|CO|🇨🇴|KM|🇰🇲|CG|🇨🇬|CD|🇨🇩|刚果金|剛果金|刚果（金）|剛果（金）|CR|🇨🇷|CI|🇨🇮|HR|🇭🇷|CY|🇨🇾|CZ|🇨🇿|捷克|DK|🇩🇰|DJ|🇩🇯|DM|🇩🇲|DO|🇩🇴|EC|🇪🇨|EG|🇪🇬|SV|🇸🇻|GQ|🇬🇶|ER|🇪🇷|EE|🇪🇪|SZ|🇸🇿|ET|🇪🇹|FO|🇫🇴|FJ|🇫🇯|FI|🇫🇮|FR|🇫🇷|法国|法國|GF|🇬🇫|PF|🇵🇫|TF|🇹🇫|GA|🇬🇦|GM|🇬🇲|GE|🇬🇪|DE|🇩🇪|德国|德國|GH|🇬🇭|GR|🇬🇷|GL|🇬🇱|GD|🇬🇩|GP|🇬🇵|GT|🇬🇹|GN|🇬🇳|GW|🇬🇼|GY|🇬🇾|HT|🇭🇹|VA|🇻🇦|HN|🇭🇳|HU|🇭🇺|IS|🇮🇸|IN|🇮🇳|印度|ID|🇮🇩|印尼|印度尼西亚|印度尼西亞|IQ|🇮🇶|IE|🇮🇪|IL|🇮🇱|IT|🇮🇹|JM|🇯🇲|JP|🇯🇵|日本|JO|🇯🇴|KZ|🇰🇿|KE|🇰🇪|KI|🇰🇮|KW|🇰🇼|KG|🇰🇬|LA|🇱🇦|LV|🇱🇻|LB|🇱🇧|LS|🇱🇸|LR|🇱🇷|LY|🇱🇾|LI|🇱🇮|LT|🇱🇹|LU|🇱🇺|MG|🇲🇬|MW|🇲🇼|MY|🇲🇾|马来西亚|馬來西亞|MV|🇲🇻|ML|🇲🇱|MT|🇲🇹|MH|🇲🇭|MQ|🇲🇶|MR|🇲🇷|MU|🇲🇺|YT|🇾🇹|MX|🇲🇽|墨西哥|FM|🇫🇲|MD|🇲🇩|摩尔多瓦|摩爾多瓦|MC|🇲🇨|MN|🇲🇳|ME|🇲🇪|MA|🇲🇦|MZ|🇲🇿|MM|🇲🇲|NA|🇳🇦|NR|🇳🇷|NP|🇳🇵|NL|🇳🇱|荷兰|荷蘭|NC|🇳🇨|NZ|🇳🇿|新西兰|紐西蘭|NI|🇳🇮|NE|🇳🇪|NG|🇳🇬|MK|🇲🇰|NO|🇳🇴|OM|🇴🇲|PK|🇵🇰|PW|🇵🇼|PS|🇵🇸|PA|🇵🇦|PG|🇵🇬|PY|🇵🇾|PE|🇵🇪|秘鲁|秘魯|PH|🇵🇭|菲律宾|菲律賓|PL|🇵🇱|PT|🇵🇹|QA|🇶🇦|RE|🇷🇪|RO|🇷🇴|RW|🇷🇼|BL|🇧🇱|SH|🇸🇭|KN|🇰🇳|LC|🇱🇨|MF|🇲🇫|PM|🇵🇲|VC|🇻🇨|WS|🇼🇸|SM|🇸🇲|ST|🇸🇹|SA|🇸🇦|沙特|沙烏地|沙特阿拉伯|沙烏地阿拉伯|SN|🇸🇳|RS|🇷🇸|SC|🇸🇨|SL|🇸🇱|SG|🇸🇬|新加坡|SK|🇸🇰|SI|🇸🇮|SB|🇸🇧|SO|🇸🇴|ZA|🇿🇦|KR|🇰🇷|韩国|韓國|SS|🇸🇸|ES|🇪🇸|LK|🇱🇰|SD|🇸🇩|SR|🇸🇷|SJ|🇸🇯|SE|🇸🇪|瑞典|CH|🇨🇭|瑞士|TW|🇹🇼|台湾|台灣|TJ|🇹🇯|TZ|🇹🇿|TH|🇹🇭|泰国|泰國|TL|🇹🇱|TG|🇹🇬|TO|🇹🇴|TT|🇹🇹|TN|🇹🇳|TR|🇹🇷|土耳其|TM|🇹🇲|TV|🇹🇻|UG|🇺🇬|UA|🇺🇦|乌克兰|烏克蘭|AE|🇦🇪|阿联酋|阿聯酋|GB|🇬🇧|英国|英國|US|🇺🇸|美国|美國|UY|🇺🇾|UZ|🇺🇿|VU|🇻🇺|VN|🇻🇳|越南|WF|🇼🇫|YE|🇾🇪|ZM|🇿🇲|ZW|🇿🇼'
+  const CLAUDE_FILTER = 'AL|🇦🇱|DZ|🇩🇿|AD|🇦🇩|AO|🇦🇴|AG|🇦🇬|AR|🇦🇷|阿根廷|AM|🇦🇲|AU|🇦🇺|澳大利亚|澳大利亞|AT|🇦🇹|AZ|🇦🇿|BS|🇧🇸|BH|🇧🇭|BD|🇧🇩|BB|🇧🇧|BE|🇧🇪|BZ|🇧🇿|BJ|🇧🇯|BT|🇧🇹|BO|🇧🇴|BA|🇧🇦|BW|🇧🇼|BR|🇧🇷|巴西|BN|🇧🇳|文莱|汶萊|BG|🇧🇬|BF|🇧🇫|BI|🇧🇮|CV|🇨🇻|KH|🇰🇭|CM|🇨🇲|CA|🇨🇦|加拿大|CF|🇨🇫|TD|🇹🇩|CL|🇨🇱|智利|CO|🇨🇴|KM|🇰🇲|CG|🇨🇬|CR|🇨🇷|CI|🇨🇮|HR|🇭🇷|CY|🇨🇾|CZ|🇨🇿|捷克|DK|🇩🇰|DJ|🇩🇯|DM|🇩🇲|DO|🇩🇴|EC|🇪🇨|EG|🇪🇬|SV|🇸🇻|GQ|🇬🇶|ER|🇪🇷|EE|🇪🇪|SZ|🇸🇿|ET|🇪🇹|FJ|🇫🇯|FI|🇫🇮|FR|🇫🇷|法国|法國|GA|🇬🇦|GM|🇬🇲|GE|🇬🇪|DE|🇩🇪|德国|德國|GH|🇬🇭|GR|🇬🇷|GD|🇬🇩|GT|🇬🇹|GN|🇬🇳|GW|🇬🇼|GY|🇬🇾|HT|🇭🇹|HN|🇭🇳|HU|🇭🇺|IS|🇮🇸|IN|🇮🇳|印度|ID|🇮🇩|印尼|印度尼西亚|印度尼西亞|IQ|🇮🇶|IE|🇮🇪|IL|🇮🇱|IT|🇮🇹|JM|🇯🇲|JP|🇯🇵|日本|JO|🇯🇴|KZ|🇰🇿|KE|🇰🇪|KI|🇰🇮|KW|🇰🇼|KG|🇰🇬|LA|🇱🇦|LV|🇱🇻|LB|🇱🇧|LS|🇱🇸|LR|🇱🇷|LY|🇱🇾|LI|🇱🇮|LT|🇱🇹|LU|🇱🇺|MG|🇲🇬|MW|🇲🇼|MY|🇲🇾|马来西亚|馬來西亞|MV|🇲🇻|ML|🇲🇱|MT|🇲🇹|MH|🇲🇭|MR|🇲🇷|MU|🇲🇺|MX|🇲🇽|墨西哥|FM|🇫🇲|MD|🇲🇩|摩尔多瓦|摩爾多瓦|MC|🇲🇨|MN|🇲🇳|ME|🇲🇪|MA|🇲🇦|MZ|🇲🇿|NA|🇳🇦|NR|🇳🇷|NP|🇳🇵|NL|🇳🇱|荷兰|荷蘭|NZ|🇳🇿|新西兰|紐西蘭|NI|🇳🇮|NE|🇳🇪|NG|🇳🇬|MK|🇲🇰|NO|🇳🇴|OM|🇴🇲|PK|🇵🇰|PW|🇵🇼|PS|🇵🇸|PA|🇵🇦|PG|🇵🇬|PY|🇵🇾|PE|🇵🇪|秘鲁|秘魯|PH|🇵🇭|菲律宾|菲律賓|PL|🇵🇱|PT|🇵🇹|QA|🇶🇦|RO|🇷🇴|RW|🇷🇼|KN|🇰🇳|LC|🇱🇨|VC|🇻🇨|WS|🇼🇸|SM|🇸🇲|ST|🇸🇹|SA|🇸🇦|沙特|沙烏地|沙特阿拉伯|沙烏地阿拉伯|SN|🇸🇳|RS|🇷🇸|SC|🇸🇨|SL|🇸🇱|SG|🇸🇬|新加坡|SK|🇸🇰|SI|🇸🇮|SB|🇸🇧|SO|🇸🇴|ZA|🇿🇦|KR|🇰🇷|韩国|韓國|SS|🇸🇸|ES|🇪🇸|LK|🇱🇰|SD|🇸🇩|SR|🇸🇷|SE|🇸🇪|瑞典|CH|🇨🇭|瑞士|TW|🇹🇼|台湾|台灣|TJ|🇹🇯|TZ|🇹🇿|TH|🇹🇭|泰国|泰國|TL|🇹🇱|TG|🇹🇬|TO|🇹🇴|TT|🇹🇹|TN|🇹🇳|TR|🇹🇷|土耳其|TM|🇹🇲|TV|🇹🇻|UG|🇺🇬|UA|🇺🇦|乌克兰|烏克蘭|AE|🇦🇪|阿联酋|阿聯酋|GB|🇬🇧|英国|英國|US|🇺🇸|美国|美國|UY|🇺🇾|UZ|🇺🇿|VU|🇻🇺|VA|🇻🇦|VN|🇻🇳|越南|ZM|🇿🇲|ZW|🇿🇼'
+  const {
+    groups: countryRegionGroups,
+    groupNames: countryRegionGroupNames,
+  } = customCountryRegionGroups(BASIC_GROUP_OPTIONS)
   const proxyGroups = [
-    // Groups for different rulesets
+    // Just Proxy
     {
       ...BASIC_GROUP_OPTIONS,
-      'name': '节点选择',
-      'type': 'select',
-      'proxies': ['延迟选优', '故障转移', '负载均衡(散列)', '负载均衡(轮询)', ...BASIC_GROUP_NAMES],
-      'include-all-proxies': true,
-      'icon': 'https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg',
-    },
-    {
-      ...BASIC_GROUP_OPTIONS,
-      'name': '微软服务',
-      'type': 'select',
-      'proxies': ['全局直连', '节点选择', '延迟选优', '故障转移', '负载均衡(散列)', '负载均衡(轮询)', ...BASIC_GROUP_NAMES],
-      'include-all-proxies': true,
-      'icon': 'https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg',
-    },
-    {
-      ...BASIC_GROUP_OPTIONS,
-      'name': '谷歌服务',
-      'type': 'select',
-      'proxies': ['节点选择', '延迟选优', '故障转移', '负载均衡(散列)', '负载均衡(轮询)', '全局直连', ...BASIC_GROUP_NAMES],
-      'include-all-proxies': true,
-      'icon': 'https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg',
-    },
-    {
-      ...BASIC_GROUP_OPTIONS,
-      'name': '苹果服务',
-      'type': 'select',
-      'proxies': ['节点选择', '延迟选优', '故障转移', '负载均衡(散列)', '负载均衡(轮询)', '全局直连', ...BASIC_GROUP_NAMES],
-      'include-all-proxies': true,
-      'icon': 'https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg',
-    },
-    {
-      ...BASIC_GROUP_OPTIONS,
-      'name': '国外媒体',
-      'type': 'select',
-      'proxies': ['节点选择', '延迟选优', '故障转移', '负载均衡(散列)', '负载均衡(轮询)', '全局直连', ...BASIC_GROUP_NAMES],
-      'include-all-proxies': true,
-      'icon': 'https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg',
-    },
-    {
-      ...BASIC_GROUP_OPTIONS,
-      'name': '电报消息',
-      'type': 'select',
-      'proxies': ['节点选择', '延迟选优', '故障转移', '负载均衡(散列)', '负载均衡(轮询)', '全局直连', ...BASIC_GROUP_NAMES],
-      'include-all-proxies': true,
-      'icon': 'https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg',
-    },
-    {
-      ...BASIC_GROUP_OPTIONS,
-      'url': 'https://chatgpt.com',
-      'expected-status': '200',
-      'name': 'ChatGPT',
-      'type': 'select',
-      'include-all-proxies': true,
-      'filter':
-        'AD|🇦🇩|AE|🇦🇪|AF|🇦🇫|AG|🇦🇬|AL|🇦🇱|AM|🇦🇲|AO|🇦🇴|AR|🇦🇷|AT|🇦🇹|AU|🇦🇺|AZ|🇦🇿|BA|🇧🇦|BB|🇧🇧|BD|🇧🇩|BE|🇧🇪|BF|🇧🇫|BG|🇧🇬|BH|🇧🇭|BI|🇧🇮|BJ|🇧🇯|BN|🇧🇳|文莱|BO|🇧🇴|BR|🇧🇷|BS|🇧🇸|BT|🇧🇹|BW|🇧🇼|BZ|🇧🇿|CA|🇨🇦|CD|🇨🇩|刚果金|CF|🇨🇫|CG|🇨🇬|CH|🇨🇭|CI|🇨🇮|CL|🇨🇱|智利|CM|🇨🇲|CO|🇨🇴|CR|🇨🇷|CV|🇨🇻|CY|🇨🇾|CZ|🇨🇿|捷克|DE|🇩🇪|德国|DJ|🇩🇯|DK|🇩🇰|DM|🇩🇲|DO|🇩🇴|DZ|🇩🇿|EC|🇪🇨|EE|🇪🇪|EG|🇪🇬|ER|🇪🇷|ES|🇪🇸|ET|🇪🇹|FI|🇫🇮|FJ|🇫🇯|FM|🇫🇲|FR|🇫🇷|法国|GA|🇬🇦|GB|🇬🇧|英国|GD|🇬🇩|GE|🇬🇪|GH|🇬🇭|GM|🇬🇲|GN|🇬🇳|GQ|🇬🇶|GR|🇬🇷|GT|🇬🇹|GW|🇬🇼|GY|🇬🇾|HN|🇭🇳|HR|🇭🇷|HT|🇭🇹|HU|🇭🇺|ID|🇮🇩|印尼|IE|🇮🇪|IL|🇮🇱|IN|🇮🇳|IQ|🇮🇶|IS|🇮🇸|IT|🇮🇹|JM|🇯🇲|JO|🇯🇴|JP|🇯🇵|日本|KE|🇰🇪|KG|🇰🇬|KH|🇰🇭|KI|🇰🇮|KM|🇰🇲|KN|🇰🇳|KR|🇰🇷|韩国|KW|🇰🇼|KZ|🇰🇿|LA|🇱🇦|LB|🇱🇧|LC|🇱🇨|LI|🇱🇮|LK|🇱🇰|LR|🇱🇷|LS|🇱🇸|LT|🇱🇹|LU|🇱🇺|LV|🇱🇻|LY|🇱🇾|MA|🇲🇦|MC|🇲🇨|MD|🇲🇩|摩尔多瓦|ME|🇲🇪|MG|🇲🇬|MH|🇲🇭|MK|🇲🇰|ML|🇲🇱|MM|🇲🇲|MN|🇲🇳|MR|🇲🇷|MT|🇲🇹|MU|🇲🇺|MV|🇲🇻|MW|🇲🇼|MX|🇲🇽|MY|🇲🇾|MZ|🇲🇿|NA|🇳🇦|NE|🇳🇪|NG|🇳🇬|NI|🇳🇮|NL|🇳🇱|NO|🇳🇴|NP|🇳🇵|NR|🇳🇷|NZ|🇳🇿|OM|🇴🇲|PA|🇵🇦|PE|🇵🇪|秘鲁|PG|🇵🇬|PH|🇵🇭|菲律宾|PK|🇵🇰|PL|🇵🇱|PS|🇵🇸|PT|🇵🇹|PW|🇵🇼|PY|🇵🇾|QA|🇶🇦|RO|🇷🇴|RS|🇷🇸|RW|🇷🇼|SA|🇸🇦|SB|🇸🇧|SC|🇸🇨|SD|🇸🇩|SE|🇸🇪|瑞典|SG|🇸🇬|新加坡|SI|🇸🇮|SK|🇸🇰|SL|🇸🇱|SM|🇸🇲|SN|🇸🇳|SO|🇸🇴|SR|🇸🇷|SS|🇸🇸|ST|🇸🇹|SV|🇸🇻|SZ|🇸🇿|TD|🇹🇩|TG|🇹🇬|TH|🇹🇭|泰国|TJ|🇹🇯|TL|🇹🇱|TM|🇹🇲|TN|🇹🇳|TO|🇹🇴|TR|🇹🇷|土耳其|TT|🇹🇹|TV|🇹🇻|TW|🇹🇼|台湾|TZ|🇹🇿|UA|🇺🇦|乌克兰|UG|🇺🇬|US|🇺🇸|美国|UY|🇺🇾|UZ|🇺🇿|VA|🇻🇦|VC|🇻🇨|VN|🇻🇳|越南|VU|🇻🇺|WS|🇼🇸|YE|🇾🇪|ZA|🇿🇦|ZM|🇿🇲|ZW|🇿🇼',
-      'icon': 'https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg',
-    },
-    {
-      ...BASIC_GROUP_OPTIONS,
-      'name': '全局直连',
-      'type': 'select',
-      'proxies': ['DIRECT', '节点选择', '延迟选优', '故障转移', '负载均衡(散列)', '负载均衡(轮询)', ...BASIC_GROUP_NAMES],
-      'include-all-proxies': true,
-      'icon': 'https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg',
-    },
-    {
-      ...BASIC_GROUP_OPTIONS,
-      name: '全局拦截',
+      name: 'Just Proxy',
       type: 'select',
-      proxies: ['REJECT', 'DIRECT'],
-      icon: 'https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/block.svg',
+      proxies: ['Low Latency', 'Just Fallback', 'Loadbalance (Hashing)', 'Loadbalance (Round)', ...countryRegionGroupNames],
+      icon: 'https://cdn.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg',
     },
     {
       ...BASIC_GROUP_OPTIONS,
-      'name': '漏网之鱼',
-      'type': 'select',
-      'proxies': ['节点选择', '延迟选优', '故障转移', '负载均衡(散列)', '负载均衡(轮询)', '全局直连', ...BASIC_GROUP_NAMES],
-      'include-all-proxies': true,
-      'icon': 'https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg',
-    },
-    // Basic groups for previous groups
-    {
-      ...BASIC_GROUP_OPTIONS,
+      'name': 'Low Latency',
+      'icon': 'https://cdn.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg',
       'type': 'url-test',
-      'tolerance': 50,
       'include-all-proxies': true,
-      'name': '延迟选优',
-      'icon': 'https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg',
+      'tolerance': 50,
+      'hidden': true,
     },
     {
       ...BASIC_GROUP_OPTIONS,
+      'name': 'Just Fallback',
+      'icon': 'https://cdn.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/ambulance.svg',
       'type': 'fallback',
       'include-all-proxies': true,
-      'name': '故障转移',
-      'icon': 'https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/ambulance.svg',
     },
     {
       ...BASIC_GROUP_OPTIONS,
+      'name': 'Loadbalance (Hashing)',
+      'icon': 'https://cdn.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/merry_go.svg',
       'type': 'load-balance',
+      'include-all-proxies': true,
       'strategy': 'consistent-hashing',
-      'include-all-proxies': true,
-      'name': '负载均衡(散列)',
-      'icon': 'https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/merry_go.svg',
+      'hidden': true,
     },
     {
       ...BASIC_GROUP_OPTIONS,
+      'name': 'Loadbalance (Round)',
+      'icon': 'https://cdn.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/balance.svg',
       'type': 'load-balance',
-      'strategy': 'round-robin',
       'include-all-proxies': true,
-      'name': '负载均衡(轮询)',
-      'icon': 'https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/balance.svg',
+      'strategy': 'round-robin',
+      'hidden': true,
     },
-    // Basic groups by country
-    ...BASIC_GROUPS,
+    ...countryRegionGroups,
+
+    // Vendor specific groups
+    {
+      ...BASIC_GROUP_OPTIONS,
+      'name': 'Chat GPT',
+      'icon': 'https://cdn.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg',
+      'type': 'select',
+      'url': 'https://chatgpt.com',
+      'expected-status': '200',
+      'include-all-proxies': true,
+      'filter': CHAT_GPT_FILTER,
+    },
+    {
+      ...BASIC_GROUP_OPTIONS,
+      'name': 'Claude',
+      'icon': 'https://cdn.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/claude.svg',
+      'type': 'select',
+      'url': 'https://claude.com',
+      'expected-status': '200',
+      'include-all-proxies': true,
+      'filter': CLAUDE_FILTER,
+    },
+
+    {
+      ...BASIC_GROUP_OPTIONS,
+      name: 'Just Direct',
+      type: 'select',
+      proxies: ['DIRECT', 'Just Proxy'],
+      icon: 'https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/link.svg',
+    },
+    {
+      ...BASIC_GROUP_OPTIONS,
+      name: 'Just Reject',
+      type: 'select',
+      proxies: ['REJECT', 'Just Direct'],
+      icon: 'https://cdn.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/block.svg',
+    },
+    {
+      ...BASIC_GROUP_OPTIONS,
+      name: 'Just Match',
+      type: 'select',
+      proxies: ['Just Direct', 'Just Proxy', 'Low Latency', 'Just Fallback', 'Loadbalance (Hashing)', 'Loadbalance (Round)', ...countryRegionGroupNames],
+      icon: 'https://cdn.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/fish.svg',
+    },
   ]
 
   return {
@@ -180,59 +138,38 @@ function customProxiesAndGroups(config) {
     proxyGroups,
   }
 }
-
-/**
- * Custom DNS configuration
- *
- * @returns {object} DNS configuration
- */
-function customDns() {
-  const DEFAULT_NAMESERVERS = [
-    // AliDNS
-    '223.5.5.5',
-    '223.6.6.6',
-    // 114DNS
-    '114.114.114.114',
-    '114.114.115.115',
-    // Cloudflare DNS
-    '1.1.1.1',
-    '1.0.0.1',
+function customCountryRegionGroups(BASIC_GROUP_OPTIONS) {
+  const TW_FILTER = 'TW|🇹🇼|WS|🇼🇸|台湾|台灣'
+  const HK_FILTER = 'HK|🇭🇰|香港'
+  const SG_FILTER = 'SG|🇸🇬|新加坡'
+  const JP_FILTER = 'JP|🇯🇵|日本'
+  const US_FILTER = 'US|🇺🇸|美国|美國'
+  const COUNTRY_REGION_CONFIG = [
+    { name: 'Taiwan', icon: 'https://www.svgrepo.com/show/405623/flag-for-flag-taiwan.svg', filter: TW_FILTER },
+    { name: 'Hongkong', icon: 'https://www.svgrepo.com/show/405507/flag-for-flag-hong-kong-sar-china.svg', filter: HK_FILTER },
+    { name: 'Singapore', icon: 'https://www.svgrepo.com/show/405601/flag-for-flag-singapore.svg', filter: SG_FILTER },
+    { name: 'Japan', icon: 'https://www.svgrepo.com/show/405519/flag-for-flag-japan.svg', filter: JP_FILTER },
+    { name: 'United States', icon: 'https://www.svgrepo.com/show/405645/flag-for-flag-united-states.svg', filter: US_FILTER },
+    { name: 'Other', icon: 'https://www.svgrepo.com/show/187784/earth-globe-global.svg', excludeFilter: [TW_FILTER, HK_FILTER, SG_FILTER, JP_FILTER, US_FILTER].join('|') },
   ]
-  const NAMESERVERS = [
-    // AliDNS
-    '223.5.5.5',
-    '223.6.6.6',
-    'tls://dns.alidns.com:853',
-    'https://dns.alidns.com/dns-query',
-    // 114DNS
-    '114.114.114.114',
-    '114.114.115.115',
-    // Cloudflare DNS
-    '1.1.1.1',
-    '1.0.0.1',
-    'tls://dns.cloudflare.com:853',
-    'https://dns.cloudflare.com/dns-query',
-  ]
-  const dns = {
-    'enable': true,
-    'cache-algorithm': 'arc',
-    'ipv6': true,
-    // Response fake ip for dns queries
-    'enhanced-mode': 'fake-ip',
-    // Range of responsed fake ips
-    'fake-ip-range': '198.18.0.1/16',
-    // Domains that should not use fake ip
-    'fake-ip-filter': [
-      'rule-set:fake-ip-filter-set',
-    ],
-    // Default nameservers, used to resolve other dns servers
-    'default-nameserver': DEFAULT_NAMESERVERS,
-    // Nameservers
-    'nameserver': NAMESERVERS,
-    // We can also use `nameserver-policy` and `fallback` to customize dns servers
-  }
+  const groups = COUNTRY_REGION_CONFIG.flatMap(({
+    name,
+    icon,
+    filter,
+    excludeFilter,
+  }) => [{
+    ...BASIC_GROUP_OPTIONS,
+    name,
+    icon,
+    'type': 'select',
+    'include-all-proxies': true,
+    filter,
+    'exclude-filter': excludeFilter,
+  }])
+  const groupNames = groups.map(g => g.name)
   return {
-    dns,
+    groups,
+    groupNames,
   }
 }
 
@@ -252,120 +189,44 @@ function customProvidersAndRules() {
     'fake-ip-filter-set': {
       ...BASIC_RULE_PROVIDER_OPTIONS,
       behavior: 'domain',
-      url: 'https://github.com/silver716/fake-ip-filter/raw/master/fake_ip_filter_set.yaml',
+      url: 'https://cdn.jsdelivr.net/gh/silver716/fake-ip-filter/fake_ip_filter_set.yaml',
       path: './ruleset/silver716/fake-ip-filter-set.yaml',
-    },
-    'reject': {
-      ...BASIC_RULE_PROVIDER_OPTIONS,
-      behavior: 'domain',
-      url: 'https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt',
-      path: './ruleset/loyalsoldier/reject.yaml',
-    },
-    'icloud': {
-      ...BASIC_RULE_PROVIDER_OPTIONS,
-      behavior: 'domain',
-      url: 'https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt',
-      path: './ruleset/loyalsoldier/icloud.yaml',
-    },
-    'apple': {
-      ...BASIC_RULE_PROVIDER_OPTIONS,
-      behavior: 'domain',
-      url: 'https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt',
-      path: './ruleset/loyalsoldier/apple.yaml',
-    },
-    'google': {
-      ...BASIC_RULE_PROVIDER_OPTIONS,
-      behavior: 'domain',
-      url: 'https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/googl e.txt',
-      path: './ruleset/loyalsoldier/google.yaml',
-    },
-    'proxy': {
-      ...BASIC_RULE_PROVIDER_OPTIONS,
-      behavior: 'domain',
-      url: 'https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt',
-      path: './ruleset/loyalsoldier/proxy.yaml',
-    },
-    'direct': {
-      ...BASIC_RULE_PROVIDER_OPTIONS,
-      behavior: 'domain',
-      url: 'https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt',
-      path: './ruleset/loyalsoldier/direct.yaml',
-    },
-    'private': {
-      ...BASIC_RULE_PROVIDER_OPTIONS,
-      behavior: 'domain',
-      url: 'https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt',
-      path: './ruleset/loyalsoldier/private.yaml',
-    },
-    'gfw': {
-      ...BASIC_RULE_PROVIDER_OPTIONS,
-      behavior: 'domain',
-      url: 'https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt',
-      path: './ruleset/loyalsoldier/gfw.yaml',
-    },
-    'tld-not-cn': {
-      ...BASIC_RULE_PROVIDER_OPTIONS,
-      behavior: 'domain',
-      url: 'https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt',
-      path: './ruleset/loyalsoldier/tld-not-cn.yaml',
-    },
-    'telegramcidr': {
-      ...BASIC_RULE_PROVIDER_OPTIONS,
-      behavior: 'ipcidr',
-      url: 'https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt',
-      path: './ruleset/loyalsoldier/telegramcidr.yaml',
-    },
-    'cncidr': {
-      ...BASIC_RULE_PROVIDER_OPTIONS,
-      behavior: 'ipcidr',
-      url: 'https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt',
-      path: './ruleset/loyalsoldier/cncidr.yaml',
-    },
-    'lancidr': {
-      ...BASIC_RULE_PROVIDER_OPTIONS,
-      behavior: 'ipcidr',
-      url: 'https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt',
-      path: './ruleset/loyalsoldier/lancidr.yaml',
     },
     'applications': {
       ...BASIC_RULE_PROVIDER_OPTIONS,
       behavior: 'classical',
-      url: 'https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt',
+      url: 'https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt',
       path: './ruleset/loyalsoldier/applications.yaml',
-    },
-    'openai': {
-      ...BASIC_RULE_PROVIDER_OPTIONS,
-      behavior: 'classical',
-      url: 'https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml',
-      path: './ruleset/blackmatrix7/openai.yaml',
     },
   }
   // Rules
   const rules = [
-    // Forza Horizon 4
-    'PROCESS-NAME,ForzaHorizon4.exe,全局直连',
-    // half-life launcher
-    'PROCESS-NAME,hl.exe,全局直连',
-    // blackmatrix7 rule set
-    'RULE-SET,openai,ChatGPT',
-    // Loyalsoldier rule set
-    'RULE-SET,applications,全局直连',
-    'RULE-SET,private,全局直连',
-    'RULE-SET,reject,全局拦截',
-    'RULE-SET,icloud,微软服务',
-    'RULE-SET,apple,苹果服务',
-    'RULE-SET,google,谷歌服务',
-    'RULE-SET,proxy,节点选择',
-    'RULE-SET,gfw,节点选择',
-    'RULE-SET,tld-not-cn,节点选择',
-    'RULE-SET,direct,全局直连',
-    'RULE-SET,lancidr,全局直连,no-resolve',
-    'RULE-SET,cncidr,全局直连,no-resolve',
-    'RULE-SET,telegramcidr,电报消息,no-resolve',
-    // Other rules
-    'GEOIP,LAN,全局直连,no-resolve',
-    'GEOIP,CN,全局直连,no-resolve',
-    'MATCH,漏网之鱼',
+    // Games
+    'PROCESS-NAME,ForzaHorizon4.exe,Just Direct', // Forza Horizon 4
+    'PROCESS-NAME,hl.exe,Just Direct', // half-life launcher
+    'RULE-SET,applications,Just Direct',
+    'GEOSITE,category-games@cn,Just Direct',
+    'GEOSITE,steam@cn,Just Direct',
+
+    'GEOSITE,private,Just Direct',
+    'GEOSITE,category-ads-all,Just Reject',
+
+    'GEOSITE,openai,Chat GPT',
+    'GEOSITE,anthropic,Claude',
+    'GEOSITE,microsoft@cn,Just Direct',
+    'GEOSITE,onedrive,Just Direct',
+    'GEOSITE,google,Just Proxy',
+    'GEOSITE,apple-cn,Just Direct',
+    'GEOSITE,youtube,Just Proxy',
+    'GEOSITE,netflix,Just Proxy',
+
+    'GEOSITE,geolocation-!cn,Just Proxy',
+    'GEOSITE,cn,Just Direct',
+
+    'GEOIP,telegram,Just Proxy,no-resolve',
+    'GEOIP,cn,Just Direct,no-resolve',
+
+    'MATCH,Just Match',
   ]
 
   return {
