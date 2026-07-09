@@ -2,7 +2,6 @@ amends "package://github.com/jdx/hk/releases/download/v1.49.0/hk@1.49.0#/Config.
 import "package://github.com/jdx/hk/releases/download/v1.49.0/hk@1.49.0#/Builtins.pkl"
 
 local linters = new Mapping<String, Step> {
-  // Configurations
   ["stylua"] = (Builtins.stylua) {
     glob = List("**/*.lua")
   }
@@ -16,8 +15,27 @@ local linters = new Mapping<String, Step> {
     check_list_files = "pkl format --diff-name-only {{ files }}"
     fix = "pkl format --write {{ files }}"
   }
-
-  // Source code
+  ["nufmt"] {
+    glob = List("**/*.nu")
+    check = "nufmt --dry-run {{ files }}"
+    fix = "nufmt {{ files }}"
+  }
+  ["shfmt"] = (Builtins.shfmt) {
+    glob =
+      List(
+        ".editorconfig",
+        ".gitattributes",
+        ".gitignore",
+        ".npmrc",
+        "dot_gitconfig",
+        "dot_bash_profile",
+      )
+  }
+  ["gotmplfmt"] {
+    glob = List(".chezmoiignore", "**/*.tmpl")
+    check_list_files = "bun run ./cli/gotmplfmt-check.js {{ files }}"
+    fix = "gotmplfmt -w {{ files }}"
+  }
   ["oxlint"] = Builtins.ox_lint
   ["eslint"] = (Builtins.eslint) {
     batch = false
@@ -46,14 +64,6 @@ local linters = new Mapping<String, Step> {
         "*.toml",
       )
     depends = List("oxlint")
-  }
-  ["nufmt"] {
-    glob = List("**/*.nu")
-    check = "nufmt --dry-run {{ files }}"
-    fix = "nufmt {{ files }}"
-  }
-  ["shfmt"] = (Builtins.shfmt) {
-    glob = List("dot_gitconfig", "dot_bash_profile")
   }
 }
 

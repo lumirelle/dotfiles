@@ -13,25 +13,25 @@ scripts/**
 README.md
 
 {{ if ne .chezmoi.os "windows" }}
-AppData
-Documents
-**/*.reg
-**/*.cmd
-**/*.ps1
+	AppData
+	Documents
+	**/*.reg
+	**/*.cmd
+	**/*.ps1
 {{ else }}
-.bash_profile
-**/*.sh
-.config/nvim
+	.bash_profile
+	**/*.sh
+	.config/nvim
 {{ end }}
 
 {{ if ne .chezmoi.os "darwin" }}
-Library
+	Library
 {{ end }}
 
 {{ if ne .chezmoi.os "linux" }}
-.local
-.config/nushell
-.config/Code
-.config/Cursor
-.config/Zed
+	.local
+	.config/nushell
+	.config/Code
+	.config/Cursor
+	.config/Zed
 {{ end }}

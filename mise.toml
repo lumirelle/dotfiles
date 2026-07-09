@@ -1,19 +1,24 @@
 [env]
-_.path = [ "./node_modules/.bin" ]
+_.path = [
+  "./node_modules/.bin",
+  "./cli"
+]
 
 RUSTUP_TOOLCHAIN = "1.96.1-x86_64-pc-windows-gnu"
 
 [tools]
 # Environments
-bun = "1.3.14"
-aube = "1.26.0"
-rust = "1.96.1"
+bun = "latest"
+aube = "latest"
+rust = "latest"
+go = "latest"
 # Linters & Formatters
-hk = "1.50.0"
-stylua = "2.5.2"
-pkl = "0.31.1"
+hk = "latest"
+stylua = "latest"
+pkl = "latest"
 "cargo:https://github.com/nushell/nufmt" = "branch:main"
 shfmt = "latest"
+"go:github.com/gohugoio/gotmplfmt" = "latest"
 
 [deps.bun-aube]
 description = "Automatically install dependencies via aube & bun's lockfile."
