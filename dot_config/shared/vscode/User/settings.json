@@ -433,6 +433,15 @@
   // #region Behavior / Dev Experience
   // Markdown
   "markdown.extension.italic.indicator": "_",
+  // YAML
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ],
   // Mise
   "mise.autoDetectMiseBinPath": false,
   // Dev Containers
