@@ -1,4 +1,5 @@
 .lazy.lua
+.vscode
 .oxlintrc.json
 eslint.config.js
 taze.config.ts

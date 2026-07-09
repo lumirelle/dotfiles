@@ -1,5 +1,6 @@
 // cspell:disable
 {
+  // Extension Count: 22 + $DEFAULT_VSCODE = 57
   "recommendations": [
     // #region Appearance / Editor
     // Lens
@@ -7,7 +8,6 @@
     // Hint
     "ruban-s.fast-import-cost",
     "antfu.pnpm-catalog-lens",
-    "wallabyjs.console-ninja",
     "antfu.iconify",
     // #endregion
 
@@ -21,6 +21,12 @@
     // #endregion
 
     // #region Behavior / Dev Experience
+    // Zig
+    "ziglang.vscode-zig",
+    // Rust
+    "rust-lang.rust-analyzer",
+    // Go
+    "golang.go",
     // JavaScript / TypeScript
     "johnsoncodehk.vscode-tsconfig-helper",
     "npmx-dev.vscode-npmx",
@@ -45,7 +51,4 @@
     "dbaeumer.vscode-eslint"
     // #endregion
   ]
-  // Extension Count
-  // VSCODE: 20 + $DEFAULT_VSCODE = 55
-  // CURSOR: 20 + $DEFAULT_CURSOR = 55
 }

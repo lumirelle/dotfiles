@@ -1,5 +1,6 @@
 // cspell:disable
 {
+  // Extension Count: 35
   "recommendations": [
     // #region Appearance / Theme
     "andreilucaci.everforest-pro",
@@ -89,7 +90,4 @@
     "lumirelle.shell-format-rev"
     // #endregion
   ]
-  // Extension Count
-  // VSCODE: 35
-  // CURSOR: 35
 }
