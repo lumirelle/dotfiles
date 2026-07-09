@@ -15,8 +15,6 @@ My dotfiles (also application files), out-of-box (for me).
   - Git
 - Devtools Manager
   - Mise
-- Package Manager
-  - Maven (JVM Language)
 - Editors
   - Neovim
   - VSCode

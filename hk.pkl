@@ -61,7 +61,6 @@ local linters = new Mapping<String, Step> {
         "*.yaml",
         "*.yml",
         "*.toml",
-        "*.xml",
       )
     depends = List("oxlint")
   }

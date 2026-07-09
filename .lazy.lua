@@ -20,7 +20,6 @@ local eslint_support_filetypes = {
   -- ML
   "yaml",
   "toml",
-  "xml",
 }
 local eslint_support_file_patterns = {
   -- JS & TS
@@ -43,7 +42,6 @@ local eslint_support_file_patterns = {
   "*.yaml",
   "*.yml",
   "*.toml",
-  "*.xml",
 }
 -- Disable other formatter conflict with ESLint
 require("snacks").util.lsp.on(function(_, client)
