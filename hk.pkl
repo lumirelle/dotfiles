@@ -74,6 +74,7 @@ hooks {
   }
   ["fix"] {
     fix = true
+    stage = false
     steps = linters
   }
   ["check"] {
