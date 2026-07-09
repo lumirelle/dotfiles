@@ -47,6 +47,11 @@ local linters = new Mapping<String, Step> {
       )
     depends = List("oxlint")
   }
+  ["nufmt"] {
+    glob = List("**/*.nu")
+    check = "nufmt --dry-run {{ files }}"
+    fix = "nufmt {{ files }}"
+  }
 }
 
 hooks {
