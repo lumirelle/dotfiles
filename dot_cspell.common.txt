@@ -1,1 +1,12 @@
 lumirelle
+
+stylua
+
+nufmt
+
+shfmt
+
+gotmplfmt
+tmpl
+
+oxlint

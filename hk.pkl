@@ -33,7 +33,7 @@ local linters = new Mapping<String, Step> {
   }
   ["gotmplfmt"] {
     glob = List(".chezmoiignore", "**/*.tmpl")
-    check_list_files = "bun run ./cli/gotmplfmt-check.js {{ files }}"
+    check_list_files = "bun run ./scripts/gotmplfmt-check.js {{ files }}"
     fix = "gotmplfmt -w {{ files }}"
   }
   ["oxlint"] = Builtins.ox_lint
