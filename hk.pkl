@@ -57,11 +57,11 @@ local linters = new Mapping<String, Step> {
         // JSON
         "*.json",
         "*.jsonc",
-        // YAML
+        // ML
         "*.yaml",
         "*.yml",
-        // TOML
         "*.toml",
+        "*.xml",
       )
     depends = List("oxlint")
   }

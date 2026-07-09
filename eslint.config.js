@@ -11,6 +11,11 @@ export default antfu(
     // The same for WindowsTerminal.
     ignores: ['**/rime/**/*', '**/Microsoft.WindowsTerminal_8wekyb3d8bbwe/**/*'],
 
+    // XML formatter
+    formatters: {
+      xml: true,
+    },
+
     // Overrides
     perfectionist: {
       overrides: {

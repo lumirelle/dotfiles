@@ -17,10 +17,10 @@ local eslint_support_filetypes = {
   -- JSON
   "json",
   "jsonc",
-  -- YAML
+  -- ML
   "yaml",
-  -- TOML
   "toml",
+  "xml",
 }
 local eslint_support_file_patterns = {
   -- JS & TS
@@ -39,11 +39,11 @@ local eslint_support_file_patterns = {
   -- JSON
   "*.json",
   "*.jsonc",
-  -- YAML
+  -- ML
   "*.yaml",
   "*.yml",
-  -- TOML
   "*.toml",
+  "*.xml",
 }
 -- Disable other formatter conflict with ESLint
 require("snacks").util.lsp.on(function(_, client)
