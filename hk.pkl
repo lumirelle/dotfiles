@@ -28,7 +28,7 @@ local linters = new Mapping<String, Step> {
         "**/.gitignore",
         "**/.npmrc",
         "dot_gitconfig",
-        "dot_bash_profile",
+        "dot_profile",
       )
   }
   ["gotmplfmt"] {

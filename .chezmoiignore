@@ -21,7 +21,7 @@ nufmt.nuon
 	**/*.cmd
 	**/*.ps1
 {{ else }}
-	.bash_profile
+	.profile
 	**/*.sh
 	.config/nvim
 {{ end }}
