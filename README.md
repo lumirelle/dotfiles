@@ -13,7 +13,9 @@ My dotfiles (also application files), out-of-box (for me).
   - Starship
 - Source Control
   - Git
-- Devtools Manager
+- System Manager
+  - Chezmoi
+  - Nix Home Manager
   - Mise
 - Editors
   - Neovim
