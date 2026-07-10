@@ -15,7 +15,7 @@ function main(config) {
   return config
 }
 
-const NO_STANDARD_PROXY_REG = /官\s*网|流量|到期|重置|订阅|说明|提示|剩余|套餐|导航|Traffic|Expire|Reset/
+const NO_STANDARD_PROXY_REG = /官\s*网|到期|重置|订阅|说明|提示|剩余|套餐|导航|Traffic|Expire|Reset/
 /**
  * Custom proxies and groups
  *
