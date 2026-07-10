@@ -1,10 +1,10 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions":
+    "actions": 
     [
         {
-            "command":
+            "command": 
             {
                 "action": "sendInput",
                 "input": "\u001b[46;5u"
@@ -16,7 +16,7 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
-    "keybindings":
+    "keybindings": 
     [
         {
             "id": "Terminal.DuplicatePaneAuto",
@@ -28,20 +28,20 @@
         }
     ],
     "launchMode": "maximized",
-    "newTabMenu":
+    "newTabMenu": 
     [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles":
+    "profiles": 
     {
-        "defaults":
+        "defaults": 
         {
             "backgroundImage": "desktopWallpaper",
             "backgroundImageOpacity": 0.3,
             "colorScheme": "Everforest Dark Hard",
-            "font":
+            "font": 
             {
                 "face": "'0xProto', 'Symbols Nerd Font Mono', 'Maple Mono WD CN'"
             },
@@ -49,7 +49,7 @@
             "rightClickContextMenu": true,
             "useAcrylic": true
         },
-        "list":
+        "list": 
         [
             {
                 "commandline": "\"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -nologo",
@@ -67,94 +67,110 @@
                 "hidden": false,
                 "name": "Nushell",
                 "source": "nu"
+            },
+            {
+                "guid": "{1adc8a3a-ed8c-549a-8b10-489c9f597b19}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Microsoft.WSL"
             }
         ]
     },
-    "schemes": [
+    "schemes": 
+    [
         {
+            "background": "#272E33",
+            "black": "#414B50",
+            "blue": "#7FBBB3",
+            "brightBlack": "#414B50",
+            "brightBlue": "#7FBBB3",
+            "brightCyan": "#83C092",
+            "brightGreen": "#A7C080",
+            "brightPurple": "#D699B6",
+            "brightRed": "#E67E80",
+            "brightWhite": "#D3C6AA",
+            "brightYellow": "#DBBC7F",
+            "cursorColor": "#D3C6AA",
+            "cyan": "#83C092",
+            "foreground": "#D3C6AA",
+            "green": "#A7C080",
             "name": "Everforest Dark Hard",
-
-            "cursorColor": "#D3C6AA", // fg
-            "selectionBackground": "#4C3743", // bg_visual
-
-            "background": "#272E33", // bg0
-            "foreground": "#D3C6AA", // fg
-
-            "black": "#414B50", // bg3
-            "red": "#E67E80", // red
-            "green": "#A7C080", // green
-            "yellow": "#DBBC7F", // yellow
-            "blue": "#7FBBB3", // blue
-            "purple": "#D699B6", // purple
-            "cyan": "#83C092", // aqua
-            "white": "#D3C6AA", // fg
-
-            "brightBlack": "#414B50", // bg3
-            "brightRed": "#E67E80", // red
-            "brightGreen": "#A7C080", // green
-            "brightYellow": "#DBBC7F", // yellow
-            "brightBlue": "#7FBBB3", // blue
-            "brightPurple": "#D699B6", // purple
-            "brightCyan": "#83C092", // aqua
-            "brightWhite": "#D3C6AA" // fg
+            "purple": "#D699B6",
+            "red": "#E67E80",
+            "selectionBackground": "#4C3743",
+            "white": "#D3C6AA",
+            "yellow": "#DBBC7F"
         },
         {
+            "background": "#FFFBEF",
+            "black": "#5C6A72",
+            "blue": "#3A94C5",
+            "brightBlack": "#5C6A72",
+            "brightBlue": "#3A94C5",
+            "brightCyan": "#35A77C",
+            "brightGreen": "#8DA101",
+            "brightPurple": "#DF69BA",
+            "brightRed": "#F85552",
+            "brightWhite": "#EDEADA",
+            "brightYellow": "#DFA000",
+            "cursorColor": "#5C6A72",
+            "cyan": "#35A77C",
+            "foreground": "#5C6A72",
+            "green": "#8DA101",
             "name": "Everforest Light Hard",
-
-            "cursorColor": "#5C6A72", // fg
-            "selectionBackground": "#F0F2D4", // bg_visual
-
-            "background": "#FFFBEF", // bg0
-            "foreground": "#5C6A72", // fg
-
-            "black": "#5C6A72", // fg
-            "red": "#F85552", // red
-            "green": "#8DA101", // green
-            "yellow": "#DFA000", // yellow
-            "blue": "#3A94C5", // blue
-            "purple": "#DF69BA", // purple
-            "cyan": "#35A77C", // aqua
-            "white": "#EDEADA", // bg3
-
-            "brightBlack": "#5C6A72", // fg
-            "brightRed": "#F85552", // red
-            "brightGreen": "#8DA101", // green
-            "brightYellow": "#DFA000", // yellow
-            "brightBlue": "#3A94C5", // blue
-            "brightPurple": "#DF69BA", // purple
-            "brightCyan": "#35A77C", // aqua
-            "brightWhite": "#EDEADA" // bg3
+            "purple": "#DF69BA",
+            "red": "#F85552",
+            "selectionBackground": "#F0F2D4",
+            "white": "#EDEADA",
+            "yellow": "#DFA000"
         }
     ],
-    "themes": [
+    "themes": 
+    [
         {
             "name": "Everforest Dark Hard",
-            "tab": {
-                "background": "#272E33FF", // bg0
+            "tab": 
+            {
+                "background": "#272E33FF",
+                "iconStyle": "default",
                 "showCloseButton": "always",
                 "unfocusedBackground": null
             },
-            "tabRow": {
-                "background": "#1E2326FF", // bg_dim
-                "unfocusedBackground": "#1E2326FF" // bg_dim
+            "tabRow": 
+            {
+                "background": "#1E2326FF",
+                "unfocusedBackground": "#1E2326FF"
             },
-            "window": {
-                "applicationTheme": "dark"
+            "window": 
+            {
+                "applicationTheme": "dark",
+                "experimental.rainbowFrame": false,
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
             }
         },
         {
             "name": "Everforest Light Hard",
-            "tab": {
-                "background": "#FFFBEFFF", // bg0
+            "tab": 
+            {
+                "background": "#FFFBEFFF",
+                "iconStyle": "default",
                 "showCloseButton": "always",
                 "unfocusedBackground": null
             },
-            "tabRow": {
-                "background": "#F2EFDFFF", // bg_dim
-                "unfocusedBackground": "#F2EFDFFF" // bg_dim
+            "tabRow": 
+            {
+                "background": "#F2EFDFFF",
+                "unfocusedBackground": "#F2EFDFFF"
             },
-            "window": {
-                "applicationTheme": "light"
+            "window": 
+            {
+                "applicationTheme": "light",
+                "experimental.rainbowFrame": false,
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
             }
         }
     ]

@@ -6,10 +6,9 @@ export default antfu(
   {
     // Strict lib type
     type: 'lib',
-    // Keep rime config style as it is,
+    // Keep some configs style as their are,
     // to reduce the differences while updating.
-    // The same for WindowsTerminal.
-    ignores: ['**/rime/**/*', '**/Microsoft.WindowsTerminal_8wekyb3d8bbwe/**/*'],
+    ignores: ['**/Microsoft.WindowsTerminal_8wekyb3d8bbwe/**/*', 'dot_config/shared/clash-verge-rev/verge.yaml'],
 
     // Overrides
     perfectionist: {
