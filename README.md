@@ -15,7 +15,7 @@ My dotfiles (also application files), out-of-box (for me).
   - Git
 - System Manager
   - Chezmoi
-  - Nix Home Manager
+  - Nix
   - Mise
 - Editors
   - Neovim
