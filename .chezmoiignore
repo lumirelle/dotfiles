@@ -34,6 +34,5 @@ nufmt.nuon
 	.local
 	.config/nushell
 	.config/Code
-	.config/Cursor
 	.config/Zed
 {{ end }}
