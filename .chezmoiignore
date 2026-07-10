@@ -21,9 +21,9 @@ nufmt.nuon
 	**/*.cmd
 	**/*.ps1
 {{ else }}
+	.config/nvim
 	.profile
 	**/*.sh
-	.config/nvim
 {{ end }}
 
 {{ if ne .chezmoi.os "darwin" }}
@@ -31,8 +31,17 @@ nufmt.nuon
 {{ end }}
 
 {{ if ne .chezmoi.os "linux" }}
-	.local
+	.local/shared/io.github.clash-verge-rev.clash-verge-rev
 	.config/nushell
 	.config/Code
 	.config/Zed
+{{ else }}
+	{{ if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+		.local/shared/io.github.clash-verge-rev.clash-verge-rev
+		.config/shared/clash-verge-rev
+		.config/Code
+		.config/shared/vscode
+		.config/Zed
+		.config/shared/zed
+	{{ end }}
 {{ end }}
