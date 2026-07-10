@@ -1,10 +1,10 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
+    "actions":
     [
         {
-            "command": 
+            "command":
             {
                 "action": "sendInput",
                 "input": "\u001b[46;5u"
@@ -16,7 +16,7 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
-    "keybindings": 
+    "keybindings":
     [
         {
             "id": "Terminal.DuplicatePaneAuto",
@@ -28,20 +28,20 @@
         }
     ],
     "launchMode": "maximized",
-    "newTabMenu": 
+    "newTabMenu":
     [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": 
+    "profiles":
     {
-        "defaults": 
+        "defaults":
         {
             "backgroundImage": "desktopWallpaper",
             "backgroundImageOpacity": 0.3,
             "colorScheme": "Everforest Dark Hard",
-            "font": 
+            "font":
             {
                 "face": "'0xProto', 'Symbols Nerd Font Mono', 'Maple Mono WD CN'"
             },
@@ -49,7 +49,7 @@
             "rightClickContextMenu": true,
             "useAcrylic": true
         },
-        "list": 
+        "list":
         [
             {
                 "commandline": "\"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -nologo",
@@ -60,23 +60,18 @@
             {
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "hidden": false
+                "hidden": false,
+                "name": "Command Prompt"
             },
             {
                 "guid": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
                 "hidden": false,
                 "name": "Nushell",
                 "source": "nu"
-            },
-            {
-                "guid": "{1adc8a3a-ed8c-549a-8b10-489c9f597b19}",
-                "hidden": false,
-                "name": "Ubuntu",
-                "source": "Microsoft.WSL"
             }
         ]
     },
-    "schemes": 
+    "schemes":
     [
         {
             "background": "#272E33",
@@ -125,23 +120,23 @@
             "yellow": "#DFA000"
         }
     ],
-    "themes": 
+    "themes":
     [
         {
             "name": "Everforest Dark Hard",
-            "tab": 
+            "tab":
             {
                 "background": "#272E33FF",
                 "iconStyle": "default",
                 "showCloseButton": "always",
                 "unfocusedBackground": null
             },
-            "tabRow": 
+            "tabRow":
             {
                 "background": "#1E2326FF",
                 "unfocusedBackground": "#1E2326FF"
             },
-            "window": 
+            "window":
             {
                 "applicationTheme": "dark",
                 "experimental.rainbowFrame": false,
@@ -152,19 +147,19 @@
         },
         {
             "name": "Everforest Light Hard",
-            "tab": 
+            "tab":
             {
                 "background": "#FFFBEFFF",
                 "iconStyle": "default",
                 "showCloseButton": "always",
                 "unfocusedBackground": null
             },
-            "tabRow": 
+            "tabRow":
             {
                 "background": "#F2EFDFFF",
                 "unfocusedBackground": "#F2EFDFFF"
             },
-            "window": 
+            "window":
             {
                 "applicationTheme": "light",
                 "experimental.rainbowFrame": false,
