@@ -1,22 +1,18 @@
 [env]
-_.path = [
-  "./node_modules/.bin",
-  "./cli"
-]
-
-RUSTUP_TOOLCHAIN = "1.96.1-x86_64-pc-windows-gnu"
+_.path = [ "./node_modules/.bin" ]
 
 [tools]
 # Environments
 bun = "latest"
+node = "24"
 aube = "latest"
-rust = "latest"
+rust = "stable-gnu"
 go = "latest"
 # Linters & Formatters
 hk = "latest"
 stylua = "latest"
 pkl = "latest"
-"cargo:https://github.com/nushell/nufmt" = "branch:main"
+"cargo:https://github.com/nushell/nufmt" = "HEAD"
 shfmt = "latest"
 "go:github.com/gohugoio/gotmplfmt" = "latest"
 

@@ -2,25 +2,62 @@
 experimental = true
 lockfile = true
 
-[tools]
-# -- System Appearance
-"github:Tatsu-syo/noMeiryoUI" = { os = "windows", version_prefix = "TAG-", version = "3.4.2", asset_pattern = "noMeiryoUI*.zip" }
+# System Appearance
+[tools."github:Tatsu-syo/noMeiryoUI"]
+os = "windows"
+version = "3.4.2"
+version_prefix = "TAG-"
+asset_pattern = "noMeiryoUI*.zip"
+
+[tools."github:lumirelle/input-tip"]
+os = "windows"
+version = "4.1.0"
+asset_pattern = "input-tip.zip"
+
+# System Input Method
+[tools."http:im-select"]
+os = "windows"
+version = "1.0.1"
+url = "https://github.com/daipeihust/im-select/raw/refs/heads/master/win/out/x64/im-select.exe"
+checksum = "sha256:e66f0a6e30b9f20787c7d4a1c57b8f2b518d36c1c7cbdbbb6220d51226ddd0b6"
+
+[tools."github:laishulu/macism"]
+os = "macos"
+version = "3.1.1"
+
+# Development Environment
+# -- Shell
+[tools."aqua:nushell/nushell"]
+version = "latest"
+
+[tools.starship]
+version = "latest"
+
+# -- CLI / TUI Tools
+[tools.zoxide]
+version = "latest"
+
+[tools.yazi]
+version = "latest"
+
+[tools.fd]
+version = "latest"
+
+[tools.ripgrep]
+version = "latest"
+
+[tools.tree-sitter]
+version = "latest"
+
+[tools.lazygit]
+version = "latest"
+
+[tools.hyperfine]
+version = "latest"
+
 # -- Language Support
-bun = "1.3.14"
-node = "24.18.0"
-zig = "0.16.0"
-go = "1.26.4"
-java = "graalvm-community-25.0.2"
-"github:niXman/mingw-builds-binaries" = { os = "windows", version = "16.1.0-rt_v14-rev1", version_prefix = "", asset_pattern = "x86_64-*-release-posix-seh-ucrt-*.7z" }
-# -- Development Experience
-zoxide = "latest"
-yazi = "latest"
-fd = "latest"
-ripgrep = "latest"
-tree-sitter = "latest"
-lazygit = "latest"
-"http:im-select" = { os = "windows", version = "1.0.1", url = "https://github.com/daipeihust/im-select/raw/refs/heads/master/win/out/x64/im-select.exe" }
-"github:laishulu/macism" = { version = "3.1.1", os = "macos", platforms = { macos-arm64 = { asset_pattern = "macism-arm64" }, macos-x64 = { asset_pattern = "macism-x86_64" } } }
-"github:lumirelle/input-tip" = { version = "4.1.0", os = "windows", asset_pattern = "input-tip.zip" }
-# -- Performance
-hyperfine = "latest"
+[tools."github:niXman/mingw-builds-binaries"]
+os = "windows"
+version = "16.1.0-rt_v14-rev1"
+version_prefix = ""
+asset_pattern = "x86_64-*-release-posix-seh-ucrt-*.7z"

@@ -22,9 +22,7 @@ nufmt.nuon
 	**/*.ps1
 {{ else }}
 	.config/nvim
-	.config/home-manager
 	.profile
-	.nix-channels
 	**/*.sh
 {{ end }}
 
