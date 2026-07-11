@@ -1,11 +1,10 @@
-# UI
-mkdir ($nu.data-dir | path join "vendor/autoload")
-starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
-
 # Environment
 ## Mise, https://mise.jdx.dev/
 mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
 $env.PODMAN_COMPOSE_WARNING_LOGS = false
+## Starship, https://starship.rs/
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 ## Zoxide, https://github.com/ajeetdsouza/zoxide
 zoxide init nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
 

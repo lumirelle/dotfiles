@@ -15,12 +15,11 @@ if [ -d "$HOME/.local/bin" ]; then
   PATH="$HOME/.local/bin:$PATH"
 fi
 
-# UI
-eval "$(starship init bash)"
-
 # Environment
 ## Mise, https://mise.jdx.dev/
 eval "$(mise activate bash)"
+## Starship, https://starship.rs/
+eval "$(starship init bash)"
 ## Zoxide, https://github.com/ajeetdsouza/zoxide
 eval "$(zoxide init bash)"
 ## Podman

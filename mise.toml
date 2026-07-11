@@ -12,7 +12,7 @@ go = "latest"
 hk = "latest"
 stylua = "latest"
 pkl = "latest"
-"cargo:https://github.com/nushell/nufmt" = "HEAD"
+"cargo:https://github.com/nushell/nufmt" = "branch:main"
 shfmt = "latest"
 "go:github.com/gohugoio/gotmplfmt" = "latest"
 

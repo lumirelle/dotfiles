@@ -1,12 +1,13 @@
 # Encoding
 $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [Text.Encoding]::UTF8
 
-# UI
-Invoke-Expression (&starship init powershell)
+
 
 # Environment
 ## Mise, https://mise.jdx.dev/
 (&mise activate pwsh) | Out-String | Invoke-Expression
+## Starship, https://starship.rs/
+Invoke-Expression (&starship init powershell)
 ## Zoxide, https://github.com/ajeetdsouza/zoxide
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 ## Podman
