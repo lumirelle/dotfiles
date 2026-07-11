@@ -20,8 +20,8 @@ collapse_navbar: false
 sysproxy_tray_icon: false
 tun_tray_icon: false
 enable_tun_mode: true
-enable_auto_launch: false
-enable_silent_start: false
+enable_auto_launch: true
+enable_silent_start: true
 enable_system_proxy: false
 enable_proxy_guard: false
 enable_bypass_check: true
