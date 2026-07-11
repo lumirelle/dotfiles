@@ -1,7 +1,15 @@
 # Encoding
 $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [Text.Encoding]::UTF8
 
-
+# System Environment
+## set PATH so it includes user's private bin if it exists
+if (Test-Path "$env:USERPROFILE\bin") { 
+  $env:PATH = "$env:USERPROFILE\bin;$env:PATH"
+}
+## set PATH so it includes user's private bin if it exists
+if (Test-Path "$env:USERPROFILE\.local\bin") { 
+  $env:PATH = "$env:USERPROFILE\.local\bin;$env:PATH"
+}
 
 # Environment
 ## Mise, https://mise.jdx.dev/

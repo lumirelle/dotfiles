@@ -1,9 +1,19 @@
+# System Environment
+## set PATH so it includes user's private bin if it exists
+if ($"($env.HOME)/bin" | path exists) { 
+  $env.PATH = ($env.PATH | prepend $"($env.HOME)/bin")
+}
+## set PATH so it includes user's private bin if it exists
+if ($"($env.HOME)/.local/bin" | path exists) { 
+  $env.PATH = ($env.PATH | prepend $"($env.HOME)/.local/bin")
+}
+
 # Environment
+mkdir ($nu.data-dir | path join "vendor/autoload")
 ## Mise, https://mise.jdx.dev/
 mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
 $env.PODMAN_COMPOSE_WARNING_LOGS = false
 ## Starship, https://starship.rs/
-mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 ## Zoxide, https://github.com/ajeetdsouza/zoxide
 zoxide init nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
