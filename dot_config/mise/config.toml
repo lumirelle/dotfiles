@@ -26,17 +26,7 @@ os = "macos"
 version = "3.1.1"
 
 # Development Environment
-# -- Shell
-[tools."aqua:nushell/nushell"]
-version = "latest"
-
-[tools.starship]
-version = "latest"
-
 # -- CLI / TUI Tools
-[tools.zoxide]
-version = "latest"
-
 [tools.yazi]
 version = "latest"
 
