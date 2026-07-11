@@ -24,6 +24,7 @@ nufmt.nuon
 	.config/nvim
 	.config/home-manager
 	.profile
+	.nix-channels
 	**/*.sh
 {{ end }}
 
