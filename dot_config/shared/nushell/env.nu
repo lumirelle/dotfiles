@@ -1,10 +1,10 @@
 # System Environment
 ## set PATH so it includes user's private bin if it exists
-if ($"($env.HOME)/bin" | path exists) { 
+if ($"($env.HOME?)/bin" | path exists) { 
   $env.PATH = ($env.PATH | prepend $"($env.HOME)/bin")
 }
 ## set PATH so it includes user's private bin if it exists
-if ($"($env.HOME)/.local/bin" | path exists) { 
+if ($"($env.HOME?)/.local/bin" | path exists) { 
   $env.PATH = ($env.PATH | prepend $"($env.HOME)/.local/bin")
 }
 
