@@ -32,6 +32,9 @@ symbol = " "
 
 [directory]
 read_only = " 󰌾"
+truncate_to_repo = false
+truncation_length = 0
+use_os_path_sep = false
 
 [docker_context]
 symbol = " "
@@ -80,6 +83,9 @@ symbol = " "
 
 [hostname]
 ssh_symbol = " "
+ssh_only = false
+format = "[$ssh_symbol$hostname:]($style) "
+style = "bold green"
 
 [java]
 symbol = " "
@@ -197,6 +203,11 @@ symbol = " "
 
 [swift]
 symbol = " "
+
+[username]
+show_always = true
+format = "[$user@]($style)"
+style_user = "bold green"
 
 [xmake]
 symbol = " "
