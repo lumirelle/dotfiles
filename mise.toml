@@ -6,7 +6,7 @@ _.path = [ "./node_modules/.bin" ]
 bun = "latest"
 node = "24"
 aube = "latest"
-rust = "stable-gnu"
+rust = "stable-gnullvm"
 go = "latest"
 # Linters & Formatters
 hk = "latest"
