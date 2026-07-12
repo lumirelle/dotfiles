@@ -28,8 +28,8 @@ function customProxiesAndGroups(config) {
 
   // Proxy group options
   const BASIC_GROUP_OPTIONS = {
-    'url': 'http://www.gstatic.com/generate_204 ',
-    'interval': 300,
+    'url': 'https://www.google.com/generate_204',
+    'interval': 180,
     'timeout': 3_000,
     'lazy': true,
     'max-failed-times': 3,
@@ -198,6 +198,48 @@ function customProvidersAndRules() {
       url: 'https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt',
       path: './ruleset/loyalsoldier/applications.yaml',
     },
+    'private': {
+      ...BASIC_RULE_PROVIDER_OPTIONS,
+      behavior: 'domain',
+      url: 'https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt',
+      path: './ruleset/loyalsoldier/private.yaml',
+    },
+    'reject': {
+      ...BASIC_RULE_PROVIDER_OPTIONS,
+      behavior: 'domain',
+      url: 'https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt',
+      path: './ruleset/loyalsoldier/reject.yaml',
+    },
+    'proxy': {
+      ...BASIC_RULE_PROVIDER_OPTIONS,
+      behavior: 'domain',
+      url: 'https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt',
+      path: './ruleset/loyalsoldier/proxy.yaml',
+    },
+    'direct': {
+      ...BASIC_RULE_PROVIDER_OPTIONS,
+      behavior: 'domain',
+      url: 'https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt',
+      path: './ruleset/loyalsoldier/direct.yaml',
+    },
+    'lancidr': {
+      ...BASIC_RULE_PROVIDER_OPTIONS,
+      behavior: 'ipcidr',
+      url: 'https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt',
+      path: './ruleset/loyalsoldier/lancidr.yaml',
+    },
+    'cncidr': {
+      ...BASIC_RULE_PROVIDER_OPTIONS,
+      behavior: 'ipcidr',
+      url: 'https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt',
+      path: './ruleset/loyalsoldier/cncidr.yaml',
+    },
+    'telegramcidr': {
+      ...BASIC_RULE_PROVIDER_OPTIONS,
+      behavior: 'ipcidr',
+      url: 'https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt',
+      path: './ruleset/loyalsoldier/telegramcidr.yaml',
+    },
   }
   // Rules
   const rules = [
@@ -208,8 +250,8 @@ function customProvidersAndRules() {
     'GEOSITE,category-games@cn,Just Direct',
     'GEOSITE,steam@cn,Just Direct',
 
-    'GEOSITE,private,Just Direct',
-    'GEOSITE,category-ads-all,Just Reject',
+    'RULE-SET,private,Just Direct',
+    'RULE-SET,reject,Just Reject',
 
     'GEOSITE,openai,Chat GPT',
     'GEOSITE,anthropic,Claude',
@@ -220,11 +262,14 @@ function customProvidersAndRules() {
     'GEOSITE,youtube,Just Proxy',
     'GEOSITE,netflix,Just Proxy',
 
-    'GEOSITE,geolocation-!cn,Just Proxy',
-    'GEOSITE,cn,Just Direct',
+    'RULE-SET,proxy,Just Proxy',
+    'RULE-SET,direct,Just Direct',
 
-    'GEOIP,telegram,Just Proxy,no-resolve',
-    'GEOIP,cn,Just Direct,no-resolve',
+    'RULE-SET,lancidr,Just Direct',
+    'RULE-SET,cncidr,Just Direct',
+    'RULE-SET,telegramcidr,Just Proxy',
+    'GEOIP,LAN,Just Direct',
+    'GEOIP,CN,Just Direct',
 
     'MATCH,Just Match',
   ]
