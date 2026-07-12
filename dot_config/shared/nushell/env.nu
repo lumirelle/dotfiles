@@ -12,7 +12,12 @@ if ($"($env.HOME?)/.local/bin" | path exists) {
 mkdir ($nu.data-dir | path join "vendor/autoload")
 ## Mise, https://mise.jdx.dev/
 mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
-$env.PATH = ($env.PATH | prepend $"($env.HOME)/.local/share/mise/shims")
+if ($"($env.HOME?)/.local/share/mise/shims" | path exists) {
+  $env.PATH = ($env.PATH | prepend $"($env.HOME?)/.local/share/mise/shims")
+}
+if ($"($env.LOCALAPPDATA?)/mise/shims" | path exists) {
+  $env.PATH = ($env.PATH | prepend $"($env.LOCALAPPDATA?)/mise/shims")
+}
 ## Starship, https://starship.rs/
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 ## Zoxide, https://github.com/ajeetdsouza/zoxide

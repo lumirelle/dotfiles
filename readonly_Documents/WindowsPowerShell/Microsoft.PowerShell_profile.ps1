@@ -3,18 +3,20 @@ $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [Text.E
 
 # System Environment
 ## set PATH so it includes user's private bin if it exists
-if (Test-Path "$env:USERPROFILE\bin") { 
+if (Test-Path "$env:USERPROFILE\bin") {
   $env:PATH = "$env:USERPROFILE\bin;$env:PATH"
 }
 ## set PATH so it includes user's private bin if it exists
-if (Test-Path "$env:USERPROFILE\.local\bin") { 
+if (Test-Path "$env:USERPROFILE\.local\bin") {
   $env:PATH = "$env:USERPROFILE\.local\bin;$env:PATH"
 }
 
 # Environment
 ## Mise, https://mise.jdx.dev/
 (&mise activate pwsh) | Out-String | Invoke-Expression
-$env:PATH = "$env:LOCALAPPDATA\mise\shims;$env:PATH"
+if (Test-Path "$env:LOCALAPPDATA\mise\shims") {
+  $env:PATH = "$env:LOCALAPPDATA\mise\shims;$env:PATH"
+}
 ## Starship, https://starship.rs/
 Invoke-Expression (&starship init powershell)
 ## Zoxide, https://github.com/ajeetdsouza/zoxide

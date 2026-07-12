@@ -18,7 +18,9 @@ fi
 # Environment
 ## Mise, https://mise.jdx.dev/
 eval "$(mise activate bash)"
-PATH="$HOME/.local/share/mise/shims:$PATH"
+if [ -d "$HOME/.local/share/mise/shims" ]; then
+  PATH="$HOME/.local/share/mise/shims:$PATH"
+fi
 ## Starship, https://starship.rs/
 eval "$(starship init bash)"
 ## Zoxide, https://github.com/ajeetdsouza/zoxide
