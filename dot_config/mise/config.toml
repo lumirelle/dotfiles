@@ -2,6 +2,9 @@
 experimental = true
 lockfile = true
 
+[tools]
+clang = "latest"
+
 # System Appearance
 [tools."github:Tatsu-syo/noMeiryoUI"]
 os = "windows"
@@ -44,10 +47,3 @@ version = "latest"
 
 [tools.hyperfine]
 version = "latest"
-
-# -- Language Support
-[tools."github:niXman/mingw-builds-binaries"]
-os = "windows"
-version = "16.1.0-rt_v14-rev1"
-version_prefix = ""
-asset_pattern = "x86_64-*-release-posix-seh-ucrt-*.7z"
