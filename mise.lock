@@ -110,10 +110,6 @@ url = "https://github.com/oven-sh/bun/releases/download/bun-v1.3.14/bun-windows-
 version = "branch:main"
 backend = "cargo:https://github.com/nushell/nufmt"
 
-[[tools."cargo:https://github.com/nushell/nufmt"]]
-version = "ref:main"
-backend = "cargo:https://github.com/nushell/nufmt"
-
 [[tools.go]]
 version = "1.26.5"
 backend = "core:go"
@@ -323,7 +319,7 @@ url = "https://github.com/apple/pkl/releases/download/0.32.0/pkl-windows-amd64.e
 url_api = "https://api.github.com/repos/apple/pkl/releases/assets/470498222"
 
 [[tools.rust]]
-version = "stable-gnullvm"
+version = "stable-gnu"
 backend = "core:rust"
 
 [[tools.shfmt]]

@@ -2,8 +2,9 @@
 experimental = true
 lockfile = true
 
-[tools]
-clang = "latest"
+[env]
+CC = "clang"
+CCX = "clang++"
 
 # System Appearance
 [tools."github:Tatsu-syo/noMeiryoUI"]
@@ -46,4 +47,8 @@ version = "latest"
 version = "latest"
 
 [tools.hyperfine]
+version = "latest"
+
+# -- Language Support
+[tools.clang]
 version = "latest"

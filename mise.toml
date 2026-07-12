@@ -1,12 +1,14 @@
 [env]
 _.path = [ "./node_modules/.bin" ]
 
+RUSTFLAGS = "-Clinker=clang"
+
 [tools]
 # Environments
 bun = "latest"
 node = "24"
 aube = "latest"
-rust = "stable-gnullvm"
+rust = "stable-gnu"
 go = "latest"
 # Linters & Formatters
 hk = "latest"
