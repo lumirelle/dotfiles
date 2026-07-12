@@ -243,12 +243,13 @@ function customProvidersAndRules() {
   }
   // Rules
   const rules = [
-    // Games
+    // Games & Network testing
     'PROCESS-NAME,ForzaHorizon4.exe,Just Direct', // Forza Horizon 4
     'PROCESS-NAME,hl.exe,Just Direct', // half-life launcher
     'RULE-SET,applications,Just Direct',
     'GEOSITE,category-games@cn,Just Direct',
     'GEOSITE,steam@cn,Just Direct',
+    'DOMAIN-SUFFIX,test-ipv6.com,Just Direct',
 
     'RULE-SET,private,Just Direct',
     'RULE-SET,reject,Just Reject',

@@ -8,61 +8,23 @@ dns:
   respect-rules: false
   cache-algorithm: arc
   default-nameserver:
-    # AliDNS
-    - 223.5.5.5
-    - 2400:3200::1
-    # 114DNS
-    - 114.114.114.114
-    # Cloudflare DNS
-    - 1.1.1.1
-    - 2606:4700:4700::1111
-    # Cisco OpenDNS
-    - 208.67.222.222
-    - 2620:119:35::35
-    # System
-    - system
+    - 223.5.5.5 # AliDNS
+    - 114.114.114.114 # 114DNS
+    - 1.1.1.1 # Cloudflare DNS
+    - 208.67.222.222  # Cisco OpenDNS
+    - system # System
   nameserver:
-    # AliDNS
     - 'https://dns.alidns.com/dns-query'
-    # DNSPod
     - 'https://doh.pub/dns-query'
-    # 360 DNS
     - 'https://doh.360.cn/dns-query'
-    # Cloudflare DNS
     - 'https://dns.cloudflare.com/dns-query'
-    # Cisco OpenDNS
     - 'https://doh.opendns.com/dns-query'
-    # Google DNS
     - 'https://dns.google/dns-query'
-  direct-nameserver: []
-  direct-nameserver-follow-policy: false
-  proxy-server-nameserver:
-    # AliDNS
-    - 'https://dns.alidns.com/dns-query'
-    # DNSPod
-    - 'https://doh.pub/dns-query'
-    # 360 DNS
-    - 'https://doh.360.cn/dns-query'
-    # Cloudflare DNS
-    - 'https://dns.cloudflare.com/dns-query'
-    # Cisco OpenDNS
-    - 'https://doh.opendns.com/dns-query'
-    # Google DNS
-    - 'https://dns.google/dns-query'
-  nameserver-policy:
-    'geosite:cn,private':
-      - 'https://dns.alidns.com/dns-query'
-      - 'https://doh.pub/dns-query'
-      - 'https://doh.360.cn/dns-query'
-    'geosite:geolocation-!cn':
-      - 'https://dns.cloudflare.com/dns-query'
-      - 'https://doh.opendns.com/dns-query'
-      - 'https://dns.google/dns-query'
-    'geosite:category-ads-all': rcode://success
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
     - rule-set:fake-ip-filter-set
+    - MATCH,fake-ip
   fake-ip-filter-mode: blacklist
   fallback: []
   fallback-filter:
