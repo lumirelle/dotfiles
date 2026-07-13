@@ -14,9 +14,6 @@ if (Test-Path "$env:USERPROFILE\.local\bin") {
 # Environment
 ## Mise, https://mise.jdx.dev/
 (&mise activate pwsh) | Out-String | Invoke-Expression
-if (Test-Path "$env:LOCALAPPDATA\mise\shims") {
-  $env:PATH = "$env:LOCALAPPDATA\mise\shims;$env:PATH"
-}
 ## Starship, https://starship.rs/
 Invoke-Expression (&starship init powershell)
 ## Zoxide, https://github.com/ajeetdsouza/zoxide
