@@ -15,7 +15,7 @@ editor = nvim # Or replace with your preferred editor.
 manyFiles = true
 
 # Include additional configuration files based on the current repository path.
-[includeIf "gitdir:~/work/"]
+[includeIf "gitdir:~/workon/"]
 path = .gitconfig-work
 
 # Repository Initialization
