@@ -4,18 +4,19 @@ My dotfiles (also application files), out-of-box (for me).
 
 - Network Tools
   - Clash Verge Rev
-- Terminal
+- Terminals
   - Windows Terminal (Windows Only)
-- Shell
+- Shells
   - Nushell
   - Windows PowerShell (Legacy, Windows Only)
-- Shell Prompt
+- Shell Prompts
   - Starship
-- Source Control
+- Version control systems
   - Git
-- System Manager
+- System Components
+  - Windows Subsystem for Linux (WSL)
+- System Managers
   - Chezmoi
-  - Nix
   - Mise
 - Editors
   - Neovim
@@ -23,5 +24,5 @@ My dotfiles (also application files), out-of-box (for me).
   - Zed
 - Agents
   - Open Code
-- Linter
+- Linters
   - CSpell

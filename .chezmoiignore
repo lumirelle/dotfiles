@@ -17,6 +17,7 @@ nufmt.nuon
 {{ if ne .chezmoi.os "windows" }}
 	AppData
 	Documents
+	.wslconfig
 	**/*.reg
 	**/*.cmd
 	**/*.ps1
