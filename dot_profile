@@ -1,4 +1,4 @@
-# System Environment
+# Guard
 ## if running bash
 if [ -n "$BASH_VERSION" ]; then
   # include .bashrc if it exists
@@ -6,49 +6,3 @@ if [ -n "$BASH_VERSION" ]; then
     . "$HOME/.bashrc"
   fi
 fi
-## set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ]; then
-  PATH="$HOME/bin:$PATH"
-fi
-## set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ]; then
-  PATH="$HOME/.local/bin:$PATH"
-fi
-
-# Environment
-## Mise, https://mise.jdx.dev/
-eval "$(mise activate bash)"
-## Starship, https://starship.rs/
-eval "$(starship init bash)"
-## Zoxide, https://github.com/ajeetdsouza/zoxide
-eval "$(zoxide init bash)"
-## Podman
-export PODMAN_COMPOSE_WARNING_LOGS=false
-
-# Aliases & Custom Commands
-alias cz='chezmoi'
-alias docker='podman'
-alias compose='podman compose'
-degit() {
-  local repo="$1" dest="${2:-.}"
-  if [[ -d "$dest" ]]; then
-    if [[ -n "$(ls -A "$dest")" ]]; then
-      echo -e "\033[31mTarget directory is not empty. Please specify an empty directory or a new directory.\033[0m"
-      return 1
-    fi
-  else
-    mkdir -p "$dest"
-  fi
-  local branch="main"
-  if [[ "$repo" == *#* ]]; then
-    branch="${repo#*#}"
-    repo="${repo%%#*}"
-  fi
-  local url="https://github.com/$repo/archive/refs/heads/$branch.tar.gz"
-  echo "Creating project from $url..."
-  tmpfile=$(mktemp)
-  curl -sL "$url" -o "$tmpfile"
-  tar -xzf "$tmpfile" --strip-components=1 -C "$dest"
-  rm "$tmpfile"
-  echo "Done!"
-}
