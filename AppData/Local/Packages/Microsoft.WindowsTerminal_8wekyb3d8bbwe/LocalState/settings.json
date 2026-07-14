@@ -72,7 +72,7 @@
                 "name": "Nushell"
             },
             {
-                "commandline": "wsl",
+                "commandline": "wsl --cd ~",
                 "guid": "{b02bd5d0-487c-4679-a940-be8e7f33dec1}",
                 "hidden": false,
                 "icon": "\ud83d\udc27",
