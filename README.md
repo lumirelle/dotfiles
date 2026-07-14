@@ -9,6 +9,7 @@ My dotfiles (also application files), out-of-box (for me).
 - Shells
   - Nushell
   - Windows PowerShell (Legacy, Windows Only)
+  - Bash (Legacy, Linux Only, Login shell mode will redirect to Nushell)
 - Shell Prompts
   - Starship
 - Version control systems

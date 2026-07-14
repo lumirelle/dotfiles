@@ -1,6 +1,3 @@
-# Encoding
-$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [Text.Encoding]::UTF8
-
 # System Environment
 ## set PATH so it includes user's private bin if it exists
 if (Test-Path "$env:USERPROFILE\bin") {
@@ -10,10 +7,12 @@ if (Test-Path "$env:USERPROFILE\bin") {
 if (Test-Path "$env:USERPROFILE\.local\bin") {
   $env:PATH = "$env:USERPROFILE\.local\bin;$env:PATH"
 }
-
-# Environment
 ## Mise, https://mise.jdx.dev/
 (&mise activate pwsh) | Out-String | Invoke-Expression
+
+# Environment
+## Shell
+$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [Text.Encoding]::UTF8
 ## Starship, https://starship.rs/
 Invoke-Expression (&starship init powershell)
 ## Zoxide, https://github.com/ajeetdsouza/zoxide
