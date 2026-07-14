@@ -8,8 +8,8 @@ if ($"($env.HOME?)/.local/bin" | path exists) {
   $env.PATH = ($env.PATH | prepend $"($env.HOME)/.local/bin")
 }
 mkdir ($nu.data-dir | path join "vendor/autoload")
-## Mise, https://mise.jdx.dev/
-mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
+let mise_path = $nu.default-config-dir | path join mise.nu
+$env.NU_LIB_DIRS | append ($mise_path | path dirname | to nuon)
 
 # Environment
 ## Shell
