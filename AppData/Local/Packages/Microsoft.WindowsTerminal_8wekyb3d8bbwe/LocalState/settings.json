@@ -15,7 +15,7 @@
     "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
+    "defaultProfile": "{01c948fc-988e-4072-9bb7-322fd290be5c}",
     "keybindings":
     [
         {
@@ -47,7 +47,8 @@
             },
             "intenseTextStyle": "all",
             "rightClickContextMenu": true,
-            "useAcrylic": true
+            "useAcrylic": true,
+            "startingDirectory": "%USERPROFILE%"
         },
         "list":
         [
@@ -64,12 +65,18 @@
                 "name": "Command Prompt"
             },
             {
-                "commandline": "nu",
-                "guid": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
+                "commandline": "mise exec aqua:nushell/nushell -- nu",
+                "guid": "{01c948fc-988e-4072-9bb7-322fd290be5c}",
                 "hidden": false,
-                "icon": "\ud83d\udc95",
-                "name": "Nushell",
-                "startingDirectory": "%USERPROFILE%"
+                "icon": "\ud83d\udc1a",
+                "name": "Nushell"
+            },
+            {
+                "commandline": "wsl",
+                "guid": "{b02bd5d0-487c-4679-a940-be8e7f33dec1}",
+                "hidden": false,
+                "icon": "\ud83d\udc27",
+                "name": "Windows Subsystem for Linux"
             }
         ]
     },
