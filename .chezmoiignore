@@ -24,6 +24,7 @@ nufmt.nuon
 {{ else }}
 	.config/nvim
 	.profile
+	.bashrc
 	**/*.sh
 {{ end }}
 
