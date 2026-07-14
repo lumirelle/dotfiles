@@ -19,8 +19,7 @@ eval "$(mise activate bash)"
 
 # Environment
 ## If Nushell is installed, use it instead.
-if [[ -z "$NU_SHELL_STARTED" ]] && command -v nu &>/dev/null; then
-  export NU_SHELL_STARTED=1
+if command -v nu &>/dev/null; then
   exec nu
 else
   ## Starship, https://starship.rs/
