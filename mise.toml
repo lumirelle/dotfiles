@@ -1,18 +1,10 @@
-[env]
-_.path = [
-  "{{config_root}}/node_modules/.bin",
-  # `mise install` with `rustc` can fail to find `clang` if the path is not set explicitly.
-  "~/.local/share/mise/installs/clang/22.1.8/.mise-bins/"
-]
-
 [tools]
 # Environments
-bun = "latest"
-node = "24"
-aube = "latest"
+node = "latest"
+nub = "latest"
 rust = "stable-gnu"
 go = "latest"
-# Linters & Formatters
+# Quality
 hk = "latest"
 stylua = "latest"
 pkl = "latest"
@@ -20,20 +12,37 @@ pkl = "latest"
 shfmt = "latest"
 "go:github.com/gohugoio/gotmplfmt" = "latest"
 
-[deps.bun-aube]
-description = "Automatically install dependencies via aube & bun's lockfile."
+[deps.nub]
+description = 'Automatically install Node.js dependencies via nub.'
 sources = [
-  "package.json",
-  "bun.lock"
+  'package.json',
+  'nub.lock'
 ]
-outputs = [ "node_modules/" ]
-# Because aube's output lockfile has bugs,
-# we use `bun install --lockfile-only` to generate a lockfile
-run = "bun install --lockfile-only && aube install"
+outputs = [ 'node_modules/' ]
+run = 'nub install'
 auto = true
 
+[env]
+_.path = [
+  "{{config_root}}/node_modules/.bin",
+  # `mise install` with `rustc` can fail to find `clang` if the path is not set explicitly.
+  "~/.local/share/mise/installs/clang/22.1.8/.mise-bins/",
+]
+
 [tasks.check]
-run = "hk check --all"
+description = 'Run all checks.'
+usage = '''
+flag "-s --staged" help="Run on staged files only without stashing unstaged changes"
+'''
+run = '''
+hk check {{ "--staged" if usage.staged else "--all" }}
+'''
 
 [tasks.fix]
-run = "hk fix --all"
+description = 'Fix all check issues.'
+usage = '''
+flag "-s --staged" help="Run on staged files only without stashing unstaged changes"
+'''
+run = '''
+hk fix {{ "--staged" if usage.staged else "--all" }}
+'''

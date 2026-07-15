@@ -1,20 +1,43 @@
-amends "package://github.com/jdx/hk/releases/download/v1.49.0/hk@1.49.0#/Config.pkl"
+amends "package://github.com/jdx/hk/releases/download/v1.50.0/hk@1.50.0#/Config.pkl"
 
-import "package://github.com/jdx/hk/releases/download/v1.49.0/hk@1.49.0#/Builtins.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.50.0/hk@1.50.0#/Builtins.pkl"
 
 local linters = new Mapping<String, Step> {
+  // Code
+  ["gotmplfmt"] {
+    glob = List(".chezmoiignore", "**/*.tmpl")
+    check_list_files = "node ./scripts/gotmplfmt-check.js {{ files }}"
+    fix = "gotmplfmt -w {{ files }}"
+  }
+  ["oxlint"] = Builtins.ox_lint
+  ["eslint"] = (Builtins.eslint) {
+    batch = false
+    glob =
+      List(
+        // Code
+        "*.js",
+        "*.mjs",
+        "*.cjs",
+        "*.jsx",
+        "*.ts",
+        "*.mts",
+        "*.cts",
+        "*.tsx",
+        // Configurations
+        "*.json",
+        "*.jsonc",
+        "*.yaml",
+        "*.yml",
+        "*.toml",
+        // Documentations
+        "*.md",
+        "*.mdc",
+        "*.mdx",
+      )
+    depends = List("oxlint")
+  }
   ["stylua"] = (Builtins.stylua) {
     glob = List("**/*.lua")
-  }
-  ["pkl"] = (Builtins.pkl) {
-    glob = List("**/*.pkl")
-    check = "pkl eval {{files}}"
-  }
-  ["pkl-format"] = (Builtins.pkl_format) {
-    glob = List("**/*.pkl")
-    shell = null
-    check_list_files = "pkl format --diff-name-only {{ files }}"
-    fix = "pkl format --write {{ files }}"
   }
   ["nufmt"] {
     glob = List("**/*.nu")
@@ -24,46 +47,26 @@ local linters = new Mapping<String, Step> {
   ["shfmt"] = (Builtins.shfmt) {
     glob =
       List(
+        // Code
+        "dot_gitconfig",
+        "dot_profile",
+        // Configurations
         "**/.editorconfig",
         "**/.gitattributes",
         "**/.gitignore",
         "**/.npmrc",
-        "dot_gitconfig",
-        "dot_profile",
       )
   }
-  ["gotmplfmt"] {
-    glob = List(".chezmoiignore", "**/*.tmpl")
-    check_list_files = "bun run ./scripts/gotmplfmt-check.js {{ files }}"
-    fix = "gotmplfmt -w {{ files }}"
+
+  // Configurations
+  ["hk"] = (Builtins.pkl) {
+    glob = List("hk.pkl")
+    check = "hk validate"
   }
-  ["oxlint"] = Builtins.ox_lint
-  ["eslint"] = (Builtins.eslint) {
-    batch = false
-    glob =
-      List(
-        // JS & TS
-        "*.js",
-        "*.mjs",
-        "*.cjs",
-        "*.jsx",
-        "*.ts",
-        "*.mts",
-        "*.cts",
-        "*.tsx",
-        // Markdown
-        "*.md",
-        "*.mdc",
-        "*.mdx",
-        // JSON
-        "*.json",
-        "*.jsonc",
-        // ML
-        "*.yaml",
-        "*.yml",
-        "*.toml",
-      )
-    depends = List("oxlint")
+  ["pkl-format"] = (Builtins.pkl_format) {
+    glob = List("hk.pkl")
+    shell = null
+    fix = "pkl format --write {{ files }}"
   }
 }
 

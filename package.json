@@ -2,7 +2,6 @@
   "name": "chezmoi",
   "type": "module",
   "private": true,
-  "packageManager": "bun@1.3.14",
   "devDependencies": {
     "@antfu/eslint-config": "^9.1.0",
     "@lumirelle/oxlint-config": "^0.12.0",
@@ -13,5 +12,12 @@
     "oxlint-tsgolint": "^0.24.0",
     "taze": "^19.14.1",
     "typescript": "^6.0.3"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "nub",
+      "version": "^0.4.11",
+      "onFail": "warn"
+    }
   }
 }

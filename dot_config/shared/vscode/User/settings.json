@@ -237,7 +237,7 @@
     "**/.nuxt/**",
     "**/.next/**",
     "**/dist/**",
-    "**/out/**",
+    "**/out/**"
   ],
   "todohighlight.defaultStyle": {
     "color": "#fff",
@@ -485,12 +485,12 @@
     "common": {
       "name": "common",
       "path": "~/.cspell.common.txt",
-      "description": "Words used in common situation.",
+      "description": "Words used in common situation."
     },
     "work": {
       "name": "work",
       "path": "~/.cspell.work.txt",
-      "description": "Words used in work.",
+      "description": "Words used in work."
     }
   },
   "cSpell.ignorePaths": [
@@ -516,7 +516,7 @@
     "dist",
     "out",
     "*.map",
-    "*.snap",
+    "*.snap"
   ],
   // TODO(lumirelle): It's recommended to use project-level formatter configuration
   "[dockerfile]": { "editor.defaultFormatter": "ms-azuretools.vscode-containers" },
@@ -524,6 +524,6 @@
   "markdown.extension.tableFormatter.enabled": false,
   "shellformat.useEditorConfig": true,
   "files.trimTrailingWhitespace": true,
-  "files.trimFinalNewlines": true,
+  "files.trimFinalNewlines": true
   // #endregion
 }
