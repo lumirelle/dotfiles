@@ -369,9 +369,8 @@
   "workbench.editor.limit.value": 5,
   // Word Wrap
   "editor.wordWrap": "on",
-  // Minimap
-  "editor.minimap.enabled": true,
-  "editor.minimap.renderCharacters": false,
+  // We don't actually need minimap, disable it to make the editor more clean and a little bit faster.
+  "editor.minimap.enabled": false,
   // Suggestions & Emmet
   "editor.acceptSuggestionOnCommitCharacter": false,
   // Fucking Microsoft, why you set "other" to "offWhenInlineCompletions" by default since 1.121?
