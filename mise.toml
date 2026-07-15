@@ -8,7 +8,7 @@ go = "latest"
 hk = "latest"
 stylua = "latest"
 pkl = "latest"
-"cargo:https://github.com/nushell/nufmt" = { version = "branch:main", install_env = { RUSTFLAGS = "-Clinker=clang" } }
+"cargo:https://github.com/nushell/nufmt" = { version = "branch:main" }
 shfmt = "latest"
 "go:github.com/gohugoio/gotmplfmt" = "latest"
 
@@ -23,11 +23,7 @@ run = 'nub install'
 auto = true
 
 [env]
-_.path = [
-  "{{config_root}}/node_modules/.bin",
-  # `mise install` with `rustc` can fail to find `clang` if the path is not set explicitly.
-  "~/.local/share/mise/installs/clang/22.1.8/.mise-bins/",
-]
+_.path = [ "{{config_root}}/node_modules/.bin" ]
 
 [tasks.check]
 description = 'Run all checks.'

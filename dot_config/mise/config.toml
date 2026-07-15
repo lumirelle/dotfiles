@@ -6,10 +6,6 @@ lockfile = true
 [dotfiles]
 "/etc/sysctl.d/50-unprivileged-ports.conf/unprivileged-ports" = { line = "net.ipv4.ip_unprivileged_port_start = 80" }
 
-[env]
-CC = "clang"
-CCX = "clang++"
-
 # System Appearance
 [tools."github:Tatsu-syo/noMeiryoUI"]
 os = "windows"
@@ -64,8 +60,4 @@ version = "latest"
 version = "latest"
 
 [tools.hyperfine]
-version = "latest"
-
-# -- Language Support
-[tools.clang]
 version = "latest"
