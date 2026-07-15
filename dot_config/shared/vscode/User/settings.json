@@ -433,6 +433,16 @@
   // #endregion
 
   // #region Behavior / Dev Experience
+  "json.schemaDownload.trustedDomains": {
+    "https://developer.microsoft.com/json-schemas/": true,
+    "https://json-schema.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://raw.githubusercontent.com/antfu-collective/taze/": true,
+    "https://raw.githubusercontent.com/devcontainers/spec/": true,
+    "https://raw.githubusercontent.com/microsoft/vscode/": true,
+    "https://schemastore.azurewebsites.net/": true,
+    "https://www.schemastore.org/": true
+  },
   // Markdown
   "markdown.extension.italic.indicator": "_",
   // YAML
@@ -521,6 +531,6 @@
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
   "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilot:gemini-3.1-pro-preview"
+  "gitlens.ai.vscode.model": "copilot:gemini-3.1-pro-preview",
   // #endregion
 }
