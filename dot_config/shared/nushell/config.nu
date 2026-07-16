@@ -7,14 +7,14 @@ if ($"($env.HOME?)/bin" | path exists) {
 if ($"($env.HOME?)/.local/bin" | path exists) {
   $env.PATH = ($env.PATH | prepend $"($env.HOME)/.local/bin")
 }
-mkdir ($nu.data-dir | path join "vendor/autoload")
-let mise_path = $nu.default-config-dir | path join mise.nu
-$env.NU_LIB_DIRS | append ($mise_path | path dirname | to nuon)
 
 # Environment
 ## Shell
 $env.config.show_banner = 'short'
 $env.config.buffer_editor = 'nvim'
+## Mise, https://mise.jdx.dev/
+mkdir ($nu.data-dir | path join "vendor/autoload")
+^mise activate nu | save -f ($nu.data-dir | path join "vendor/autoload/mise.nu")
 ## Starship, https://starship.rs/
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 ## Zoxide, https://github.com/ajeetdsouza/zoxide
