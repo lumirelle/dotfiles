@@ -73,15 +73,17 @@ local linters = new Mapping<String, Step> {
   }
 
   // Configurations
-  ["hk"] = (Builtins.pkl) {
+  ["hk"] {
     glob = List("hk.pkl")
     check = new Config.Command {
       argv = List("hk", "validate")
     }
   }
-  ["pkl-format"] = (Builtins.pkl_format) {
+  ["pkl-format"] {
     glob = List("hk.pkl")
-    shell = null
+    check_list_files = new Config.Command {
+      argv = List("pkl", "format", "--diff-name-only", "{{ files }}")
+    }
     fix = new Config.Command {
       argv = List("pkl", "format", "--write", "{{ files }}")
     }
