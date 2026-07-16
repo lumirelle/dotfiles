@@ -390,23 +390,23 @@
   // #endregion
   // #region Behavior / Terminal
   "terminal.integrated.profiles.linux": {
-    "nushell": {
+    "Nushell": {
       "path": "nu"
     }
   },
   "terminal.integrated.profiles.osx": {
-    "nushell": {
+    "Nushell": {
       "path": "nu"
     }
   },
   "terminal.integrated.profiles.windows": {
-    "nushell": {
+    "Nushell": {
       "path": "nu"
     }
   },
-  "terminal.integrated.defaultProfile.linux": "nushell",
-  "terminal.integrated.defaultProfile.osx": "nushell",
-  "terminal.integrated.defaultProfile.windows": "nushell",
+  "terminal.integrated.defaultProfile.linux": "Nushell",
+  "terminal.integrated.defaultProfile.osx": "Nushell",
+  "terminal.integrated.defaultProfile.windows": "Nushell",
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.rightClickBehavior": "default",
   "terminal.integrated.shellIntegration.history": 99999,
