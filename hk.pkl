@@ -1,13 +1,17 @@
-amends "package://github.com/jdx/hk/releases/download/v1.50.0/hk@1.50.0#/Config.pkl"
+amends "package://github.com/jdx/hk/releases/download/v1.51.0/hk@1.51.0#/Config.pkl"
 
-import "package://github.com/jdx/hk/releases/download/v1.50.0/hk@1.50.0#/Builtins.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.51.0/hk@1.51.0#/Builtins.pkl"
 
 local linters = new Mapping<String, Step> {
   // Code
   ["gotmplfmt"] {
     glob = List(".chezmoiignore", "**/*.tmpl")
-    check_list_files = "node ./scripts/gotmplfmt-check.js {{ files }}"
-    fix = "gotmplfmt -w {{ files }}"
+    check_list_files = new Config.Command {
+      argv = List("node", "./scripts/gotmplfmt-check.js", "{{ files }}")
+    }
+    fix = new Config.Command {
+      argv = List("gotmplfmt", "-w", "{{ files }}")
+    }
   }
   ["oxlint"] = Builtins.ox_lint
   ["eslint"] = (Builtins.eslint) {
@@ -41,32 +45,46 @@ local linters = new Mapping<String, Step> {
   }
   ["nufmt"] {
     glob = List("**/*.nu")
-    check = "nufmt --dry-run {{ files }}"
-    fix = "nufmt {{ files }}"
+    check = new Config.command {
+      argv = List("nufmt", "--dry-run", "{{ files }}")
+    }
+    fix = new Config.command {
+      argv = List("nufmt", "{{ files }}")
+    }
   }
   ["shfmt"] = (Builtins.shfmt) {
-    glob =
+    match_any =
       List(
-        // Code
-        "dot_gitconfig",
-        "dot_profile",
-        // Configurations
-        "**/.editorconfig",
-        "**/.gitattributes",
-        "**/.gitignore",
-        "**/.npmrc",
+        new Config.FileSelector {
+          glob =
+            List(
+              // Code
+              "dot_gitconfig",
+              "dot_profile",
+              // Configurations
+              "**/.editorconfig",
+              "**/.gitattributes",
+              "**/.gitignore",
+              "**/.npmrc",
+            )
+        },
+        new Config.FileSelector { types = List("sh", "bash") },
       )
   }
 
   // Configurations
   ["hk"] = (Builtins.pkl) {
     glob = List("hk.pkl")
-    check = "hk validate"
+    check = new Config.Command {
+      argv = List("hk", "validate")
+    }
   }
   ["pkl-format"] = (Builtins.pkl_format) {
     glob = List("hk.pkl")
     shell = null
-    fix = "pkl format --write {{ files }}"
+    fix = new Config.Command {
+      argv = List("pkl", "format", "--write", "{{ files }}")
+    }
   }
 }
 
