@@ -1,7 +1,7 @@
 [tools]
 # Environments
 node = "latest"
-nub = "latest"
+'github:nubjs/nub' = 'latest'
 rust = "stable-gnu"
 go = "latest"
 # Quality
