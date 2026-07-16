@@ -9,33 +9,6 @@ export default antfu(
     // Keep some configs style as their are,
     // to reduce the differences while updating.
     ignores: ['**/Microsoft.WindowsTerminal_8wekyb3d8bbwe/**/*', 'dot_config/shared/clash-verge-rev/verge.yaml'],
-
-    // Overrides
-    perfectionist: {
-      overrides: {
-        'perfectionist/sort-imports': [
-          'error',
-          {
-            environment: 'bun',
-            groups: [
-              'type-import',
-              ['type-parent', 'type-sibling', 'type-index', 'type-internal'],
-              'value-builtin',
-              'value-external',
-              'value-internal',
-              ['value-parent', 'value-sibling', 'value-index'],
-              'side-effect',
-              'ts-equals-import',
-              'unknown',
-            ],
-            newlinesBetween: 'ignore',
-            newlinesInside: 'ignore',
-            order: 'asc',
-            type: 'natural',
-          },
-        ],
-      },
-    },
   },
   ...oxlint.buildFromOxlintConfigFile('.oxlintrc.json'),
 )
