@@ -7,22 +7,21 @@ vim.filetype.add({
 
 -- ESLint as formatter
 local eslint_support_filetypes = {
-  -- JS & TS
+  -- Code
   "javascript",
   "javascriptreact",
   "typescript",
   "typescriptreact",
-  -- Markdown
-  "markdown",
-  -- JSON
+  -- Configurations
   "json",
   "jsonc",
-  -- ML
   "yaml",
   "toml",
+  -- Documentations
+  "markdown",
 }
 local eslint_support_file_patterns = {
-  -- JS & TS
+  -- Code
   "*.js",
   "*.mjs",
   "*.cjs",
@@ -31,17 +30,16 @@ local eslint_support_file_patterns = {
   "*.mts",
   "*.cts",
   "*.tsx",
-  -- Markdown
-  "*.md",
-  "*.mdc",
-  "*.mdx",
-  -- JSON
+  -- Configurations
   "*.json",
   "*.jsonc",
-  -- ML
   "*.yaml",
   "*.yml",
   "*.toml",
+  -- Documentations
+  "*.md",
+  "*.mdc",
+  "*.mdx",
 }
 -- Disable other formatter conflict with ESLint
 require("snacks").util.lsp.on(function(_, client)
