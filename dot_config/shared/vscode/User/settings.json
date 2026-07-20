@@ -141,6 +141,8 @@
   "gitlens.views.formats.commits.label": "${(tips|11?) > }${message}",
   "gitlens.codeLens.enabled": false,
   "gitlens.ai.enabled": false,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilotcli:",
   "gitlens.defaultCurrentUserNameStyle": "nameAndYou",
   "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm:ss",
   // Show file size, don't make it too large.
@@ -148,7 +150,6 @@
   // Guides
   "editor.lineNumbers": "relative",
   "scm.diffDecorationsGutterWidth": 2,
-  "editor.renderWhitespace": "boundary",
   "editor.guides.bracketPairs": true,
   "editor.rulers": [
     80,
@@ -299,8 +300,8 @@
   // #region Appearance / Font
   "custom-ui-style.font.sansSerif": "'Fraunces 9pt', 'Symbols Nerd Font', 'Resource Han Rounded SC', sans-serif",
   "markdown.preview.fontFamily": "'Fraunces 9pt', 'Symbols Nerd Font', 'Resource Han Rounded SC', monospace",
-  "editor.fontFamily": "'0xProto', 'Symbols Nerd Font Mono', 'Maple Mono WD CN', monospace",
-  "custom-ui-style.font.monospace": "'0xProto', 'Symbols Nerd Font Mono', 'Maple Mono WD CN'", // Will falls back to editor's font
+  "editor.fontFamily": "'Annotation Mono', 'Symbols Nerd Font Mono', 'Maple Mono WR CN', monospace",
+  "custom-ui-style.font.monospace": "'Annotation Mono', 'Symbols Nerd Font Mono', 'Maple Mono WR CN'", // Will falls back to editor's font
   "markdown.preview.fontSize": 14,
   "editor.fontSize": 16,
   "terminal.integrated.fontSize": 14,

@@ -43,7 +43,7 @@
             "colorScheme": "Everforest Dark Hard",
             "font":
             {
-                "face": "'0xProto', 'Symbols Nerd Font Mono', 'Maple Mono WD CN'"
+                "face": "'Annotation Mono', 'Symbols Nerd Font Mono', 'Maple Mono WR CN'"
             },
             "intenseTextStyle": "all",
             "rightClickContextMenu": true,
