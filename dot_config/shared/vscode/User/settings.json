@@ -367,6 +367,8 @@
   "workbench.startupEditor": "none",
   // Accessibility
   "editor.accessibilitySupport": "off",
+  // Disable preview mode when you single click on a file, since I don't like it.
+  "workbench.editor.enablePreview": false,
   // Opened Limits
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": true,
