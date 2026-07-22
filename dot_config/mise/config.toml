@@ -13,22 +13,6 @@ version = "3.4.2"
 version_prefix = "TAG-"
 asset_pattern = "noMeiryoUI*.zip"
 
-[tools."github:lumirelle/input-tip"]
-os = "windows"
-version = "4.1.0"
-asset_pattern = "input-tip.zip"
-
-# System Input Method
-[tools."http:im-select"]
-os = "windows"
-version = "1.0.1"
-url = "https://github.com/daipeihust/im-select/raw/refs/heads/master/win/out/x64/im-select.exe"
-checksum = "sha256:e66f0a6e30b9f20787c7d4a1c57b8f2b518d36c1c7cbdbbb6220d51226ddd0b6"
-
-[tools."github:laishulu/macism"]
-os = "macos"
-version = "3.1.1"
-
 # System Environment
 [tools.chezmoi]
 version = "latest"

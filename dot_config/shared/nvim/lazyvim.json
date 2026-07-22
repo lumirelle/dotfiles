@@ -23,7 +23,6 @@
     "lazyvim.plugins.extras.util.chezmoi",
     "lazyvim.plugins.extras.util.dot",
     "plugins.extras.editor.gitignore",
-    "plugins.extras.editor.ime",
     "plugins.extras.editor.zoxide",
     "plugins.extras.lang.toml",
     "plugins.extras.lang.typescript.oxc"
