@@ -14,6 +14,7 @@ scripts
 README.md
 nufmt.nuon
 
+# Windows specific configurations
 {{ if ne .chezmoi.os "windows" }}
 	AppData
 	Documents
@@ -21,29 +22,41 @@ nufmt.nuon
 	**/*.reg
 	**/*.cmd
 	**/*.ps1
-{{ else }}
+{{ end }}
+# Configurations should be ignored on Windows Subsystem for Linux
+{{ if and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+	.config/shared/clash-verge-rev
+	.config/shared/rime
+	.config/shared/vscode
+	.config/shared/zed
+	.local/shared/io.github.clash-verge-rev.clash-verge-rev
+	.local/shared/fcitx5
+	.config/fcitx
+	.config/ibus
+	.config/Code
+	.config/Zed
+{{ end }}
+
+# MacOS & Linux shared configurations
+{{ if and (ne .chezmoi.os "darwin") (ne .chezmoi.os "linux") }}
 	.config/nvim
 	.profile
 	.bashrc
 	**/*.sh
 {{ end }}
 
+# MacOS specific configurations
 {{ if ne .chezmoi.os "darwin" }}
 	Library
 {{ end }}
 
+# Linux specific configurations
 {{ if ne .chezmoi.os "linux" }}
 	.local/shared/io.github.clash-verge-rev.clash-verge-rev
+	.local/shared/fcitx5
+	.config/fcitx
+	.config/ibus
 	.config/nushell
 	.config/Code
 	.config/Zed
-{{ else }}
-	{{ if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
-		.local/shared/io.github.clash-verge-rev.clash-verge-rev
-		.config/shared/clash-verge-rev
-		.config/Code
-		.config/shared/vscode
-		.config/Zed
-		.config/shared/zed
-	{{ end }}
 {{ end }}
