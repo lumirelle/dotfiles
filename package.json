@@ -11,14 +11,17 @@
     }
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^9.1.0",
-    "@lumirelle/oxlint-config": "^0.12.0",
-    "@lumirelle/tsconfig": "^0.1.5",
-    "eslint": "^10.7.0",
-    "eslint-plugin-oxlint": "^1.73.0",
-    "oxlint": "^1.73.0",
-    "oxlint-tsgolint": "^0.24.0",
-    "taze": "^19.14.1",
-    "typescript": "^6.0.3"
+    "@antfu/eslint-config": "^9.2.0",
+    "@lumirelle/oxlint-config": "^0.13.0",
+    "@lumirelle/tsconfig": "^0.1.6",
+    "eslint": "^10.8.0",
+    "eslint-plugin-oxlint": "^1.75.0",
+    "oxlint": "^1.75.0",
+    "oxlint-tsgolint": "^7.0.2001",
+    "taze": "^19.16.0",
+    "typescript": "npm:typescript-native-bridge@^6.0.3-bridge.6.tsgo.7.0.2"
+  },
+  "overrides": {
+    "typescript": "$typescript"
   }
 }

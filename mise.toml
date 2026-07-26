@@ -1,7 +1,7 @@
 [tools]
 # Environments
 node = "latest"
-'github:nubjs/nub' = { version = 'latest', postinstall = 'nub pm pin' }
+'github:nubjs/nub' = "latest"
 rust = "stable-gnu"
 go = "latest"
 # Quality
@@ -24,6 +24,9 @@ auto = true
 
 [env]
 _.path = [ "{{config_root}}/node_modules/.bin" ]
+
+[hooks.enter]
+run = 'nub pm pin'
 
 [tasks.check]
 description = 'Run all checks.'
