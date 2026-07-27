@@ -5,43 +5,43 @@ version = "branch:main"
 backend = "cargo:https://github.com/nushell/nufmt"
 
 [[tools."github:nubjs/nub"]]
-version = "0.5.0"
+version = "0.6.0"
 backend = "github:nubjs/nub"
 
 [tools."github:nubjs/nub"."platforms.linux-arm64"]
-checksum = "sha256:361756af1eca35a8945e4b333c8daae42627d74eb1b8e0de0b1c3fb4cd63acd8"
-url = "https://github.com/nubjs/nub/releases/download/v0.5.0/nub-linux-arm64.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/486544476"
+checksum = "sha256:8ab023e14a030a151b3e24e3bef360dcc3b230ea36b657d111919e73a51c28ff"
+url = "https://github.com/nubjs/nub/releases/download/v0.6.0/nub-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/489764416"
 
 [tools."github:nubjs/nub"."platforms.linux-arm64-musl"]
-checksum = "sha256:1b74e21f65df051a3c1ae1f5099a858b1fad5cad0abf6a304eed6041aa83404a"
-url = "https://github.com/nubjs/nub/releases/download/v0.5.0/nub-linux-arm64-musl.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/486544484"
+checksum = "sha256:ebdfd891a04bffc9bd312fb67dde29b5a9f686a0d5c1a5f9bf0acdf0efb05e65"
+url = "https://github.com/nubjs/nub/releases/download/v0.6.0/nub-linux-arm64-musl.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/489764409"
 
 [tools."github:nubjs/nub"."platforms.linux-x64"]
-checksum = "sha256:26218366269476abfea1ad01531bc9edf317339bbc2783e398d23d212e108ebd"
-url = "https://github.com/nubjs/nub/releases/download/v0.5.0/nub-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/486544474"
+checksum = "sha256:9da96cc4600abb7995b5e06e8f74c3c89c295a70d9b62747d08b21b0d5de4c5d"
+url = "https://github.com/nubjs/nub/releases/download/v0.6.0/nub-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/489764415"
 
 [tools."github:nubjs/nub"."platforms.linux-x64-musl"]
-checksum = "sha256:1a70bbd0195973a8325e2701b361692f5ad137088df051a6f533a7b1bcd803f5"
-url = "https://github.com/nubjs/nub/releases/download/v0.5.0/nub-linux-x64-musl.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/486544479"
+checksum = "sha256:4880742fa48d776150ac470a6ed092745b9b2aa45ca2761b52aa5a3627571e40"
+url = "https://github.com/nubjs/nub/releases/download/v0.6.0/nub-linux-x64-musl.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/489764414"
 
 [tools."github:nubjs/nub"."platforms.macos-arm64"]
-checksum = "sha256:97364ec066d673d01185c9e3f0704531f8adc51806cfb2c5140fabc6b113532d"
-url = "https://github.com/nubjs/nub/releases/download/v0.5.0/nub-darwin-arm64.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/486544473"
+checksum = "sha256:f5abffa7bfe1b6a9b4fecf66d4f97d19b1491df35a7b05b6da5c2cfc495b255c"
+url = "https://github.com/nubjs/nub/releases/download/v0.6.0/nub-darwin-arm64.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/489764406"
 
 [tools."github:nubjs/nub"."platforms.macos-x64"]
-checksum = "sha256:786aeb87d2cbbea10a08f97008dd1c2e77030ecadebc04ccaedc0adb19267c5f"
-url = "https://github.com/nubjs/nub/releases/download/v0.5.0/nub-darwin-x64.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/486544468"
+checksum = "sha256:4ee5d6b0db4783885c2d0451e1b1fcd198b457442361444ea5ef166ab5dad50b"
+url = "https://github.com/nubjs/nub/releases/download/v0.6.0/nub-darwin-x64.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/489764407"
 
 [tools."github:nubjs/nub"."platforms.windows-x64"]
-checksum = "sha256:a8a2fe530dd93c6402ecffb12a4ce33e3b39d761cd5115fe3252aba1342912b0"
-url = "https://github.com/nubjs/nub/releases/download/v0.5.0/nub-win32-x64.zip"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/486544478"
+checksum = "sha256:a4472d680fa3fbcd31703a8f9963cf783caf9a435a19e538d74d16316437ea8f"
+url = "https://github.com/nubjs/nub/releases/download/v0.6.0/nub-win32-x64.zip"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/489764418"
 
 [[tools.go]]
 version = "1.26.5"

@@ -19,14 +19,11 @@ sources = [
   'nub.lock'
 ]
 outputs = [ 'node_modules/' ]
-run = 'nub install'
+run = 'nub pm pin && nub install'
 auto = true
 
 [env]
 _.path = [ "{{config_root}}/node_modules/.bin" ]
-
-[hooks.enter]
-run = 'nub pm pin'
 
 [tasks.check]
 description = 'Run all checks.'
