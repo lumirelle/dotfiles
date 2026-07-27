@@ -23,7 +23,6 @@ module git-completion-utils {
   # Code is copied and modified from https://github.com/nushell/nushell/issues/14582#issuecomment-2542596272
   export def args-split []: string -> list<string> {
     
-
     # Define our states
     const STATE_NORMAL = 0
     const STATE_IN_SINGLE_QUOTE = 1
@@ -38,7 +37,8 @@ module git-completion-utils {
     mut prev_state = $STATE_NORMAL
 
     # Process each character
-    for char in $in | split chars {
+    mut chars = $in | split chars
+    for char in $chars {
       if $state == $STATE_ESCAPE {
         # Handle escaped character
         $current_token = $current_token + $char
