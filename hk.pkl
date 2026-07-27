@@ -60,6 +60,7 @@ local linters = new Mapping<String, Step> {
             List(
               // Code
               "dot_gitconfig",
+              "dot_gitaliases",
               "dot_profile",
               // Configurations
               "**/.editorconfig",
