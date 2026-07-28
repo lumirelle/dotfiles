@@ -62,23 +62,6 @@ followTags = true
 date = short
 decoration = short
 
-# Aliases
-# We use -?/--? to trigger the help message for each alias, which is implemented in the corresponding shell function.
-[alias]
-me = !bash ~/.gitaliases me
-discard = !bash ~/.gitaliases discard
-disadd = !bash ~/.gitaliases disadd
-uncommit = reset --soft HEAD^ # Back to the staging area
-commit-wip = commit --message 'wip: working in progress'
-commit-readme = commit --message 'docs: update README.md'
-commit-deps = commit --message 'chore: update non-major dependencies'
-# It's HIGHLY RECOMMENDED to use "Pull Request" on hosting platforms for merging branches,
-# but this alias can be helpful when you do want to merge locally.
-justmerge = !bash ~/.gitaliases justmerge
-log1 = log -1 HEAD --stat
-logs = log HEAD --stat
-logg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-
 # Global Hooks
 [hook "hk-pre-commit"]
 # It seems like --from-hook does not work well (maybe this is caused by using Windows)
