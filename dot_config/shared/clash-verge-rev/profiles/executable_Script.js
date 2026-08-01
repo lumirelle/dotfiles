@@ -243,17 +243,28 @@ function customProvidersAndRules() {
   }
   // Rules
   const rules = [
-    // Games & Network testing
+    // Applications
     'PROCESS-NAME,ForzaHorizon4.exe,Just Direct', // Forza Horizon 4
     'PROCESS-NAME,hl.exe,Just Direct', // half-life launcher
     'RULE-SET,applications,Just Direct',
-    'GEOSITE,category-games@cn,Just Direct',
-    'GEOSITE,steam@cn,Just Direct',
-    'DOMAIN-SUFFIX,test-ipv6.com,Just Direct',
 
+    // Domain
+    'DOMAIN-SUFFIX,rockstargames.com,Just Direct',
+    'DOMAIN-SUFFIX,lspdfrcn.net,Just Direct',
+    'DOMAIN-SUFFIX,test-ipv6.com,Just Direct',
     'RULE-SET,private,Just Direct',
     'RULE-SET,reject,Just Reject',
+    'RULE-SET,direct,Just Direct',
+    'RULE-SET,proxy,Just Proxy',
 
+    // Cidr
+    'RULE-SET,lancidr,Just Direct',
+    'RULE-SET,cncidr,Just Direct',
+    'RULE-SET,telegramcidr,Just Proxy',
+
+    // GEO
+    'GEOSITE,category-games@cn,Just Direct',
+    'GEOSITE,steam@cn,Just Direct',
     'GEOSITE,openai,Chat GPT',
     'GEOSITE,anthropic,Claude',
     'GEOSITE,microsoft@cn,Just Direct',
@@ -262,13 +273,6 @@ function customProvidersAndRules() {
     'GEOSITE,apple-cn,Just Direct',
     'GEOSITE,youtube,Just Proxy',
     'GEOSITE,netflix,Just Proxy',
-
-    'RULE-SET,proxy,Just Proxy',
-    'RULE-SET,direct,Just Direct',
-
-    'RULE-SET,lancidr,Just Direct',
-    'RULE-SET,cncidr,Just Direct',
-    'RULE-SET,telegramcidr,Just Proxy',
     'GEOIP,LAN,Just Direct',
     'GEOIP,CN,Just Direct',
 
