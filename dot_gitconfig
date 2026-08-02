@@ -22,6 +22,7 @@ path = .gitconfig-work
 [init]
 defaultBranch = main
 
+# Basic
 [blame]
 ignoreRevsFile = ":(optional).git-blame-ignore-revs"
 # See https://www.michaelheap.com/git-ignore-rev/
