@@ -179,8 +179,8 @@
   // #region Appearance / Themes & Colors & Effects
   // Themes
   "window.autoDetectColorScheme": true,
-  "workbench.preferredDarkColorTheme": "Everforest Pro Dark",
-  "workbench.preferredLightColorTheme": "Everforest Pro Light",
+  "workbench.preferredDarkColorTheme": "Vercel (Dark)",
+  "workbench.preferredLightColorTheme": "Vercel (Light)",
   "workbench.productIconTheme": "icons-carbon",
   "workbench.iconTheme": "catppuccin-mocha",
   // Colors

@@ -1,0 +1,33 @@
+{
+  // File Associations
+  "file_types": {
+    "JSONC": ["*.json"]
+  },
+
+  // Quality
+  "format_on_save": "off",
+  "formatter": [
+    { "code_action": "source.fixAll.oxc" },
+    { "code_action": "source.fixAll.eslint" }
+  ],
+  "lsp": {
+    "eslint": {
+      "settings": {
+        "validate": [
+          // Code
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact",
+          // Configurations
+          "json",
+          "jsonc",
+          "yaml",
+          "toml",
+          // Documentations
+          "markdown"
+        ]
+      }
+    }
+  }
+}

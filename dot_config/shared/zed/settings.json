@@ -4,8 +4,8 @@
   // Theme
   "theme": {
     "mode": "system",
-    "dark": "Everforest Dark Soft (regular)",
-    "light": "Everforest Light Soft (regular)"
+    "dark": "Vercel Dark",
+    "light": "Vercel Light"
   },
   "icon_theme": "Catppuccin Mocha",
   // Layout

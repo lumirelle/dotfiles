@@ -1,7 +1,8 @@
 {
   "recommendations": [
     // #region Appearance / Theme
-    "everforest"
+    "vercel-theme",
+    "catppuccin-icons"
     // #endregion
   ]
 }

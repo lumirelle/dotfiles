@@ -1,12 +1,12 @@
 return {
   { "folke/tokyonight.nvim", enabled = false },
   { "catppuccin/nvim", enabled = false },
-  "sainnhe/everforest",
+  "tiesen243/vercel.nvim",
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "everforest",
+      colorscheme = "vercel",
     },
   },
 

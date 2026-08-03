@@ -40,7 +40,7 @@
         {
             "backgroundImage": "desktopWallpaper",
             "backgroundImageOpacity": 0.3,
-            "colorScheme": "Everforest Dark Hard",
+            "colorScheme": "Vercel Dark",
             "font":
             {
                 "face": "'Annotation Mono', 'Symbols Nerd Font Mono', 'Maple Mono WR CN'"
@@ -82,100 +82,92 @@
     },
     "schemes":
     [
-        {
-            "background": "#272E33",
-            "black": "#414B50",
-            "blue": "#7FBBB3",
-            "brightBlack": "#414B50",
-            "brightBlue": "#7FBBB3",
-            "brightCyan": "#83C092",
-            "brightGreen": "#A7C080",
-            "brightPurple": "#D699B6",
-            "brightRed": "#E67E80",
-            "brightWhite": "#D3C6AA",
-            "brightYellow": "#DBBC7F",
-            "cursorColor": "#D3C6AA",
-            "cyan": "#83C092",
-            "foreground": "#D3C6AA",
-            "green": "#A7C080",
-            "name": "Everforest Dark Hard",
-            "purple": "#D699B6",
-            "red": "#E67E80",
-            "selectionBackground": "#4C3743",
-            "white": "#D3C6AA",
-            "yellow": "#DBBC7F"
-        },
-        {
-            "background": "#FFFBEF",
-            "black": "#5C6A72",
-            "blue": "#3A94C5",
-            "brightBlack": "#5C6A72",
-            "brightBlue": "#3A94C5",
-            "brightCyan": "#35A77C",
-            "brightGreen": "#8DA101",
-            "brightPurple": "#DF69BA",
-            "brightRed": "#F85552",
-            "brightWhite": "#EDEADA",
-            "brightYellow": "#DFA000",
-            "cursorColor": "#5C6A72",
-            "cyan": "#35A77C",
-            "foreground": "#5C6A72",
-            "green": "#8DA101",
-            "name": "Everforest Light Hard",
-            "purple": "#DF69BA",
-            "red": "#F85552",
-            "selectionBackground": "#F0F2D4",
-            "white": "#EDEADA",
-            "yellow": "#DFA000"
-        }
+      {
+        "name": "Vercel Dark",
+
+        "cursorColor": "#EDEDED", // foreground
+        "selectionBackground": "#333333", // selection
+
+        "background": "#000000", // background
+        "foreground": "#EDEDED", // foreground
+
+        "black": "#000000", // ansiBlack
+        "red": "#F56464", // ansiRed
+        "green": "#58C760", // ansiGreen
+        "yellow": "#F99902", // ansiYellow
+        "blue": "#62A6FF", // ansiBlue
+        "purple": "#B675F1", // ansiMagenta
+        "cyan": "#14CBB7", // ansiCyan
+        "white": "#A1A1A1", // ansiWhite
+
+        "brightBlack": "#676767", // ansiBrightBlack
+        "brightRed": "#F56464", // ansiBrightRed
+        "brightGreen": "#58C760", // ansiBrightGreen
+        "brightYellow": "#F99902", // ansiBrightYellow
+        "brightBlue": "#62A6FF", // ansiBrightBlue
+        "brightPurple": "#B675F1", // ansiBrightMagenta
+        "brightCyan": "#14CBB7", // ansiBrightCyan
+        "brightWhite": "#EDEDED" // ansiBrightWhite
+      },
+      {
+        "name": "Vercel Light",
+
+        "cursorColor": "#171717", // foreground
+        "selectionBackground": "#CCCCCC", // selection
+
+        "background": "#FFFFFF", // background
+        "foreground": "#171717", // foreground
+
+        "black": "#171717", // ansiBlack
+        "red": "#C62128", // ansiRed
+        "green": "#397C3B", // ansiGreen
+        "yellow": "#9E5200", // ansiYellow
+        "blue": "#005EE9", // ansiBlue
+        "purple": "#7200C4", // ansiMagenta
+        "cyan": "#027D70", // ansiCyan
+        "white": "#CCCCCC", // ansiWhite
+
+        "brightBlack": "#666666", // ansiBrightBlack
+        "brightRed": "#C62128", // ansiBrightRed
+        "brightGreen": "#397C3B", // ansiBrightGreen
+        "brightYellow": "#9E5200", // ansiBrightYellow
+        "brightBlue": "#005EE9", // ansiBrightBlue
+        "brightPurple": "#7200C4", // ansiBrightMagenta
+        "brightCyan": "#027D70", // ansiBrightCyan
+        "brightWhite": "#FAFAFA" // ansiBrightWhite
+      }
     ],
     "themes":
     [
-        {
-            "name": "Everforest Dark Hard",
-            "tab":
-            {
-                "background": "#272E33FF",
-                "iconStyle": "default",
-                "showCloseButton": "always",
-                "unfocusedBackground": null
-            },
-            "tabRow":
-            {
-                "background": "#1E2326FF",
-                "unfocusedBackground": "#1E2326FF"
-            },
-            "window":
-            {
-                "applicationTheme": "dark",
-                "experimental.rainbowFrame": false,
-                "frame": null,
-                "unfocusedFrame": null,
-                "useMica": false
-            }
+      {
+        "name": "Vercel Dark",
+        "tab": {
+          "background": "#0A0A0AFF", // tab.activeBackground
+          "showCloseButton": "always",
+          "unfocusedBackground": null
         },
-        {
-            "name": "Everforest Light Hard",
-            "tab":
-            {
-                "background": "#FFFBEFFF",
-                "iconStyle": "default",
-                "showCloseButton": "always",
-                "unfocusedBackground": null
-            },
-            "tabRow":
-            {
-                "background": "#F2EFDFFF",
-                "unfocusedBackground": "#F2EFDFFF"
-            },
-            "window":
-            {
-                "applicationTheme": "light",
-                "experimental.rainbowFrame": false,
-                "frame": null,
-                "unfocusedFrame": null,
-                "useMica": false
-            }
+        "tabRow": {
+          "background": "#000000FF", // titleBar.background
+          "unfocusedBackground": "#000000FF" // titleBar.background
+        },
+        "window": {
+          "applicationTheme": "dark"
         }
+      },
+      {
+        "name": "Vercel Light",
+        "tab": {
+          "background": "#FFFFFFFF", // tab.activeBackground
+          "showCloseButton": "always",
+          "unfocusedBackground": null
+        },
+        "tabRow": {
+          "background": "#FAFAFAFF", // titleBar.background
+          "unfocusedBackground": "#FAFAFAFF" // titleBar.background
+        },
+        "window": {
+          "applicationTheme": "light"
+        }
+      }
     ]
 }
