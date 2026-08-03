@@ -23,6 +23,7 @@ zoxide init nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.
 $env.PODMAN_COMPOSE_WARNING_LOGS = false
 
 # Aliases
+source aliases/built-in.nu
 source aliases/git.nu
 source aliases/lazygit.nu
 source aliases/chezmoi.nu
