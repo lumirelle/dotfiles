@@ -37,6 +37,20 @@ return {
 ⠀⠀⣝⠛⢿⣿⣿⣿⣿⣿⣿⠟⣁⠀⠀⢈⠛⠿⢸⣇⢸⡇⢸⡇⣶⣦⣌⡙⠻⢄⡀⠁⠘⠇⠘⣿⢸⣿⡇⣿⡇⢸⡛⠷⣦⣄⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]],
         },
       },
+      picker = {
+        sources = {
+          explorer = {
+            hidden = true,
+            ignored = true,
+          },
+          files = {
+            hidden = true,
+          },
+          grep = {
+            hidden = true,
+          },
+        },
+      },
     },
   },
 }
