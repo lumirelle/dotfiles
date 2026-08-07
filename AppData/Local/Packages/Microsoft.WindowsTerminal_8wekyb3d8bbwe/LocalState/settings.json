@@ -40,7 +40,7 @@
         {
             "backgroundImage": "desktopWallpaper",
             "backgroundImageOpacity": 0.3,
-            "colorScheme": "Vercel Dark",
+            "colorScheme": "Vercel Light",
             "font":
             {
                 "face": "'Annotation Mono', 'Symbols Nerd Font Mono', 'Maple Mono WR CN'"
@@ -137,6 +137,7 @@
         "brightWhite": "#FAFAFA" // ansiBrightWhite
       }
     ],
+    "theme": "Vercel Light",
     "themes":
     [
       {
