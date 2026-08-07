@@ -40,7 +40,7 @@
         {
             "backgroundImage": "desktopWallpaper",
             "backgroundImageOpacity": 0.3,
-            "colorScheme": "Vercel Light",
+            "colorScheme": "Vercel Dark",
             "font":
             {
                 "face": "'Annotation Mono', 'Symbols Nerd Font Mono', 'Maple Mono WR CN'"
@@ -85,71 +85,71 @@
       {
         "name": "Vercel Dark",
 
-        "cursorColor": "#EDEDED", // foreground
-        "selectionBackground": "#333333", // selection
+        "cursorColor": "#EDEDED", // editorCursor.foreground
+        "selectionBackground": "#1A1A1A", // terminal.selectionBackground
 
-        "background": "#000000", // background
-        "foreground": "#EDEDED", // foreground
+        "background": "#000000", // editor.background
+        "foreground": "#EDEDED", // terminal.foreground
 
-        "black": "#000000", // ansiBlack
-        "red": "#F56464", // ansiRed
-        "green": "#58C760", // ansiGreen
-        "yellow": "#F99902", // ansiYellow
-        "blue": "#62A6FF", // ansiBlue
-        "purple": "#B675F1", // ansiMagenta
-        "cyan": "#14CBB7", // ansiCyan
-        "white": "#A1A1A1", // ansiWhite
+        "black": "#EDEDED", // ansiBlack
+        "red": "#C62128", // ansiRed
+        "green": "#00CA50", // ansiGreen
+        "yellow": "#FF9300", // ansiYellow
+        "blue": "#47A8FF", // ansiBlue
+        "purple": "#C472FB", // ansiMagenta
+        "cyan": "#01F7F7", // ansiCyan
+        "white": "#1A1A1A", // ansiWhite
 
-        "brightBlack": "#676767", // ansiBrightBlack
-        "brightRed": "#F56464", // ansiBrightRed
-        "brightGreen": "#58C760", // ansiBrightGreen
-        "brightYellow": "#F99902", // ansiBrightYellow
-        "brightBlue": "#62A6FF", // ansiBrightBlue
-        "brightPurple": "#B675F1", // ansiBrightMagenta
-        "brightCyan": "#14CBB7", // ansiBrightCyan
-        "brightWhite": "#EDEDED" // ansiBrightWhite
+        "brightBlack": "#A0A0A0", // ansiBrightBlack
+        "brightRed": "#98191F", // ansiBrightRed
+        "brightGreen": "#009C3E", // ansiBrightGreen
+        "brightYellow": "#C47100", // ansiBrightYellow
+        "brightBlue": "#3781C4", // ansiBrightBlue
+        "brightPurple": "#9758C1", // ansiBrightMagenta
+        "brightCyan": "#01BEBE", // ansiBrightCyan
+        "brightWhite": "#000000" // ansiBrightWhite
       },
       {
         "name": "Vercel Light",
 
-        "cursorColor": "#171717", // foreground
-        "selectionBackground": "#CCCCCC", // selection
+        "cursorColor": "#171717", // editorCursor.foreground
+        "selectionBackground": "#F2F2F2", // terminal.selectionBackground
 
-        "background": "#FFFFFF", // background
-        "foreground": "#171717", // foreground
+        "background": "#FFFFFF", // editor.background
+        "foreground": "#171717", // terminal.foreground
 
         "black": "#171717", // ansiBlack
         "red": "#C62128", // ansiRed
-        "green": "#397C3B", // ansiGreen
-        "yellow": "#9E5200", // ansiYellow
-        "blue": "#005EE9", // ansiBlue
-        "purple": "#7200C4", // ansiMagenta
-        "cyan": "#027D70", // ansiCyan
-        "white": "#CCCCCC", // ansiWhite
+        "green": "#107D32", // ansiGreen
+        "yellow": "#AA4D00", // ansiYellow
+        "blue": "#005FF2", // ansiBlue
+        "purple": "#7D00CC", // ansiMagenta
+        "cyan": "#01F7F7", // ansiCyan
+        "white": "#F2F2F2", // ansiWhite
 
-        "brightBlack": "#666666", // ansiBrightBlack
-        "brightRed": "#C62128", // ansiBrightRed
-        "brightGreen": "#397C3B", // ansiBrightGreen
-        "brightYellow": "#9E5200", // ansiBrightYellow
-        "brightBlue": "#005EE9", // ansiBrightBlue
-        "brightPurple": "#7200C4", // ansiBrightMagenta
-        "brightCyan": "#027D70", // ansiBrightCyan
-        "brightWhite": "#FAFAFA" // ansiBrightWhite
+        "brightBlack": "#4D4D4D", // ansiBrightBlack
+        "brightRed": "#D35459", // ansiBrightRed
+        "brightGreen": "#479B61", // ansiBrightGreen
+        "brightYellow": "#BE763B", // ansiBrightYellow
+        "brightBlue": "#3B84F5", // ansiBrightBlue
+        "brightPurple": "#923BD2", // ansiBrightMagenta
+        "brightCyan": "#3BF9F9", // ansiBrightCyan
+        "brightWhite": "#FFFFFF" // ansiBrightWhite
       }
     ],
-    "theme": "Vercel Light",
+    "theme": "Vercel Dark",
     "themes":
     [
       {
         "name": "Vercel Dark",
         "tab": {
-          "background": "#0A0A0AFF", // tab.activeBackground
+          "background": "#00000000", // tab.activeBackground
           "showCloseButton": "always",
           "unfocusedBackground": null
         },
         "tabRow": {
           "background": "#000000FF", // titleBar.background
-          "unfocusedBackground": "#000000FF" // titleBar.background
+          "unfocusedBackground": "#000000FF" // titleBar.inactiveBackground
         },
         "window": {
           "applicationTheme": "dark"
@@ -163,8 +163,8 @@
           "unfocusedBackground": null
         },
         "tabRow": {
-          "background": "#FAFAFAFF", // titleBar.background
-          "unfocusedBackground": "#FAFAFAFF" // titleBar.background
+          "background": "#FFFFFFFF", // titleBar.background
+          "unfocusedBackground": "#FFFFFFFF" // titleBar.inactiveBackground
         },
         "window": {
           "applicationTheme": "light"
