@@ -119,7 +119,7 @@ symbol = " "
 
 [os]
 disabled = false
-style = "bold black"
+style = "bold bright-black"
 
 [os.symbols]
 Alpaquita = " "
