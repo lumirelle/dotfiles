@@ -57,3 +57,6 @@ else
     echo "Done!"
   }
 fi
+
+# opencode
+export PATH=/home/xiaoxi/.opencode/bin:$PATH
