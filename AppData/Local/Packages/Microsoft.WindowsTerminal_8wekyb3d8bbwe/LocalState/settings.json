@@ -39,16 +39,17 @@
         "defaults":
         {
             "backgroundImage": "desktopWallpaper",
-            "backgroundImageOpacity": 0.3,
+            "backgroundImageOpacity": 0.24,
             "colorScheme": "Vercel Dark",
             "font":
             {
                 "face": "'Annotation Mono', 'Symbols Nerd Font Mono', 'Maple Mono WR CN'"
             },
             "intenseTextStyle": "all",
+            "opacity": 100,
             "rightClickContextMenu": true,
-            "useAcrylic": true,
-            "startingDirectory": "%USERPROFILE%"
+            "startingDirectory": "%USERPROFILE%",
+            "useAcrylic": true
         },
         "list":
         [
@@ -82,93 +83,101 @@
     },
     "schemes":
     [
-      {
-        "name": "Vercel Dark",
-
-        "cursorColor": "#EDEDED", // editorCursor.foreground
-        "selectionBackground": "#1A1A1A", // terminal.selectionBackground
-
-        "background": "#000000", // editor.background
-        "foreground": "#EDEDED", // terminal.foreground
-
-        "black": "#A0A0A0", // ansiBlack
-        "red": "#FF565F", // ansiRed
-        "green": "#00CA50", // ansiGreen
-        "yellow": "#FF9300", // ansiYellow
-        "blue": "#47A8FF", // ansiBlue
-        "purple": "#C472FB", // ansiMagenta
-        "cyan": "#01F7F7", // ansiCyan
-        "white": "#000000", // ansiWhite
-
-        "brightBlack": "#EDEDED", // ansiBrightBlack
-        "brightRed": "#FF9399", // ansiBrightRed
-        "brightGreen": "#5CDD8F", // ansiBrightGreen
-        "brightYellow": "#FFBA5C", // ansiBrightYellow
-        "brightBlue": "#89C7FF", // ansiBrightBlue
-        "brightPurple": "#D9A5FC", // ansiBrightMagenta
-        "brightCyan": "#5CFAFA", // ansiBrightCyan
-        "brightWhite": "#000000" // ansiBrightWhite
-      },
-      {
-        "name": "Vercel Light",
-
-        "cursorColor": "#171717", // editorCursor.foreground
-        "selectionBackground": "#F2F2F2", // terminal.selectionBackground
-
-        "background": "#FFFFFF", // editor.background
-        "foreground": "#171717", // terminal.foreground
-
-        "black": "#171717", // ansiBlack
-        "red": "#D8001B", // ansiRed
-        "green": "#107D32", // ansiGreen
-        "yellow": "#AA4D00", // ansiYellow
-        "blue": "#005FF2", // ansiBlue
-        "purple": "#7D00CC", // ansiMagenta
-        "cyan": "#01F7F7", // ansiCyan
-        "white": "#FFFFFF", // ansiWhite
-
-        "brightBlack": "#4D4D4D", // ansiBrightBlack
-        "brightRed": "#E65C6D", // ansiBrightRed
-        "brightGreen": "#66AC7C", // ansiBrightGreen
-        "brightYellow": "#C98D5C", // ansiBrightYellow
-        "brightBlue": "#5C99F7", // ansiBrightBlue
-        "brightPurple": "#AC5CDE", // ansiBrightMagenta
-        "brightCyan": "#5CFAFA", // ansiBrightCyan
-        "brightWhite": "#FFFFFF" // ansiBrightWhite
-      }
+        {
+            "background": "#000000",
+            "black": "#EDEDED",
+            "blue": "#47A8FF",
+            "brightBlack": "#EDEDED",
+            "brightBlue": "#47A8FF",
+            "brightCyan": "#01F7F7",
+            "brightGreen": "#00CA50",
+            "brightPurple": "#C472FB",
+            "brightRed": "#FF565F",
+            "brightWhite": "#000000",
+            "brightYellow": "#FF9300",
+            "cursorColor": "#EDEDED",
+            "cyan": "#01F7F7",
+            "foreground": "#EDEDED",
+            "green": "#00CA50",
+            "name": "Vercel Dark",
+            "purple": "#C472FB",
+            "red": "#FF565F",
+            "selectionBackground": "#1A1A1A",
+            "white": "#000000",
+            "yellow": "#FF9300"
+        },
+        {
+            "background": "#FFFFFF",
+            "black": "#171717",
+            "blue": "#005FF2",
+            "brightBlack": "#171717",
+            "brightBlue": "#005FF2",
+            "brightCyan": "#01F7F7",
+            "brightGreen": "#107D32",
+            "brightPurple": "#7D00CC",
+            "brightRed": "#D8001B",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#AA4D00",
+            "cursorColor": "#171717",
+            "cyan": "#01F7F7",
+            "foreground": "#171717",
+            "green": "#107D32",
+            "name": "Vercel Light",
+            "purple": "#7D00CC",
+            "red": "#D8001B",
+            "selectionBackground": "#F2F2F2",
+            "white": "#FFFFFF",
+            "yellow": "#AA4D00"
+        }
     ],
     "theme": "Vercel Dark",
     "themes":
     [
-      {
-        "name": "Vercel Dark",
-        "tab": {
-          "background": "#00000000", // tab.activeBackground
-          "showCloseButton": "always",
-          "unfocusedBackground": null
+        {
+            "name": "Vercel Dark",
+            "tab":
+            {
+                "background": "#00000000",
+                "iconStyle": "default",
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "tabRow":
+            {
+                "background": "#000000FF",
+                "unfocusedBackground": "#000000FF"
+            },
+            "window":
+            {
+                "applicationTheme": "dark",
+                "experimental.rainbowFrame": false,
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
+            }
         },
-        "tabRow": {
-          "background": "#000000FF", // titleBar.background
-          "unfocusedBackground": "#000000FF" // titleBar.inactiveBackground
-        },
-        "window": {
-          "applicationTheme": "dark"
+        {
+            "name": "Vercel Light",
+            "tab":
+            {
+                "background": "#FFFFFFFF",
+                "iconStyle": "default",
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "tabRow":
+            {
+                "background": "#FFFFFFFF",
+                "unfocusedBackground": "#FFFFFFFF"
+            },
+            "window":
+            {
+                "applicationTheme": "light",
+                "experimental.rainbowFrame": false,
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
+            }
         }
-      },
-      {
-        "name": "Vercel Light",
-        "tab": {
-          "background": "#FFFFFFFF", // tab.activeBackground
-          "showCloseButton": "always",
-          "unfocusedBackground": null
-        },
-        "tabRow": {
-          "background": "#FFFFFFFF", // titleBar.background
-          "unfocusedBackground": "#FFFFFFFF" // titleBar.inactiveBackground
-        },
-        "window": {
-          "applicationTheme": "light"
-        }
-      }
     ]
 }
