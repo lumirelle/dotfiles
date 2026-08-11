@@ -24,6 +24,7 @@ $env.PODMAN_COMPOSE_WARNING_LOGS = false
 
 # Aliases
 source aliases/built-in.nu
+source aliases/winget.nu
 source aliases/git.nu
 source aliases/lazygit.nu
 source aliases/chezmoi.nu
