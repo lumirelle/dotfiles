@@ -66,6 +66,7 @@
   },
   // Editor
   "close_on_file_delete": true,
+  "semantic_tokens": "combined",
   // Terminal
   "terminal": {
     "shell": {
