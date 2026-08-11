@@ -102,7 +102,7 @@
             "name": "Vercel Dark",
             "purple": "#C472FB",
             "red": "#FF565F",
-            "selectionBackground": "#1A1A1A",
+            "selectionBackground": "#1F1F1F",
             "white": "#000000",
             "yellow": "#FF9300"
         },
@@ -125,7 +125,7 @@
             "name": "Vercel Light",
             "purple": "#7D00CC",
             "red": "#D8001B",
-            "selectionBackground": "#F2F2F2",
+            "selectionBackground": "#EBEBEB",
             "white": "#FFFFFF",
             "yellow": "#AA4D00"
         }
