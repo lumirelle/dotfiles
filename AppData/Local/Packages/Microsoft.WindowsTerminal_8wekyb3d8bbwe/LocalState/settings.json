@@ -1,10 +1,10 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions":
+    "actions": 
     [
         {
-            "command":
+            "command": 
             {
                 "action": "sendInput",
                 "input": "\u001b[46;5u"
@@ -15,8 +15,8 @@
     "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{01c948fc-988e-4072-9bb7-322fd290be5c}",
-    "keybindings":
+    "defaultProfile": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
+    "keybindings": 
     [
         {
             "id": "Terminal.DuplicatePaneAuto",
@@ -28,20 +28,20 @@
         }
     ],
     "launchMode": "maximized",
-    "newTabMenu":
+    "newTabMenu": 
     [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles":
+    "profiles": 
     {
-        "defaults":
+        "defaults": 
         {
             "backgroundImage": "desktopWallpaper",
             "backgroundImageOpacity": 0.24,
             "colorScheme": "Vercel Dark",
-            "font":
+            "font": 
             {
                 "face": "'Annotation Mono', 'Symbols Nerd Font Mono', 'Maple Mono WR CN'"
             },
@@ -51,7 +51,7 @@
             "startingDirectory": "%USERPROFILE%",
             "useAcrylic": true
         },
-        "list":
+        "list": 
         [
             {
                 "commandline": "\"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -nologo",
@@ -66,22 +66,21 @@
                 "name": "Command Prompt"
             },
             {
-                "commandline": "mise exec aqua:nushell/nushell -- nu",
-                "guid": "{01c948fc-988e-4072-9bb7-322fd290be5c}",
-                "hidden": false,
-                "icon": "\ud83d\udc1a",
-                "name": "Nushell"
-            },
-            {
                 "commandline": "wsl --cd ~",
                 "guid": "{b02bd5d0-487c-4679-a940-be8e7f33dec1}",
                 "hidden": false,
                 "icon": "\ud83d\udc27",
                 "name": "Windows Subsystem for Linux"
+            },
+            {
+                "commandline": "nu",
+                "guid": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
+                "hidden": false,
+                "name": "Nushell"
             }
         ]
     },
-    "schemes":
+    "schemes": 
     [
         {
             "background": "#000000",
@@ -131,23 +130,23 @@
         }
     ],
     "theme": "Vercel Dark",
-    "themes":
+    "themes": 
     [
         {
             "name": "Vercel Dark",
-            "tab":
+            "tab": 
             {
                 "background": "#00000000",
                 "iconStyle": "default",
                 "showCloseButton": "always",
                 "unfocusedBackground": null
             },
-            "tabRow":
+            "tabRow": 
             {
                 "background": "#000000FF",
                 "unfocusedBackground": "#000000FF"
             },
-            "window":
+            "window": 
             {
                 "applicationTheme": "dark",
                 "experimental.rainbowFrame": false,
@@ -158,19 +157,19 @@
         },
         {
             "name": "Vercel Light",
-            "tab":
+            "tab": 
             {
                 "background": "#FFFFFFFF",
                 "iconStyle": "default",
                 "showCloseButton": "always",
                 "unfocusedBackground": null
             },
-            "tabRow":
+            "tabRow": 
             {
                 "background": "#FFFFFFFF",
                 "unfocusedBackground": "#FFFFFFFF"
             },
-            "window":
+            "window": 
             {
                 "applicationTheme": "light",
                 "experimental.rainbowFrame": false,

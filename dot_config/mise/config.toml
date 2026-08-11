@@ -17,15 +17,6 @@ asset_pattern = "noMeiryoUI*.zip"
 [tools.chezmoi]
 version = "latest"
 
-[tools."aqua:nushell/nushell"]
-version = "latest"
-
-[tools.starship]
-version = "latest"
-
-[tools.zoxide]
-version = "latest"
-
 # Development Environment
 # -- CLI / TUI Tools
 [tools.yazi]
