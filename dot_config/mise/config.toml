@@ -13,10 +13,6 @@ version = "3.4.2"
 version_prefix = "TAG-"
 asset_pattern = "noMeiryoUI*.zip"
 
-# System Environment
-[tools.chezmoi]
-version = "latest"
-
 # Development Environment
 # -- CLI / TUI Tools
 [tools.yazi]
