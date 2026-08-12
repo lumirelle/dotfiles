@@ -24,9 +24,6 @@ version = "latest"
 [tools.ripgrep]
 version = "latest"
 
-[tools.tree-sitter]
-version = "latest"
-
 [tools.lazygit]
 version = "latest"
 
