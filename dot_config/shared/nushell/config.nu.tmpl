@@ -1,11 +1,11 @@
 # System Environment
 ## set PATH so it includes user's private bin if it exists
 if ($"($env.HOME?)/bin" | path exists) {
-  $env.PATH = ($env.PATH | prepend $"($env.HOME)/bin")
+$env.PATH = ($env.PATH | prepend $"($env.HOME)/bin")
 }
 ## set PATH so it includes user's private bin if it exists
 if ($"($env.HOME?)/.local/bin" | path exists) {
-  $env.PATH = ($env.PATH | prepend $"($env.HOME)/.local/bin")
+$env.PATH = ($env.PATH | prepend $"($env.HOME)/.local/bin")
 }
 
 # Environment
@@ -24,7 +24,12 @@ $env.PODMAN_COMPOSE_WARNING_LOGS = false
 
 # Aliases
 source aliases/built-in.nu
-source aliases/winget.nu
+{{ if eq .chezmoi.os "windows" }}
+	source aliases/winget.nu
+{{ end }}
+{{ if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "arch") }}
+	source aliases/pacman.nu
+{{ end }}
 source aliases/git.nu
 source aliases/lazygit.nu
 source aliases/chezmoi.nu
