@@ -6,13 +6,6 @@ lockfile = true
 	# Chezmoi is not suitable for /etc/ configuration management, so we use mise dotfiles for that purpose.
 	[dotfiles]
 	"/etc/sysctl.d/50-unprivileged-ports.conf/unprivileged-ports".line = "net.ipv4.ip_unprivileged_port_start = 80"
-
-	{{ if and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
-		"/etc/wsl.conf/wsl-conf".block = '''
-		[interop]
-		appendWindowsPath = false
-		'''
-	{{ end }}
 {{ end }}
 
 # System Appearance
