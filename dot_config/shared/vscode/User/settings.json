@@ -23,7 +23,7 @@
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "//": "Last update at 7/9/2026, 6:47:55 PM",
+    "//": "Last update at 8/13/2026, 5:21:26 PM",
     ".agent": ".agent, .claude, .cline, .codebuddy, .codex, .commandcode, .continue, .crush, .cursor, .factory, .gemini, .goose, .junie, .kilocode, .kiro, .kode, .mcpjam, .mux, .neovate, .opencode, .openhands, .pi, .pochi, .qoder, .qwen, .roo, .trae, .windsurf, .zencoder",
     ".clang-tidy": ".clang-format, .clangd, compile_commands.json",
     ".env": "*.env, .env.*, .envrc, env.d.ts",
@@ -141,8 +141,6 @@
   "gitlens.views.formats.commits.label": "${(tips|11?) > }${message}",
   "gitlens.codeLens.enabled": false,
   "gitlens.ai.enabled": false,
-  "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilotcli:",
   "gitlens.defaultCurrentUserNameStyle": "nameAndYou",
   "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm:ss",
   // Show file size, don't make it too large.
@@ -527,6 +525,11 @@
   "markdown.extension.tableFormatter.enabled": false,
   "shellformat.useEditorConfig": true,
   "files.trimTrailingWhitespace": true,
-  "files.trimFinalNewlines": true
+  "files.trimFinalNewlines": true,
+  // #endregion
+  // #region Behavior / Remote
+  "remote.SSH.remotePlatform": {
+    "vibe-coding": "linux"
+  }
   // #endregion
 }
