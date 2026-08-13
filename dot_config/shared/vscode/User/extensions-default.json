@@ -3,9 +3,9 @@
   // Extension Count: 35
   "recommendations": [
     // #region Appearance / Theme
-    "gantoreno.vscode-vercel-theme",
-    "antfu.icons-carbon",
-    "catppuccin.catppuccin-vsc-icons",
+    "lumirelle.vscode-vercel-theme",
+    "pkief.material-product-icons",
+    "pkief.material-icon-theme",
     // #endregion
 
     // #region Appearance / Sidebar / Explorer
@@ -13,8 +13,6 @@
     // #endregion
 
     // #region Appearance / Editor
-    // Cursor
-    "30d98f9b2.neovide-cursor",
     // Lens
     "usernamehw.errorlens",
     // Preview Editor
@@ -32,6 +30,7 @@
     // #endregion
 
     // #region Appearance / Highlight
+    "naumovs.color-highlight",
     "jgclark.vscode-todo-highlight",
     "ibm.output-colorizer",
     // #endregion

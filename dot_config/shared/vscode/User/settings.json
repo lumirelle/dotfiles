@@ -179,8 +179,8 @@
   "window.autoDetectColorScheme": true,
   "workbench.preferredDarkColorTheme": "Vercel (Dark)",
   "workbench.preferredLightColorTheme": "Vercel (Light)",
-  "workbench.productIconTheme": "icons-carbon",
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.productIconTheme": "material-product-icons",
+  "workbench.iconTheme": "material-icon-theme",
   // Colors
   "workbench.editor.highlightModifiedTabs": true,
   "todohighlight.include": [
