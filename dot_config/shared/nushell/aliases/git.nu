@@ -27,7 +27,7 @@ export alias gbsr = git bisect reset
 export alias gcf = git config --list
 
 # clone, cl
-export alias gcl = git clone core.symlinks=true
+export alias gcl = git clone --config core.symlinks=true
 
 # describe, dc
 export alias gdc = git describe --tags (git rev-list --tags --max-count=1)
