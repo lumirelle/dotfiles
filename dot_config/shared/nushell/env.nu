@@ -1,1 +1,1 @@
-
+export const PLACEHOLDER = 'yes'
