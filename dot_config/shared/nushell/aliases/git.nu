@@ -40,6 +40,13 @@ export def gme [] {
   echo $"(git config get user.name) <(git config get user.email)>"
 }
 
+# p
+export alias gp = git pull
+
+# ps
+export alias gps = git push
+export alias gpsf = git push --force
+
 # root, rt
 # Go to root
 export alias grt = cd (git rev-parse --show-toplevel | complete | if $in.exit_code == 0 { $in.stdout | str trim } else { '.' })
