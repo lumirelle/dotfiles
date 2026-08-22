@@ -1,25 +1,9 @@
-# Guard
-## If not running interactively, don't do anything
-case $- in
-*i*) ;;
-*) return ;;
-esac
-
-# System Environment
-## set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ]; then
-  PATH="$HOME/bin:$PATH"
-fi
-## set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ]; then
-  PATH="$HOME/.local/bin:$PATH"
-fi
 ## Mise, https://mise.jdx.dev/
 eval "$(mise activate bash)"
 
 # Environment
-## If Nushell is installed, use it instead.
-if command -v nu &>/dev/null; then
+## If Nushell is installed & the shell is running in interactive mode, run Nushell instead.
+if [[ $- == *i* ]] && command -v nu &>/dev/null; then
   exec nu
 else
   ## Starship, https://starship.rs/
@@ -57,6 +41,3 @@ else
     echo "Done!"
   }
 fi
-
-# opencode
-export PATH=/home/xiaoxi/.opencode/bin:$PATH
