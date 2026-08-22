@@ -1,13 +1,13 @@
-export alias cm = chezmoi
+export alias ch = chezmoi
 
-export alias cmdr = chezmoi doctor
-export alias cms = chezmoi status
-export alias cmd = chezmoi diff
+export alias chdr = chezmoi doctor
+export alias chs = chezmoi status
+export alias chd = chezmoi diff
 
-export alias cma = chezmoi add
-export alias cmra = chezmoi re-add
+export alias cha = chezmoi add
+export alias chra = chezmoi re-add
 
-export alias cmfg = chezmoi forget
-export alias cmde = chezmoi destroy
+export alias chfg = chezmoi forget
+export alias chde = chezmoi destroy
 
-export alias cmap = chezmoi apply
+export alias chap = chezmoi apply
