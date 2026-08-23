@@ -4,5 +4,5 @@ Windows Registry Editor Version 5.00
 "AutoFontFamily"=-
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink]
-"Fraunces 9pt"=-
-"Fraunces 9pt Bold"=-
+"Merriweather 18pt"=-
+"Merriweather 18pt Bold"=-

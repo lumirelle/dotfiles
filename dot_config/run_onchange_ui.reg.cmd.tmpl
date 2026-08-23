@@ -1,0 +1,4 @@
+@REM {{ joinPath .chezmoi.homeDir ".config/ui.reg" | include | sha256sum }}
+
+@gsudo status IsElevated --no-output || (gsudo "%~f0" & exit /b)
+reg import "%USERPROFILE%\.config\ui.reg"

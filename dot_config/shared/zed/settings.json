@@ -23,7 +23,7 @@
   "show_whitespaces": "boundary",
   "colorize_brackets": true,
   // Font
-  "ui_font_family": "Fraunces 9pt",
+  "ui_font_family": "Merriweather 18pt",
   "ui_font_fallbacks": [
     "Symbols Nerd Font",
     "Resource Han Rounded SC"

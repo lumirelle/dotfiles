@@ -296,8 +296,8 @@
   "editor.cursorSmoothCaretAnimation": "on",
   // #endregion
   // #region Appearance / Font
-  "custom-ui-style.font.sansSerif": "'Fraunces 9pt', 'Symbols Nerd Font', 'Resource Han Rounded SC', sans-serif",
-  "markdown.preview.fontFamily": "'Fraunces 9pt', 'Symbols Nerd Font', 'Resource Han Rounded SC', monospace",
+  "custom-ui-style.font.sansSerif": "'Merriweather 18pt', 'Symbols Nerd Font', 'Resource Han Rounded SC', sans-serif",
+  "markdown.preview.fontFamily": "'Merriweather 18pt', 'Symbols Nerd Font', 'Resource Han Rounded SC', monospace",
   "editor.fontFamily": "'Annotation Mono', 'Symbols Nerd Font Mono', 'Maple Mono WR CN', monospace",
   "custom-ui-style.font.monospace": "'Annotation Mono', 'Symbols Nerd Font Mono', 'Maple Mono WR CN'", // Will falls back to editor's font
   "markdown.preview.fontSize": 14,
