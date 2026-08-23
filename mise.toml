@@ -32,7 +32,7 @@ flag "-s --staged" help="Run on staged files only without stashing unstaged chan
 arg "[rest]" var=#true help="Additional arguments to pass to the test runner"
 '''
 run = '''
-hk check {{ "--staged" if usage.staged else "--all" }}  {{ usage.rest | join(sep=' ') if usage.rest else '' }}
+hk check {{ "--staged" if usage.staged else "--all" }} {{ usage.rest | join(sep=' ') if usage.rest else '' }}
 '''
 
 [tasks.fix]
