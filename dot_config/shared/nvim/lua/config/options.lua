@@ -3,7 +3,7 @@
 -- Add any additional options here
 
 -- Gui font, used by Neovide
-vim.o.guifont = "Annotation Mono, Symbols Nerd Font, Maple Mono WR CN"
+vim.o.guifont = "Go Mono, Symbols Nerd Font, Maple Mono CN"
 
 -- Set default shell to Nushell, to get the cross-platform experience
 vim.o.shell = "nu"

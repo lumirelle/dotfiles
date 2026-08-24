@@ -29,10 +29,10 @@
     "Resource Han Rounded SC"
   ],
   "ui_font_size": 16,
-  "buffer_font_family": "Annotation Mono",
+  "buffer_font_family": "Go Mono",
   "buffer_font_fallbacks": [
     "Symbols Nerd Font Mono",
-    "Maple Mono WR CN"
+    "Maple Mono CN"
   ],
   "buffer_font_size": 16,
   "buffer_font_features": {
