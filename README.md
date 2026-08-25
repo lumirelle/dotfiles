@@ -12,6 +12,8 @@ My dotfiles (also application files), out-of-box (for me).
   - Nushell
   - Windows PowerShell (Legacy, Windows Only)
   - Bash (Legacy, Unix-like Only, Login shell mode will redirect to Nushell)
+- Shell Mutiplexers
+  - Herdr
 - Shell Prompts
   - Starship
 - Version control systems

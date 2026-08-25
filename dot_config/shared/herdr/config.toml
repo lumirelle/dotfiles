@@ -1,0 +1,5 @@
+onboarding = false
+
+# Use nushell for new interactive panes.
+[terminal]
+default_shell = 'nu'
