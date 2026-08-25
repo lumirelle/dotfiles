@@ -25,5 +25,7 @@ My dotfiles (also application files), out-of-box (for me).
   - Neovim
   - VSCode
   - Zed
+- Agent Harness
+  - Pi Coding Agent
 - Linters
   - CSpell
