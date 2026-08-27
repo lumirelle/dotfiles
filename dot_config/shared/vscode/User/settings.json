@@ -447,14 +447,7 @@
   },
   // Markup Languages
   "markdown.extension.italic.indicator": "_",
-  "yaml.disableSchemaDetection": [
-    "**/.github/workflows/*.yml",
-    "**/.github/workflows/*.yaml",
-    "**/.gitea/workflows/*.yml",
-    "**/.gitea/workflows/*.yaml",
-    "**/.forgejo/workflows/*.yml",
-    "**/.forgejo/workflows/*.yaml"
-  ],
+  "yaml.disableSchemaDetection": [],
   // Vue
   "vue.autoInsert.dotValue": true,
   "vue.hover.rich": true,
