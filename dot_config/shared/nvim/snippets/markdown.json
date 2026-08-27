@@ -1,0 +1,58 @@
+{
+  "Markdown Table": {
+    "prefix": "table",
+    "description": "Markdown table",
+    "body": [
+      "<table><tbody>",
+      "",
+      "<tr><th valign=\"top\">",
+      "",
+      "$1",
+      "",
+      "</th><th valign=\"top\">",
+      "",
+      "$0",
+      "",
+      "</th></tr>",
+      "",
+      "</tbody></table>",
+      ""
+    ]
+  },
+  "Markdown Table Row": {
+    "prefix": "tablerow",
+    "description": "Markdown table row",
+    "body": [
+      "<tr><td valign=\"top\">",
+      "",
+      "$1",
+      "",
+      "</td><td valign=\"top\">",
+      "",
+      "$0",
+      "",
+      "</td></tr>",
+      ""
+    ]
+  },
+  "Commnet Todo in HTML": {
+    "prefix": "todo",
+    "description": "Commnet Todo in HTML",
+    "body": ["<!-- TODO(Lumirelle): $0 -->"]
+  },
+  "Commnet XXX in HTML": {
+    "prefix": "xxx",
+    "description": "Commnet XXX in HTML",
+    "body": ["<!-- BUG(Lumirelle): $0 -->"]
+  },
+  "Commnet Fixme in HTML": {
+    "prefix": "fxm",
+    "description": "Commnet fixme in HTML",
+    "body": ["<!-- FIXME(Lumirelle): $0 -->"]
+  },
+  "Commnet Note in HTML": {
+    "prefix": "note",
+    "description": "Commnet Note in HTML",
+    "body": ["<!-- NOTE(Lumirelle): $0 -->"]
+  }
+}

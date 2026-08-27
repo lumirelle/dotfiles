@@ -1,0 +1,42 @@
+{
+  "Commnet Todo": {
+    "prefix": "todo",
+    "description": "Commnet Todo",
+    "body": ["// TODO(Lumirelle): $0"]
+  },
+  "Commnet Todo Block With ///": {
+    "prefix": "todoblock",
+    "description": "Commnet Todo Block With ///",
+    "body": ["///", "/// TODO(Lumirelle): $0", "///"]
+  },
+  "Comment XXX": {
+    "prefix": "xxx",
+    "description": "Comment XXX",
+    "body": ["// XXX(Lumirelle): $0"]
+  },
+  "Commnet XXX Block With ///": {
+    "prefix": "xxxblock",
+    "description": "Commnet XXX Block With ///",
+    "body": ["///", "/// XXX(Lumirelle): $0", "///"]
+  },
+  "Commnet Fixme": {
+    "prefix": "fxm",
+    "description": "Commnet Fixme",
+    "body": ["// FIXME(Lumirelle): $0"]
+  },
+  "Commnet Fixme Block With ///": {
+    "prefix": "fxmblock",
+    "description": "Commnet Fixme Block With ///",
+    "body": ["///", "/// FIXME(Lumirelle): $0", "///"]
+  },
+  "Commnet Note": {
+    "prefix": "note",
+    "description": "Commnet Note",
+    "body": ["// NOTE(Lumirelle): $0"]
+  },
+  "Commnet Note Block With ///": {
+    "prefix": "noteblock",
+    "description": "Commnet Note Block With ///",
+    "body": ["///", "/// NOTE(Lumirelle): $0", "///"]
+  }
+}
