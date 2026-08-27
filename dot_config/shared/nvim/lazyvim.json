@@ -30,6 +30,7 @@
     "lazyvim.plugins.extras.util.dot",
     "lazyvim.plugins.extras.util.gh",
     "plugins.extras.editor.gitignore",
+    "plugins.extras.editor.prose",
     "plugins.extras.editor.zoxide",
     "plugins.extras.lang.toml",
     "plugins.extras.lang.typescript.oxc"
