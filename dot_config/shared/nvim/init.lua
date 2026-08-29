@@ -23,5 +23,9 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+-- Windows does not define HOME by default; some plugins (e.g. astrocommunity.pack.chezmoi)
+-- expect it to exist, so fall back to USERPROFILE.
+vim.env.HOME = vim.env.HOME or vim.env.USERPROFILE
+
 require("lazy_setup")
 require("polish")
