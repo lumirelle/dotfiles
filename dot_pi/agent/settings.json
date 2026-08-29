@@ -1,0 +1,12 @@
+{
+  "lastChangelogVersion": "0.84.4",
+  "theme": "dark",
+  "defaultProvider": "openrouter",
+  "defaultModel": "z-ai/glm-5.3-flash",
+  "packages": [
+    "npm:pi-web-access",
+    "npm:@narumitw/pi-btw",
+    "npm:pi-herdr-subagents",
+    "npm:pi-tool-display"
+  ]
+}
