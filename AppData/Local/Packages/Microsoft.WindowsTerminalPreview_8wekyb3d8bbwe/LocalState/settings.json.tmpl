@@ -1,17 +1,7 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
-    "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions":
-    [
-        {
-            "command":
-            {
-                "action": "sendInput",
-                "input": "\u001b[46;5u"
-            },
-            "id": "User.sendInput.3B9D7849"
-        }
-    ],
+    "$schema": "https://aka.ms/terminal-profiles-schema-preview",
+    "actions": [],
     "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
@@ -21,10 +11,6 @@
         {
             "id": "Terminal.DuplicatePaneAuto",
             "keys": "alt+shift+d"
-        },
-        {
-            "id": "User.sendInput.3B9D7849",
-            "keys": "ctrl+period"
         }
     ],
     "launchMode": "maximized",
@@ -32,6 +18,22 @@
     [
         {
             "type": "remainingProfiles"
+        },
+        {
+            "allowEmpty": false,
+            "entries":
+            [
+                {
+                    "commandline": null,
+                    "name": null,
+                    "source": "Windows.Terminal.SSH",
+                    "type": "matchProfiles"
+                }
+            ],
+            "icon": "\ue969",
+            "inline": "auto",
+            "name": "SSH",
+            "type": "folder"
         }
     ],
     "profiles":
@@ -65,6 +67,14 @@
                 "hidden": false,
                 "name": "Command Prompt"
             },
+{{ if eq .chezmoi.hostname "NJ-TSJ-0254" }}
+            {
+                "guid": "{2849f3cd-ed96-5507-a22e-c26667b28b87}",
+                "hidden": false,
+                "name": "SSH - vibe-coding",
+                "source": "Windows.Terminal.SSH"
+            },
+{{ end }}
             {
                 "commandline": "wsl --cd ~",
                 "guid": "{b02bd5d0-487c-4679-a940-be8e7f33dec1}",
@@ -78,7 +88,25 @@
                 "hidden": false,
                 "name": "Nushell",
                 "source": "nu"
-            }
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{9a288e30-58a2-5fe0-b6a8-f961d3be35e8}",
+                "hidden": true,
+                "name": "archlinux",
+                "source": "Microsoft.WSL"
+            },
+            {
+                "guid": "{a83685e5-18c3-5337-ab9d-4957346b4ed6}",
+                "hidden": true,
+                "name": "podman-machine-default",
+                "source": "Microsoft.WSL"
+            },
         ]
     },
     "schemes":
