@@ -5,6 +5,7 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
+  { import = "astrocommunity.motion.mini-move" },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.chezmoi" },
   { import = "astrocommunity.pack.docker" },
