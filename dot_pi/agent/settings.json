@@ -3,6 +3,7 @@
   "theme": "dark",
   "defaultProvider": "openrouter",
   "defaultModel": "z-ai/glm-5.3-flash",
+  "defaultThinkingLevel": "max",
   "packages": [
     "npm:pi-web-access",
     "npm:@narumitw/pi-btw",
