@@ -1,211 +1,211 @@
 {
-    "$help": "https://aka.ms/terminal-documentation",
-    "$schema": "https://aka.ms/terminal-profiles-schema-preview",
-    "actions": [],
-    "centerOnLaunch": true,
-    "copyFormatting": "none",
-    "copyOnSelect": false,
-    "defaultProfile": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
-    "keybindings":
-    [
-        {
-            "id": "Terminal.DuplicatePaneAuto",
-            "keys": "alt+shift+d"
-        }
-    ],
-    "launchMode": "maximized",
-    "newTabMenu":
-    [
-        {
-            "type": "remainingProfiles"
-        },
-        {
-            "allowEmpty": false,
-            "entries":
-            [
-                {
-                    "commandline": null,
-                    "name": null,
-                    "source": "Windows.Terminal.SSH",
-                    "type": "matchProfiles"
-                }
-            ],
-            "icon": "\ue969",
-            "inline": "auto",
-            "name": "SSH",
-            "type": "folder"
-        }
-    ],
-    "profiles":
-    {
-        "defaults":
-        {
-            "backgroundImage": "desktopWallpaper",
-            "backgroundImageOpacity": 0.24,
-            "colorScheme": "Vercel Dark",
-            "font":
-            {
-                "face": "'Go Mono', 'Symbols Nerd Font Mono', 'Maple Mono CN'"
-            },
-            "intenseTextStyle": "all",
-            "opacity": 100,
-            "rightClickContextMenu": true,
-            "startingDirectory": "%USERPROFILE%",
-            "useAcrylic": true
-        },
-        "list":
-        [
-            {
-                "commandline": "\"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -nologo",
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "hidden": false,
-                "name": "Windows PowerShell"
-            },
-            {
-                "commandline": "%SystemRoot%\\System32\\cmd.exe",
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "hidden": false,
-                "name": "Command Prompt"
-            },
+"$help": "https://aka.ms/terminal-documentation",
+"$schema": "https://aka.ms/terminal-profiles-schema-preview",
+"actions": [],
+"centerOnLaunch": true,
+"copyFormatting": "none",
+"copyOnSelect": false,
+"defaultProfile": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
+"keybindings":
+[
+{
+"id": "Terminal.DuplicatePaneAuto",
+"keys": "alt+shift+d"
+}
+],
+"launchMode": "maximized",
+"newTabMenu":
+[
+{
+"type": "remainingProfiles"
+},
+{
+"allowEmpty": false,
+"entries":
+[
+{
+"commandline": null,
+"name": null,
+"source": "Windows.Terminal.SSH",
+"type": "matchProfiles"
+}
+],
+"icon": "\ue969",
+"inline": "auto",
+"name": "SSH",
+"type": "folder"
+}
+],
+"profiles":
+{
+"defaults":
+{
+"backgroundImage": "desktopWallpaper",
+"backgroundImageOpacity": 0.24,
+"colorScheme": "Vercel Dark",
+"font":
+{
+"face": "'Go Mono', 'Symbols Nerd Font Mono', 'Maple Mono CN'"
+},
+"intenseTextStyle": "all",
+"opacity": 100,
+"rightClickContextMenu": true,
+"startingDirectory": "%USERPROFILE%",
+"useAcrylic": true
+},
+"list":
+[
+{
+"commandline": "\"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -nologo",
+"guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+"hidden": false,
+"name": "Windows PowerShell"
+},
+{
+"commandline": "%SystemRoot%\\System32\\cmd.exe",
+"guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+"hidden": false,
+"name": "Command Prompt"
+},
 {{ if eq .chezmoi.hostname "NJ-TSJ-0254" }}
-            {
-                "guid": "{2849f3cd-ed96-5507-a22e-c26667b28b87}",
-                "hidden": false,
-                "name": "SSH - vibe-coding",
-                "source": "Windows.Terminal.SSH"
-            },
+	{
+	"guid": "{2849f3cd-ed96-5507-a22e-c26667b28b87}",
+	"hidden": false,
+	"name": "SSH - vibe-coding",
+	"source": "Windows.Terminal.SSH"
+	},
 {{ end }}
-            {
-                "commandline": "wsl --cd ~",
-                "guid": "{b02bd5d0-487c-4679-a940-be8e7f33dec1}",
-                "hidden": false,
-                "icon": "\ud83d\udc27",
-                "name": "Windows Subsystem for Linux"
-            },
-            {
-                "commandline": "nu",
-                "guid": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
-                "hidden": false,
-                "name": "Nushell",
-                "source": "nu"
-            },
-            {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": true,
-                "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
-            },
-            {
-                "guid": "{9a288e30-58a2-5fe0-b6a8-f961d3be35e8}",
-                "hidden": true,
-                "name": "archlinux",
-                "source": "Microsoft.WSL"
-            },
-            {
-                "guid": "{a83685e5-18c3-5337-ab9d-4957346b4ed6}",
-                "hidden": true,
-                "name": "podman-machine-default",
-                "source": "Microsoft.WSL"
-            },
-        ]
-    },
-    "schemes":
-    [
-        {
-            "background": "#000000",
-            "black": "#A0A0A0",
-            "blue": "#47A8FF",
-            "brightBlack": "#A0A0A0",
-            "brightBlue": "#47A8FF",
-            "brightCyan": "#01F7F7",
-            "brightGreen": "#00CA50",
-            "brightPurple": "#C472FB",
-            "brightRed": "#FF565F",
-            "brightWhite": "#EDEDED",
-            "brightYellow": "#FF9300",
-            "cursorColor": "#EDEDED",
-            "cyan": "#01F7F7",
-            "foreground": "#EDEDED",
-            "green": "#00CA50",
-            "name": "Vercel Dark",
-            "purple": "#C472FB",
-            "red": "#FF565F",
-            "selectionBackground": "#1F1F1F",
-            "white": "#EDEDED",
-            "yellow": "#FF9300"
-        },
-        {
-            "background": "#FFFFFF",
-            "black": "#171717",
-            "blue": "#005FF2",
-            "brightBlack": "#171717",
-            "brightBlue": "#005FF2",
-            "brightCyan": "#01F7F7",
-            "brightGreen": "#107D32",
-            "brightPurple": "#7D00CC",
-            "brightRed": "#D8001B",
-            "brightWhite": "#4D4D4D",
-            "brightYellow": "#AA4D00",
-            "cursorColor": "#171717",
-            "cyan": "#01F7F7",
-            "foreground": "#171717",
-            "green": "#107D32",
-            "name": "Vercel Light",
-            "purple": "#7D00CC",
-            "red": "#D8001B",
-            "selectionBackground": "#EBEBEB",
-            "white": "#4D4D4D",
-            "yellow": "#AA4D00"
-        }
-    ],
-    "theme": "Vercel Dark",
-    "themes":
-    [
-        {
-            "name": "Vercel Dark",
-            "tab":
-            {
-                "background": "#00000000",
-                "iconStyle": "default",
-                "showCloseButton": "always",
-                "unfocusedBackground": null
-            },
-            "tabRow":
-            {
-                "background": "#000000FF",
-                "unfocusedBackground": "#000000FF"
-            },
-            "window":
-            {
-                "applicationTheme": "dark",
-                "experimental.rainbowFrame": false,
-                "frame": null,
-                "unfocusedFrame": null,
-                "useMica": false
-            }
-        },
-        {
-            "name": "Vercel Light",
-            "tab":
-            {
-                "background": "#FFFFFFFF",
-                "iconStyle": "default",
-                "showCloseButton": "always",
-                "unfocusedBackground": null
-            },
-            "tabRow":
-            {
-                "background": "#FFFFFFFF",
-                "unfocusedBackground": "#FFFFFFFF"
-            },
-            "window":
-            {
-                "applicationTheme": "light",
-                "experimental.rainbowFrame": false,
-                "frame": null,
-                "unfocusedFrame": null,
-                "useMica": false
-            }
-        }
-    ]
+{
+"commandline": "wsl --cd ~",
+"guid": "{b02bd5d0-487c-4679-a940-be8e7f33dec1}",
+"hidden": false,
+"icon": "\ud83d\udc27",
+"name": "Windows Subsystem for Linux"
+},
+{
+"commandline": "nu",
+"guid": "{47302f9c-1ac4-566c-aa3e-8cf29889d6ab}",
+"hidden": false,
+"name": "Nushell",
+"source": "nu"
+},
+{
+"guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+"hidden": true,
+"name": "Azure Cloud Shell",
+"source": "Windows.Terminal.Azure"
+},
+{
+"guid": "{9a288e30-58a2-5fe0-b6a8-f961d3be35e8}",
+"hidden": true,
+"name": "archlinux",
+"source": "Microsoft.WSL"
+},
+{
+"guid": "{a83685e5-18c3-5337-ab9d-4957346b4ed6}",
+"hidden": true,
+"name": "podman-machine-default",
+"source": "Microsoft.WSL"
+},
+]
+},
+"schemes":
+[
+{
+"background": "#000000",
+"black": "#A0A0A0",
+"blue": "#47A8FF",
+"brightBlack": "#A0A0A0",
+"brightBlue": "#47A8FF",
+"brightCyan": "#01F7F7",
+"brightGreen": "#00CA50",
+"brightPurple": "#C472FB",
+"brightRed": "#FF565F",
+"brightWhite": "#EDEDED",
+"brightYellow": "#FF9300",
+"cursorColor": "#EDEDED",
+"cyan": "#01F7F7",
+"foreground": "#EDEDED",
+"green": "#00CA50",
+"name": "Vercel Dark",
+"purple": "#C472FB",
+"red": "#FF565F",
+"selectionBackground": "#1F1F1F",
+"white": "#EDEDED",
+"yellow": "#FF9300"
+},
+{
+"background": "#FFFFFF",
+"black": "#171717",
+"blue": "#005FF2",
+"brightBlack": "#171717",
+"brightBlue": "#005FF2",
+"brightCyan": "#01F7F7",
+"brightGreen": "#107D32",
+"brightPurple": "#7D00CC",
+"brightRed": "#D8001B",
+"brightWhite": "#4D4D4D",
+"brightYellow": "#AA4D00",
+"cursorColor": "#171717",
+"cyan": "#01F7F7",
+"foreground": "#171717",
+"green": "#107D32",
+"name": "Vercel Light",
+"purple": "#7D00CC",
+"red": "#D8001B",
+"selectionBackground": "#EBEBEB",
+"white": "#4D4D4D",
+"yellow": "#AA4D00"
+}
+],
+"theme": "Vercel Dark",
+"themes":
+[
+{
+"name": "Vercel Dark",
+"tab":
+{
+"background": "#00000000",
+"iconStyle": "default",
+"showCloseButton": "always",
+"unfocusedBackground": null
+},
+"tabRow":
+{
+"background": "#000000FF",
+"unfocusedBackground": "#000000FF"
+},
+"window":
+{
+"applicationTheme": "dark",
+"experimental.rainbowFrame": false,
+"frame": null,
+"unfocusedFrame": null,
+"useMica": false
+}
+},
+{
+"name": "Vercel Light",
+"tab":
+{
+"background": "#FFFFFFFF",
+"iconStyle": "default",
+"showCloseButton": "always",
+"unfocusedBackground": null
+},
+"tabRow":
+{
+"background": "#FFFFFFFF",
+"unfocusedBackground": "#FFFFFFFF"
+},
+"window":
+{
+"applicationTheme": "light",
+"experimental.rainbowFrame": false,
+"frame": null,
+"unfocusedFrame": null,
+"useMica": false
+}
+}
+]
 }
