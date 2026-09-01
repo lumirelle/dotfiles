@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "context-mode": {
+      "command": "mise exec node -- npx context-mode"
+    }
+  }
+}

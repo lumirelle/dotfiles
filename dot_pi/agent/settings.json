@@ -8,6 +8,10 @@
     "npm:pi-web-access",
     "npm:@narumitw/pi-btw",
     "npm:pi-herdr-subagents",
-    "npm:pi-tool-display"
-  ]
+    "npm:pi-tool-display",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:pi-mcp-adapter",
+    "npm:context-mode"
+  ],
+  "hideThinkingBlock": true
 }
