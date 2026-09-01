@@ -14,7 +14,7 @@ tun:
   auto-route: true
   device: Mihomo
   dns-hijack:
-    - any:53
+  - any:53
   mtu: 1500
   route-exclude-address: []
   stack: mixed
@@ -23,9 +23,9 @@ secret: set-your-secret
 external-controller-cors:
   allow-private-network: true
   allow-origins:
-    - tauri://localhost
-    - http://tauri.localhost
-    - https://yacd.metacubex.one
-    - https://metacubex.github.io
-    - https://board.zash.run.place
+  - tauri://localhost
+  - http://tauri.localhost
+  - https://yacd.metacubex.one
+  - https://metacubex.github.io
+  - https://board.zash.run.place
 unified-delay: true
