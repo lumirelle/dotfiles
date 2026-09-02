@@ -28,6 +28,7 @@ My dotfiles (also application files), out-of-box (for me).
   - VSCode
   - Zed
 - Harness (for LLM, Harness + LLM = Agent)
-  - oh-my-pi
+  - General (`.agents`)
+  - oh-my-pi (`.omp`)
 - Linters
   - CSpell
