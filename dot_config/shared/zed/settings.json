@@ -7,7 +7,7 @@
     "dark": "Vercel Dark",
     "light": "Vercel Light"
   },
-  "icon_theme": "Catppuccin Mocha",
+  "icon_theme": "Material Icon Theme",
   // Layout
   "use_system_prompts": false,
   "use_system_path_prompts": false,
