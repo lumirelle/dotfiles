@@ -8,6 +8,7 @@ return {
   "AstroNvim/astroui",
   ---@type AstroUIOpts
   opts = {
+    colorscheme = "vercel",
     -- Icons can be configured throughout the interface
     icons = {
       -- configure the loading of the lsp in the status line
