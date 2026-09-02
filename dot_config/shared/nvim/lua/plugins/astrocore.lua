@@ -7,5 +7,19 @@
 return {
   "AstroNvim/astrocore",
   ---@type AstroCoreOpts
-  opts = {},
+  opts = {
+    options = {
+      opt = {
+        -- Use Nushell as the default shell.
+        -- nu is not POSIX: no `2>&1`, no `tee`, and no quote-stripping,
+        -- so the shell* options must be overridden alongside `shell`.
+        shell = "nu",
+        shellcmdflag = "-c",
+        shellquote = "",
+        shellxquote = "",
+        shellredir = "| save --force %s",
+        shellpipe = "| save --force %s",
+      },
+    },
+  },
 }
