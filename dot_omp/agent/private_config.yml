@@ -2,7 +2,7 @@ providers:
   webSearchOrder:
     []
 modelRoles:
-  default: openrouter/google/gemini-3.7-flash
+  default: xiaoxi/xiaoxi/GLM-5.3:high
 symbolPreset: nerd
 composer:
   shape: claude
