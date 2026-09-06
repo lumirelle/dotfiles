@@ -289,65 +289,6 @@ checksum = "sha256:e36a4e730c15b28466efeac090a022cd2cdb16b88d06a4755cad6020b04e2
 url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.0/noMeiryoUI3.5.0.zip"
 url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/536341171"
 
-[[tools."github:apple/pkl-lsp"]]
-version = "0.8.0"
-backend = "github:apple/pkl-lsp"
-
-[tools."github:apple/pkl-lsp"."platforms.linux-arm64"]
-checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
-url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
-url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
-
-[tools."github:apple/pkl-lsp"."platforms.linux-arm64-musl"]
-checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
-url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
-url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
-
-[tools."github:apple/pkl-lsp"."platforms.linux-x64"]
-checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
-url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
-url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
-
-[tools."github:apple/pkl-lsp"."platforms.linux-x64-baseline"]
-checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
-url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
-url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
-
-[tools."github:apple/pkl-lsp"."platforms.linux-x64-musl"]
-checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
-url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
-url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
-
-[tools."github:apple/pkl-lsp"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
-url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
-url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
-
-[tools."github:apple/pkl-lsp"."platforms.macos-arm64"]
-checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
-url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
-url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
-
-[tools."github:apple/pkl-lsp"."platforms.macos-x64"]
-checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
-url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
-url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
-
-[tools."github:apple/pkl-lsp"."platforms.macos-x64-baseline"]
-checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
-url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
-url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
-
-[tools."github:apple/pkl-lsp"."platforms.windows-x64"]
-checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
-url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
-url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
-
-[tools."github:apple/pkl-lsp"."platforms.windows-x64-baseline"]
-checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
-url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
-url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
-
 [[tools.hyperfine]]
 version = "1.20.0"
 backend = "aqua:sharkdp/hyperfine"

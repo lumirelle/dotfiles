@@ -6,14 +6,14 @@ local linters = new Mapping<String, Step> {
   // Code
   ["gotmplfmt"] {
     glob = List(".chezmoiignore", "**/*.tmpl")
-    check_list_files = new Config.CommandSpec {
-      command = new Config.Command {
+    check_list_files = new CommandSpec {
+      command = new Command {
         argv = List("node", "./scripts/gotmplfmt-check.js", "{{ files }}")
       }
       effect = "read"
     }
-    fix = new Config.CommandSpec {
-      command = new Config.Command {
+    fix = new CommandSpec {
+      command = new Command {
         argv = List("gotmplfmt", "-w", "{{ files }}")
       }
       effect = "write"
@@ -44,12 +44,12 @@ local linters = new Mapping<String, Step> {
         "*.mdc",
         "*.mdx",
       )
-    check = new Config.CommandSpec {
-      command = new Config.Command { argv = List("eslint", "--no-warn-ignored", "{{files}}") }
+    check = new CommandSpec {
+      command = new Command { argv = List("eslint", "--no-warn-ignored", "{{files}}") }
       effect = "read"
     }
-    fix = new Config.CommandSpec {
-      command = new Config.Command {
+    fix = new CommandSpec {
+      command = new Command {
         argv = List("eslint", "--no-warn-ignored", "--fix", "{{files}}")
       }
       effect = "write"
@@ -59,14 +59,14 @@ local linters = new Mapping<String, Step> {
   ["stylua"] = Builtins.stylua
   ["nufmt"] {
     glob = List("**/*.nu")
-    check = new Config.CommandSpec {
-      command = new Config.Command {
+    check = new CommandSpec {
+      command = new Command {
         argv = List("nufmt", "--dry-run", "{{ files }}")
       }
       effect = "read"
     }
-    fix = new Config.CommandSpec {
-      command = new Config.Command {
+    fix = new CommandSpec {
+      command = new Command {
         argv = List("nufmt", "{{ files }}")
       }
       effect = "write"
@@ -75,7 +75,7 @@ local linters = new Mapping<String, Step> {
   ["shfmt"] = (Builtins.shfmt) {
     match_any =
       List(
-        new Config.FileSelector {
+        new FileSelector {
           glob =
             List(
               // Code
@@ -89,15 +89,15 @@ local linters = new Mapping<String, Step> {
               "**/.npmrc",
             )
         },
-        new Config.FileSelector { types = List("sh", "bash") },
+        new FileSelector { types = List("sh", "bash") },
       )
   }
 
   // Configurations
   ["hk"] {
     glob = List("hk.pkl")
-    check = new Config.CommandSpec {
-      command = new Config.Command { argv = List("hk", "validate") }
+    check = new CommandSpec {
+      command = new Command { argv = List("hk", "validate") }
       effect = "read"
     }
   }
