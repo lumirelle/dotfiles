@@ -1,3 +1,5 @@
+#:schema https://mise.jdx.dev/schema/mise.json
+
 [tools]
 # Environments
 node = "latest"
@@ -14,16 +16,13 @@ shfmt = "latest"
 
 [deps.nub]
 description = 'Automatically install Node.js dependencies via nub.'
-sources = [
-  'package.json',
-  'nub.lock'
-]
-outputs = [ 'node_modules/' ]
+sources = ['package.json', 'nub.lock']
+outputs = ['node_modules/']
 run = 'nub pm pin && nub install'
 auto = true
 
 [env]
-_.path = [ "{{config_root}}/node_modules/.bin" ]
+_.path = ["{{config_root}}/node_modules/.bin"]
 
 [tasks.check]
 description = 'Run all checks.'

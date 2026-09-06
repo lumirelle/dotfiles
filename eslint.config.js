@@ -6,6 +6,13 @@ export default antfu(
   {
     // Strict lib type
     type: 'lib',
+    toml: {
+      overrides: {
+        'toml/array-element-newline': ['error', 'consistent'],
+        'toml/array-bracket-spacing': ['error', 'never'],
+        'toml/spaced-comment': ['error', 'always', { markers: [':schema'] }],
+      },
+    },
     // Keep some configs style as their are,
     // to reduce the differences while updating.
     ignores: [
