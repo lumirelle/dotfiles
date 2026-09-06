@@ -1,5 +1,8 @@
 onboarding = false
 
+[keys]
+prefix = "ctrl+s"
+
 # Use nushell for new interactive panes.
 [terminal]
 default_shell = 'nu'
