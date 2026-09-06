@@ -289,6 +289,65 @@ checksum = "sha256:e36a4e730c15b28466efeac090a022cd2cdb16b88d06a4755cad6020b04e2
 url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.0/noMeiryoUI3.5.0.zip"
 url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/536341171"
 
+[[tools."github:apple/pkl-lsp"]]
+version = "0.8.0"
+backend = "github:apple/pkl-lsp"
+
+[tools."github:apple/pkl-lsp"."platforms.linux-arm64"]
+checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
+url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
+url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
+
+[tools."github:apple/pkl-lsp"."platforms.linux-arm64-musl"]
+checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
+url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
+url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
+
+[tools."github:apple/pkl-lsp"."platforms.linux-x64"]
+checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
+url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
+url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
+
+[tools."github:apple/pkl-lsp"."platforms.linux-x64-baseline"]
+checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
+url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
+url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
+
+[tools."github:apple/pkl-lsp"."platforms.linux-x64-musl"]
+checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
+url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
+url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
+
+[tools."github:apple/pkl-lsp"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
+url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
+url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
+
+[tools."github:apple/pkl-lsp"."platforms.macos-arm64"]
+checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
+url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
+url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
+
+[tools."github:apple/pkl-lsp"."platforms.macos-x64"]
+checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
+url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
+url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
+
+[tools."github:apple/pkl-lsp"."platforms.macos-x64-baseline"]
+checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
+url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
+url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
+
+[tools."github:apple/pkl-lsp"."platforms.windows-x64"]
+checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
+url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
+url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
+
+[tools."github:apple/pkl-lsp"."platforms.windows-x64-baseline"]
+checksum = "sha256:06f9de45a21aa7a16bf5c052513521f98793cd9c57036b9368fcad799e96a8ff"
+url = "https://github.com/apple/pkl-lsp/releases/download/0.8.0/pkl-lsp-0.8.0.jar"
+url_api = "https://api.github.com/repos/apple/pkl-lsp/releases/assets/470575405"
+
 [[tools.hyperfine]]
 version = "1.20.0"
 backend = "aqua:sharkdp/hyperfine"
@@ -342,6 +401,37 @@ url_api = "https://api.github.com/repos/sharkdp/hyperfine/releases/assets/317832
 checksum = "sha256:2508c549b049b1d4342d08edc1cb42bfac169082b6e3069431b5bab9822dbb32"
 url = "https://github.com/sharkdp/hyperfine/releases/download/v1.20.0/hyperfine-v1.20.0-x86_64-pc-windows-msvc.zip"
 url_api = "https://api.github.com/repos/sharkdp/hyperfine/releases/assets/317832313"
+
+[[tools.java]]
+version = "27.0.0"
+backend = "core:java"
+
+[tools.java.options]
+shorthand_vendor = "openjdk"
+
+[tools.java."platforms.linux-arm64"]
+checksum = "sha256:da4e9dde1fff90204739e969187bab4751bd59a2a1c479672e1a1810f7dd23ea"
+url = "https://download.java.net/java/GA/jdk27/55ce5470a6294008af0057ff4626d0e5/35/GPL/openjdk-27_linux-aarch64_bin.tar.gz"
+
+[tools.java."platforms.linux-x64"]
+checksum = "sha256:95fc37eb3a18a27a26d5904c2d89d52bace8dafa9a078ca27f4747fbc4bf070b"
+url = "https://download.java.net/java/GA/jdk27/55ce5470a6294008af0057ff4626d0e5/35/GPL/openjdk-27_linux-x64_bin.tar.gz"
+
+[tools.java."platforms.linux-x64-baseline"]
+checksum = "sha256:95fc37eb3a18a27a26d5904c2d89d52bace8dafa9a078ca27f4747fbc4bf070b"
+url = "https://download.java.net/java/GA/jdk27/55ce5470a6294008af0057ff4626d0e5/35/GPL/openjdk-27_linux-x64_bin.tar.gz"
+
+[tools.java."platforms.macos-arm64"]
+checksum = "sha256:ff42134c1bc5ac81c5a91a95fd4df87479db5d0499ba875d6adb5bda5626c3e8"
+url = "https://download.java.net/java/GA/jdk27/55ce5470a6294008af0057ff4626d0e5/35/GPL/openjdk-27_macos-aarch64_bin.tar.gz"
+
+[tools.java."platforms.windows-x64"]
+checksum = "sha256:41172837168dd25a8d9fe5eb253ac1efc568c5f9ff608144bcacadfdf50f876c"
+url = "https://download.java.net/java/GA/jdk27/55ce5470a6294008af0057ff4626d0e5/35/GPL/openjdk-27_windows-x64_bin.zip"
+
+[tools.java."platforms.windows-x64-baseline"]
+checksum = "sha256:41172837168dd25a8d9fe5eb253ac1efc568c5f9ff608144bcacadfdf50f876c"
+url = "https://download.java.net/java/GA/jdk27/55ce5470a6294008af0057ff4626d0e5/35/GPL/openjdk-27_windows-x64_bin.zip"
 
 [[tools.lazygit]]
 version = "0.64.1"
