@@ -210,17 +210,17 @@ function customProvidersAndRules() {
       url: 'https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt',
       path: './ruleset/loyalsoldier/reject.yaml',
     },
-    'proxy': {
-      ...BASIC_RULE_PROVIDER_OPTIONS,
-      behavior: 'domain',
-      url: 'https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt',
-      path: './ruleset/loyalsoldier/proxy.yaml',
-    },
     'direct': {
       ...BASIC_RULE_PROVIDER_OPTIONS,
       behavior: 'domain',
       url: 'https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt',
       path: './ruleset/loyalsoldier/direct.yaml',
+    },
+    'proxy': {
+      ...BASIC_RULE_PROVIDER_OPTIONS,
+      behavior: 'domain',
+      url: 'https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt',
+      path: './ruleset/loyalsoldier/proxy.yaml',
     },
     'lancidr': {
       ...BASIC_RULE_PROVIDER_OPTIONS,
@@ -249,30 +249,34 @@ function customProvidersAndRules() {
     'RULE-SET,applications,Just Direct',
 
     // Domain
+    'RULE-SET,reject,Just Reject',
+
+    'GEOSITE,openai,Chat GPT',
+    'GEOSITE,anthropic,Claude',
+
+    'GEOSITE,google,Just Proxy',
+    'GEOSITE,youtube,Just Proxy',
+    'GEOSITE,netflix,Just Proxy',
+
     'DOMAIN-SUFFIX,rockstargames.com,Just Direct',
     'DOMAIN-SUFFIX,lspdfrcn.net,Just Direct',
     'DOMAIN-SUFFIX,test-ipv6.com,Just Direct',
     'RULE-SET,private,Just Direct',
-    'RULE-SET,reject,Just Reject',
     'RULE-SET,direct,Just Direct',
-    'RULE-SET,proxy,Just Proxy',
-
-    // Cidr
-    'RULE-SET,lancidr,Just Direct',
-    'RULE-SET,cncidr,Just Direct',
-    'RULE-SET,telegramcidr,Just Proxy',
-
-    // GEO
     'GEOSITE,category-games@cn,Just Direct',
     'GEOSITE,steam@cn,Just Direct',
-    'GEOSITE,openai,Chat GPT',
-    'GEOSITE,anthropic,Claude',
     'GEOSITE,microsoft@cn,Just Direct',
     'GEOSITE,onedrive,Just Direct',
-    'GEOSITE,google,Just Proxy',
     'GEOSITE,apple-cn,Just Direct',
-    'GEOSITE,youtube,Just Proxy',
-    'GEOSITE,netflix,Just Proxy',
+
+    'RULE-SET,proxy,Just Proxy',
+
+    // CIDR
+    'RULE-SET,telegramcidr,Just Proxy',
+    'RULE-SET,lancidr,Just Direct',
+    'RULE-SET,cncidr,Just Direct',
+
+    // GEO
     'GEOIP,LAN,Just Direct',
     'GEOIP,CN,Just Direct',
 
