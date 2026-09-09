@@ -23,12 +23,14 @@ My dotfiles (also application files), out-of-box (for me).
 - System Managers
   - Chezmoi
   - Mise
+- Password Manager
+  - Fnox
 - Editors
   - Neovim
   - VSCode
   - Zed
 - Harness (for LLM, Harness + LLM = Agent)
-  - General (`.agents`)
-  - oh-my-pi (`.omp`)
+  - General (`~/.agents`)
+  - Pi Coding Agent (`~/.pi`)
 - Linters
   - CSpell

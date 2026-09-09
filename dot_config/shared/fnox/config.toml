@@ -1,0 +1,9 @@
+#:schema https://fnox.jdx.dev/schema.json
+default_provider = "age"
+
+[providers.age]
+type = "age"
+recipients = ["age1z6r25k45m62lh2wmf5tye0rq5w065u25xczlmxzwa8rtaktr7eeqsk9mju"]
+
+[secrets]
+PI_PROVIDER_XIAOXI_API_KEY = { provider = "age", value = "YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBwM1FQdjF0NU5XYzNUZHFmYW55NHdtajdiT3JRN29LZjExL1pMNFJxaFF3CkZpanpOZmFVbHpwNVl3ZUQ5c3BSelNYbzZpWGF3ejBkR2tSekFObW5xQVEKLT4gaHleaSQtZ3JlYXNlIEk3bmhlOi0KNmkyZ3NmUQotLS0gNkVjYWVQL3NJYkxiQkVDcFcveEo2eDRlNms4SUJiYmRjUHkrSXdGdnRXVQp3DUnmXY37ZEX3CzVus7bpgv1VioUwipVN1x0APE/vQ0h7bIN+kI9GrAUXuJbpKYHS9woRDcDxwx0=" }

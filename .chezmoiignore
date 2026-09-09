@@ -41,6 +41,7 @@ nufmt.nuon
 {{ if and (ne .chezmoi.os "darwin") (ne .chezmoi.os "linux") }}
 	.config/nvim
 	.config/herdr
+	.config/fnox
 	.profile
 	.bashrc
 	**/*.sh

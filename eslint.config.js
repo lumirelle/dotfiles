@@ -20,7 +20,6 @@ export default antfu(
       '**/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/**/*',
       '**/clash-verge-rev/config.yaml',
       'dot_config/shared/clash-verge-rev/verge.yaml',
-      'dot_omp/SYSTEM.md',
     ],
   },
   ...oxlint.buildFromOxlintConfigFile('.oxlintrc.json'),

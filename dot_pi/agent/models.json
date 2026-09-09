@@ -1,0 +1,35 @@
+{
+  "providers": {
+    "xiaoxi": {
+      "baseUrl": "https://njlitellm.xiaoxitech.com/v1",
+      "api": "openai-completions",
+      "apiKey": "!fnox get PI_PROVIDER_XIAOXI_API_KEY",
+      "models": [
+        {
+          "id": "xiaoxi/GLM-5.3",
+          "name": "GLM 5.3",
+          "reasoning": true,
+          "input": ["text"],
+          "contextWindow": 1050000,
+          "cost": { "input": 0.14, "output": 0.44, "cacheRead": 0.14, "cacheWrite": 0.44 }
+        },
+        {
+          "id": "xiaoxi/DeepSeek-V4-Flash-0731",
+          "name": "DeepSeek V4 Flash 0731",
+          "reasoning": true,
+          "input": ["text"],
+          "contextWindow": 1000000,
+          "cost": { "input": 0.0065, "output": 0.018, "cacheRead": 0.0065, "cacheWrite": 0.018 }
+        },
+        {
+          "id": "xiaoxi/Qwen3.8-27B",
+          "name": "Qwen 3.8 27B",
+          "reasoning": true,
+          "input": ["text", "image"],
+          "contextWindow": 1000000,
+          "cost": { "input": 0.042, "output": 0.3, "cacheRead": 0.042, "cacheWrite": 0.3 }
+        }
+      ]
+    }
+  }
+}
