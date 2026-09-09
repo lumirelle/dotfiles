@@ -6,6 +6,8 @@ mkdir ($nu.data-dir | path join "vendor/autoload")
 mise exec -- starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 ## Zoxide, https://github.com/ajeetdsouza/zoxide
 mise exec -- zoxide init nushell | save -f ($nu.data-dir | path join "vendor/autoload/zoxide.nu")
+## Fnox, https://fnox.jdx.dev/
+mise exec -- fnox activate nu | save -f ($nu.data-dir | path join "vendor/autoload/fnox.nu")
 ## Podman
 $env.PODMAN_COMPOSE_WARNING_LOGS = false
 

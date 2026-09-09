@@ -34,6 +34,9 @@ version = "latest"
 [tools.zoxide]
 version = "latest"
 
+[tools.fnox]
+version = "latest"
+
 [tools.yazi]
 version = "latest"
 
