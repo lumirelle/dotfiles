@@ -2,11 +2,9 @@
 experimental = true
 lockfile = true
 
-{{ if eq .chezmoi.os "linux" }}
-	# Chezmoi is not suitable for /etc/ configuration management, so we use mise dotfiles for that purpose.
-	[dotfiles]
-	"/etc/sysctl.d/50-unprivileged-ports.conf/unprivileged-ports".line = "net.ipv4.ip_unprivileged_port_start = 80"
-{{ end }}
+[dotfiles]
+"/etc/sysctl.d/50-unprivileged-ports.conf/unprivileged-ports".line = "net.ipv4.ip_unprivileged_port_start = 80"
+"/etc/sysctl.d/50-unprivileged-ports.conf/unprivileged-ports".variants = [{ os = "linux" }]
 
 # System Appearance
 [tools."github:Tatsu-syo/noMeiryoUI"]
@@ -17,22 +15,25 @@ asset_pattern = "noMeiryoUI*.zip"
 
 # Development Environment
 # -- Environment
-## Drive LSP
 [tools.node]
 version = "latest"
 
 [tools.java]
 version = "latest"
 
-## Drive .js/.ts scripts
 [tools.bun]
 version = "latest"
 
-## Drive .py scripts
 [tools.python]
 version = "3.13"
 
 # -- CLI / TUI Tools
+[tools.starship]
+version = "latest"
+
+[tools.zoxide]
+version = "latest"
+
 [tools.yazi]
 version = "latest"
 
