@@ -7,9 +7,9 @@ if [[ $- == *i* ]] && command -v nu &>/dev/null; then
   exec nu
 else
   ## Starship, https://starship.rs/
-  eval "$(starship init bash)"
+  eval "$(mise exec -- starship init bash)"
   ## Zoxide, https://github.com/ajeetdsouza/zoxide
-  eval "$(zoxide init bash)"
+  eval "$(mise exec -- zoxide init bash)"
   ## Podman
   export PODMAN_COMPOSE_WARNING_LOGS=false
 

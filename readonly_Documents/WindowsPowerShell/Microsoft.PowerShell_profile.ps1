@@ -14,9 +14,9 @@ if (Test-Path "$env:USERPROFILE\.local\bin") {
 ## Shell
 $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [Text.Encoding]::UTF8
 ## Starship, https://starship.rs/
-Invoke-Expression (&starship init powershell)
+Invoke-Expression (&mise exec -- starship init powershell)
 ## Zoxide, https://github.com/ajeetdsouza/zoxide
-Invoke-Expression (& { (zoxide init powershell | Out-String) })
+Invoke-Expression (& { (mise exec -- zoxide init powershell | Out-String) })
 ## Podman
 $env:PODMAN_COMPOSE_WARNING_LOGS = $false
 
