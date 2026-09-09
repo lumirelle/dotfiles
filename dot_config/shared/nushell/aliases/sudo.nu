@@ -1,4 +1,5 @@
 # Alias support for `sudo`, see https://github.com/nushell/nushell/issues/17652
+# NOTICE: Nushell built-in commands or Aliases to them are not supported.
 export def --wrapped sudo [...args] {
   ^sudo ...(match $args {
     [$first, ..$rest] => {
