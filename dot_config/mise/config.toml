@@ -37,6 +37,9 @@ version = "latest"
 [tools.fnox]
 version = "latest"
 
+[tools.age]
+version = "latest"
+
 [tools.yazi]
 version = "latest"
 
