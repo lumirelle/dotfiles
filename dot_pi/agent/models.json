@@ -3,7 +3,7 @@
     "xiaoxi": {
       "baseUrl": "https://njlitellm.xiaoxitech.com/v1",
       "api": "openai-completions",
-      "apiKey": "!fnox get PI_PROVIDER_XIAOXI_API_KEY",
+      "apiKey": "!fnox get PI_PROVIDER_XIAOXI_API_KEY -c ~/.pi/agent/fnox.local.toml",
       "models": [
         {
           "id": "xiaoxi/GLM-5.3",
