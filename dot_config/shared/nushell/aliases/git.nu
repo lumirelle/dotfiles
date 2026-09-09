@@ -1,14 +1,3 @@
-# am
-export alias gam = git am
-export alias gamc = git am --continue
-export alias gams = git am --skip
-export alias gama = git am --abort
-export alias gamsh = git am --show-current-patch
-
-# apply, ap
-export alias gap = git apply
-export alias gap3 = git apply --3way
-
 # branch, b
 export alias gba = git branch --all
 export alias gbr = git branch --remote
@@ -29,9 +18,6 @@ export alias gcf = git config --list
 # clone, cl
 export alias gcl = git clone --config core.symlinks=true
 
-# describe, dc
-export alias gdc = git describe --tags (git rev-list --tags --max-count=1)
-
 # help, ?
 export alias g? = git help
 
@@ -50,11 +36,6 @@ export alias gpsf = git push --force
 # root, rt
 # Go to root
 export alias grt = cd (git rev-parse --show-toplevel | complete | if $in.exit_code == 0 { $in.stdout | str trim } else { '.' })
-
-# show, sh
-export alias gsh = git show
-export alias gshs = git show -s
-export alias gshps = git show --pretty=short --show-signature
 
 # summary
 export alias gsummary = git shortlog --summary --numbered
