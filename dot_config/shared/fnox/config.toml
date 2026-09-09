@@ -4,6 +4,7 @@ default_provider = "age"
 [providers.age]
 type = "age"
 recipients = [
+  "age1et3h9pd7lc3r3wd0sjh7n8pc098vem5rfyal258ujznvan8ke53s64vny6", # @dev
   "age1z6r25k45m62lh2wmf5tye0rq5w065u25xczlmxzwa8rtaktr7eeqsk9mju", # @work
   "age194ayc2p0wgdt697an6gwxjksatjflzqee3j4nfnnf672erzksqlsxj8668" # @work-wsl
 ]
