@@ -14,7 +14,7 @@ $env.PODMAN_COMPOSE_WARNING_LOGS = false
 # Aliases
 source aliases/sudo.nu
 source aliases/built-in.nu
-source aliases/exts.nu
+source aliases/cwd-file-exts.nu
 {{ if eq .chezmoi.os "windows" }}
 	source aliases/winget.nu
 {{ end }}
