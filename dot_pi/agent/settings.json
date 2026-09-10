@@ -1,6 +1,6 @@
 {
   "lastChangelogVersion": "0.85.1",
   "theme": "dark",
-  "defaultProvider": "openrouter",
-  "defaultModel": "moonshotai/kimi-k2.6"
+  "defaultProvider": "deepseek",
+  "defaultModel": "deepseek-v4-flash"
 }
