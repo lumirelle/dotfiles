@@ -10,11 +10,11 @@
     },
     "bash": {
       "*": "allow",
-      "rm -rf *": "deny",
       "sudo *": "ask"
     },
     "external_directory": {
       "*": "ask",
+      "~/.agent/*": "allow",
       "/tmp/*": "allow"
     }
   }
