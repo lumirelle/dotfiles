@@ -10,6 +10,7 @@
     },
     "bash": {
       "*": "allow",
+      "timeout *": "allow",
       "sudo *": "ask"
     },
     "external_directory": {
