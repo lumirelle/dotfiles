@@ -9,10 +9,13 @@
       "*.env.example": "allow"
     },
     "bash": {
-      "*": "ask",
+      "*": "allow",
       "rm -rf *": "deny",
       "sudo *": "ask"
     },
-    "external_directory": "ask"
+    "external_directory": {
+      "*": "ask",
+      "/tmp": "allow"
+    }
   }
 }
