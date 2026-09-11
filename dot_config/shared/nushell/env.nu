@@ -13,5 +13,7 @@ if ($"($env.HOME?)/.local/bin" | path exists) {
 $env.config.show_banner = 'short'
 $env.config.buffer_editor = 'nvim'
 ## Mise, https://mise.jdx.dev/
-let mise_path = $nu.default-config-dir | path join mise.nu
-^mise activate nu | save $mise_path --force
+let mise_nu = $nu.default-config-dir | path join mise.nu
+if not ($mise_nu | path exists) {
+  ^mise activate nu | save -f $mise_nu
+}
