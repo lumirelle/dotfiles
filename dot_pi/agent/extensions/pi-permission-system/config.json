@@ -16,6 +16,7 @@
     "external_directory": {
       "*": "ask",
       "~/.agents/*": "allow",
+      "/tmp": "allow",
       "/tmp/*": "allow"
     }
   }
