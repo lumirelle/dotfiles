@@ -23,16 +23,16 @@
   "show_whitespaces": "boundary",
   "colorize_brackets": true,
   // Font
-  "ui_font_family": "Merriweather 18pt",
+  "ui_font_family": "Space Grotesk",
   "ui_font_fallbacks": [
     "Symbols Nerd Font",
     "Resource Han Rounded SC"
   ],
   "ui_font_size": 16,
-  "buffer_font_family": "Go Mono",
+  "buffer_font_family": "0xProto",
   "buffer_font_fallbacks": [
     "Symbols Nerd Font Mono",
-    "Maple Mono CN"
+    "Maple Mono WD CN"
   ],
   "buffer_font_size": 16,
   "buffer_font_features": {
