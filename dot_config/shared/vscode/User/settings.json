@@ -298,8 +298,8 @@
   // #region Appearance / Font
   "custom-ui-style.font.sansSerif": "'Space Grotesk', 'Symbols Nerd Font', 'Resource Han Rounded SC', sans-serif",
   "markdown.preview.fontFamily": "'Space Grotesk', 'Symbols Nerd Font', 'Resource Han Rounded SC', monospace",
-  "editor.fontFamily": "'0xProto', 'Symbols Nerd Font Mono', 'Maple Mono WD CN', monospace",
-  "custom-ui-style.font.monospace": "'0xProto', 'Symbols Nerd Font Mono', 'Maple Mono WD CN'", // Will falls back to editor's font
+  "editor.fontFamily": "'0xProto', 'Symbols Nerd Font Mono', 'Maple Mono WR CN', monospace",
+  "custom-ui-style.font.monospace": "'0xProto', 'Symbols Nerd Font Mono', 'Maple Mono WR CN'", // Will falls back to editor's font
   "markdown.preview.fontSize": 14,
   "editor.fontSize": 16,
   "terminal.integrated.fontSize": 14,
