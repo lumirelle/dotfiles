@@ -4,6 +4,11 @@
   "defaultProvider": "deepseek",
   "defaultModel": "deepseek-v4-flash",
   "packages": [
-    "npm:@gotgenes/pi-permission-system"
-  ]
+    "npm:@gotgenes/pi-permission-system",
+    "npm:pi-rtk-optimizer",
+    "npm:pi-fff",
+    "npm:@juicesharp/rpiv-web-tools",
+    "npm:@juicesharp/rpiv-ask-user-question"
+  ],
+  "hideThinkingBlock": true
 }

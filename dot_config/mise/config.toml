@@ -60,3 +60,9 @@ version = "latest"
 
 [tools.gdu]
 version = "latest"
+
+[tools."github:vercel-labs/agent-browser"]
+version = "latest"
+
+[tools."github:rtk-ai/rtk"]
+version = "latest"
