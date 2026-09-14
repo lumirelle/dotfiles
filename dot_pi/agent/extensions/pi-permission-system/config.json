@@ -6,18 +6,15 @@
       "*": "allow",
       "*.env": "deny",
       "*.env.*": "deny",
-      "*.env.example": "allow"
+      "*.env.example": "allow",
+      "~/.ssh/*": "deny"
     },
     "bash": {
       "*": "allow",
-      "timeout *": "allow",
-      "sudo *": "ask"
+      "sudo *": { "action": "deny", "reason": "Request user to execute" }
     },
     "external_directory": {
-      "*": "ask",
-      "~/.agents/*": "allow",
-      "/tmp": "allow",
-      "/tmp/*": "allow"
+      "*": "deny"
     }
   }
 }
