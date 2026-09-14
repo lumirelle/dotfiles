@@ -34,3 +34,5 @@ My dotfiles (also application files), out-of-box (for me).
   - Pi Coding Agent (`~/.pi`)
 - Linters
   - CSpell
+- CLI Tools
+  - yazi
