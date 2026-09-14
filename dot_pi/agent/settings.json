@@ -9,7 +9,8 @@
     "npm:pi-fff",
     "npm:@juicesharp/rpiv-web-tools",
     "npm:@juicesharp/rpiv-ask-user-question",
-    "npm:pi-agent-browser-native"
+    "npm:pi-agent-browser-native",
+    "npm:pi-session-cleanup"
   ],
   "hideThinkingBlock": true
 }
