@@ -523,6 +523,7 @@
   // #region Behavior / Remote
   "remote.SSH.remotePlatform": {
     "vibe-coding": "linux"
-  }
+  },
+  "remote.SSH.useLocalServer": true
   // #endregion
 }
