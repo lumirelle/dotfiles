@@ -58,10 +58,6 @@ autoSetupRemote = true
 default = current
 followTags = true
 
-# Working with submodule
-[submodule]
-recurse = true
-
 # Log
 [log]
 date = short
