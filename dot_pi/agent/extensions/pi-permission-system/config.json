@@ -11,6 +11,7 @@
     },
     "bash": {
       "*": "allow",
+      "timeout *": "allow",
       "sudo *": { "action": "deny", "reason": "Request user to execute" }
     },
     "external_directory": {
