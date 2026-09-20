@@ -15,7 +15,8 @@
       "sudo *": { "action": "deny", "reason": "Request user to execute" }
     },
     "external_directory": {
-      "*": "deny"
+      "*": "deny",
+      "~/.agents/*": "allow"
     }
   }
 }
