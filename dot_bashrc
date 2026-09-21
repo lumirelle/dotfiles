@@ -10,34 +10,12 @@ else
   eval "$(starship init bash)"
   ## Zoxide, https://github.com/ajeetdsouza/zoxide
   eval "$(zoxide init bash)"
+  ## Fnox, https://fnox.jdx.dev/
+  eval "$(fnox activate bash)"
   ## Podman
   export PODMAN_COMPOSE_WARNING_LOGS=false
 
   # Aliases & Custom Commands
-  alias cz='chezmoi'
-  alias docker='podman'
-  alias compose='podman compose'
-  degit() {
-    local repo="$1" dest="${2:-.}"
-    if [[ -d "$dest" ]]; then
-      if [[ -n "$(ls -A "$dest")" ]]; then
-        echo -e "\033[31mTarget directory is not empty. Please specify an empty directory or a new directory.\033[0m"
-        return 1
-      fi
-    else
-      mkdir -p "$dest"
-    fi
-    local branch="main"
-    if [[ "$repo" == *#* ]]; then
-      branch="${repo#*#}"
-      repo="${repo%%#*}"
-    fi
-    local url="https://github.com/$repo/archive/refs/heads/$branch.tar.gz"
-    echo "Creating project from $url..."
-    tmpfile=$(mktemp)
-    curl -sL "$url" -o "$tmpfile"
-    tar -xzf "$tmpfile" --strip-components=1 -C "$dest"
-    rm "$tmpfile"
-    echo "Done!"
-  }
+  alias lg='lazygit'
+  alias ch='chezmoi'
 fi
