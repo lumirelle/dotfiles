@@ -2,7 +2,7 @@
   "lastChangelogVersion": "0.86.1",
   "theme": "dark",
   "defaultProvider": "deepseek",
-  "defaultModel": "deepseek-v4-flash",
+  "defaultModel": "deepseek-flash",
   "packages": [
     "npm:@gotgenes/pi-permission-system",
     "npm:pi-rtk-optimizer",
