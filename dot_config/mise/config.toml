@@ -17,6 +17,7 @@ asset_pattern = "noMeiryoUI*.zip"
 # -- Environment
 [tools.node]
 version = "latest"
+postinstall = "npm install -g degit"
 
 [tools.java]
 version = "latest"

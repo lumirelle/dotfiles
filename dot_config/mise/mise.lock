@@ -248,74 +248,31 @@ url = "https://github.com/sharkdp/fd/releases/download/v10.5.0/fd-v10.5.0-x86_64
 url_api = "https://api.github.com/repos/sharkdp/fd/releases/assets/530482901"
 
 [[tools.fnox]]
-version = "1.35.1"
+version = "1.35.2"
 backend = "github:jdx/fnox"
 
 [tools.fnox."platforms.linux-arm64"]
-checksum = "sha256:d81a90ac6860947e24d6cfccb83102fab2899836c4144e1f8992f2c51749daab"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/546210948"
-provenance = "github-attestations"
-
-[tools.fnox."platforms.linux-arm64-musl"]
-checksum = "sha256:ea87196c4169fdf6170a7246c3ee3643cf6e9fd57d38c39a0626ef05c2531d91"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/546210949"
+checksum = "sha256:d404b219b6a3c3c4f3531d88cb7d3b96d00891b826d8fcfc2941b8a060028015"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/561018918"
 provenance = "github-attestations"
 
 [tools.fnox."platforms.linux-x64"]
-checksum = "sha256:ecdbccd01cac2d5e32601636cc0a7b1d8b1501151b4683d660b1c024763ced45"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/546210980"
-provenance = "github-attestations"
-
-[tools.fnox."platforms.linux-x64-baseline"]
-checksum = "sha256:ecdbccd01cac2d5e32601636cc0a7b1d8b1501151b4683d660b1c024763ced45"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/546210980"
+checksum = "sha256:5f95929bb8b73cd849b238fbefe3dbf8706f57f876cc5ae23aa9aa9da62a40a9"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/561018959"
 provenance = "github-attestations"
 
 [tools.fnox."platforms.linux-x64-musl"]
-checksum = "sha256:491aaab498435e9edfdd8561ddc571a684cec49cee653f294544bcdf04857cca"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/546210978"
-provenance = "github-attestations"
-
-[tools.fnox."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:491aaab498435e9edfdd8561ddc571a684cec49cee653f294544bcdf04857cca"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/546210978"
-provenance = "github-attestations"
-
-[tools.fnox."platforms.macos-arm64"]
-checksum = "sha256:9b733a2b9e3e893e73131cc3c7d64c8596de4c7210b47f3695ed4011d798a1e6"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/546210951"
+checksum = "sha256:9ddbd3e8304f4bd1aae59f0152efd8ec810ada9656e64ce7533d4c46f8aae985"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/561018962"
 provenance = "github-attestations"
 
 [tools.fnox."platforms.macos-x64"]
-checksum = "sha256:77e920b21e42af9df0d6bf1bba58ad95cbf28557009f172c73db2fea651c9962"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/546210947"
-provenance = "github-attestations"
-
-[tools.fnox."platforms.macos-x64-baseline"]
-checksum = "sha256:77e920b21e42af9df0d6bf1bba58ad95cbf28557009f172c73db2fea651c9962"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/546210947"
-provenance = "github-attestations"
-
-[tools.fnox."platforms.windows-x64"]
-checksum = "sha256:4a8ac72394d0b678fc603add1559f7d4572212b0b08fc4884426b69af036d632"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/546210974"
-provenance = "github-attestations"
-provenance_verified = true
-
-[tools.fnox."platforms.windows-x64-baseline"]
-checksum = "sha256:4a8ac72394d0b678fc603add1559f7d4572212b0b08fc4884426b69af036d632"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.1/fnox-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/546210974"
+checksum = "sha256:efb1a830b0b44704b93d1647cab9b9046da7519a869cc6de3437a028c7db7417"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/561018920"
 provenance = "github-attestations"
 
 [[tools.gdu]]
@@ -500,63 +457,53 @@ url = "https://github.com/rtk-ai/rtk/releases/download/v0.49.0/rtk-x86_64-pc-win
 url_api = "https://api.github.com/repos/rtk-ai/rtk/releases/assets/556881347"
 
 [[tools."github:vercel-labs/agent-browser"]]
-version = "0.37.1"
+version = "0.38.1"
 backend = "github:vercel-labs/agent-browser"
 
 [tools."github:vercel-labs/agent-browser"."platforms.linux-arm64"]
-checksum = "sha256:d54d3e1262dc1aa0906e0677adc6d0cbb40d1274631f4cf77136bf23a0bc20e9"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.37.1/agent-browser-linux-arm64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/550831256"
+checksum = "sha256:937b315ee0761e8a62f7950ddcfef9b3d3d8e8d5eb9c9d2bf9e23e5725664511"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.38.1/agent-browser-linux-arm64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/568699597"
 
 [tools."github:vercel-labs/agent-browser"."platforms.linux-arm64-musl"]
-checksum = "sha256:ab7afc4e74d1218d32bd12519474dbd6ed9bf32b3a905d7648e9d9400f50083d"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.37.1/agent-browser-linux-musl-arm64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/550831257"
+checksum = "sha256:60dc1f49b3656898a88e3ca983415e1f4ecd103433c924f1ff4ec11837ccda07"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.38.1/agent-browser-linux-musl-arm64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/568699600"
 
 [tools."github:vercel-labs/agent-browser"."platforms.linux-x64"]
-checksum = "sha256:f8e5f9294bd0da70dda61854f12004fd61c668cd682bfb600cdf6d0df73dea69"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.37.1/agent-browser-linux-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/550831289"
+checksum = "sha256:5100149a1903211c889de4e545bf36d90803740cea4f99aa22651649f9205ea1"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.38.1/agent-browser-linux-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/568699628"
 
 [tools."github:vercel-labs/agent-browser"."platforms.linux-x64-baseline"]
-checksum = "sha256:f8e5f9294bd0da70dda61854f12004fd61c668cd682bfb600cdf6d0df73dea69"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.37.1/agent-browser-linux-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/550831289"
+checksum = "sha256:5100149a1903211c889de4e545bf36d90803740cea4f99aa22651649f9205ea1"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.38.1/agent-browser-linux-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/568699628"
 
 [tools."github:vercel-labs/agent-browser"."platforms.linux-x64-musl"]
-checksum = "sha256:5318f2ed03a9fae04a9e1f8d274d1a0fd6bf7fd427f32a44224be11f2dc3a37d"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.37.1/agent-browser-linux-musl-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/550831261"
-
-[tools."github:vercel-labs/agent-browser"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:5318f2ed03a9fae04a9e1f8d274d1a0fd6bf7fd427f32a44224be11f2dc3a37d"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.37.1/agent-browser-linux-musl-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/550831261"
+checksum = "sha256:e4b4555c450d6903567f18ae572c26a6f86dcad31c401f9b56d5bc00334afc91"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.38.1/agent-browser-linux-musl-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/568699594"
 
 [tools."github:vercel-labs/agent-browser"."platforms.macos-arm64"]
-checksum = "sha256:e52f06476ea0f1d14357c1924ce1d7f1bf08279f2642d74ccfa7ee935c46aea1"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.37.1/agent-browser-darwin-arm64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/550831254"
+checksum = "sha256:2e61287259053ea964d39e77002c6a34af0e589e55ccff25e659efae7e892e0d"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.38.1/agent-browser-darwin-arm64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/568699596"
 
 [tools."github:vercel-labs/agent-browser"."platforms.macos-x64"]
-checksum = "sha256:c79d1e0525c0bf79df9eec355269ae40bcda9c4a3fce3f242c24faecaaaeef84"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.37.1/agent-browser-darwin-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/550831255"
+checksum = "sha256:9187f885f7da0a6d880ff6d2e7dea58e17bea490a1fec85bbb6a36067272ea8e"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.38.1/agent-browser-darwin-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/568699595"
 
 [tools."github:vercel-labs/agent-browser"."platforms.macos-x64-baseline"]
-checksum = "sha256:c79d1e0525c0bf79df9eec355269ae40bcda9c4a3fce3f242c24faecaaaeef84"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.37.1/agent-browser-darwin-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/550831255"
-
-[tools."github:vercel-labs/agent-browser"."platforms.windows-x64"]
-checksum = "sha256:29a003139ff4eb96fa4d1ed341830b26eb3e082843bf776b4e88ad3443bb8fde"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.37.1/agent-browser-win32-x64.exe"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/550831299"
+checksum = "sha256:9187f885f7da0a6d880ff6d2e7dea58e17bea490a1fec85bbb6a36067272ea8e"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.38.1/agent-browser-darwin-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/568699595"
 
 [tools."github:vercel-labs/agent-browser"."platforms.windows-x64-baseline"]
-checksum = "sha256:29a003139ff4eb96fa4d1ed341830b26eb3e082843bf776b4e88ad3443bb8fde"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.37.1/agent-browser-win32-x64.exe"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/550831299"
+checksum = "sha256:70bd758b2a5a72b18055f60ff877d2297d036c4104e3bc94af6f7c1ceb941408"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.38.1/agent-browser-win32-x64.exe"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/568699636"
 
 [[tools.hyperfine]]
 version = "1.20.0"
@@ -703,63 +650,63 @@ url = "https://github.com/jj-vcs/jj/releases/download/v0.45.1/jj-v0.45.1-x86_64-
 url_api = "https://api.github.com/repos/jj-vcs/jj/releases/assets/543038773"
 
 [[tools.lazygit]]
-version = "0.65.0"
+version = "0.65.1"
 backend = "aqua:jesseduffield/lazygit"
 
 [tools.lazygit."platforms.linux-arm64"]
-checksum = "sha256:d954a09c128bd37b2bd0d254308474e87de3729cfe0e37f5b46a49357a4fe257"
-url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.0/lazygit_0.65.0_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/545957226"
+checksum = "sha256:49abecdf6adf4f2dfdb11bf7b9bfada267ea523612ed809d1c6d87f6c04000a7"
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/560658270"
 
 [tools.lazygit."platforms.linux-arm64-musl"]
-checksum = "sha256:d954a09c128bd37b2bd0d254308474e87de3729cfe0e37f5b46a49357a4fe257"
-url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.0/lazygit_0.65.0_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/545957226"
+checksum = "sha256:49abecdf6adf4f2dfdb11bf7b9bfada267ea523612ed809d1c6d87f6c04000a7"
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/560658270"
 
 [tools.lazygit."platforms.linux-x64"]
-checksum = "sha256:44d8e7dd1484b4a66e191bd4ab25a71e8b4b3a65ab122f838e65677ef58c5506"
-url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.0/lazygit_0.65.0_linux_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/545957203"
+checksum = "sha256:02beacbcda0fa342e50ae3480ba8147307353af3fb28e1d5f790e02329c201a6"
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_linux_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/560658266"
 
 [tools.lazygit."platforms.linux-x64-baseline"]
-checksum = "sha256:44d8e7dd1484b4a66e191bd4ab25a71e8b4b3a65ab122f838e65677ef58c5506"
-url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.0/lazygit_0.65.0_linux_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/545957203"
+checksum = "sha256:02beacbcda0fa342e50ae3480ba8147307353af3fb28e1d5f790e02329c201a6"
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_linux_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/560658266"
 
 [tools.lazygit."platforms.linux-x64-musl"]
-checksum = "sha256:44d8e7dd1484b4a66e191bd4ab25a71e8b4b3a65ab122f838e65677ef58c5506"
-url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.0/lazygit_0.65.0_linux_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/545957203"
+checksum = "sha256:02beacbcda0fa342e50ae3480ba8147307353af3fb28e1d5f790e02329c201a6"
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_linux_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/560658266"
 
 [tools.lazygit."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:44d8e7dd1484b4a66e191bd4ab25a71e8b4b3a65ab122f838e65677ef58c5506"
-url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.0/lazygit_0.65.0_linux_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/545957203"
+checksum = "sha256:02beacbcda0fa342e50ae3480ba8147307353af3fb28e1d5f790e02329c201a6"
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_linux_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/560658266"
 
 [tools.lazygit."platforms.macos-arm64"]
-checksum = "sha256:d8ea1cade9e4279e45cbb58652e84edb07e98a9f8ec0604099c8b0a8f709e63a"
-url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.0/lazygit_0.65.0_darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/545957198"
+checksum = "sha256:65a367c6ea9a88efebaaf7998a6835eedb987e04916cef677264ff9b31b1b13e"
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/560658243"
 
 [tools.lazygit."platforms.macos-x64"]
-checksum = "sha256:3848033450205f975aa6a587e76f01c9796bff3a3cc0e32060ac77b9423264e3"
-url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.0/lazygit_0.65.0_darwin_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/545957191"
+checksum = "sha256:fde13daf583511aa24c42ca154911643231a5af784c7cdd8117264b2fc035b33"
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_darwin_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/560658244"
 
 [tools.lazygit."platforms.macos-x64-baseline"]
-checksum = "sha256:3848033450205f975aa6a587e76f01c9796bff3a3cc0e32060ac77b9423264e3"
-url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.0/lazygit_0.65.0_darwin_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/545957191"
+checksum = "sha256:fde13daf583511aa24c42ca154911643231a5af784c7cdd8117264b2fc035b33"
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_darwin_x86_64.tar.gz"
+url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/560658244"
 
 [tools.lazygit."platforms.windows-x64"]
-checksum = "sha256:20a597e8f29d4ed295e28fb4b869b31a41d20dc69dc15829c4744263141be2ee"
-url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.0/lazygit_0.65.0_windows_x86_64.zip"
-url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/545957221"
+checksum = "sha256:bed669be29204932560836a58dc6519ba43c10ea7dc7df63af8a1d96424e191d"
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_windows_x86_64.zip"
+url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/560658241"
 
 [tools.lazygit."platforms.windows-x64-baseline"]
-checksum = "sha256:20a597e8f29d4ed295e28fb4b869b31a41d20dc69dc15829c4744263141be2ee"
-url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.0/lazygit_0.65.0_windows_x86_64.zip"
-url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/545957221"
+checksum = "sha256:bed669be29204932560836a58dc6519ba43c10ea7dc7df63af8a1d96424e191d"
+url = "https://github.com/jesseduffield/lazygit/releases/download/v0.65.1/lazygit_0.65.1_windows_x86_64.zip"
+url_api = "https://api.github.com/repos/jesseduffield/lazygit/releases/assets/560658241"
 
 [[tools.node]]
 version = "26.8.1"
