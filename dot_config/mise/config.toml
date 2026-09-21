@@ -28,6 +28,9 @@ version = "latest"
 version = "3.13"
 
 # -- CLI / TUI Tools
+[tools.jj]
+version = "latest"
+
 [tools.starship]
 version = "latest"
 

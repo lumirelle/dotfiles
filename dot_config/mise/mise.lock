@@ -643,6 +643,65 @@ url = "https://download.java.net/java/GA/jdk27/55ce5470a6294008af0057ff4626d0e5/
 checksum = "sha256:41172837168dd25a8d9fe5eb253ac1efc568c5f9ff608144bcacadfdf50f876c"
 url = "https://download.java.net/java/GA/jdk27/55ce5470a6294008af0057ff4626d0e5/35/GPL/openjdk-27_windows-x64_bin.zip"
 
+[[tools.jj]]
+version = "0.45.1"
+backend = "aqua:jj-vcs/jj"
+
+[tools.jj."platforms.linux-arm64"]
+checksum = "sha256:7349a43dd5a20dbc998b10114daa0ee63d2ab863fb822c7eb6b0ebca5903cc69"
+url = "https://github.com/jj-vcs/jj/releases/download/v0.45.1/jj-v0.45.1-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/jj-vcs/jj/releases/assets/543031340"
+
+[tools.jj."platforms.linux-arm64-musl"]
+checksum = "sha256:7349a43dd5a20dbc998b10114daa0ee63d2ab863fb822c7eb6b0ebca5903cc69"
+url = "https://github.com/jj-vcs/jj/releases/download/v0.45.1/jj-v0.45.1-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/jj-vcs/jj/releases/assets/543031340"
+
+[tools.jj."platforms.linux-x64"]
+checksum = "sha256:f35438350b5d61963aac5dd74ede510b31d6b9690769d1a6268cf058cc825f72"
+url = "https://github.com/jj-vcs/jj/releases/download/v0.45.1/jj-v0.45.1-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/jj-vcs/jj/releases/assets/543032052"
+
+[tools.jj."platforms.linux-x64-baseline"]
+checksum = "sha256:f35438350b5d61963aac5dd74ede510b31d6b9690769d1a6268cf058cc825f72"
+url = "https://github.com/jj-vcs/jj/releases/download/v0.45.1/jj-v0.45.1-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/jj-vcs/jj/releases/assets/543032052"
+
+[tools.jj."platforms.linux-x64-musl"]
+checksum = "sha256:f35438350b5d61963aac5dd74ede510b31d6b9690769d1a6268cf058cc825f72"
+url = "https://github.com/jj-vcs/jj/releases/download/v0.45.1/jj-v0.45.1-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/jj-vcs/jj/releases/assets/543032052"
+
+[tools.jj."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:f35438350b5d61963aac5dd74ede510b31d6b9690769d1a6268cf058cc825f72"
+url = "https://github.com/jj-vcs/jj/releases/download/v0.45.1/jj-v0.45.1-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/jj-vcs/jj/releases/assets/543032052"
+
+[tools.jj."platforms.macos-arm64"]
+checksum = "sha256:51ba42e3d0682616f6eb015045bfe45289b396f03511f9897f645ce8e9272743"
+url = "https://github.com/jj-vcs/jj/releases/download/v0.45.1/jj-v0.45.1-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/jj-vcs/jj/releases/assets/543036998"
+
+[tools.jj."platforms.macos-x64"]
+checksum = "sha256:6171582d0b5a98a1005cd9643faebff7936812ec264d7968a39d9cef3654a99b"
+url = "https://github.com/jj-vcs/jj/releases/download/v0.45.1/jj-v0.45.1-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/jj-vcs/jj/releases/assets/543034411"
+
+[tools.jj."platforms.macos-x64-baseline"]
+checksum = "sha256:6171582d0b5a98a1005cd9643faebff7936812ec264d7968a39d9cef3654a99b"
+url = "https://github.com/jj-vcs/jj/releases/download/v0.45.1/jj-v0.45.1-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/jj-vcs/jj/releases/assets/543034411"
+
+[tools.jj."platforms.windows-x64"]
+checksum = "sha256:5dbf2619272c897394d34190a94b21a6ab8d1e8e59fcf7dfc173d8fa8aa90bf0"
+url = "https://github.com/jj-vcs/jj/releases/download/v0.45.1/jj-v0.45.1-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/jj-vcs/jj/releases/assets/543038773"
+
+[tools.jj."platforms.windows-x64-baseline"]
+checksum = "sha256:5dbf2619272c897394d34190a94b21a6ab8d1e8e59fcf7dfc173d8fa8aa90bf0"
+url = "https://github.com/jj-vcs/jj/releases/download/v0.45.1/jj-v0.45.1-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/jj-vcs/jj/releases/assets/543038773"
+
 [[tools.lazygit]]
 version = "0.65.0"
 backend = "aqua:jesseduffield/lazygit"

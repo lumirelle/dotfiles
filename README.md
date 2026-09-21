@@ -44,6 +44,7 @@ My dotfiles (also application files), out-of-box (for me).
   - [WinLibs: GCC + MinGW-w64 compiler for Windows (Windows Only)](https://winlibs.com/)
 - Version Control Systems
   - [Git](https://git-scm.com/)
+  - [Jujutsu](https://github.com/jj-vcs/jj)
 - System Managers
   - [Chezmoi](https://www.chezmoi.io/)
   - [Mise](https://mise.jdx.dev/)
