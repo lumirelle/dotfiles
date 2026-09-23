@@ -3,3 +3,8 @@
 [user]
 name = "Lumirelle"
 email = "lumirelle@outlook.com"
+
+[templates]
+# By default a duplicated commit only keeps the description and gets a new change ID,
+# this make the copies then carry (duplicated from commit {{commit id}}), just like git cherry-pick -x.
+duplicate_description = 'description ++ "\n\n(duplicated from commit " ++ commit_id.short() ++ ")"'
