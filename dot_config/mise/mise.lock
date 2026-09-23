@@ -248,73 +248,73 @@ url = "https://github.com/sharkdp/fd/releases/download/v10.5.0/fd-v10.5.0-x86_64
 url_api = "https://api.github.com/repos/sharkdp/fd/releases/assets/530482901"
 
 [[tools.fnox]]
-version = "1.35.2"
+version = "1.35.3"
 backend = "github:jdx/fnox"
 
 [tools.fnox."platforms.linux-arm64"]
-checksum = "sha256:d404b219b6a3c3c4f3531d88cb7d3b96d00891b826d8fcfc2941b8a060028015"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/561018918"
+checksum = "sha256:0bf2d91b31d57969e6c12e4677d77f2f648dde81685fa07a6d691560c8cd89f7"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.3/fnox-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/578792289"
 provenance = "github-attestations"
 
 [tools.fnox."platforms.linux-arm64-musl"]
-checksum = "sha256:e01d961fd668bb678a0fde108057651c40497d6a086f9b32fa4cbb8afe215b1f"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/561018922"
+checksum = "sha256:d0d808ee972747b0868317800772e80f693cb7023ca39a9e75f77c6e9cf57e38"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.3/fnox-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/578792291"
 provenance = "github-attestations"
 
 [tools.fnox."platforms.linux-x64"]
-checksum = "sha256:5f95929bb8b73cd849b238fbefe3dbf8706f57f876cc5ae23aa9aa9da62a40a9"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/561018959"
+checksum = "sha256:69066f81f624d355c83bcb394ba80f6add80c06b7be92c7b178d38af14a25c52"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.3/fnox-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/578792337"
 provenance = "github-attestations"
 
 [tools.fnox."platforms.linux-x64-baseline"]
-checksum = "sha256:5f95929bb8b73cd849b238fbefe3dbf8706f57f876cc5ae23aa9aa9da62a40a9"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/561018959"
+checksum = "sha256:69066f81f624d355c83bcb394ba80f6add80c06b7be92c7b178d38af14a25c52"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.3/fnox-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/578792337"
 provenance = "github-attestations"
 
 [tools.fnox."platforms.linux-x64-musl"]
-checksum = "sha256:9ddbd3e8304f4bd1aae59f0152efd8ec810ada9656e64ce7533d4c46f8aae985"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/561018962"
+checksum = "sha256:e0a9bc1e132bc893301cc108afc849412046ebeb3043ef5b4a3de5e45d5f6701"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.3/fnox-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/578792344"
 provenance = "github-attestations"
 
 [tools.fnox."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:9ddbd3e8304f4bd1aae59f0152efd8ec810ada9656e64ce7533d4c46f8aae985"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/561018962"
+checksum = "sha256:e0a9bc1e132bc893301cc108afc849412046ebeb3043ef5b4a3de5e45d5f6701"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.3/fnox-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/578792344"
 provenance = "github-attestations"
 
 [tools.fnox."platforms.macos-arm64"]
-checksum = "sha256:3f6e9b4f7a59a5712abe48cf6c97b2a0600392b5cb54059a80b53497adeab354"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/561018919"
+checksum = "sha256:49965f9739d053f544aa32599494b3e2442dcf8c116d92a6a4afa5575e9decd3"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.3/fnox-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/578792286"
 provenance = "github-attestations"
 
 [tools.fnox."platforms.macos-x64"]
-checksum = "sha256:efb1a830b0b44704b93d1647cab9b9046da7519a869cc6de3437a028c7db7417"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/561018920"
+checksum = "sha256:f56104dc739e6882e6a85fc32149c372450ba6a6799b31f69766234494bababb"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.3/fnox-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/578792298"
 provenance = "github-attestations"
 
 [tools.fnox."platforms.macos-x64-baseline"]
-checksum = "sha256:efb1a830b0b44704b93d1647cab9b9046da7519a869cc6de3437a028c7db7417"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-x86_64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/561018920"
+checksum = "sha256:f56104dc739e6882e6a85fc32149c372450ba6a6799b31f69766234494bababb"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.3/fnox-x86_64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/578792298"
 provenance = "github-attestations"
 
 [tools.fnox."platforms.windows-x64"]
-checksum = "sha256:ba662d6a6452f8ab060505ae35e3bd81c890fa1ba5ada778b4c451aaf006d6a8"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/561018956"
+checksum = "sha256:6264f8be31e6de99f6f97fa871f6323c9b01d605c0a9b9887e6364fdd74ad4f2"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.3/fnox-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/578792327"
 provenance = "github-attestations"
 
 [tools.fnox."platforms.windows-x64-baseline"]
-checksum = "sha256:ba662d6a6452f8ab060505ae35e3bd81c890fa1ba5ada778b4c451aaf006d6a8"
-url = "https://github.com/jdx/fnox/releases/download/v1.35.2/fnox-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/561018956"
+checksum = "sha256:6264f8be31e6de99f6f97fa871f6323c9b01d605c0a9b9887e6364fdd74ad4f2"
+url = "https://github.com/jdx/fnox/releases/download/v1.35.3/fnox-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/jdx/fnox/releases/assets/578792327"
 provenance = "github-attestations"
 
 [[tools.gdu]]
@@ -377,7 +377,7 @@ url = "https://github.com/dundee/gdu/releases/download/v5.37.0/gdu_windows_amd64
 url_api = "https://api.github.com/repos/dundee/gdu/releases/assets/519065133"
 
 [[tools."github:Tatsu-syo/noMeiryoUI"]]
-version = "3.5.0"
+version = "3.5.1"
 backend = "github:Tatsu-syo/noMeiryoUI"
 
 [tools."github:Tatsu-syo/noMeiryoUI".options]
@@ -385,59 +385,59 @@ asset_pattern = "noMeiryoUI*.zip"
 version_prefix = "TAG-"
 
 [tools."github:Tatsu-syo/noMeiryoUI"."platforms.linux-arm64"]
-checksum = "sha256:e36a4e730c15b28466efeac090a022cd2cdb16b88d06a4755cad6020b04e2a86"
-url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.0/noMeiryoUI3.5.0.zip"
-url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/536341171"
+checksum = "sha256:f96c2803a499c4e3b20e10bd423aa765d081b557536a5b6f3a7ba2aa9be93cf2"
+url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.1/noMeiryoUI3.5.1.zip"
+url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/546807590"
 
 [tools."github:Tatsu-syo/noMeiryoUI"."platforms.linux-arm64-musl"]
-checksum = "sha256:e36a4e730c15b28466efeac090a022cd2cdb16b88d06a4755cad6020b04e2a86"
-url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.0/noMeiryoUI3.5.0.zip"
-url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/536341171"
+checksum = "sha256:f96c2803a499c4e3b20e10bd423aa765d081b557536a5b6f3a7ba2aa9be93cf2"
+url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.1/noMeiryoUI3.5.1.zip"
+url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/546807590"
 
 [tools."github:Tatsu-syo/noMeiryoUI"."platforms.linux-x64"]
-checksum = "sha256:e36a4e730c15b28466efeac090a022cd2cdb16b88d06a4755cad6020b04e2a86"
-url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.0/noMeiryoUI3.5.0.zip"
-url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/536341171"
+checksum = "sha256:f96c2803a499c4e3b20e10bd423aa765d081b557536a5b6f3a7ba2aa9be93cf2"
+url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.1/noMeiryoUI3.5.1.zip"
+url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/546807590"
 
 [tools."github:Tatsu-syo/noMeiryoUI"."platforms.linux-x64-baseline"]
-checksum = "sha256:e36a4e730c15b28466efeac090a022cd2cdb16b88d06a4755cad6020b04e2a86"
-url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.0/noMeiryoUI3.5.0.zip"
-url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/536341171"
+checksum = "sha256:f96c2803a499c4e3b20e10bd423aa765d081b557536a5b6f3a7ba2aa9be93cf2"
+url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.1/noMeiryoUI3.5.1.zip"
+url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/546807590"
 
 [tools."github:Tatsu-syo/noMeiryoUI"."platforms.linux-x64-musl"]
-checksum = "sha256:e36a4e730c15b28466efeac090a022cd2cdb16b88d06a4755cad6020b04e2a86"
-url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.0/noMeiryoUI3.5.0.zip"
-url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/536341171"
+checksum = "sha256:f96c2803a499c4e3b20e10bd423aa765d081b557536a5b6f3a7ba2aa9be93cf2"
+url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.1/noMeiryoUI3.5.1.zip"
+url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/546807590"
 
 [tools."github:Tatsu-syo/noMeiryoUI"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:e36a4e730c15b28466efeac090a022cd2cdb16b88d06a4755cad6020b04e2a86"
-url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.0/noMeiryoUI3.5.0.zip"
-url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/536341171"
+checksum = "sha256:f96c2803a499c4e3b20e10bd423aa765d081b557536a5b6f3a7ba2aa9be93cf2"
+url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.1/noMeiryoUI3.5.1.zip"
+url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/546807590"
 
 [tools."github:Tatsu-syo/noMeiryoUI"."platforms.macos-arm64"]
-checksum = "sha256:e36a4e730c15b28466efeac090a022cd2cdb16b88d06a4755cad6020b04e2a86"
-url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.0/noMeiryoUI3.5.0.zip"
-url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/536341171"
+checksum = "sha256:f96c2803a499c4e3b20e10bd423aa765d081b557536a5b6f3a7ba2aa9be93cf2"
+url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.1/noMeiryoUI3.5.1.zip"
+url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/546807590"
 
 [tools."github:Tatsu-syo/noMeiryoUI"."platforms.macos-x64"]
-checksum = "sha256:e36a4e730c15b28466efeac090a022cd2cdb16b88d06a4755cad6020b04e2a86"
-url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.0/noMeiryoUI3.5.0.zip"
-url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/536341171"
+checksum = "sha256:f96c2803a499c4e3b20e10bd423aa765d081b557536a5b6f3a7ba2aa9be93cf2"
+url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.1/noMeiryoUI3.5.1.zip"
+url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/546807590"
 
 [tools."github:Tatsu-syo/noMeiryoUI"."platforms.macos-x64-baseline"]
-checksum = "sha256:e36a4e730c15b28466efeac090a022cd2cdb16b88d06a4755cad6020b04e2a86"
-url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.0/noMeiryoUI3.5.0.zip"
-url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/536341171"
+checksum = "sha256:f96c2803a499c4e3b20e10bd423aa765d081b557536a5b6f3a7ba2aa9be93cf2"
+url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.1/noMeiryoUI3.5.1.zip"
+url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/546807590"
 
 [tools."github:Tatsu-syo/noMeiryoUI"."platforms.windows-x64"]
-checksum = "sha256:e36a4e730c15b28466efeac090a022cd2cdb16b88d06a4755cad6020b04e2a86"
-url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.0/noMeiryoUI3.5.0.zip"
-url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/536341171"
+checksum = "sha256:f96c2803a499c4e3b20e10bd423aa765d081b557536a5b6f3a7ba2aa9be93cf2"
+url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.1/noMeiryoUI3.5.1.zip"
+url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/546807590"
 
 [tools."github:Tatsu-syo/noMeiryoUI"."platforms.windows-x64-baseline"]
-checksum = "sha256:e36a4e730c15b28466efeac090a022cd2cdb16b88d06a4755cad6020b04e2a86"
-url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.0/noMeiryoUI3.5.0.zip"
-url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/536341171"
+checksum = "sha256:f96c2803a499c4e3b20e10bd423aa765d081b557536a5b6f3a7ba2aa9be93cf2"
+url = "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-3.5.1/noMeiryoUI3.5.1.zip"
+url_api = "https://api.github.com/repos/Tatsu-syo/noMeiryoUI/releases/assets/546807590"
 
 [[tools."github:rtk-ai/rtk"]]
 version = "0.49.0"
