@@ -11,6 +11,7 @@
     },
     "bash": {
       "*": "allow",
+      "time *": "allow",
       "timeout *": "allow",
       "sudo *": { "action": "deny", "reason": "Request user to execute" }
     },
