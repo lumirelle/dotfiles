@@ -36,9 +36,9 @@ My dotfiles (also application files), out-of-box (for me).
   - [Starship](https://starship.rs/)
 - System Configuration
   - Windows Only:
-    - [dot_config/run_onchange_ui.reg.cmd.tmpl](dot_config/run_onchange_ui.reg.cmd.tmpl): Custom Windows system UI font solution
-    - [dot_config/run_onchange_disable_ctrl_space.reg.cmd](dot_config/run_onchange_disable_ctrl_space.reg.cmd): Disable hotkey `ctrl+space` to switch input method language
-    - [dot_config/run_once_LongPathEnabled.cmd](dot_config/run_once_LongPathEnabled.cmd): Enable Windows long path support
+    - [dot_config/run_onchange_ui.cmd](dot_config/run_onchange_ui.cmd): Custom Windows system UI font solution, [dot_config/ui_reset.cmd](dot_config/ui_reset.cmd) manually restores the default font
+    - [dot_config/run_onchange_disable_ctrl_space.cmd](dot_config/run_onchange_disable_ctrl_space.cmd): Disable hotkey `ctrl+space` to switch input method language
+    - [dot_config/run_onchange_LongPathEnabled.cmd](dot_config/run_onchange_LongPathEnabled.cmd): Enable Windows long path support
 - System Components
   - [Windows Subsystem for Linux (WSL, Windows Only)](https://github.com/microsoft/WSL)
   - [WinLibs: GCC + MinGW-w64 compiler for Windows (Windows Only)](https://winlibs.com/)
