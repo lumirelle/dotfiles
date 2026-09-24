@@ -11,8 +11,8 @@
     },
     "bash": {
       "*": "allow",
-      "time *": "allow",
-      "timeout *": "allow",
+      "time *": { "action": "deny", "reason": "Use Pi's bash timeout parameter instead of the time wrapper." },
+      "timeout *": { "action": "deny", "reason": "Use Pi's bash timeout parameter instead of the timeout wrapper." },
       "sudo *": { "action": "deny", "reason": "Request user to execute" }
     },
     "external_directory": {
