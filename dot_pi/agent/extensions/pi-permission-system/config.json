@@ -17,6 +17,10 @@
     },
     "external_directory": {
       "*": "deny",
+      "/tmp": "allow",
+      "~/AppData/Local/Temp/*": "allow"
+    },
+    "external_directory_read": {
       "~/.agents/*": "allow"
     }
   }
