@@ -18,8 +18,8 @@ export default antfu(
     ignores: [
       '**/Microsoft.WindowsTerminal_8wekyb3d8bbwe/**/*',
       '**/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/**/*',
-      '**/clash-verge-rev/config.yaml',
-      'dot_config/shared/clash-verge-rev/verge.yaml',
+      '**/io.github.clash-verge-rev.clash-verge-rev/*.yaml',
+      'dot_config/shared/clash-verge-rev/*.yaml',
     ],
   },
   ...oxlint.buildFromOxlintConfigFile('.oxlintrc.json'),
