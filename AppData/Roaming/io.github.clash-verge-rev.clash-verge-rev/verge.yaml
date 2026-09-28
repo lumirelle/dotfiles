@@ -26,6 +26,11 @@ enable_system_proxy: false
 enable_proxy_guard: false
 enable_bypass_check: true
 enable_dns_settings: true
+profile_dns_settings:
+  R2X8jwcL6Sym:
+    enabled: true
+  RuJa5iF9M7Oh:
+    enabled: false
 use_default_bypass: true
 system_proxy_bypass: null
 proxy_guard_duration: 30
