@@ -3,10 +3,17 @@
   "theme": "dark",
   "defaultProvider": "deepseek",
   "defaultModel": "deepseek-flash",
-  "defaultTools": ["read", "bash", "edit", "write", "grep", "find", "ls"],
+  "defaultTools": [
+    "read",
+    "bash",
+    "edit",
+    "write",
+    "grep",
+    "find",
+    "ls"
+  ],
   "packages": [
     "npm:@gotgenes/pi-permission-system",
-    "npm:pi-rtk-optimizer",
     "npm:pi-fff",
     "npm:@juicesharp/rpiv-web-tools",
     "npm:@juicesharp/rpiv-ask-user-question",
