@@ -1,0 +1,40 @@
+# Clash Verge DNS Config
+
+dns:
+  enable: true
+  ipv6: true
+  listen: :53
+  use-hosts: true
+  use-system-hosts: true
+  prefer-h3: false
+  respect-rules: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-range6: fdfe:dcba:9876::1/64
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+    - 'rule-set:fake-ip-filter-set'
+  default-nameserver:
+  - 119.29.29.29
+  - 223.5.5.5
+  - system
+  nameserver:
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  - tls://dot.pub:853
+  - tls://dns.alidns.com:853
+  - dhcp://en0
+  nameserver-policy: {}
+  proxy-server-nameserver: []
+  direct-nameserver: []
+  direct-nameserver-follow-policy: false
+  fallback: []
+  fallback-filter:
+    geoip: false
+    geoip-code: CN
+    ipcidr:
+    - 240.0.0.0/4
+    - 0.0.0.0/32
+    - 127.0.0.0/32
+    domain: []
+hosts: {}

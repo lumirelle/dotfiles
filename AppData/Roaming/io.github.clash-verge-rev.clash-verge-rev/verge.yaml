@@ -30,7 +30,9 @@ profile_dns_settings:
   R2X8jwcL6Sym:
     enabled: true
   RuJa5iF9M7Oh:
-    enabled: false
+    enabled: true
+  Rw5bN93RChKJ:
+    enabled: true
 use_default_bypass: true
 system_proxy_bypass: null
 proxy_guard_duration: 30
