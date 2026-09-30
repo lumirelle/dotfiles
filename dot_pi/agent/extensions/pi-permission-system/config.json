@@ -13,7 +13,30 @@
       "*": "allow",
       "time *": { "action": "deny", "reason": "Use Pi's bash timeout parameter instead of the time wrapper." },
       "timeout *": { "action": "deny", "reason": "Use Pi's bash timeout parameter instead of the timeout wrapper." },
-      "sudo *": { "action": "deny", "reason": "Request user to execute" }
+      "sudo *": { "action": "deny", "reason": "Request user to execute" },
+
+      "cat *": { "action": "deny", "reason": "Use the `read` tool instead of `cat`; it supports offset/limit for large files" },
+      "head *": { "action": "deny", "reason": "Use the `read` tool with `limit` instead of `head`" },
+      "tail *": { "action": "deny", "reason": "Use the `read` tool with `offset` (and `limit`) instead of `tail`" },
+      "bat *": { "action": "deny", "reason": "Use the `read` tool instead of `bat`" },
+
+      "grep *": { "action": "deny", "reason": "Use the `grep` tool for file content search, or `fff_multi_grep` for several patterns at once" },
+      "rg *": { "action": "deny", "reason": "Use the `grep` tool instead of `rg`" },
+      "ag *": { "action": "deny", "reason": "Use the `grep` tool instead of `ag`" },
+      "ack *": { "action": "deny", "reason": "Use the `grep` tool instead of `ack`" },
+      "find *": { "action": "deny", "reason": "Use the `find` tool (glob) or `find_files` (fuzzy) instead of bash `find`" },
+      "fd *": { "action": "deny", "reason": "Use the `find_files` tool instead of `fd`" },
+      "locate *": { "action": "deny", "reason": "Use the `find_files` tool instead of `locate`" },
+      "tree *": { "action": "deny", "reason": "Use the `ls` tool or `find` instead of `tree`" },
+      "ls *": { "action": "deny", "reason": "Use the `ls` tool instead of bash `ls`" },
+      "ll *": { "action": "deny", "reason": "Use the `ls` tool instead of `ll`" },
+      "dir *": { "action": "deny", "reason": "Use the `ls` tool instead of `dir`" },
+
+      "sed -i*": { "action": "deny", "reason": "Use the `edit` tool for in-place edits instead of `sed -i`" },
+      "sed --in-place*": { "action": "deny", "reason": "Use the `edit` tool for in-place edits instead of `sed --in-place`" },
+      "perl -i*": { "action": "deny", "reason": "Use the `edit` tool for in-place edits instead of `perl -i`" },
+      "tee *": { "action": "deny", "reason": "Use the `write` or `edit` tool instead of `tee`" },
+      "touch *": { "action": "deny", "reason": "Use the `write` tool to create the file instead of `touch`" }
     },
     "external_directory": {
       "*": "deny",
