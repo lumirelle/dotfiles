@@ -1,1 +1,1 @@
-export alias lg = lazygit
+export alias lzg = lazygit

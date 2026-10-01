@@ -31,7 +31,6 @@ source aliases/cwd-file-exts.nu
 {{ if and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "arch") }}
 	source aliases/pacman.nu
 {{ end }}
-source aliases/git.nu
 source aliases/lazygit.nu
 source aliases/chezmoi.nu
-source aliases/docker.nu
+source aliases/podman.nu
