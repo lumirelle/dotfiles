@@ -75,8 +75,7 @@
   },
   // Minimap
   "minimap": {
-    "display_in": "all_editors",
-    "show": "always"
+    "show": "never"
   },
   // Scroll
   "scroll_sensitivity": 2,
