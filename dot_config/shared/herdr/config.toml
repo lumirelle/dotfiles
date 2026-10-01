@@ -1,8 +1,18 @@
 onboarding = false
 
+[theme]
+# Use host terminal's color scheme
+name = "terminal"
+
 [keys]
 prefix = "ctrl+s"
 
 # Use nushell for new interactive panes.
 [terminal]
 default_shell = 'nu'
+
+[ui]
+sidebar_start_collapsed = true
+sidebar_collapsed_mode = "hidden"
+copy_on_select = false
+accent = "blue"
