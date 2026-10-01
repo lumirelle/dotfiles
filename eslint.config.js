@@ -16,8 +16,6 @@ export default antfu(
     // Keep some configs style as their are,
     // to reduce the differences while updating.
     ignores: [
-      '**/Microsoft.WindowsTerminal_8wekyb3d8bbwe/**/*',
-      '**/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/**/*',
       '**/io.github.clash-verge-rev.clash-verge-rev/*.yaml',
       'dot_config/shared/clash-verge-rev/*.yaml',
     ],

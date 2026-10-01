@@ -1,0 +1,6 @@
+{{ if eq .chezmoi.hostname "NJ-TSJ-0254" }}
+	{{ joinPath .chezmoi.homeDir "AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings_nj-tsj-0254.json" }}
+{{ else }}
+	{{ joinPath .chezmoi.homeDir "AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings_default.json" }}
+{{ end }}
+
