@@ -23,7 +23,7 @@ Invoke-Expression (& { (fnox activate powershell | Out-String) })
 $env:PODMAN_COMPOSE_WARNING_LOGS = $false
 
 # Aliases & Custom Commands
-New-Alias -Name lg -Value lazygit
+New-Alias -Name lzg -Value lazygit
 New-Alias -Name ch -Value chezmoi
 ## GNU flavor
 New-Alias -Name which -Value where.exe

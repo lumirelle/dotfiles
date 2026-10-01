@@ -16,6 +16,6 @@ else
   export PODMAN_COMPOSE_WARNING_LOGS=false
 
   # Aliases & Custom Commands
-  alias lg='lazygit'
+  alias lzg='lazygit'
   alias ch='chezmoi'
 fi
