@@ -8,44 +8,44 @@ backend = "cargo:https://github.com/nushell/nufmt"
 specifiers = ["HEAD"]
 
 [[tools."github:nubjs/nub"]]
-version = "0.7.5"
+version = "0.9.5"
 backend = "github:nubjs/nub"
-specifiers = ["0.7.5"]
+specifiers = ["0.9.5"]
 
 [tools."github:nubjs/nub"."platforms.linux-arm64"]
-checksum = "sha256:de28e3df5a84fb410640d7ab820e172401d85d63ba44d4b6f6454bf9c27380d3"
-url = "https://github.com/nubjs/nub/releases/download/v0.7.5/nub-linux-arm64.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/507734611"
+checksum = "sha256:e6c0dace69682819f2cdbd8a3403e8d3e10ebc8e3ae8110cc2ec776c60c218e8"
+url = "https://github.com/nubjs/nub/releases/download/v0.9.5/nub-linux-arm64.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/589387916"
 
 [tools."github:nubjs/nub"."platforms.linux-arm64-musl"]
-checksum = "sha256:e9d98e41c6a89ab89e103a94a7a61561cd9db05fc470600ac02918ad89a2f8ca"
-url = "https://github.com/nubjs/nub/releases/download/v0.7.5/nub-linux-arm64-musl.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/507734615"
+checksum = "sha256:a7010bf9cf329a1ebaa92c44f653104dee2e14f6a46eb690e3c7e7ffd01c80bc"
+url = "https://github.com/nubjs/nub/releases/download/v0.9.5/nub-linux-arm64-musl.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/589388000"
 
 [tools."github:nubjs/nub"."platforms.linux-x64"]
-checksum = "sha256:34ad027792b7702e88f71eadde9fc2bf4ebade13a1c91b92fa056954f15880eb"
-url = "https://github.com/nubjs/nub/releases/download/v0.7.5/nub-linux-x64.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/507734614"
+checksum = "sha256:f1f21f6365c454ec820cee5ad3ce9b014d4ce9bebf22390200d390e53693ecdf"
+url = "https://github.com/nubjs/nub/releases/download/v0.9.5/nub-linux-x64.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/589387769"
 
 [tools."github:nubjs/nub"."platforms.linux-x64-musl"]
-checksum = "sha256:830e811bfabbd6edd1e20e975965d75d21d20fd9191bb45484efb2a29fe9789b"
-url = "https://github.com/nubjs/nub/releases/download/v0.7.5/nub-linux-x64-musl.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/507734610"
+checksum = "sha256:9101754b3fdb7a2c6939405e36efe6054ac34fe1d1365d321eecf3b111969274"
+url = "https://github.com/nubjs/nub/releases/download/v0.9.5/nub-linux-x64-musl.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/589387856"
 
 [tools."github:nubjs/nub"."platforms.macos-arm64"]
-checksum = "sha256:dd5a6a9bf30d96e36fe5ba7df870156db7089b3b5bbf73734c881ecc86ed693f"
-url = "https://github.com/nubjs/nub/releases/download/v0.7.5/nub-darwin-arm64.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/507734604"
+checksum = "sha256:b601d669a8e971eaa958942bdde4e310496ca0b5da7fb113406bc1b4703f2847"
+url = "https://github.com/nubjs/nub/releases/download/v0.9.5/nub-darwin-arm64.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/589387528"
 
 [tools."github:nubjs/nub"."platforms.macos-x64"]
-checksum = "sha256:45396491a922e9a6ff75ab6add500bf597b2be51b80acbaeaa055a7a9d845748"
-url = "https://github.com/nubjs/nub/releases/download/v0.7.5/nub-darwin-x64.tar.gz"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/507734605"
+checksum = "sha256:a628e7afae5f4ad0f201e8377ee94136e4784f6db3110199690fb737c6f89330"
+url = "https://github.com/nubjs/nub/releases/download/v0.9.5/nub-darwin-x64.tar.gz"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/589387667"
 
 [tools."github:nubjs/nub"."platforms.windows-x64"]
-checksum = "sha256:061956457776121ec8a4de43da47a85eebb9e3c26111ff39fc5c55865836de43"
-url = "https://github.com/nubjs/nub/releases/download/v0.7.5/nub-win32-x64.zip"
-url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/507734620"
+checksum = "sha256:2686fadb14062bfeddd9db4bb9e778602cd21097fe3b7c1d61f9f36cdcbe5b53"
+url = "https://github.com/nubjs/nub/releases/download/v0.9.5/nub-win32-x64.zip"
+url_api = "https://api.github.com/repos/nubjs/nub/releases/assets/589388072"
 
 [[tools.go]]
 version = "1.27.1"
@@ -86,45 +86,39 @@ backend = "go:github.com/gohugoio/gotmplfmt"
 specifiers = ["latest"]
 
 [[tools.hk]]
-version = "2.0.1"
+version = "2.4.0"
 backend = "aqua:jdx/hk"
 specifiers = ["latest"]
 
 [tools.hk."platforms.linux-arm64"]
-checksum = "sha256:8a28f2737914bbffa8dd16f39a2fc65d85e9a52261789cf6a1affd6c6762fbc1"
-url = "https://github.com/jdx/hk/releases/download/v2.0.1/hk-aarch64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/jdx/hk/releases/assets/566307878"
-signer = "sigstore-oidc:https://github.com/jdx/hk/.github/workflows/release.yml"
+checksum = "sha256:836235bd8aa06f25e7ff28591b32efb5297abe55366e912095636a49ffe4d363"
+url = "https://github.com/jdx/hk/releases/download/v2.4.0/hk-aarch64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/jdx/hk/releases/assets/594327179"
 
 [tools.hk."platforms.linux-arm64-musl"]
-checksum = "sha256:b75f54bf8a3679a13a01d250959ae77fab033ca5025eb557b76442c59efa8eb8"
-url = "https://github.com/jdx/hk/releases/download/v2.0.1/hk-aarch64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/jdx/hk/releases/assets/566307875"
-signer = "sigstore-oidc:https://github.com/jdx/hk/.github/workflows/release.yml"
+checksum = "sha256:ad5c5a556e0a505d9a3441868217976bd4ae610e1364e93516993b9717d9ef28"
+url = "https://github.com/jdx/hk/releases/download/v2.4.0/hk-aarch64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/jdx/hk/releases/assets/594327184"
 
 [tools.hk."platforms.linux-x64"]
-checksum = "sha256:f14d0290a07f82911f32ea5e4a91dd80d90abb852488912b1ade9b240f70d615"
-url = "https://github.com/jdx/hk/releases/download/v2.0.1/hk-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/jdx/hk/releases/assets/566307905"
-signer = "sigstore-oidc:https://github.com/jdx/hk/.github/workflows/release.yml"
+checksum = "sha256:6efabe30aeabc4611a42ce6cf0fd46b9a19478e2cfd9acfd1bd93998736f3153"
+url = "https://github.com/jdx/hk/releases/download/v2.4.0/hk-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/jdx/hk/releases/assets/594327200"
 
 [tools.hk."platforms.linux-x64-musl"]
-checksum = "sha256:76269248e27114f361d533551ffca757e58a1d4abe880fd008df16d19128ea97"
-url = "https://github.com/jdx/hk/releases/download/v2.0.1/hk-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/jdx/hk/releases/assets/566307913"
-signer = "sigstore-oidc:https://github.com/jdx/hk/.github/workflows/release.yml"
+checksum = "sha256:f34598671ca40be5c308324a60ef30b736dbbbf4259dfb511abd79009ee4de2a"
+url = "https://github.com/jdx/hk/releases/download/v2.4.0/hk-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/jdx/hk/releases/assets/594327202"
 
 [tools.hk."platforms.macos-arm64"]
-checksum = "sha256:6ec393f898f562f76c4839a910356b4afec6740eff23f18ebdf8cf41c793a461"
-url = "https://github.com/jdx/hk/releases/download/v2.0.1/hk-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/jdx/hk/releases/assets/566307879"
-signer = "sigstore-oidc:https://github.com/jdx/hk/.github/workflows/release.yml"
+checksum = "sha256:6e1c970b9de7ab4ee52c85869b2ea9cfe8769d25a0fe9536062e0ba62366ec59"
+url = "https://github.com/jdx/hk/releases/download/v2.4.0/hk-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/jdx/hk/releases/assets/594327181"
 
 [tools.hk."platforms.windows-x64"]
-checksum = "sha256:b3cb8ab5958393faacefabfb3a402060eb256b1fda8e1f83c74c3fc877ebff8f"
-url = "https://github.com/jdx/hk/releases/download/v2.0.1/hk-x86_64-pc-windows-msvc.zip"
-url_api = "https://api.github.com/repos/jdx/hk/releases/assets/566307877"
-signer = "sigstore-oidc:https://github.com/jdx/hk/.github/workflows/release.yml"
+checksum = "sha256:028931e00fd670ad891a428bf44e14ac8e2726a8f72b7fae80b27b6502af2be3"
+url = "https://github.com/jdx/hk/releases/download/v2.4.0/hk-x86_64-pc-windows-msvc.zip"
+url_api = "https://api.github.com/repos/jdx/hk/releases/assets/594327180"
 
 [[tools.node]]
 version = "26.10.0"

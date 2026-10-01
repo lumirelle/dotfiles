@@ -3,7 +3,7 @@
 [tools]
 # Environments
 node = "latest"
-"github:nubjs/nub" = "0.7.5"
+"github:nubjs/nub" = "0.9.5"
 rust = "stable-gnu"
 go = "latest"
 # Quality

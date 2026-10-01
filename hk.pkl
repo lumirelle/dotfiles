@@ -1,6 +1,6 @@
-amends "package://github.com/jdx/hk/releases/download/v2.0.1/hk@2.0.1#/Config.pkl"
+amends "package://github.com/jdx/hk/releases/download/v2.4.0/hk@2.4.0#/Config.pkl"
 
-import "package://github.com/jdx/hk/releases/download/v2.0.1/hk@2.0.1#/Builtins.pkl"
+import "package://github.com/jdx/hk/releases/download/v2.4.0/hk@2.4.0#/Builtins.pkl"
 
 steps {
   // Code
@@ -101,5 +101,11 @@ steps {
       effect = "read"
     }
   }
-  ["pkl-format"] = Builtins.pkl_format
+  ["pkl-format"] = (Builtins.pkl_format) {
+    shell = null
+    fix = new CommandSpec {
+      command = new Command { argv = List("pkl", "format", "--write", "{{ files }}") }
+      effect = "write"
+    }
+  }
 }
