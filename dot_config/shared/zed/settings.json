@@ -2,19 +2,6 @@
 {
   // #region UI
   // Theme
-  "wsl_connections": [
-    {
-      "distro_name": "archlinux",
-      "user": null,
-      "projects": [
-        {
-          "paths": [
-            "/home/lumirelle/my/demo/demo-misc/./"
-          ]
-        }
-      ]
-    }
-  ],
   "theme": {
     "mode": "system",
     "dark": "Vercel Dark",
@@ -94,6 +81,21 @@
   // Scroll
   "scroll_sensitivity": 2,
   "fast_scroll_sensitivity": 3,
+  // WSL Connection
+  "wsl_connections": [
+    {
+      "distro_name": "archlinux",
+      "user": null,
+      "projects": [
+        {
+          "paths": [
+            "/home/lumirelle/my/demo/demo-misc/./"
+          ]
+        }
+      ]
+    }
+  ],
+
   // #endregion
 
   // #region Code Quality
