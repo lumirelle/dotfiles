@@ -143,8 +143,6 @@
   "gitlens.ai.enabled": false,
   "gitlens.defaultCurrentUserNameStyle": "nameAndYou",
   "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm:ss",
-  // Show file size, don't make it too large.
-  "filesize.showBrotliInStatusBar": true,
   // Guides
   "editor.lineNumbers": "relative",
   "scm.diffDecorationsGutterWidth": 2,
@@ -465,6 +463,7 @@
   // #region Behavior / Tool & Library & Framework Support
   // Mise
   "mise.autoDetectMiseBinPath": false,
+  "mise.configureExtensionAutomatically": true,
   // Dev Containers
   "containers.containerClient": "com.microsoft.visualstudio.containers.podman",
   "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.podmancompose",

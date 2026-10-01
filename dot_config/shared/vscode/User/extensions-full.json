@@ -1,6 +1,6 @@
 // cspell:disable
 {
-  // Extension Count: 22 + $DEFAULT_VSCODE = 57
+  // Extension Count: 20 + $DEFAULT_VSCODE = 56
   "recommendations": [
     // #region Appearance / Editor
     // Lens
@@ -9,15 +9,6 @@
     "ruban-s.fast-import-cost",
     "antfu.pnpm-catalog-lens",
     "antfu.iconify",
-    // #endregion
-
-    // #region Behavior / Sidebar / Addons
-    // Excercises
-    "yrm.type-challenges",
-    // #endregion
-
-    // #region Behavior / Commands / Addons
-    "jasonnutter.search-node-modules", // CTRL+K CTRL+N
     // #endregion
 
     // #region Behavior / Dev Experience

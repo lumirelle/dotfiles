@@ -1,6 +1,6 @@
 // cspell:disable
 {
-  // Extension Count: 35
+  // Extension Count: 36
   "recommendations": [
     // #region Appearance / Theme
     "lumirelle.vscode-vercel-theme",
@@ -26,7 +26,6 @@
     // #region Appearance / Status Bar
     // Hint
     "johnpapa.read-time",
-    "mkxml.vscode-filesize",
     // #endregion
 
     // #region Appearance / Highlight
@@ -37,10 +36,6 @@
 
     // #region Appearance / Custom UI
     "subframe7536.custom-ui-style",
-    // #endregion
-
-    // #region Behavior / Sidebar / Explorer
-    "jannisx11.batch-rename-extension",
     // #endregion
 
     // #region Behavior / Sidebar / Addons
@@ -57,11 +52,17 @@
 
     // #region Behavior / Editor
     "ms-vscode.hexeditor",
-    "cardinal90.multi-cursor-case-preserve",
     // #endregion
 
     // #region Behavior / AI
     "coderabbit.coderabbit-vscode", // AI Code Reviewer
+    // #endregion
+
+    // #region Behavior / Remote Development
+    "ms-vscode-remote.remote-wsl",
+    "ms-vscode-remote.remote-ssh",
+    "ms-vscode.remote-explorer",
+    "ms-vscode-remote.remote-ssh-edit",
     // #endregion
 
     // #region Behavior / Dev Experience
