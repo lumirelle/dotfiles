@@ -38,10 +38,12 @@ My dotfiles (also application files), out-of-box (for me).
   - Windows Only:
     - [dot_config/run_onchange_ui.cmd](dot_config/run_onchange_ui.cmd): Custom Windows system UI font solution, [dot_config/ui_reset.cmd](dot_config/ui_reset.cmd) manually restores the default font
     - [dot_config/run_onchange_disable_ctrl_space.cmd](dot_config/run_onchange_disable_ctrl_space.cmd): Disable hotkey `ctrl+space` to switch input method language
+    - [dot_config/run_onchange_disable_Windows_search.cmd](dot_config/run_onchange_disable_Windows_search.cmd): Disable Windows search service
     - [dot_config/run_onchange_LongPathEnabled.cmd](dot_config/run_onchange_LongPathEnabled.cmd): Enable Windows long path support
 - System Components
   - [Windows Subsystem for Linux (WSL, Windows Only)](https://github.com/microsoft/WSL)
   - [WinLibs: GCC + MinGW-w64 compiler for Windows (Windows Only)](https://winlibs.com/)
+    - [dot_config/run_onchange_set_cc_cxx.cmd](dot_config/run_onchange_set_cc_cxx.cmd): Set CC & CXX environment variable to force using `gcc` & `g++` instead of MSVC on Windows
 - Version Control Systems
   - [Git](https://git-scm.com/)
   - [Jujutsu](https://github.com/jj-vcs/jj)
@@ -62,3 +64,4 @@ My dotfiles (also application files), out-of-box (for me).
     - [@juicesharp/rpiv-web-tools](https://pi.dev/packages/@juicesharp/rpiv-web-tools)
 - Misc CLI Tools
   - [Yazi](https://yazi-rs.github.io/)
+    - [dot_config/run_onchange_set_yazi_file_one.cmd](dot_config/run_onchange_set_yazi_file_one.cmd): Let Yazi use Git provided file.exe

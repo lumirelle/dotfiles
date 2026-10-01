@@ -1,12 +1,13 @@
+# Usernames
 lumirelle
 
-stylua
-
-nufmt
-
-shfmt
-
-gotmplfmt
+# File extensions
 tmpl
 
+# Applications
+stylua
+nufmt
+shfmt
+gotmplfmt
 oxlint
+
