@@ -7,13 +7,17 @@ if ($"($env.HOME?)/bin" | path exists) {
 if ($"($env.HOME?)/.local/bin" | path exists) {
   $env.PATH = ($env.PATH | prepend $"($env.HOME)/.local/bin")
 }
-
-# Environment
-## Shell
-$env.config.show_banner = 'short'
-$env.config.buffer_editor = 'nvim'
 ## Mise, https://mise.jdx.dev/
 let mise_nu = $nu.default-config-dir | path join mise.nu
 if not ($mise_nu | path exists) {
   ^mise activate nu | save -f $mise_nu
 }
+## Mise, https://mise.jdx.dev/
+use ($nu.default-config-dir | path join mise.nu)
+
+# Environment
+## Shell
+$env.config.show_banner = 'short'
+$env.config.buffer_editor = 'nvim'
+## Podman
+$env.PODMAN_COMPOSE_WARNING_LOGS = false
