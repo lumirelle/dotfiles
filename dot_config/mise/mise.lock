@@ -193,6 +193,66 @@ url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.2/bun-windows-x
 checksum = "sha256:78c221c2376f79731ccf4e4af0b3bb46d81fefa3296c5abee09ad8a1b21e68c6"
 url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.2/bun-windows-x64-baseline.zip"
 
+[[tools.fastfetch]]
+version = "2.69.0"
+backend = "aqua:fastfetch-cli/fastfetch"
+specifiers = ["latest"]
+
+[tools.fastfetch."platforms.linux-arm64"]
+checksum = "sha256:843a0d4e3d604efc7cce18df1efcc09b00a1960cfea9949118b50bf999694027"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.69.0/fastfetch-linux-aarch64.tar.gz"
+url_api = "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/assets/588203943"
+
+[tools.fastfetch."platforms.linux-arm64-musl"]
+checksum = "sha256:843a0d4e3d604efc7cce18df1efcc09b00a1960cfea9949118b50bf999694027"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.69.0/fastfetch-linux-aarch64.tar.gz"
+url_api = "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/assets/588203943"
+
+[tools.fastfetch."platforms.linux-x64"]
+checksum = "sha256:9fe880a34de3fec88e57a69230c02fd7be0846db3f3ea9f88f2b74489a79ff55"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.69.0/fastfetch-linux-amd64.tar.gz"
+url_api = "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/assets/588203754"
+
+[tools.fastfetch."platforms.linux-x64-baseline"]
+checksum = "sha256:9fe880a34de3fec88e57a69230c02fd7be0846db3f3ea9f88f2b74489a79ff55"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.69.0/fastfetch-linux-amd64.tar.gz"
+url_api = "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/assets/588203754"
+
+[tools.fastfetch."platforms.linux-x64-musl"]
+checksum = "sha256:9fe880a34de3fec88e57a69230c02fd7be0846db3f3ea9f88f2b74489a79ff55"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.69.0/fastfetch-linux-amd64.tar.gz"
+url_api = "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/assets/588203754"
+
+[tools.fastfetch."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:9fe880a34de3fec88e57a69230c02fd7be0846db3f3ea9f88f2b74489a79ff55"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.69.0/fastfetch-linux-amd64.tar.gz"
+url_api = "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/assets/588203754"
+
+[tools.fastfetch."platforms.macos-arm64"]
+checksum = "sha256:3901a90b11f1823a00fea6f3c3c877e7f336465e9d9facc98fd6b8803e8fac7e"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.69.0/fastfetch-macos-aarch64.tar.gz"
+url_api = "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/assets/588202979"
+
+[tools.fastfetch."platforms.macos-x64"]
+checksum = "sha256:ec6ea2aed26df0561c9331526f1f4289f4285b11f7e3910c29f0b66766b635f1"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.69.0/fastfetch-macos-amd64.tar.gz"
+url_api = "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/assets/588202958"
+
+[tools.fastfetch."platforms.macos-x64-baseline"]
+checksum = "sha256:ec6ea2aed26df0561c9331526f1f4289f4285b11f7e3910c29f0b66766b635f1"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.69.0/fastfetch-macos-amd64.tar.gz"
+url_api = "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/assets/588202958"
+
+[tools.fastfetch."platforms.windows-x64"]
+checksum = "sha256:aba011c1c45d1a6bdcf52098dd0b9afe990fe444180bc491e87f36670f1452ef"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.69.0/fastfetch-windows-amd64.zip"
+url_api = "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/assets/588202599"
+
+[tools.fastfetch."platforms.windows-x64-baseline"]
+checksum = "sha256:aba011c1c45d1a6bdcf52098dd0b9afe990fe444180bc491e87f36670f1452ef"
+url = "https://github.com/fastfetch-cli/fastfetch/releases/download/2.69.0/fastfetch-windows-amd64.zip"
+url_api = "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/assets/588202599"
+
 [[tools.fd]]
 version = "10.5.0"
 backend = "aqua:sharkdp/fd"

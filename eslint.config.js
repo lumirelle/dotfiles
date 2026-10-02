@@ -18,6 +18,7 @@ export default antfu(
     ignores: [
       '**/io.github.clash-verge-rev.clash-verge-rev/*.yaml',
       'dot_config/shared/clash-verge-rev/*.yaml',
+      'dot_pi/agent/settings.json',
     ],
   },
   ...oxlint.buildFromOxlintConfigFile('.oxlintrc.json'),
