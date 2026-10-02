@@ -1,6 +1,6 @@
 // cspell:disable
 {
-  // Extension Count: 36
+  // Extension Count: 35
   "recommendations": [
     // #region Appearance / Theme
     "lumirelle.vscode-vercel-theme",
@@ -21,11 +21,6 @@
     "bierner.markdown-footnotes",
     "bierner.markdown-preview-github-styles",
     "bierner.markdown-yaml-preamble",
-    // #endregion
-
-    // #region Appearance / Status Bar
-    // Hint
-    "johnpapa.read-time",
     // #endregion
 
     // #region Appearance / Highlight
