@@ -86,23 +86,23 @@
       "background": "#000000",
       "foreground": "#EDEDED",
 
-      "black": "#EDEDED", // colors.background_reverse
+      "black": "#A1A1A1", // colors.black
       "red": "#FF6166",
       "green": "#62C073",
       "yellow": "#F2A20D", // colors.amber
       "blue": "#52A8FF",
       "purple": "#BF7AF0",
       "cyan": "#0AC7B4", // colors.teal
-      "white": "#0A0A0A", // colors.foreground_reverse
+      "white": "#EDEDED", // colors.white
 
-      "brightBlack": "#EDEDED", // colors.background_reverse
+      "brightBlack": "#A1A1A1", // colors.black
       "brightRed": "#FF6166",
       "brightGreen": "#62C073",
       "brightYellow": "#F2A20D", // colors.amber
       "brightBlue": "#52A8FF",
       "brightPurple": "#BF7AF0",
       "brightCyan": "#0AC7B4", // colors.teal
-      "brightWhite": "#0A0A0A" // colors.foreground_reverse
+      "brightWhite": "#EDEDED" // colors.white
     },
     {
       "name": "Vercel Light",
@@ -113,23 +113,23 @@
       "background": "#FAFAFA",
       "foreground": "#171717",
 
-      "black": "#171717", // colors.background_reverse
+      "black": "#171717", // colors.black
       "red": "#CB2A2F",
       "green": "#297A3A",
       "yellow": "#A35200", // colors.amber
       "blue": "#0068D6",
       "purple": "#7820BC",
       "cyan": "#067A6E", // colors.teal
-      "white": "#FFFFFF", // colors.foreground_reverse
+      "white": "#4D4D4D", // colors.white
 
-      "brightBlack": "#171717", // colors.background_reverse
+      "brightBlack": "#171717", // colors.black
       "brightRed": "#CB2A2F",
       "brightGreen": "#297A3A",
       "brightYellow": "#A35200", // colors.amber
       "brightBlue": "#0068D6",
       "brightPurple": "#7820BC",
       "brightCyan": "#067A6E", // colors.teal
-      "brightWhite": "#FFFFFF" // colors.foreground_reverse
+      "brightWhite": "#4D4D4D" // colors.white
     }
   ],
   "theme": "Vercel Dark",
