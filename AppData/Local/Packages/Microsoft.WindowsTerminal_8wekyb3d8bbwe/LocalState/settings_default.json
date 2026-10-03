@@ -19,8 +19,6 @@
   ],
   "profiles": {
     "defaults": {
-      "backgroundImage": "desktopWallpaper",
-      "backgroundImageOpacity": 0.24,
       "colorScheme": "Vercel Dark",
       "font": {
         "face": "'0xProto', 'Symbols Nerd Font Mono', 'Maple Mono WR CN'"
@@ -80,50 +78,58 @@
   },
   "schemes": [
     {
-      "background": "#000000",
-      "black": "#A0A0A0",
-      "blue": "#47A8FF",
-      "brightBlack": "#A0A0A0",
-      "brightBlue": "#47A8FF",
-      "brightCyan": "#01F7F7",
-      "brightGreen": "#00CA50",
-      "brightPurple": "#C472FB",
-      "brightRed": "#FF565F",
-      "brightWhite": "#EDEDED",
-      "brightYellow": "#FF9300",
-      "cursorColor": "#EDEDED",
-      "cyan": "#01F7F7",
-      "foreground": "#EDEDED",
-      "green": "#00CA50",
       "name": "Vercel Dark",
-      "purple": "#C472FB",
-      "red": "#FF565F",
-      "selectionBackground": "#1F1F1F",
-      "white": "#EDEDED",
-      "yellow": "#FF9300"
+
+      "cursorColor": "#EDEDED", // colors.foreground
+      "selectionBackground": "#1A1A1A", // colors.background_hover
+
+      "background": "#000000",
+      "foreground": "#EDEDED",
+
+      "black": "#EDEDED", // colors.background_reverse
+      "red": "#FF6166",
+      "green": "#62C073",
+      "yellow": "#F2A20D", // colors.amber
+      "blue": "#52A8FF",
+      "purple": "#BF7AF0",
+      "cyan": "#0AC7B4", // colors.teal
+      "white": "#0A0A0A", // colors.foreground_reverse
+
+      "brightBlack": "#EDEDED", // colors.background_reverse
+      "brightRed": "#FF6166",
+      "brightGreen": "#62C073",
+      "brightYellow": "#F2A20D", // colors.amber
+      "brightBlue": "#52A8FF",
+      "brightPurple": "#BF7AF0",
+      "brightCyan": "#0AC7B4", // colors.teal
+      "brightWhite": "#0A0A0A" // colors.foreground_reverse
     },
     {
-      "background": "#FFFFFF",
-      "black": "#171717",
-      "blue": "#005FF2",
-      "brightBlack": "#171717",
-      "brightBlue": "#005FF2",
-      "brightCyan": "#01F7F7",
-      "brightGreen": "#107D32",
-      "brightPurple": "#7D00CC",
-      "brightRed": "#D8001B",
-      "brightWhite": "#4D4D4D",
-      "brightYellow": "#AA4D00",
-      "cursorColor": "#171717",
-      "cyan": "#01F7F7",
-      "foreground": "#171717",
-      "green": "#107D32",
       "name": "Vercel Light",
-      "purple": "#7D00CC",
-      "red": "#D8001B",
-      "selectionBackground": "#EBEBEB",
-      "white": "#4D4D4D",
-      "yellow": "#AA4D00"
+
+      "cursorColor": "#171717", // colors.foreground
+      "selectionBackground": "#F2F2F2", // colors.background_hover
+
+      "background": "#FAFAFA",
+      "foreground": "#171717",
+
+      "black": "#171717", // colors.background_reverse
+      "red": "#CB2A2F",
+      "green": "#297A3A",
+      "yellow": "#A35200", // colors.amber
+      "blue": "#0068D6",
+      "purple": "#7820BC",
+      "cyan": "#067A6E", // colors.teal
+      "white": "#FFFFFF", // colors.foreground_reverse
+
+      "brightBlack": "#171717", // colors.background_reverse
+      "brightRed": "#CB2A2F",
+      "brightGreen": "#297A3A",
+      "brightYellow": "#A35200", // colors.amber
+      "brightBlue": "#0068D6",
+      "brightPurple": "#7820BC",
+      "brightCyan": "#067A6E", // colors.teal
+      "brightWhite": "#FFFFFF" // colors.foreground_reverse
     }
   ],
   "theme": "Vercel Dark",
@@ -131,8 +137,7 @@
     {
       "name": "Vercel Dark",
       "tab": {
-        "background": "#00000000",
-        "iconStyle": "default",
+        "background": "#000000FF",
         "showCloseButton": "always",
         "unfocusedBackground": null
       },
@@ -141,31 +146,22 @@
         "unfocusedBackground": "#000000FF"
       },
       "window": {
-        "applicationTheme": "dark",
-        "experimental.rainbowFrame": false,
-        "frame": null,
-        "unfocusedFrame": null,
-        "useMica": false
+        "applicationTheme": "dark"
       }
     },
     {
       "name": "Vercel Light",
       "tab": {
-        "background": "#FFFFFFFF",
-        "iconStyle": "default",
+        "background": "#FAFAFAFF",
         "showCloseButton": "always",
         "unfocusedBackground": null
       },
       "tabRow": {
-        "background": "#FFFFFFFF",
-        "unfocusedBackground": "#FFFFFFFF"
+        "background": "#FAFAFAFF",
+        "unfocusedBackground": "#FAFAFAFF"
       },
       "window": {
-        "applicationTheme": "light",
-        "experimental.rainbowFrame": false,
-        "frame": null,
-        "unfocusedFrame": null,
-        "useMica": false
+        "applicationTheme": "light"
       }
     }
   ]
