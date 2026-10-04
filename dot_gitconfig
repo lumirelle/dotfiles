@@ -18,7 +18,6 @@ manyFiles = true
 [includeIf "gitdir:~/workon/"]
 path = .gitconfig-work
 
-# Init
 [init]
 defaultBranch = main
 
@@ -58,10 +57,12 @@ autoSetupRemote = true
 default = current
 followTags = true
 
-# Log
 [log]
 date = short
 decoration = short
+
+[alias]
+clonex = clone --recurse-submodules
 
 # Global hooks
 [hook "hk-pre-commit"]
