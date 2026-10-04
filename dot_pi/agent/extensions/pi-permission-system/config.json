@@ -22,12 +22,12 @@
       "touch *": { "action": "deny", "reason": "Use the `write` tool to create the file instead of `touch`" }
     },
     "external_directory": {
-      "*": "ask",
-      "/tmp": "allow",
-      "~/AppData/Local/Temp/*": "allow"
+      "*": "ask"
     },
     "external_directory_read": {
-      "~/.agents/*": "allow"
+      "~/.agents/*": "allow",
+      "/tmp": "allow",
+      "~/AppData/Local/Temp/*": "allow"
     }
   }
 }
