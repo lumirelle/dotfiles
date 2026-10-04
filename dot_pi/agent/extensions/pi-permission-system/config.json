@@ -22,7 +22,7 @@
       "touch *": { "action": "deny", "reason": "Use the `write` tool to create the file instead of `touch`" }
     },
     "external_directory": {
-      "*": "deny",
+      "*": "ask",
       "/tmp": "allow",
       "~/AppData/Local/Temp/*": "allow"
     },
