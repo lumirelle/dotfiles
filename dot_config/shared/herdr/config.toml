@@ -14,5 +14,4 @@ default_shell = 'nu'
 [ui]
 sidebar_start_collapsed = true
 sidebar_collapsed_mode = "hidden"
-copy_on_select = false
 accent = "blue"
