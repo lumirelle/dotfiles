@@ -67,5 +67,5 @@ decoration = short
 [hook "hk-pre-commit"]
 # It seems like --from-hook does not work well (maybe this is caused by using Windows)
 # So we test hk.pkl here explicitly
-command = test "${HK:-1}" = "0" || ! test -e hk.pkl || hk run pre-commit --from-hook --staged "$@"
+command = test ${HK:-1} = 0 || ! test -e hk.pkl || hk run pre-commit --from-hook $@
 event = pre-commit
