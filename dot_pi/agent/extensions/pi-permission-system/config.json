@@ -27,7 +27,9 @@
     "external_directory_read": {
       "~/.agents/*": "allow",
       "/tmp": "allow",
-      "~/AppData/Local/Temp/*": "allow"
+      "~/AppData/Local/Temp/*": "allow",
+      "C:/Users/lumirelle/AppData/Local/Temp/*": "allow",
+      "C:/Users/LUMIRE~1/AppData/Local/Temp/*": "allow"
     }
   }
 }
