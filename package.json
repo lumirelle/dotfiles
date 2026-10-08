@@ -2,11 +2,11 @@
   "name": "chezmoi",
   "type": "module",
   "private": true,
-  "packageManager": "nub@0.7.5",
+  "packageManager": "nub@0.9.5",
   "devEngines": {
     "packageManager": {
       "name": "nub",
-      "version": "^0.7.5",
+      "version": "^0.9.5",
       "onFail": "ignore"
     }
   },
@@ -14,12 +14,12 @@
     "@antfu/eslint-config": "^9.5.1",
     "@lumirelle/oxlint-config": "^0.14.0",
     "@lumirelle/tsconfig": "^0.1.6",
-    "eslint": "^10.10.0",
-    "eslint-plugin-oxlint": "^1.81.0",
-    "oxlint": "^1.81.0",
-    "oxlint-tsgolint": "^7.0.2001",
-    "taze": "^21.1.0",
-    "typescript": "npm:typescript-native-bridge@^6.0.3-bridge.16.tsgo.7.0.2"
+    "eslint": "^10.12.0",
+    "eslint-plugin-oxlint": "^1.87.0",
+    "oxlint": "^1.87.0",
+    "oxlint-tsgolint": "^7.0.2003",
+    "taze": "^21.3.0",
+    "typescript": "npm:typescript-native-bridge@^6.0.3-bridge.18.tsgo.7.0.2"
   },
   "overrides": {
     "@typescript-eslint/eslint-plugin": "8.70.0",
