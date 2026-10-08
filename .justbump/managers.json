@@ -1,0 +1,39 @@
+{
+  "version": 3,
+  "verify": "run `mise run check` and confirm the bumped tools and deps still work",
+  "managers": [
+    {
+      "name": "mise",
+      "kind": "toolchain",
+      "detect": ["mise.toml", "mise.lock"],
+      "note": "project-scoped: --local keeps this off the machine-global config",
+      "commands": {
+        "check": "mise outdated --local --json",
+        "bump": {
+          "default": "mise upgrade --local",
+          "major": "mise upgrade --local --bump"
+        }
+      }
+    },
+    {
+      "name": "nub",
+      "kind": "package",
+      "detect": ["nub.lock", "packageManager=nub"],
+      "note": "taze declared in devDependencies, so the Node lane is available",
+      "commands": {
+        "check": "nub outdated --json",
+        "bump": {
+          "default": "nub exec taze -w --no-interactive --no-node-version --no-github-actions",
+          "patch": "nub exec taze patch -w --no-interactive --no-node-version --no-github-actions",
+          "minor": "nub exec taze minor -w --no-interactive --no-node-version --no-github-actions",
+          "major": "nub exec taze major -w --no-interactive --no-node-version --no-github-actions"
+        },
+        "refresh": [
+          "node --input-type=commonjs -e \"require('fs').rmSync('node_modules',{recursive:true,force:true})\"",
+          "nub install",
+          "nub dedupe"
+        ]
+      }
+    }
+  ]
+}
