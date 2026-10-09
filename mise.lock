@@ -124,7 +124,7 @@ repository_ids = { repository = "922514152" }
 checksum = "sha256:9d3063f0eadb316415dc2aaea51608f436eb6ffe44e00c2e460294c66f269a54"
 url = "https://github.com/jdx/hk/releases/download/v2.5.0/hk-x86_64-pc-windows-msvc.zip"
 signer = "sigstore-oidc:https://github.com/jdx/hk/.github/workflows/release.yml"
-repository_ids = { repository = "922514152" }
+repository_ids = { repository = "922514152", owner = "216188" }
 
 [[tools.node]]
 version = "26.11.1"
