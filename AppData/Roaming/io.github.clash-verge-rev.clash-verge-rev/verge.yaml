@@ -31,6 +31,7 @@ profile_dns_settings:
     enabled: true
   RuJa5iF9M7Oh:
     enabled: true
+    confirmation: f8b070a44cd6e97ea5834cbfad324ceef6de6194f7f002c6eb41f003bb257f0b
   Rw5bN93RChKJ:
     enabled: true
 use_default_bypass: true
