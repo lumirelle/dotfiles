@@ -9,7 +9,11 @@ function main(config) {
   config['proxy-groups'] = proxyGroups
 
   const { ruleProviders, rules } = customProvidersAndRules()
-  config['rule-providers'] = ruleProviders
+  // Preserve profile's rule providers
+  config['rule-providers'] = {
+    ...config['rule-providers'],
+    ...ruleProviders,
+  }
   config.rules = rules
 
   return config

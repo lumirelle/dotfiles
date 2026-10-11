@@ -34,6 +34,7 @@ profile_dns_settings:
     confirmation: f8b070a44cd6e97ea5834cbfad324ceef6de6194f7f002c6eb41f003bb257f0b
   Rw5bN93RChKJ:
     enabled: true
+    confirmation: 745a7e1af5a1b0cc91edeab190ee7ff79368f69ca321ef6dc39282fc9169d51b
 use_default_bypass: true
 system_proxy_bypass: null
 proxy_guard_duration: 30
