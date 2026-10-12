@@ -10,11 +10,11 @@
     "write",
     "grep",
     "find",
-    "ls"
+    "ls",
+    "+codemode"
   ],
   "packages": [
     "npm:@gotgenes/pi-permission-system",
-    "npm:pi-fff",
     "npm:@juicesharp/rpiv-web-tools",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-agent-browser-native",
