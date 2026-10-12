@@ -13,23 +13,13 @@
       "*": "allow",
       "time *": { "action": "deny", "reason": "Use Pi's bash timeout parameter instead of the time wrapper." },
       "timeout *": { "action": "deny", "reason": "Use Pi's bash timeout parameter instead of the timeout wrapper." },
-      "sudo *": { "action": "deny", "reason": "Request user to execute" },
-
-      "sed -i*": { "action": "deny", "reason": "Use the `edit` tool for in-place edits instead of `sed -i`" },
-      "sed --in-place*": { "action": "deny", "reason": "Use the `edit` tool for in-place edits instead of `sed --in-place`" },
-      "perl -i*": { "action": "deny", "reason": "Use the `edit` tool for in-place edits instead of `perl -i`" },
-      "tee *": { "action": "deny", "reason": "Use the `write` or `edit` tool instead of `tee`" },
-      "touch *": { "action": "deny", "reason": "Use the `write` tool to create the file instead of `touch`" }
-    },
-    "external_directory": {
-      "*": "ask"
+      "sudo *": { "action": "deny", "reason": "Request user to execute" }
     },
     "external_directory_read": {
-      "~/.agents/*": "allow",
-      "/tmp": "allow",
-      "~/AppData/Local/Temp/*": "allow",
-      "C:/Users/lumirelle/AppData/Local/Temp/*": "allow",
-      "C:/Users/LUMIRE~1/AppData/Local/Temp/*": "allow"
+      "*": "allow"
+    },
+    "external_directory_write": {
+      "*": "ask"
     }
   }
 }
