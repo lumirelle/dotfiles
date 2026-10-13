@@ -19,7 +19,7 @@
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-agent-browser-native",
     "npm:pi-session-cleanup",
-    "npm:@juicesharp/rpiv-btw"
+    "npm:pi-btw"
   ],
   "hideThinkingBlock": true
 }
