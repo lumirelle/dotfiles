@@ -2,11 +2,11 @@
   "name": "chezmoi",
   "type": "module",
   "private": true,
-  "packageManager": "nub@0.9.5",
+  "packageManager": "nub@0.9.6",
   "devEngines": {
     "packageManager": {
       "name": "nub",
-      "version": "^0.9.5",
+      "version": "^0.9.6",
       "onFail": "ignore"
     }
   },
