@@ -8,12 +8,15 @@ if ($"($env.HOME?)/.local/bin" | path exists) {
   $env.PATH = ($env.PATH | prepend $"($env.HOME)/.local/bin")
 }
 ## Mise, https://mise.jdx.dev/
+# Regenerate mise.nu on EVERY startup, instead of only when the file is missing.
+# Why: `mise activate nu` emits a "snapshot" module -- it hardcodes the PATH from the moment
+# activate ran as literals inside mise.nu, instead of prepending to PATH at runtime.
+# Generating the file only when it is missing therefore freezes that snapshot on the day it was
+# generated, and later PATH additions are never picked up.
 let mise_nu = $nu.default-config-dir | path join mise.nu
-if not ($mise_nu | path exists) {
+if (which mise | is-not-empty) {
   ^mise activate nu | save -f $mise_nu
 }
-## Mise, https://mise.jdx.dev/
-use ($nu.default-config-dir | path join mise.nu)
 
 # Environment
 ## Shell
