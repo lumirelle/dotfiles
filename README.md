@@ -5,7 +5,7 @@ My dotfiles (also application configuration files), out-of-box (for me).
 ## Configurations Included (By Category)
 
 - Network Proxy Client
-  - [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev)
+  - [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev): Require Bun global installation to run `.ts` setup scripts.
 - Input Method
   - Rime
     - [Weasel (Rime for Windows)](https://github.com/rime/weasel)
