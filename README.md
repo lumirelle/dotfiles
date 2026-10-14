@@ -8,21 +8,10 @@ My dotfiles (also application configuration files), out-of-box (for me).
   - [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev)
 - Input Method
   - Rime
-    <details>
-      <summary>Supported Backends</summary>
-      <ul>
-        <li><a href="https://github.com/rime/weasel">Weasel (Rime for Windows)</a></li>
-        <li><a href="https://github.com/rime/squirrel">Squirrel (Rime for macOS)</a></li>
-        <li><a href="https://github.com/rime/ibus-rime">IBus Rime (Rime for Linux/IBus)</a></li>
-        <li><a href="https://github.com/fcitx/fcitx5-rime">Fcitx5 Rime (Rime for Linux/Fcitx5)</a></li>
-      </ul>
-    </details>
-    <details>
-      <summary><s>Supported But Archived Backend</s></summary>
-      <ul>
-        <li><a href="https://github.com/fcitx/fcitx-rime">Fcitx Rime (Rime for Linux/Fcitx)</a></li>
-      </ul>
-    </details>
+    - [Weasel (Rime for Windows)](https://github.com/rime/weasel)
+    - [Squirrel (Rime for macOS)](https://github.com/rime/squirrel)
+    - [IBus Rime (Rime for Linux/IBus)](https://github.com/rime/ibus-rime)
+    - [Fcitx5 Rime (Rime for Linux/Fcitx5)](https://github.com/fcitx/fcitx5-rime)
 - Terminal
   - [Windows Terminal (Windows Only)](https://github.com/microsoft/terminal)
   - [Windows Terminal Preview (Windows Only)](https://github.com/microsoft/terminal)
