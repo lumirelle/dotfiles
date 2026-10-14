@@ -1,6 +1,6 @@
 {
   "$help": "https://aka.ms/terminal-documentation",
-  "$schema": "https://aka.ms/terminal-profiles-schema-preview",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
   "actions": [],
   "centerOnLaunch": true,
   "copyFormatting": "none",
@@ -15,6 +15,21 @@
   "newTabMenu": [
     {
       "type": "remainingProfiles"
+    },
+    {
+      "allowEmpty": false,
+      "entries": [
+        {
+          "commandline": null,
+          "name": null,
+          "source": "Windows.Terminal.SSH",
+          "type": "matchProfiles"
+        }
+      ],
+      "icon": "\ue969",
+      "inline": "auto",
+      "name": "SSH",
+      "type": "folder"
     }
   ],
   "profiles": {
