@@ -11,12 +11,6 @@
  * disk: keys and array entries this repo defines are added or updated, and
  * everything else that the system added survives untouched.
  *
- * Nothing is ever deleted, so the profiles Terminal persisted but this baseline
- * does not list (`archlinux`, `podman-machine-default`, `Azure Cloud Shell`,
- * `SSH - vibe-coding`) stay in the file until they are deleted in Terminal -
- * and Terminal is free to write them back afterwards, because this script does
- * not disable the profile generators that produced them.
- *
  * Array entries are matched on `guid`, `id`, `name` or `type` (in that order,
  * GUIDs compared without braces). That is what makes `profiles.list`, `themes`,
  * `schemes`, `keybindings` and `newTabMenu` grow instead of being replaced.
