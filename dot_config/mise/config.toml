@@ -6,40 +6,38 @@ lockfile = true
 "/etc/sysctl.d/50-unprivileged-ports.conf/unprivileged-ports".line = "net.ipv4.ip_unprivileged_port_start = 80"
 "/etc/sysctl.d/50-unprivileged-ports.conf/unprivileged-ports".variants = [{ os = "linux" }]
 
-[tools]
-fastfetch = "latest"
+# Operator System Tools
+[tools.fastfetch]
+version = "latest"
 
-# System Appearance
+[tools.bottom]
+version = "latest"
+
+[tools.gdu]
+version = "latest"
+
 [tools."github:Tatsu-syo/noMeiryoUI"]
 os = "windows"
 version = "latest"
 version_prefix = "TAG-"
 asset_pattern = "noMeiryoUI*.zip"
 
-# Development Environment
-# -- Environment
+# Environment Tools
+[tools.starship]
+version = "latest"
+
 [tools.node]
 version = "latest"
 postinstall = "npm install -g degit"
 
-[tools.java]
+[tools.bun]
 version = "latest"
 
-[tools.bun]
+[tools.java]
 version = "latest"
 
 [tools.python]
 version = "3.13"
-
-# -- CLI / TUI Tools
-[tools.jj]
-version = "latest"
-
-[tools.starship]
-version = "latest"
-
-[tools.zoxide]
-version = "latest"
 
 [tools.fnox]
 version = "latest"
@@ -47,7 +45,11 @@ version = "latest"
 [tools.age]
 version = "latest"
 
-[tools.yazi]
+# CLI Tools
+[tools.jj]
+version = "latest"
+
+[tools.lazygit]
 version = "latest"
 
 [tools.fd]
@@ -56,16 +58,13 @@ version = "latest"
 [tools.ripgrep]
 version = "latest"
 
-[tools.lazygit]
+[tools.zoxide]
+version = "latest"
+
+[tools.yazi]
 version = "latest"
 
 [tools.hyperfine]
-version = "latest"
-
-[tools.bottom]
-version = "latest"
-
-[tools.gdu]
 version = "latest"
 
 [tools."github:vercel-labs/agent-browser"]
