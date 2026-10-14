@@ -12,8 +12,6 @@ else
   eval "$(zoxide init bash)"
   ## Fnox, https://fnox.jdx.dev/
   eval "$(fnox activate bash)"
-  ## Podman
-  export PODMAN_COMPOSE_WARNING_LOGS=false
 
   # Aliases & Custom Commands
   alias lzg='lazygit'

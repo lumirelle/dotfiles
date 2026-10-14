@@ -1,1 +1,0 @@
-export alias pdm = podman

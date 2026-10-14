@@ -22,5 +22,3 @@ if (which mise | is-not-empty) {
 ## Shell
 $env.config.show_banner = 'short'
 $env.config.buffer_editor = 'nvim'
-## Podman
-$env.PODMAN_COMPOSE_WARNING_LOGS = false

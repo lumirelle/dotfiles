@@ -30,4 +30,3 @@ source aliases/built-in.nu
 source aliases/cwd-file-exts.nu
 source aliases/lazygit.nu
 source aliases/chezmoi.nu
-source aliases/podman.nu

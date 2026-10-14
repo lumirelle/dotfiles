@@ -464,7 +464,7 @@
   // Mise
   "mise.autoDetectMiseBinPath": false,
   "mise.configureExtensionAutomatically": true,
-  // Dev Containers
+  // Dev Containers, TODO: Switch to `wslc`.
   "containers.containerClient": "com.microsoft.visualstudio.containers.podman",
   "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.podmancompose",
   // I18n

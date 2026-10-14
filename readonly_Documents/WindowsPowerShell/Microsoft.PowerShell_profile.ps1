@@ -19,8 +19,6 @@ Invoke-Expression (&starship init powershell)
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 ## Fnox, https://fnox.jdx.dev/
 Invoke-Expression (& { (fnox activate powershell | Out-String) })
-## Podman
-$env:PODMAN_COMPOSE_WARNING_LOGS = $false
 
 # Aliases & Custom Commands
 New-Alias -Name lzg -Value lazygit
