@@ -1,0 +1,8 @@
+# On Windows chezmoi picks a script's interpreter from its file extension, so
+# `.ts` has to be mapped explicitly. macOS and Linux run those scripts through
+# the `#!/usr/bin/env bun` shebang, but mapping `.ts` everywhere keeps the three
+# platforms identical.
+#
+# https://www.chezmoi.io/reference/configuration-file/interpreters/
+[interpreters.ts]
+command = "bun"

@@ -20,6 +20,9 @@ export default antfu(
       'dot_config/shared/clash-verge-rev/*.yaml',
       'dot_pi/agent/settings.json',
     ],
+    rules: {
+      'no-console': 'off',
+    },
   },
   ...oxlint.buildFromOxlintConfigFile('.oxlintrc.json'),
 )

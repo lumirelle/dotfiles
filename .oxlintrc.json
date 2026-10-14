@@ -9,5 +9,8 @@
     "es2026": true,
     "browser": true,
     "node": true
+  },
+  "rules": {
+    "no-console": "off"
   }
 }

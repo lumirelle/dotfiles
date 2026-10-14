@@ -1,4 +1,3 @@
-// oxlint-disable no-console
 // If you want to learn about clash verge config example, please visit:
 // https://github.com/MetaCubeX/mihomo/blob/Meta/docs/config.yaml
 

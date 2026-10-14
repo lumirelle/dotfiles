@@ -29,7 +29,7 @@ nufmt.nuon
 	.config/shared/rime
 	.config/shared/vscode
 	.config/shared/zed
-	.local/shared/io.github.clash-verge-rev.clash-verge-rev
+	.local/share/io.github.clash-verge-rev.clash-verge-rev
 	.local/shared/fcitx5
 	.config/fcitx
 	.config/ibus
@@ -54,7 +54,7 @@ nufmt.nuon
 
 # Linux specific configurations
 {{ if ne .chezmoi.os "linux" }}
-	.local/shared/io.github.clash-verge-rev.clash-verge-rev
+	.local/share/io.github.clash-verge-rev.clash-verge-rev
 	.local/shared/fcitx5
 	.config/fcitx
 	.config/ibus
