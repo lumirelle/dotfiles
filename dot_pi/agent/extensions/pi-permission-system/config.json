@@ -7,6 +7,9 @@
       "sudo *": { "action": "deny", "reason": "Request user to execute" },
       "*": "allow"
     },
+    "external_directory_read": {
+      "*": "allow"
+    },
     "external_directory_write": {
       "/tmp/*": "allow",
       "~/AppData/Local/Temp/*": "allow",
