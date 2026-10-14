@@ -262,7 +262,7 @@ function genRulesAndProviders() {
     'RULE-SET,reject,Just Reject',
 
     'GEOSITE,openai,Chat GPT',
-    'GEOSITE,anthropic,Claude',
+    'GEOSITE,anthropic,Claude Code',
 
     'GEOSITE,google,Just Proxy',
     'GEOSITE,youtube,Just Proxy',
