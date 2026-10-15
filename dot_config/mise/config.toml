@@ -4,8 +4,8 @@
 experimental = true
 lockfile = true
 
-[dotfiles]
-"/etc/sysctl.d/50-unprivileged-ports.conf/unprivileged-ports" = { line = "net.ipv4.ip_unprivileged_port_start = 80", variants = [{ os = "linux" }] }
+[bootstrap.files]
+"/etc/sysctl.d/50-unprivileged-ports.conf" = { content = "net.ipv4.ip_unprivileged_port_start = 80", os = "linux" }
 
 [tools]
 # Operator System Tools
