@@ -50,7 +50,7 @@ lockfile = true
 "winget:ZedIndustries.Zed" = "latest"
 "winget:Microsoft.VisualStudioCode" = "latest"
 "winget:EarendilWorks.pi" = "latest"
-"winget:t8y2.dbx" = "latest"
+"winget:t8y2.DBX" = "latest"
 "winget:sharkdp.hyperfine" = "latest"
 
 # Archlinux Operator System Manager
