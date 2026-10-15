@@ -15,9 +15,9 @@
     "@lumirelle/oxlint-config": "^0.14.0",
     "@lumirelle/tsconfig": "^0.1.6",
     "eslint": "^10.12.0",
-    "eslint-plugin-oxlint": "^1.87.0",
-    "oxlint": "^1.87.0",
-    "oxlint-tsgolint": "^7.0.2003",
+    "eslint-plugin-oxlint": "^1.88.0",
+    "oxlint": "^1.88.0",
+    "oxlint-tsgolint": "^7.0.2004",
     "taze": "^21.3.0",
     "typescript": "npm:typescript-native-bridge@^6.0.3-bridge.18.tsgo.7.0.2"
   },
