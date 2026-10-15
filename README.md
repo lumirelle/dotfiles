@@ -6,6 +6,17 @@ My dotfiles (also application configuration files), out-of-box (for me).
 
 - Network Proxy Client
   - [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev): Require Bun global installation to run `.ts` setup scripts.
+- Operator System Configuration
+  - Windows Specific:
+    - [~/.config/run_onchange_ui.cmd](dot_config/run_onchange_ui.cmd): Customize Windows UI font, use [~/.config/ui_reset.cmd](dot_config/ui_reset.cmd) to restore the default font
+    - [~/.config/run_onchange_disable_ctrl_space.cmd](dot_config/run_onchange_disable_ctrl_space.cmd): Disable hotkey `ctrl+space` to switch input method language
+    - [~/.config/run_onchange_disable_Windows_search.cmd](dot_config/run_onchange_disable_Windows_search.cmd): Disable Windows Search Service
+    - [~/.config/run_onchange_LongPathEnabled.cmd](dot_config/run_onchange_LongPathEnabled.cmd): Enable Windows long path support
+- Operator System Components
+  - Windows Specific:
+    - [Windows Subsystem for Linux (WSL)](https://github.com/microsoft/WSL)
+    - [WinLibs: GCC + MinGW-w64 compiler for Windows](https://winlibs.com/)
+      - [~/.config/run_onchange_set_cc_cxx.cmd](dot_config/run_onchange_set_cc_cxx.cmd): Set `CC` & `CXX` environment variable to force using `gcc` & `g++` instead of MSVC on Windows
 - Input Method
   - Rime
     - [Weasel (Rime for Windows)](https://github.com/rime/weasel)
@@ -23,24 +34,13 @@ My dotfiles (also application configuration files), out-of-box (for me).
   - [Herdr](https://herdr.dev/)
 - Shell Prompt
   - [Starship](https://starship.rs/)
-- Operator System Configuration
-  - Windows Specific:
-    - [~/.config/run_onchange_ui.cmd](dot_config/run_onchange_ui.cmd): Customize Windows UI font, use [~/.config/ui_reset.cmd](dot_config/ui_reset.cmd) to restore the default font
-    - [~/.config/run_onchange_disable_ctrl_space.cmd](dot_config/run_onchange_disable_ctrl_space.cmd): Disable hotkey `ctrl+space` to switch input method language
-    - [~/.config/run_onchange_disable_Windows_search.cmd](dot_config/run_onchange_disable_Windows_search.cmd): Disable Windows Search Service
-    - [~/.config/run_onchange_LongPathEnabled.cmd](dot_config/run_onchange_LongPathEnabled.cmd): Enable Windows long path support
-- System Components
-  - Windows Specific:
-    - [Windows Subsystem for Linux (WSL)](https://github.com/microsoft/WSL)
-    - [WinLibs: GCC + MinGW-w64 compiler for Windows](https://winlibs.com/)
-      - [~/.config/run_onchange_set_cc_cxx.cmd](dot_config/run_onchange_set_cc_cxx.cmd): Set `CC` & `CXX` environment variable to force using `gcc` & `g++` instead of MSVC on Windows
+- Dotfile Manager
+  - [Chezmoi](https://www.chezmoi.io/)
+- Dotfile, Package, Tool Manager
+  - [Mise](https://mise.jdx.dev/)
 - Source Controller
   - [Git](https://git-scm.com/)
   - [Jujutsu](https://github.com/jj-vcs/jj)
-- Dotfile Manager
-  - [Chezmoi](https://www.chezmoi.io/)
-- Toolchain Manager
-  - [Mise](https://mise.jdx.dev/)
 - Password Manager
   - [Fnox](https://fnox.jdx.dev/)
 - Editor
@@ -55,6 +55,6 @@ My dotfiles (also application configuration files), out-of-box (for me).
     - [pi-agent-browser-native](https://pi.dev/packages/pi-agent-browser-native)
     - [pi-session-cleanup](https://pi.dev/packages/pi-session-cleanup)
     - [pi-btw](https://pi.dev/packages/pi-btw)
-- Misc CLI Tool
+- Misc Tool
   - [Yazi](https://yazi-rs.github.io/)
     - [~/.config/run_onchange_set_yazi_file_one.cmd](dot_config/run_onchange_set_yazi_file_one.cmd): Let Yazi use Git provided `file.exe`
