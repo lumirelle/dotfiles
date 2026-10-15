@@ -27,7 +27,7 @@ My dotfiles (also application configuration files), out-of-box (for me).
   - [Windows Terminal (Windows Only)](https://github.com/microsoft/terminal)
   - [Windows Terminal Preview (Windows Only)](https://github.com/microsoft/terminal)
 - Shell
-  - [Nushell](https://github.com/nushell/nushell): My interactive shell. Other shells are only used to run scripts, and their interactive mode is redirect to Nushell.
+  - [Nushell](https://github.com/nushell/nushell): My interactive shell. Other shells are only used to run scripts.
   - [Windows PowerShell (5.1, Windows 11 Built-in)](https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-5.1)
   - [Bash](https://www.gnu.org/software/bash/): Implementation is depend on the specific operator system distribution
 - Shell Mutiplexer

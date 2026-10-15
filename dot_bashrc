@@ -2,18 +2,13 @@
 eval "$(mise activate bash)"
 
 # Environment
-## If Nushell is installed & the shell is running in interactive mode, run Nushell instead.
-if [[ $- == *i* ]] && command -v nu &>/dev/null; then
-  exec nu
-else
-  ## Starship, https://starship.rs/
-  eval "$(starship init bash)"
-  ## Zoxide, https://github.com/ajeetdsouza/zoxide
-  eval "$(zoxide init bash)"
-  ## Fnox, https://fnox.jdx.dev/
-  eval "$(fnox activate bash)"
+## Starship, https://starship.rs/
+eval "$(starship init bash)"
+## Zoxide, https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init bash)"
+## Fnox, https://fnox.jdx.dev/
+eval "$(fnox activate bash)"
 
-  # Aliases & Custom Commands
-  alias lzg='lazygit'
-  alias ch='chezmoi'
-fi
+# Aliases & Custom Commands
+alias lzg='lazygit'
+alias ch='chezmoi'
