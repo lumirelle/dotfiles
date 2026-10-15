@@ -3,72 +3,31 @@ experimental = true
 lockfile = true
 
 [dotfiles]
-"/etc/sysctl.d/50-unprivileged-ports.conf/unprivileged-ports".line = "net.ipv4.ip_unprivileged_port_start = 80"
-"/etc/sysctl.d/50-unprivileged-ports.conf/unprivileged-ports".variants = [{ os = "linux" }]
+"/etc/sysctl.d/50-unprivileged-ports.conf/unprivileged-ports" = { line = "net.ipv4.ip_unprivileged_port_start = 80", variants = [{ os = "linux" }] }
 
+[tools]
 # Operator System Tools
-[tools.fastfetch]
-version = "latest"
-
-[tools.bottom]
-version = "latest"
-
-[tools.gdu]
-version = "latest"
-
-[tools."github:Tatsu-syo/noMeiryoUI"]
-os = "windows"
-version = "latest"
-version_prefix = "TAG-"
-asset_pattern = "noMeiryoUI*.zip"
+fastfetch = "latest"
+bottom = "latest"
+gdu = "latest"
+"github:Tatsu-syo/noMeiryoUI" = { os = "windows", version = "latest", version_prefix = "TAG-", asset_pattern = "noMeiryoUI*.zip" }
 
 # Environment Tools
-[tools.starship]
-version = "latest"
-
-[tools.node]
-version = "latest"
-postinstall = "npm install -g degit"
-
-[tools.bun]
-version = "latest"
-
-[tools.java]
-version = "latest"
-
-[tools.python]
-version = "3.13"
-
-[tools.fnox]
-version = "latest"
-
-[tools.age]
-version = "latest"
+starship = "latest"
+node = { version = "latest", postinstall = "npm install -g degit" }
+bun = "latest"
+java = "latest"
+python = "3.13"
+fnox = "latest"
+age = "latest"
 
 # CLI Tools
-[tools.jj]
-version = "latest"
-
-[tools.lazygit]
-version = "latest"
-
-[tools.fd]
-version = "latest"
-
-[tools.fzf]
-version = "latest"
-
-[tools.ripgrep]
-version = "latest"
-
-[tools.zoxide]
-version = "latest"
-
-[tools.yazi]
-version = "latest"
-
-[tools.hyperfine]
-version = "latest"
-
-[tools."github:vercel-labs/agent-browser"]
-version = "latest"
+jj = "latest"
+lazygit = "latest"
+fd = "latest"
+fzf = "latest"
+ripgrep = "latest"
+zoxide = "latest"
+yazi = "latest"
+hyperfine = "latest"
+"github:vercel-labs/agent-browser" = "latest"
