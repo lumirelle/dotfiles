@@ -1,4 +1,3 @@
-// cSpell:disable
 {
   // #region Appearance / Layout & Format
   // I don't actually need them, disable / hide them to make the editor more clean and a little bit faster.
@@ -480,44 +479,6 @@
   "telemetry.telemetryLevel": "off",
   // #endregion
   // #region Behavior / Quality
-  "cSpell.allowCompoundWords": true,
-  "cSpell.customDictionaries": {
-    "common": {
-      "name": "common",
-      "path": "~/.cspell.common.txt",
-      "description": "Words used in common situation."
-    },
-    "work": {
-      "name": "work",
-      "path": "~/.cspell.work.txt",
-      "description": "Words used in work."
-    }
-  },
-  "cSpell.ignorePaths": [
-    // Dotfolders & Dotfiles
-    ".*",
-    // Dependencies & Assets
-    "node_modules",
-    "bower_components",
-    "public",
-    "*.min.*",
-    "*.svg",
-    // Lockfiles
-    "package-lock.json",
-    "pnpm-lock.yaml",
-    "yarn.lock",
-    "bun.lock",
-    "aube-lock.yaml",
-    "nub.lock",
-    // Temporary files
-    "logs",
-    "temp",
-    // Dists
-    "dist",
-    "out",
-    "*.map",
-    "*.snap"
-  ],
   // TODO(lumirelle): It's recommended to use project-level formatter configuration
   "[dockerfile]": { "editor.defaultFormatter": "ms-azuretools.vscode-containers" },
   "oxc.fixKind": "safe_fix_or_suggestion",

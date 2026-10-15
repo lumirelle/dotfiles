@@ -1,6 +1,5 @@
-// cspell:disable
 {
-  // Extension Count: 35
+  // Extension Count: 34
   "recommendations": [
     // #region Appearance / Theme
     "lumirelle.vscode-vercel-theme",
@@ -73,10 +72,6 @@
     "tamasfe.even-better-toml",
     // Nushell
     "thenuprojectcontributors.vscode-nushell-lang",
-    // #endregion
-
-    // #region Behavior / Lint
-    "streetsidesoftware.code-spell-checker",
     // #endregion
 
     // #region Behavior / Format

@@ -47,8 +47,6 @@ My dotfiles (also application configuration files), out-of-box (for me).
   - [Neovim](https://neovim.io/)
   - [Zed](https://zed.dev/)
   - [VSCode](https://code.visualstudio.com/)
-- Editor Addon: Linter
-  - [CSpell](https://cspell.org/)
 - Harness (for AI model, Harness + AI model = Agent)
   - [Pi Coding Agent](https://pi.dev/) & it's extensions:
     - [@gotgenes/pi-permission-system](https://pi.dev/packages/@gotgenes/pi-permission-system)

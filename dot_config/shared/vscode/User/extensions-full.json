@@ -1,6 +1,5 @@
-// cspell:disable
 {
-  // Extension Count: 20 + $DEFAULT_VSCODE = 55
+  // Extension Count: 20 + $DEFAULT_VSCODE = 54
   "recommendations": [
     // #region Appearance / Editor
     // Lens
