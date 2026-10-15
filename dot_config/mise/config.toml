@@ -7,29 +7,99 @@ lockfile = true
 [bootstrap.files]
 "/etc/sysctl.d/50-unprivileged-ports.conf" = { content = "net.ipv4.ip_unprivileged_port_start = 80", os = "linux" }
 
-[tools]
-# Operator System Tools
-fastfetch = "latest"
-bottom = "latest"
-gdu = "latest"
-"github:Tatsu-syo/noMeiryoUI" = { os = "windows", version = "latest", version_prefix = "TAG-", asset_pattern = "noMeiryoUI*.zip" }
+[bootstrap.packages]
+# Windows Operator System Manager
+"winget:Fastfetch-cli.Fastfetch" = "latest"
+"winget:Clement.bottom" = "latest"
+"winget:dundee.gdu" = "latest"
+"winget:ChuyuTeam.DISM++" = "latest"
+"winget:RevoUninstaller.RevoUninstallerPro" = "latest"
 
-# Environment Tools
-starship = "latest"
+# Windows Environment/Infrastructure
+"winget:BrechtSanders.WinLibs.POSIX.UCRT" = "latest"
+"winget:FiloSottile.age" = "latest"
+"winget:jj-vcs.jj" = "latest"
+"winget:Git.Git" = "latest"
+"winget:GitHub.cli" = "latest"
+"winget:GLab.GLab" = "latest"
+"winget:tree-sitter.tree-sitter-cli" = "latest"
+
+# Windows UX Enhance
+"winget:9PLJWWSV01LK" = "latest" # Twinkle Tray
+"winget:XP8JK4HZBVF435" = "latest" # Auto Dark Mode
+"winget:Wox.Wox" = "latest"
+"winget:Brave.Brave" = "latest"
+"winget:PixPin.PixPin" = "latest"
+"winget:ajeetdsouza.zoxide" = "latest"
+"winget:sharkdp.fd" = "latest"
+"winget:junegunn.fzf" = "latest"
+"winget:BurntSushi.ripgrep.MSVC" = "latest"
+"winget:JesseDuffield.lazygit" = "latest"
+"winget:sxyazi.yazi" = "latest"
+"winget:OBSProject.OBSStudio" = "latest"
+"winget:9NBLGGH5R558" = "latest" # Microsoft To Do
+
+# Terminal & Shell on Windows
+"winget:Microsoft.WindowsTerminal.Preview" = "latest"
+"winget:Nushell.Nushell" = "latest"
+"winget:Starship.Starship" = "latest"
+"winget:Herdr.Herdr.Preview" = "latest"
+
+# Development on Windows
+"winget:Neovim.Neovim" = "latest"
+"winget:ZedIndustries.Zed" = "latest"
+"winget:Microsoft.VisualStudioCode" = "latest"
+"winget:EarendilWorks.pi" = "latest"
+"winget:t8y2.dbx" = "latest"
+"winget:sharkdp.hyperfine" = "latest"
+
+# Archlinux Operator System Manager
+"pacman:fastfetch" = "latest"
+"pacman:bottom" = "latest"
+"pacman:gdu" = "latest"
+
+# Archlinux Environment/Infrastructure
+"pacman:base-devel" = "latest"
+"pacman:unzip" = "latest"
+"pacman:wget" = "latest"
+"pacman:openssh" = "latest"
+"pacman:less" = "latest"
+"pacman:fontconfig" = "latest"
+"pacman:noto-fonts-cjk" = "latest"
+"pacman:age" = "latest"
+"pacman:jujutsu" = "latest"
+"pacman:git" = "latest"
+"pacman:github-cli" = "latest"
+"pacman:glab" = "latest"
+"pacman:tree-sitter-cli" = "latest"
+"pacman:chromium" = "latest" # Used to setup dependencies for Playwright
+
+# Archlinux UX Enhance
+"pacman:zoxide" = "latest"
+"pacman:fd" = "latest"
+"pacman:fzf" = "latest"
+"pacman:ripgrep" = "latest"
+"pacman:lazygit" = "latest"
+"pacman:yazi" = "latest"
+
+# Terminal & Shell on Archlinux
+"pacman:nushell" = "latest"
+"pacman:starship" = "latest"
+"aur:herdr-bin" = "latest"
+
+# Development on Archlinux
+"pacman:neovim" = "latest"
+"aur:pi-coding-agent-bin" = "latest"
+"pacman:hyperfine" = "latest"
+
+[tools]
+# Global But Not Included by Package Manager
+"github:Tatsu-syo/noMeiryoUI" = { os = "windows", version = "latest", version_prefix = "TAG-", asset_pattern = "noMeiryoUI*.zip" }
+fnox = "latest"
+"github:vercel-labs/agent-browser" = "latest"
+
+# Environment/Infrastructure
 node = { version = "latest", postinstall = "npm install -g degit" }
 bun = "latest"
 java = "latest"
 python = "3.13"
-fnox = "latest"
-age = "latest"
-
-# CLI Tools
-jj = "latest"
-lazygit = "latest"
-fd = "latest"
-fzf = "latest"
-ripgrep = "latest"
-zoxide = "latest"
-yazi = "latest"
-hyperfine = "latest"
-"github:vercel-labs/agent-browser" = "latest"
