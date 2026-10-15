@@ -59,7 +59,6 @@ lockfile = true
 "pacman:gdu" = "latest"
 
 # Archlinux Environment/Infrastructure
-"pacman:base-devel" = "latest"
 "pacman:unzip" = "latest"
 "pacman:wget" = "latest"
 "pacman:openssh" = "latest"
