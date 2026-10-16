@@ -12,6 +12,7 @@ My dotfiles (also application configuration files), out-of-box (for me).
     - [~/.config/run_onchange_disable_ctrl_space.cmd](dot_config/run_onchange_disable_ctrl_space.cmd): Disable hotkey `ctrl+space` to switch input method language
     - [~/.config/run_onchange_disable_Windows_search.cmd](dot_config/run_onchange_disable_Windows_search.cmd): Disable Windows Search Service
     - [~/.config/run_onchange_LongPathEnabled.cmd](dot_config/run_onchange_LongPathEnabled.cmd): Enable Windows long path support
+    - [~/.config/run_onchange_DeveloperModeEnabled.cmd](dot_config/run_onchange_DeveloperModeEnabled.cmd): Enable Windows Developer Mode, so WinGet (invoked by Mise) creates the command aliases of portable packages as symlinks under `%LOCALAPPDATA%\Microsoft\WinGet\Links` instead of appending one PATH entry per package
 - Operator System Components
   - Windows Specific:
     - [Windows Subsystem for Linux (WSL)](https://github.com/microsoft/WSL)
