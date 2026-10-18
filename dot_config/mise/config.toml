@@ -65,6 +65,7 @@ lockfile = true
 "pacman:less" = "latest"
 "pacman:fontconfig" = "latest"
 "pacman:noto-fonts-cjk" = "latest"
+"pacman:wl-clipboard" = "latest"
 "pacman:age" = "latest"
 "pacman:jujutsu" = "latest"
 "pacman:git" = "latest"
