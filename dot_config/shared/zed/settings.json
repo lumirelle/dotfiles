@@ -22,16 +22,16 @@
   "show_whitespaces": "boundary",
   "colorize_brackets": true,
   // Font
-  "ui_font_family": "Space Grotesk",
+  "ui_font_family": "Aporetic Serif",
   "ui_font_fallbacks": [
     "Symbols Nerd Font",
-    "Resource Han Rounded SC"
+    "Zhuque Fangsong (technical preview)"
   ],
   "ui_font_size": 16,
-  "buffer_font_family": "0xProto",
+  "buffer_font_family": "Aporetic Serif Mono",
   "buffer_font_fallbacks": [
     "Symbols Nerd Font Mono",
-    "Maple Mono WR CN"
+    "Zhuque Fangsong A1050"
   ],
   "buffer_font_size": 16,
   "buffer_font_features": {
