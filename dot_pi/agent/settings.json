@@ -1,16 +1,12 @@
 {
   "lastChangelogVersion": "999.999.999",
-  "theme": "dark",
+  "hideThinkingBlock": true,
   "defaultProvider": "deepseek",
   "defaultModel": "deepseek-flash",
   "defaultTools": [
-    "read",
-    "bash",
-    "edit",
-    "write",
-    "grep",
-    "find",
-    "ls",
+    "+ls",
+    "+find",
+    "+grep",
     "+codemode"
   ],
   "packages": [
@@ -18,9 +14,6 @@
     "npm:@juicesharp/rpiv-web-tools",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-agent-browser-native",
-    "npm:pi-session-cleanup",
-    "npm:pi-btw",
-    "npm:pi-subagents"
-  ],
-  "hideThinkingBlock": true
+    "npm:pi-simple-agents"
+  ]
 }
