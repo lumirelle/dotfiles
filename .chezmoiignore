@@ -1,3 +1,4 @@
+# Project configuration
 .lazy.lua
 .vscode
 .oxlintrc.json
@@ -5,14 +6,21 @@ eslint.config.js
 taze.config.ts
 package.json
 mise.toml
-nub.lock
 hk.pkl
-mise.lock
-node_modules
 tsconfig.json
-scripts
-README.md
 nufmt.nuon
+
+# Dependency & lockfile
+node_modules
+mise.lock
+nub.lock
+
+# Documentation
+docs
+*.md
+
+# Scripts
+scripts
 
 # Windows specific configurations
 {{ if ne .chezmoi.os "windows" }}
