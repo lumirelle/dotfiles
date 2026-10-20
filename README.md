@@ -54,8 +54,7 @@ My dotfiles (also application configuration files), out-of-box (for me).
     - [@juicesharp/rpiv-web-tools](https://pi.dev/packages/@juicesharp/rpiv-web-tools)
     - [@juicesharp/rpiv-ask-user-question](https://pi.dev/packages/@juicesharp/rpiv-ask-user-question)
     - [pi-agent-browser-native](https://pi.dev/packages/pi-agent-browser-native)
-    - [pi-session-cleanup](https://pi.dev/packages/pi-session-cleanup)
-    - [pi-btw](https://pi.dev/packages/pi-btw)
+    - [pi-simple-agents](https://pi.dev/packages/pi-simple-agents)
 - Misc Tool
   - [Yazi](https://yazi-rs.github.io/)
     - [~/.config/run_onchange_set_yazi_file_one.cmd](dot_config/run_onchange_set_yazi_file_one.cmd): Let Yazi use Git provided `file.exe`
