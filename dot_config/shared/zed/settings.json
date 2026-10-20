@@ -24,14 +24,14 @@
   // Font
   "ui_font_family": "Aporetic Serif",
   "ui_font_fallbacks": [
-    "Symbols Nerd Font",
-    "Zhuque Fangsong (technical preview)"
+    "Zhuque Fangsong (technical preview)",
+    "Symbols Nerd Font"
   ],
   "ui_font_size": 16,
   "buffer_font_family": "Aporetic Serif Mono",
   "buffer_font_fallbacks": [
-    "Symbols Nerd Font Mono",
-    "Zhuque Fangsong A1050"
+    "Zhuque Fangsong A1050",
+    "Symbols Nerd Font Mono"
   ],
   "buffer_font_size": 16,
   "buffer_font_features": {
