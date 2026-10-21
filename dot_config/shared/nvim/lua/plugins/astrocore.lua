@@ -19,6 +19,14 @@ return {
         shellxquote = "",
         shellredir = "| save --force %s",
         shellpipe = "| save --force %s",
+
+        -- Soft-wrap long lines for every filetype, breaking at word boundaries
+        -- and keeping the continuation lines indented. `smoothscroll` makes the
+        -- view scroll by screen lines instead of jumping over wrapped lines.
+        wrap = true,
+        linebreak = true,
+        breakindent = true,
+        smoothscroll = true,
       },
     },
   },
