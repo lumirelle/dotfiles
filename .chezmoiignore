@@ -14,6 +14,7 @@ nufmt.nuon
 node_modules
 mise.lock
 nub.lock
+skills-lock.json
 
 # Documentation
 docs
