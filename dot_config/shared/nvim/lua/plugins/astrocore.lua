@@ -14,11 +14,9 @@ return {
         -- nu is not POSIX: no `2>&1`, no `tee`, and no quote-stripping,
         -- so the shell* options must be overridden alongside `shell`.
         shell = "nu",
-        shellcmdflag = "-c",
-        shellquote = "",
-        shellxquote = "",
-        shellredir = "| save --force %s",
-        shellpipe = "| save --force %s",
+        shellcmdflag = "--stdin --no-newline -c",
+        shellredir = "out+err> %s",
+        shellpipe = "| complete | update stderr { ansi strip } | tee { get stderr | save --force --raw %s } | into record",
 
         -- Soft-wrap long lines for every filetype, breaking at word boundaries
         -- and keeping the continuation lines indented. `smoothscroll` makes the
