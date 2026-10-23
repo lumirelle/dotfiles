@@ -1,28 +1,26 @@
-# System Environment
-## set PATH so it includes user's private bin if it exists
+# -- ENCODING --
+$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [Text.Encoding]::UTF8
+
+# -- ENVIRONMENT --
 if (Test-Path "$env:USERPROFILE\bin") {
   $env:PATH = "$env:USERPROFILE\bin;$env:PATH"
 }
-## set PATH so it includes user's private bin if it exists
 if (Test-Path "$env:USERPROFILE\.local\bin") {
   $env:PATH = "$env:USERPROFILE\.local\bin;$env:PATH"
 }
 ## Mise, https://mise.jdx.dev/
 (&mise activate pwsh) | Out-String | Invoke-Expression
-
-# Environment
-## Shell
-$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [Text.Encoding]::UTF8
 ## Starship, https://starship.rs/
-Invoke-Expression (&starship init powershell)
+(&starship init powershell) | Invoke-Expression
 ## Zoxide, https://github.com/ajeetdsouza/zoxide
-Invoke-Expression (& { (zoxide init powershell | Out-String) })
+(&zoxide init powershell) | Out-String | Invoke-Expression
 ## Fnox, https://fnox.jdx.dev/
-Invoke-Expression (& { (fnox activate powershell | Out-String) })
+(&fnox activate powershell) | Out-String | Invoke-Expression
 
-# Aliases & Custom Commands
-New-Alias -Name lzg -Value lazygit
-New-Alias -Name ch -Value chezmoi
+# -- ALIASES --
 ## GNU flavor
 New-Alias -Name which -Value where.exe
 New-Alias -Name touch -Value New-Item
+
+New-Alias -Name lzg -Value lazygit
+New-Alias -Name ch -Value chezmoi
