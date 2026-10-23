@@ -1,17 +1,9 @@
-# System Environment
-## set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ]; then
-  PATH="$HOME/bin:$PATH"
-fi
-## set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ]; then
-  PATH="$HOME/.local/bin:$PATH"
-fi
+# This configuration will be loaded by Bourne-compatible shells in login mode.
 
-# Guard
-## if running bash, load .bashrc
+# -- FOR BASH --
 if [ -n "$BASH_VERSION" ]; then
-  # include .bashrc if it exists
+  # In login mode, Bash will not load `~/.bashrc`,
+  # so we have to load it manuall here (if exist).
   if [ -f "$HOME/.bashrc" ]; then
     . "$HOME/.bashrc"
   fi
