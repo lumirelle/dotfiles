@@ -4,7 +4,7 @@ return {
   {
     "L3MON4D3/LuaSnip",
     opts = function(_, opts)
-      -- include the default astronvim config that calls the setup call
+      -- Include the default astronvim config that calls the setup call.
       require("astronvim.plugins.configs.luasnip")(_, opts)
 
       local luasnip = require("luasnip")
