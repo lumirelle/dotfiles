@@ -25,6 +25,7 @@ My dotfiles (also application configuration files), out-of-box (for me).
     - [IBus Rime (Rime for Linux/IBus)](https://github.com/rime/ibus-rime)
     - [Fcitx5 Rime (Rime for Linux/Fcitx5)](https://github.com/fcitx/fcitx5-rime)
 - Terminal
+  - [WezTerm](https://github.com/wezterm/wezterm) – The only available terminal with Kitty graphic protocol support on Windows.
   - [Windows Terminal (Windows Only)](https://github.com/microsoft/terminal)
   - [Windows Terminal Preview (Windows Only)](https://github.com/microsoft/terminal)
 - Shell

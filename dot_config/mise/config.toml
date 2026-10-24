@@ -23,6 +23,7 @@ lockfile = true
 "winget:GitHub.cli" = "latest"
 "winget:GLab.GLab" = "latest"
 "winget:tree-sitter.tree-sitter-cli" = "latest"
+"winget:ImageMagick.ImageMagick" = "latest"
 
 # Windows UX Enhance
 "winget:9PLJWWSV01LK" = "latest" # Twinkle Tray
@@ -72,6 +73,7 @@ lockfile = true
 "pacman:github-cli" = "latest"
 "pacman:glab" = "latest"
 "pacman:tree-sitter-cli" = "latest"
+"pacman:imagemagick" = "latest"
 "pacman:chromium" = "latest" # Used to setup dependencies for Playwright
 
 # Archlinux UX Enhance
