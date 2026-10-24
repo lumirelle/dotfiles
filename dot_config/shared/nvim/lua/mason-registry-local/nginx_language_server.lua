@@ -11,6 +11,8 @@ local wheel = (
   .. "v%s/nginx_language_server-%s-py3-none-any.whl"
 ):format(version, version)
 
+local pip_install = " -m pip --disable-pip-version-check install --no-user --ignore-installed " .. wheel
+local create_venv = "python -m venv venv"
 ---@type RegistryPackageSpec
 return {
   name = "nginx-language-server",
@@ -22,21 +24,26 @@ return {
   source = {
     id = ("pkg:generic/nginx-language-server@%s"):format(version),
     build = {
-      -- The venv stores absolute paths, so it must be created in the final package dir.
-      staged = false,
-      run = table.concat({
-        "$ErrorActionPreference = 'Stop'",
-        "python -m venv venv",
-        (
-          "./venv/Scripts/python.exe -m pip --disable-pip-version-check install"
-          .. " --no-user --ignore-installed "
-          .. wheel
-        ),
-      }, "\n"),
+      {
+        target = "win",
+        staged = false,
+        run = table.concat({
+          create_venv,
+          ".\\venv\\Scripts\\python.exe" .. pip_install,
+        }, "\n"),
+      },
+      {
+        target = "unix",
+        staged = false,
+        run = table.concat({
+          create_venv,
+          "./venv/bin/python" .. pip_install,
+        }, "\n"),
+      },
     },
   },
   bin = {
-    ["nginx-language-server"] = "venv/Scripts/nginx-language-server.exe",
+    ["nginx-language-server"] = "pypi:nginx-language-server",
   },
   neovim = {
     lspconfig = "nginx_language_server",
