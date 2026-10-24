@@ -15,6 +15,9 @@ return {
         -- so the shell* options must be overridden alongside `shell`.
         shell = "nu",
         shellcmdflag = "--stdin --no-newline -c",
+        shellxescape = "",
+        shellxquote = "",
+        shellquote = "",
         shellredir = "out+err> %s",
         shellpipe = "| complete | update stderr { ansi strip } | tee { get stderr | save --force --raw %s } | into record",
 
