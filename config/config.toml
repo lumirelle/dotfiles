@@ -277,14 +277,6 @@ variants = [
   { os = "windows", target = "~/AppData/Roaming/Zed/settings.json" },
 ]
 
-[dotfiles."dotfiles/fnox/config.toml"]
-mode = "copy"
-source = "dotfiles/fnox/config.toml"
-variants = [
-  { os = "unix", target = "~/.config/fnox/config.toml" },
-  { os = "windows", target = "~/AppData/Local/fnox/config.toml" },
-]
-
 [dotfiles."dotfiles/nvim/"]
 mode = "copy"
 source = "dotfiles/nvim/"
