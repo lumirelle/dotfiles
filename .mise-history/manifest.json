@@ -2,6 +2,12 @@
   "format": 1,
   "enrollment": [
     {
+      "path": "config/config.toml",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/.bashrc",
       "autosave": true,
       "encrypt": false,
