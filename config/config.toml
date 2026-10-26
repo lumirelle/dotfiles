@@ -106,6 +106,7 @@ zig = "latest"
 "~/.config/rpiv-web-tools/config.json" = { mode = "track" }
 "~/.config/starship.toml" = { mode = "track" }
 "~/.gitconfig" = { mode = "track" }
+"~/.local/bin/reset_cjk-font-fallback.cmd" = { mode = "track", variants = [{ os = "windows" }] }
 "~/.pi/agent/APPEND_SYSTEM.md" = { mode = "track" }
 "~/.pi/agent/agents/oracle.md" = { mode = "track" }
 "~/.pi/agent/agents/researcher.md" = { mode = "track" }
