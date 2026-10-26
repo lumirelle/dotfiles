@@ -20,6 +20,12 @@
       "variants": []
     },
     {
+      "path": "home/.pi/agent/agents/researcher.md",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/.profile",
       "autosave": true,
       "encrypt": false,
