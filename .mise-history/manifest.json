@@ -64,6 +64,20 @@
       ]
     },
     {
+      "path": "home/.local/bin/set_cjk-font-fallback.cmd",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [
+            "windows"
+          ],
+          "profile": null,
+          "default": false
+        }
+      ]
+    },
+    {
       "path": "home/.pi/agent/APPEND_SYSTEM.md",
       "autosave": true,
       "encrypt": false,
