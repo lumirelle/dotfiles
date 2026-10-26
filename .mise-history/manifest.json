@@ -8,6 +8,12 @@
       "variants": []
     },
     {
+      "path": "home/.config/jj/config.toml",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/.config/rpiv-web-tools/config.json",
       "autosave": true,
       "encrypt": false,
