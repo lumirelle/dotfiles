@@ -82,7 +82,7 @@ lockfile = true
 "pacman:hyperfine" = "latest"
 
 [bootstrap.files]
-"/etc/sysctl.d/50-unprivileged-ports.conf" = { content = "net.ipv4.ip_unprivileged_port_start = 80", os = "linux" }
+"/etc/sysctl.d/50-unprivileged-ports.conf" = { os = "linux", content = "net.ipv4.ip_unprivileged_port_start = 80"  }
 
 [tools]
 # Global But Not Included by Package Manager
