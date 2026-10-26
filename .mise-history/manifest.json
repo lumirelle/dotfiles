@@ -38,6 +38,12 @@
       "variants": []
     },
     {
+      "path": "home/.pi/agent/agents/worker.md",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/.profile",
       "autosave": true,
       "encrypt": false,
