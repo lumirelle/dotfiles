@@ -62,6 +62,12 @@
       "variants": []
     },
     {
+      "path": "home/.pi/agent/models.json",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/.profile",
       "autosave": true,
       "encrypt": false,
