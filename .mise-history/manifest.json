@@ -95,6 +95,7 @@
       "path": "home/.pi/agent/models.json",
       "autosave": true,
       "encrypt": false,
+      "allow_plaintext": true,
       "variants": []
     },
     {
