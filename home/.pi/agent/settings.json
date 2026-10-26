@@ -1,1 +1,19 @@
-C:/Users/lumirelle/.dotfiles/.pi/agent/settings.json
+{
+  "lastChangelogVersion": "999.999.999",
+  "hideThinkingBlock": true,
+  "defaultProvider": "deepseek",
+  "defaultModel": "deepseek-flash",
+  "defaultTools": [
+    "+ls",
+    "+find",
+    "+grep",
+    "+codemode"
+  ],
+  "packages": [
+    "npm:@gotgenes/pi-permission-system",
+    "npm:@juicesharp/rpiv-web-tools",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:pi-agent-browser-native",
+    "npm:pi-simple-agents"
+  ]
+}

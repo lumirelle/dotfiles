@@ -1,0 +1,26 @@
+{
+  "recommendations": [
+    // #region Appearance / Theme
+    "vercel-theme",
+    "material-icon-theme",
+    // #endregion
+
+    // #region Behavior / Dev Experience
+    "ini",
+    "csv",
+    "xml",
+    "toml",
+    "env",
+    "log",
+
+    "nu",
+    "lua",
+
+    "zig",
+    "html",
+    "vue",
+    "sql",
+    "dockerfile"
+    // #endregion
+  ]
+}

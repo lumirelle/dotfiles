@@ -1,1 +1,4 @@
-C:/Users/lumirelle/.dotfiles/.wslconfig
+[wsl2]
+networkingMode=Mirrored
+[experimental]
+hostAddressLoopback=true

@@ -1,1 +1,10 @@
-C:/Users/lumirelle/.dotfiles/.config/rpiv-web-tools/config.json
+{
+  "provider": "exa",
+  "guidance": {
+    "web_search": {
+      "promptGuidelines": [
+        "Use web_search only for one-shot lookups. For research with domain filters, freshness, or deep search modes, call agent_browser_web_search instead."
+      ]
+    }
+  }
+}
