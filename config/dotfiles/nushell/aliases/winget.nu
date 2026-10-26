@@ -1,1 +1,0 @@
-export alias wgt = winget

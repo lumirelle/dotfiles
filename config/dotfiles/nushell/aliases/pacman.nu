@@ -1,1 +1,0 @@
-export alias pcm = pacman
