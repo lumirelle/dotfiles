@@ -8,6 +8,12 @@
       "variants": []
     },
     {
+      "path": "home/.config/starship.toml",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/.gitconfig",
       "autosave": true,
       "encrypt": false,
