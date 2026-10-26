@@ -4,7 +4,7 @@
 -- pydantic v1), so `:MasonInstall` fails on Python 3.14+.
 --
 -- This entry points Mason at my self used fork (based on the maintained fork by @walber-vaz) instead, which declares
--- `requires-python >=3.10,<3.15` and dropped pydantic/crossplane entirely.
+-- `requires-python >=3.10` and dropped pydantic/crossplane entirely.
 local version = "0.11.0"
 local wheel = (
   "https://github.com/lumirelle/nginx-language-server/releases/download/"
