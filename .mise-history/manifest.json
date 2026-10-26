@@ -44,6 +44,12 @@
       "variants": []
     },
     {
+      "path": "home/.pi/agent/extensions/pi-permission-system/config.json",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/.profile",
       "autosave": true,
       "encrypt": false,
