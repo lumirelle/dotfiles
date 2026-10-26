@@ -181,6 +181,8 @@ source = "dotfiles/rime/default.custom.yaml"
 variants = [
   { os = "macos", target = "~/Library/Rime/default.custom.yaml" },
   { os = "linux", target = "~/.config/ibus/rime/default.custom.yaml" },
+  # If you are using fcitx5 instead of ibus.
+  # { os = "linux", target = "~/.local/shared/fcitx5/rime/default.custom.yaml" },
   { os = "windows", target = "~/AppData/Roaming/Rime/default.custom.yaml" },
 ]
 
@@ -190,6 +192,8 @@ source = "dotfiles/rime/default.custom.yaml"
 variants = [
   { os = "macos", target = "~/Library/Rime/double_pinyin_flypy.custom.yaml" },
   { os = "linux", target = "~/.config/ibus/rime/double_pinyin_flypy.custom.yaml" },
+  # If you are using fcitx5 instead of ibus.
+  # { os = "linux", target = "~/.local/shared/fcitx5/rime/double_pinyin_flypy.custom.yaml" },
   { os = "windows", target = "~/AppData/Roaming/Rime/double_pinyin_flypy.custom.yaml" },
 ]
 
@@ -199,6 +203,8 @@ source = "dotfiles/rime/default.custom.yaml"
 variants = [
   { os = "macos", target = "~/Library/Rime/weasel.custom.yaml" },
   { os = "linux", target = "~/.config/ibus/rime/weasel.custom.yaml" },
+  # If you are using fcitx5 instead of ibus.
+  # { os = "linux", target = "~/.local/shared/fcitx5/rime/weasel.custom.yaml" },
   { os = "windows", target = "~/AppData/Roaming/Rime/weasel.custom.yaml" },
 ]
 
