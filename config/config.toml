@@ -232,7 +232,7 @@ mode = "copy"
 source = "dotfiles/nushell/aliases/"
 variants = [
   { os = "macos", target = "~/Library/Application Support/nushell/aliases/" },
-  { os = "linux", target = "~/.config/nushel/aliases/" },
+  { os = "linux", target = "~/.config/nushell/aliases/" },
   { os = "windows", target = "~/AppData/Roaming/nushell/aliases/" },
 ]
 
@@ -241,7 +241,7 @@ mode = "copy"
 source = "dotfiles/nushell/env.nu"
 variants = [
   { os = "macos", target = "~/Library/Application Support/nushell/env.nu" },
-  { os = "linux", target = "~/.config/nushel/env.nu" },
+  { os = "linux", target = "~/.config/nushell/env.nu" },
   { os = "windows", target = "~/AppData/Roaming/nushell/env.nu" },
 ]
 
@@ -250,7 +250,7 @@ mode = "copy"
 source = "dotfiles/nushell/config.nu"
 variants = [
   { os = "macos", target = "~/Library/Application Support/nushell/config.nu" },
-  { os = "linux", target = "~/.config/nushel/config.nu" },
+  { os = "linux", target = "~/.config/nushell/config.nu" },
   { os = "windows", target = "~/AppData/Roaming/nushell/config.nu" },
 ]
 
