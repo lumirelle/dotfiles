@@ -6,7 +6,6 @@ lockfile = true
 
 [bootstrap.packages]
 # Windows Operator System Manager
-"winget:twpayne.chezmoi" = "latest"
 "winget:Fastfetch-cli.Fastfetch" = "latest"
 "winget:Clement.bottom" = "latest"
 "winget:dundee.gdu" = "latest"
