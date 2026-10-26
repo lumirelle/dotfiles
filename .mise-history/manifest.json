@@ -8,6 +8,12 @@
       "variants": []
     },
     {
+      "path": "home/.gitconfig",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/.profile",
       "autosave": true,
       "encrypt": false,
