@@ -20,6 +20,12 @@
       "variants": []
     },
     {
+      "path": "home/.local/bin/set_cjk_font-fallback.cmd",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/.pi/agent/APPEND_SYSTEM.md",
       "autosave": true,
       "encrypt": false,
