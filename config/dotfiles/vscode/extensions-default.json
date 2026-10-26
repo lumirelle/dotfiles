@@ -1,0 +1,83 @@
+{
+  // Extension Count: 34
+  "recommendations": [
+    // #region Appearance / Theme
+    "lumirelle.vscode-vercel-theme",
+    "pkief.material-product-icons",
+    "pkief.material-icon-theme",
+    // #endregion
+
+    // #region Appearance / Sidebar / Explorer
+    "antfu.file-nesting",
+    // #endregion
+
+    // #region Appearance / Editor
+    // Lens
+    "usernamehw.errorlens",
+    // Preview Editor
+    "bierner.markdown-checkbox",
+    "bierner.markdown-emoji",
+    "bierner.markdown-footnotes",
+    "bierner.markdown-preview-github-styles",
+    "bierner.markdown-yaml-preamble",
+    // #endregion
+
+    // #region Appearance / Highlight
+    "naumovs.color-highlight",
+    "jgclark.vscode-todo-highlight",
+    "ibm.output-colorizer",
+    // #endregion
+
+    // #region Appearance / Custom UI
+    "subframe7536.custom-ui-style",
+    // #endregion
+
+    // #region Behavior / Sidebar / Addons
+    // Snippets Manager
+    "zjffun.snippetsmanager",
+    // Source Control
+    "eamodio.gitlens",
+    "github.vscode-github-actions", // Useful for Actions Development
+    // #endregion
+
+    // #region Behavior / Commands / Addons
+    "codezombiech.gitignore",
+    // #endregion
+
+    // #region Behavior / Editor
+    "ms-vscode.hexeditor",
+    // #endregion
+
+    // #region Behavior / AI
+    "coderabbit.coderabbit-vscode", // AI Code Reviewer
+    // #endregion
+
+    // #region Behavior / Remote Development
+    "ms-vscode-remote.remote-wsl",
+    "ms-vscode-remote.remote-ssh",
+    "ms-vscode.remote-explorer",
+    "ms-vscode-remote.remote-ssh-edit",
+    // #endregion
+
+    // #region Behavior / Dev Experience
+    // Mise
+    "hverlin.mise-vscode",
+    // Dev Container
+    "ms-azuretools.vscode-containers",
+    // Markdown
+    "yzhang.markdown-all-in-one",
+    // Schema (JSON, YAML, TOML)
+    "remcohaszing.schemastore",
+    "redhat.vscode-yaml",
+    "tamasfe.even-better-toml",
+    // Nushell
+    "thenuprojectcontributors.vscode-nushell-lang",
+    // #endregion
+
+    // #region Behavior / Format
+    "oxc.oxc-vscode",
+    "editorconfig.editorconfig",
+    "lumirelle.shell-format-rev"
+    // #endregion
+  ]
+}
