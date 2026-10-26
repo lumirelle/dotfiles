@@ -68,6 +68,12 @@
       "variants": []
     },
     {
+      "path": "home/.pi/agent/settings.json",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/.profile",
       "autosave": true,
       "encrypt": false,
