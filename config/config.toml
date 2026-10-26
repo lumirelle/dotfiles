@@ -92,8 +92,10 @@ fnox = "latest"
 # Environment/Infrastructure
 node = { version = "latest", postinstall = "npm install -g degit" }
 bun = "latest"
-java = "latest"
 python = "latest"
+java = "latest"
+go = "latest"
+zig = "latest"
 
 [dotfiles]
 "~/.bashrc" = { mode = "track" }
