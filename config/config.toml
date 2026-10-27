@@ -20,6 +20,7 @@ lockfile = true
 "winget:tree-sitter.tree-sitter-cli" = "latest"
 "winget:ImageMagick.ImageMagick" = "latest"
 # Windows UX Enhance
+"winget:Rime.Weasel" = "latest"
 "winget:Wox.Wox" = "latest"
 "winget:Brave.Brave" = "latest"
 "winget:PixPin.PixPin" = "latest"
