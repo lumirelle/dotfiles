@@ -14,6 +14,12 @@
       "variants": []
     },
     {
+      "path": "config/mise.lock",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "config/scripts",
       "autosave": true,
       "encrypt": false,
