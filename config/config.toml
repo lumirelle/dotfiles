@@ -99,6 +99,7 @@ zig = "latest"
 "~/.config/jj/config.toml" = { mode = "track" }
 "~/.config/mise/config.toml" = { mode = "track" }
 "~/.config/mise/dotfiles" = { mode = "track" }
+"~/.config/mise/mise.lock" = { mode = "track" }
 "~/.config/mise/scripts" = { mode = "track" }
 "~/.config/rpiv-web-tools/config.json" = { mode = "track" }
 "~/.config/starship.toml" = { mode = "track" }
