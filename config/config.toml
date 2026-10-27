@@ -15,7 +15,6 @@ lockfile = true
 "winget:BrechtSanders.WinLibs.POSIX.UCRT" = "latest"
 "winget:FiloSottile.age" = "latest"
 "winget:jj-vcs.jj" = "latest"
-"winget:Git.Git" = "latest"
 "winget:GitHub.cli" = "latest"
 "winget:GLab.GLab" = "latest"
 "winget:tree-sitter.tree-sitter-cli" = "latest"
@@ -53,13 +52,11 @@ lockfile = true
 "pacman:wl-clipboard" = "latest"
 "pacman:unzip" = "latest"
 "pacman:wget" = "latest"
-"pacman:openssh" = "latest"
 "pacman:less" = "latest"
 "pacman:fontconfig" = "latest"
 "pacman:noto-fonts-cjk" = "latest"
 "pacman:age" = "latest"
 "pacman:jujutsu" = "latest"
-"pacman:git" = "latest"
 "pacman:github-cli" = "latest"
 "pacman:glab" = "latest"
 "pacman:tree-sitter-cli" = "latest"
@@ -82,7 +79,7 @@ lockfile = true
 "pacman:hyperfine" = "latest"
 
 [bootstrap.files]
-"/etc/sysctl.d/50-unprivileged-ports.conf" = { content = "net.ipv4.ip_unprivileged_port_start = 80", os = "linux" }
+"/etc/sysctl.d/50-unprivileged-ports.conf" = { os = "linux", content = "net.ipv4.ip_unprivileged_port_start = 80"  }
 
 [tools]
 # Global But Not Included by Package Manager
@@ -106,8 +103,8 @@ zig = "latest"
 "~/.config/rpiv-web-tools/config.json" = { mode = "track" }
 "~/.config/starship.toml" = { mode = "track" }
 "~/.gitconfig" = { mode = "track" }
-"~/.local/bin/reset_cjk-font-fallback.cmd" = { mode = "track" }
-"~/.local/bin/set_cjk-font-fallback.cmd" = { mode = "track" }
+"~/.local/bin/reset_cjk-font-fallback.cmd" = { mode = "track", variants = [{ os = "windows" }] }
+"~/.local/bin/set_cjk-font-fallback.cmd" = { mode = "track", variants = [{ os = "windows" }] }
 "~/.pi/agent/APPEND_SYSTEM.md" = { mode = "track" }
 "~/.pi/agent/agents/oracle.md" = { mode = "track" }
 "~/.pi/agent/agents/researcher.md" = { mode = "track" }

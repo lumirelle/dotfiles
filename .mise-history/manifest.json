@@ -53,13 +53,29 @@
       "path": "home/.local/bin/reset_cjk-font-fallback.cmd",
       "autosave": true,
       "encrypt": false,
-      "variants": []
+      "variants": [
+        {
+          "os": [
+            "windows"
+          ],
+          "profile": null,
+          "default": false
+        }
+      ]
     },
     {
       "path": "home/.local/bin/set_cjk-font-fallback.cmd",
       "autosave": true,
       "encrypt": false,
-      "variants": []
+      "variants": [
+        {
+          "os": [
+            "windows"
+          ],
+          "profile": null,
+          "default": false
+        }
+      ]
     },
     {
       "path": "home/.pi/agent/APPEND_SYSTEM.md",
