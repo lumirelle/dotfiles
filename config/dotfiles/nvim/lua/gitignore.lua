@@ -1,12 +1,15 @@
 -- Generate `.gitignore` files from the templates in https://github.com/github/gitignore.
 --
 -- The template list comes from the GitHub trees API and is cached for a day, so the picker opens
--- instantly after the first fetch. Selected templates are appended to the target `.gitignore` under
--- a `# --- Name ---` header, and templates that are already present are skipped, so existing rules
--- are never destroyed.
+-- instantly after the first fetch. Every `.gitignore` in the repo is offered, including the
+-- `Global/` and `community/` folders (shown as a dim path hint), and templates are identified by
+-- their repo-relative path, e.g. `Lua` or `Global/mise`. Selected templates are appended to the
+-- target `.gitignore` under a `# --- <path> ---` header, and templates that are already present are
+-- skipped, so existing rules are never destroyed.
 
 local M = {}
 
+local cache_version = 2
 local cache_dir = vim.fs.joinpath(vim.fn.stdpath "cache", "gitignore")
 local list_cache = vim.fs.joinpath(cache_dir, "templates.json")
 local list_ttl = 24 * 60 * 60 -- seconds
@@ -27,21 +30,29 @@ local function curl(url)
   return out.stdout
 end
 
----@return { time: integer, names: string[] }?
+---@return { v: integer, time: integer, paths: string[] }?
 local function read_cache()
   if vim.fn.filereadable(list_cache) == 0 then return nil end
   local ok, data = pcall(vim.json.decode, table.concat(vim.fn.readfile(list_cache), "\n"))
-  if not ok or type(data) ~= "table" or type(data.names) ~= "table" then return nil end
+  if not ok or type(data) ~= "table" or data.v ~= cache_version or type(data.paths) ~= "table" then return nil end
   return data
 end
 
----@param names string[]
-local function write_cache(names)
+---@param paths string[]
+local function write_cache(paths)
   vim.fn.mkdir(cache_dir, "p")
-  vim.fn.writefile({ vim.json.encode { time = os.time(), names = names } }, list_cache)
+  vim.fn.writefile({ vim.json.encode { v = cache_version, time = os.time(), paths = paths } }, list_cache)
 end
 
----@return string[]? names, string? err
+--- Split a repo-relative template path into its name and folder hint.
+---@param path string
+---@return string name, string? dir
+local function split_path(path)
+  local dir, name = path:match "^(.*)/([^/]+)$"
+  return name or path, dir
+end
+
+---@return string[]? paths, string? err
 local function fetch_list()
   local body, err = curl(api_url)
   if not body then return nil, err end
@@ -49,41 +60,43 @@ local function fetch_list()
   if not ok or type(data) ~= "table" or type(data.tree) ~= "table" then
     return nil, "could not parse the GitHub API response"
   end
-  local names = {}
+  local paths = {}
   for _, entry in ipairs(data.tree) do
     local path = entry.path
-    -- Top-level `<Name>.gitignore` files only; `Global/` and `community/` subfolders are skipped.
-    if type(path) == "string" and path:sub(-10) == ".gitignore" and not path:find("/", 1, true) then
-      names[#names + 1] = path:sub(1, -11)
-    end
+    if type(path) == "string" and path:sub(-10) == ".gitignore" then paths[#paths + 1] = path:sub(1, -11) end
   end
-  table.sort(names, function(a, b) return a:lower() < b:lower() end)
-  write_cache(names)
-  return names
+  table.sort(paths, function(a, b)
+    local an, ad = split_path(a)
+    local bn, bd = split_path(b)
+    if an:lower() ~= bn:lower() then return an:lower() < bn:lower() end
+    return (ad or "") < (bd or "")
+  end)
+  write_cache(paths)
+  return paths
 end
 
---- Template names from github/gitignore, from cache when still fresh.
+--- Repo-relative template paths from github/gitignore, from cache when still fresh.
 ---@param opts? { refresh?: boolean }
----@return string[]? names
+---@return string[]? paths
 function M.templates(opts)
   opts = opts or {}
   local cached = read_cache()
-  local fresh = cached and cached.names and (os.time() - (cached.time or 0)) < list_ttl
-  if fresh and not opts.refresh then return cached.names end
+  local fresh = cached and (os.time() - (cached.time or 0)) < list_ttl
+  if fresh and not opts.refresh then return cached.paths end
 
-  local names, err = fetch_list()
-  if names then return names end
-  if cached and cached.names then
+  local paths, err = fetch_list()
+  if paths then return paths end
+  if cached then
     notify(("could not refresh the template list, using the cached one (%s)"):format(err), vim.log.levels.WARN)
-    return cached.names
+    return cached.paths
   end
   notify("could not fetch the template list: " .. err, vim.log.levels.ERROR)
 end
 
----@param name string
+---@param path string repo-relative path without the `.gitignore` suffix, e.g. `Global/mise`
 ---@return string? body, string? err
-local function fetch_template(name)
-  local encoded = name:gsub("[^%w%-%._~]", function(c) return ("%%%02X"):format(c:byte()) end)
+local function fetch_template(path)
+  local encoded = path:gsub("[^%w%-%._~/]", function(c) return ("%%%02X"):format(c:byte()) end)
   local body, err = curl(raw_url:format(encoded))
   if not body then return nil, err end
   if body == "" then return nil, "empty template" end
@@ -92,8 +105,10 @@ end
 
 --- Append the requested templates to `path`, skipping templates that are already there.
 ---@param names string[]
+--- Append the requested templates to `path`, skipping templates that are already there.
+---@param paths string[] repo-relative template paths, e.g. `{ "Lua", "Global/mise" }`
 ---@param path string
-function M.generate(names, path)
+function M.generate(paths, path)
   path = path or vim.fs.joinpath(M.root(), ".gitignore")
   local lines = vim.fn.filereadable(path) == 1 and vim.fn.readfile(path) or {}
 
@@ -104,7 +119,7 @@ function M.generate(names, path)
   end
 
   local added, skipped, failed = {}, {}, {}
-  for _, name in ipairs(names) do
+  for _, name in ipairs(paths) do
     if seen[name] then
       skipped[#skipped + 1] = name
     else
@@ -151,7 +166,7 @@ local function on_choice(path)
     local selected = picker:selected { fallback = true }
     picker:close()
     if #selected == 0 then return end
-    M.generate(vim.tbl_map(function(item) return item.name end, selected), path)
+    M.generate(vim.tbl_map(function(item) return item.path end, selected), path)
   end
 end
 
@@ -159,22 +174,30 @@ end
 function M.pick(opts)
   opts = opts or {}
   local path = opts.path
-  local names = M.templates()
-  if not names then return end
-  if #names == 0 then return notify("the template list is empty", vim.log.levels.WARN) end
+  local paths = M.templates()
+  if not paths then return end
+  if #paths == 0 then return notify("the template list is empty", vim.log.levels.WARN) end
+
+  local items = vim.tbl_map(function(template)
+    local name, dir = split_path(template)
+    return { text = template, name = name, dir = dir, path = template }
+  end, paths)
 
   local ok, snacks = pcall(require, "snacks")
   if not (ok and snacks.picker) then
-    return vim.ui.select(names, { prompt = ".gitignore template" }, function(choice)
+    return vim.ui.select(paths, { prompt = ".gitignore template" }, function(choice)
       if choice then M.generate({ choice }, path) end
     end)
   end
 
-  local items = vim.tbl_map(function(name) return { text = name, name = name } end, names)
   snacks.picker.pick {
     title = ".gitignore templates",
     items = items,
-    format = function(item) return { { item.text, "Normal" } } end,
+    format = function(item)
+      local ret = { { item.name, "Normal" } }
+      if item.dir then ret[#ret + 1] = { "  " .. item.dir, "Comment" } end
+      return ret
+    end,
     confirm = on_choice(path),
     win = { input = { keys = { ["<c-a>"] = "select_all" } } },
   }
@@ -192,14 +215,16 @@ function M.setup(opts)
     desc = "Append templates from github/gitignore to a .gitignore file",
     complete = function(arglead)
       local cached = read_cache()
-      local names = cached and cached.names or {}
-      return vim.tbl_filter(function(name) return name:lower():find(arglead:lower(), 1, true) == 1 end, names)
+      return vim.tbl_filter(
+        function(name) return name:lower():find(arglead:lower(), 1, true) == 1 end,
+        cached and cached.paths or {}
+      )
     end,
   })
 
   vim.api.nvim_create_user_command("GitignoreUpdate", function()
-    local names = M.templates { refresh = true }
-    if names then notify(("cached %d templates from github/gitignore"):format(#names)) end
+    local paths = M.templates { refresh = true }
+    if paths then notify(("cached %d templates from github/gitignore"):format(#paths)) end
   end, { desc = "Refresh the cached github/gitignore template list" })
 end
 
