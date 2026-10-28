@@ -14,6 +14,7 @@ lockfile = true
 # Windows Environment/Infrastructure
 "winget:BrechtSanders.WinLibs.POSIX.UCRT" = "latest"
 "winget:FiloSottile.age" = "latest"
+"winget:max-sixty.worktrunk" = "latest"
 "winget:jj-vcs.jj" = "latest"
 "winget:GitHub.cli" = "latest"
 "winget:GLab.GLab" = "latest"
@@ -57,6 +58,7 @@ lockfile = true
 "pacman:fontconfig" = "latest"
 "pacman:noto-fonts-cjk" = "latest"
 "pacman:age" = "latest"
+"pacman:worktrunk" = "latest"
 "pacman:jujutsu" = "latest"
 "pacman:github-cli" = "latest"
 "pacman:glab" = "latest"
