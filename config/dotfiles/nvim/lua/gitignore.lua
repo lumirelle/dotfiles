@@ -3,15 +3,17 @@
 -- The template list comes from the GitHub trees API and is cached for a day, so the picker opens
 -- instantly after the first fetch. Every `.gitignore` in the repo is offered, including the
 -- `Global/` and `community/` folders (shown as a dim path hint), and templates are identified by
--- their repo-relative path, e.g. `Lua` or `Global/mise`. Selected templates are appended to the
--- target `.gitignore` under a `# --- <path> ---` header, and templates that are already present are
--- skipped, so existing rules are never destroyed.
+-- their repo-relative path, e.g. `Lua` or `Global/mise`. The picker preview shows the actual
+-- template, downloaded on first hover and kept in the cache dir. Selected templates are appended to
+-- the target `.gitignore` under a `# --- <path> ---` header, and templates that are already present
+-- are skipped, so existing rules are never destroyed.
 
 local M = {}
 
 local cache_version = 2
 local cache_dir = vim.fs.joinpath(vim.fn.stdpath "cache", "gitignore")
 local list_cache = vim.fs.joinpath(cache_dir, "templates.json")
+local content_dir = vim.fs.joinpath(cache_dir, "content")
 local list_ttl = 24 * 60 * 60 -- seconds
 local api_url = "https://api.github.com/repos/github/gitignore/git/trees/main?recursive=1"
 local raw_url = "https://raw.githubusercontent.com/github/gitignore/main/%s.gitignore"
@@ -94,17 +96,70 @@ function M.templates(opts)
 end
 
 ---@param path string repo-relative path without the `.gitignore` suffix, e.g. `Global/mise`
+---@return string url
+local function template_url(path)
+  local encoded = path:gsub("[^%w%-%._~/]", function(c) return ("%%%02X"):format(c:byte()) end)
+  return raw_url:format(encoded)
+end
+
+--- Local cache file for a template body; `Global/mise` -> `content/Global__mise`.
+---@param path string
+---@return string
+local function content_file(path) return vim.fs.joinpath(content_dir, (path:gsub("/", "__"))) end
+
+---@param path string
+---@return string? text
+local function read_content(path)
+  local file = content_file(path)
+  if vim.fn.filereadable(file) == 0 then return nil end
+  return table.concat(vim.fn.readfile(file), "\n")
+end
+
+---@param path string
+---@param text string
+local function write_content(path, text)
+  vim.fn.mkdir(content_dir, "p")
+  vim.fn.writefile(vim.split(text, "\n", { plain = true }), content_file(path))
+end
+
+-- In-flight template downloads, so hovering the same item twice never fires two curls.
+---@type table<string, fun(text: string?): void[]>
+local pending = {}
+
+--- Fetch a template body in the background, filling the cache so previews and writes stop hitting the network.
+---@param path string
+---@param cb fun(text: string?)
+local function prefetch(path, cb)
+  local cached = read_content(path)
+  if cached then return cb(cached) end
+  if pending[path] then return table.insert(pending[path], cb) end
+  pending[path] = { cb }
+  vim.system({ "curl", "-fsSL", "--max-time", "20", template_url(path) }, { text = true }, function(out)
+    vim.schedule(function()
+      local text = out.code == 0 and out.stdout ~= "" and out.stdout or nil
+      if text then write_content(path, text) end
+      local callbacks = pending[path] or {}
+      pending[path] = nil
+      for _, fn in ipairs(callbacks) do
+        pcall(fn, text)
+      end
+    end)
+  end)
+end
+
+---@param path string repo-relative path without the `.gitignore` suffix, e.g. `Global/mise`
 ---@return string? body, string? err
 local function fetch_template(path)
-  local encoded = path:gsub("[^%w%-%._~/]", function(c) return ("%%%02X"):format(c:byte()) end)
-  local body, err = curl(raw_url:format(encoded))
+  local body = read_content(path)
+  if body then return body end
+  local err
+  body, err = curl(template_url(path))
   if not body then return nil, err end
   if body == "" then return nil, "empty template" end
+  write_content(path, body)
   return body
 end
 
---- Append the requested templates to `path`, skipping templates that are already there.
----@param names string[]
 --- Append the requested templates to `path`, skipping templates that are already there.
 ---@param paths string[] repo-relative template paths, e.g. `{ "Lua", "Global/mise" }`
 ---@param path string
@@ -160,6 +215,29 @@ function M.root()
   return vim.fs.root(cwd, ".git") or cwd
 end
 
+--- Render a template body in the picker preview, downloading it on first hover.
+---@param ctx snacks.picker.preview.ctx
+local function preview(ctx)
+  local template = ctx.item.path
+  local text = read_content(template)
+  if text then
+    ctx.preview:set_title(template .. ".gitignore")
+    ctx.preview:set_lines(vim.split(text, "\n", { plain = true }))
+    ctx.preview:highlight { ft = "gitignore" }
+    return
+  end
+
+  ctx.preview:set_title(template .. ".gitignore")
+  ctx.preview:set_lines { "", ("  fetching %s.gitignore from github/gitignore…"):format(template) }
+  local ok, spinner = pcall(ctx.preview.spinner, ctx.preview)
+  prefetch(template, function(body)
+    if ok and spinner then spinner:stop() end
+    if not body or not ctx.picker or ctx.picker.closed then return end
+    local current = ctx.picker:current()
+    if current and current.path == template then ctx.preview:show(ctx.picker, { force = true }) end
+  end)
+end
+
 ---@param path string
 local function on_choice(path)
   return function(picker)
@@ -193,6 +271,7 @@ function M.pick(opts)
   snacks.picker.pick {
     title = ".gitignore templates",
     items = items,
+    preview = preview,
     format = function(item)
       local ret = { { item.name, "Normal" } }
       if item.dir then ret[#ret + 1] = { "  " .. item.dir, "Comment" } end
@@ -223,9 +302,10 @@ function M.setup(opts)
   })
 
   vim.api.nvim_create_user_command("GitignoreUpdate", function()
+    vim.fn.delete(content_dir, "rf")
     local paths = M.templates { refresh = true }
     if paths then notify(("cached %d templates from github/gitignore"):format(#paths)) end
-  end, { desc = "Refresh the cached github/gitignore template list" })
+  end, { desc = "Refresh the cached github/gitignore template list and template bodies" })
 end
 
 return M
