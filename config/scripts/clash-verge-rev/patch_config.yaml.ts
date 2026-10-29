@@ -27,7 +27,7 @@ declare const Bun: { YAML: { parse: (text: string) => unknown } }
 const DESIRED: Record<string, unknown> = {
   'allow-lan': true,
   'ipv6': true,
-  'tun': { stack: 'mixed' },
+  'tun': { stack: 'system' },
 }
 
 const APP = 'io.github.clash-verge-rev.clash-verge-rev'
