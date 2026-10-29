@@ -16,6 +16,8 @@ if (Test-Path "$env:USERPROFILE\.local\bin") {
 (&zoxide init powershell) | Out-String | Invoke-Expression
 ## Fnox, https://fnox.jdx.dev/
 (&fnox activate powershell) | Out-String | Invoke-Expression
+## Worktrunk, https://worktrunk.dev/
+(& wt config shell init powershell) | Out-String | Invoke-Expression
 
 # -- ALIASES --
 ## GNU flavor
@@ -24,3 +26,4 @@ New-Alias -Name touch -Value New-Item
 
 New-Alias -Name lzg -Value lazygit
 New-Alias -Name ch -Value chezmoi
+

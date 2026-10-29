@@ -13,6 +13,8 @@ eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 ## Fnox, https://fnox.jdx.dev/
 eval "$(fnox activate bash)"
+## Worktrunk, https://worktrunk.dev/
+eval "$(command wt config shell init bash)"
 
 # -- ALIASES --
 alias ch='chezmoi'
