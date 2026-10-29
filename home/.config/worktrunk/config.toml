@@ -1,0 +1,4 @@
+#:schema https://worktrunk.dev/schema/list-v2.json
+
+[commit.generation]
+command = "pi --print --model deepseek/deepseek-flash --thinking off --system-prompt '' --append-system-prompt '' --no-tools --no-extensions --no-mcp --no-skills --no-prompt-templates --no-context-files --no-approve --no-session"
