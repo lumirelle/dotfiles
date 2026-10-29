@@ -93,7 +93,7 @@ fnox = "latest"
 node = { version = "latest", postinstall = "npm install -g degit" }
 bun = "latest"
 python = "latest"
-java = "latest"
+java = "lts"
 go = "latest"
 zig = "latest"
 
