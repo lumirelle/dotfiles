@@ -106,6 +106,7 @@ zig = "latest"
 "~/.config/mise/scripts" = { mode = "track" }
 "~/.config/rpiv-web-tools/config.json" = { mode = "track" }
 "~/.config/starship.toml" = { mode = "track" }
+"~/.config/worktrunk/config.toml" = { mode = "track" }
 "~/.gitconfig" = { mode = "track" }
 "~/.local/bin/reset_cjk-font-fallback.cmd" = { mode = "track", variants = [{ os = "windows" }] }
 "~/.local/bin/set_cjk-font-fallback.cmd" = { mode = "track", variants = [{ os = "windows" }] }
