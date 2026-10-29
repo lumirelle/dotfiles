@@ -29,6 +29,3 @@ vim.env.HOME = vim.env.HOME or vim.env.USERPROFILE
 
 require "lazy_setup"
 require "polish"
-
--- Local :Gitignore commands backed by github/gitignore templates
-require("gitignore").setup()
