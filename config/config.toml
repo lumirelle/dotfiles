@@ -1,0 +1,328 @@
+#:schema https://mise.jdx.dev/schema/mise.json
+
+[settings]
+experimental = true
+lockfile = true
+
+[bootstrap.packages]
+# Windows Operator System Manager
+"winget:Fastfetch-cli.Fastfetch" = "latest"
+"winget:Clement.bottom" = "latest"
+"winget:dundee.gdu" = "latest"
+"winget:ChuyuTeam.DISM++" = "latest"
+"winget:RevoUninstaller.RevoUninstallerPro" = "latest"
+# Windows Environment/Infrastructure
+"winget:BrechtSanders.WinLibs.POSIX.UCRT" = "latest"
+"winget:FiloSottile.age" = "latest"
+"winget:max-sixty.worktrunk" = "latest"
+"winget:jj-vcs.jj" = "latest"
+"winget:GitHub.cli" = "latest"
+"winget:GLab.GLab" = "latest"
+"winget:tree-sitter.tree-sitter-cli" = "latest"
+"winget:ImageMagick.ImageMagick" = "latest"
+# Windows UX Enhance
+"winget:Rime.Weasel" = "latest"
+"winget:Wox.Wox" = "latest"
+"winget:Brave.Brave" = "latest"
+"winget:PixPin.PixPin" = "latest"
+"winget:ajeetdsouza.zoxide" = "latest"
+"winget:sharkdp.fd" = "latest"
+"winget:junegunn.fzf" = "latest"
+"winget:BurntSushi.ripgrep.MSVC" = "latest"
+"winget:JesseDuffield.lazygit" = "latest"
+"winget:sxyazi.yazi" = "latest"
+"winget:OBSProject.OBSStudio" = "latest"
+"winget:9NBLGGH5R558" = "latest" # Microsoft To Do
+# Terminal & Shell on Windows
+"winget:wez.wezterm.nightly" = "latest"
+"winget:Nushell.Nushell" = "latest"
+"winget:Starship.Starship" = "latest"
+"winget:Herdr.Herdr.Preview" = "latest"
+# Development on Windows
+"winget:Neovim.Neovim" = "latest"
+"winget:ZedIndustries.Zed" = "latest"
+"winget:Microsoft.VisualStudioCode" = "latest"
+"winget:EarendilWorks.pi" = "latest"
+"winget:t8y2.DBX" = "latest"
+"winget:sharkdp.hyperfine" = "latest"
+
+# Archlinux Operator System Manager
+"pacman:fastfetch" = "latest"
+"pacman:bottom" = "latest"
+"pacman:gdu" = "latest"
+# Archlinux Environment/Infrastructure
+"pacman:wl-clipboard" = "latest"
+"pacman:unzip" = "latest"
+"pacman:wget" = "latest"
+"pacman:less" = "latest"
+"pacman:fontconfig" = "latest"
+"pacman:noto-fonts-cjk" = "latest"
+"pacman:age" = "latest"
+"pacman:worktrunk" = "latest"
+"pacman:jujutsu" = "latest"
+"pacman:github-cli" = "latest"
+"pacman:glab" = "latest"
+"pacman:tree-sitter-cli" = "latest"
+"pacman:imagemagick" = "latest"
+"pacman:chromium" = "latest" # Used to setup dependencies for Playwright
+# Archlinux UX Enhance
+"pacman:zoxide" = "latest"
+"pacman:fd" = "latest"
+"pacman:fzf" = "latest"
+"pacman:ripgrep" = "latest"
+"pacman:lazygit" = "latest"
+"pacman:yazi" = "latest"
+# Terminal & Shell on Archlinux
+"pacman:nushell" = "latest"
+"pacman:starship" = "latest"
+"aur:herdr-bin" = "latest"
+# Development on Archlinux
+"pacman:neovim" = "latest"
+"aur:pi-coding-agent-bin" = "latest"
+"pacman:hyperfine" = "latest"
+
+[bootstrap.files]
+"/etc/sysctl.d/50-unprivileged-ports.conf" = { os = "linux", content = "net.ipv4.ip_unprivileged_port_start = 80"  }
+
+[tools]
+# Global But Not Included by Package Manager
+"github:SyrianTurk/SyrianSegoe" = { os = "windows", version = "latest" } # Replace Windows system (Latin) font
+fnox = "latest"
+"github:vercel-labs/agent-browser" = "latest"
+# Environment/Infrastructure
+node = { version = "latest", postinstall = "npm install -g degit" }
+bun = "latest"
+python = "latest"
+java = "lts"
+go = "latest"
+zig = "latest"
+
+[dotfiles]
+"~/.bashrc" = { mode = "track" }
+"~/.config/jj/config.toml" = { mode = "track" }
+"~/.config/mise/config.toml" = { mode = "track" }
+"~/.config/mise/dotfiles" = { mode = "track" }
+"~/.config/mise/mise.lock" = { mode = "track" }
+"~/.config/mise/scripts" = { mode = "track" }
+"~/.config/rpiv-web-tools/config.json" = { mode = "track" }
+"~/.config/starship.toml" = { mode = "track" }
+"~/.config/worktrunk/config.toml" = { mode = "track" }
+"~/.gitconfig" = { mode = "track" }
+"~/.local/bin/reset_cjk-font-fallback.cmd" = { mode = "track", variants = [{ os = "windows" }] }
+"~/.local/bin/set_cjk-font-fallback.cmd" = { mode = "track", variants = [{ os = "windows" }] }
+"~/.pi/agent/APPEND_SYSTEM.md" = { mode = "track" }
+"~/.pi/agent/agents/oracle.md" = { mode = "track" }
+"~/.pi/agent/agents/researcher.md" = { mode = "track" }
+"~/.pi/agent/agents/reviewer.md" = { mode = "track" }
+"~/.pi/agent/agents/scout.md" = { mode = "track" }
+"~/.pi/agent/agents/worker.md" = { mode = "track" }
+"~/.pi/agent/auth.json" = { mode = "track" }
+"~/.pi/agent/extensions/pi-permission-system/config.json" = { mode = "track" }
+"~/.pi/agent/models.json" = { mode = "track" }
+"~/.pi/agent/settings.json" = { mode = "track" }
+"~/.profile" = { mode = "track" }
+"~/.wezterm.lua" = { mode = "track" }
+"~/.wslconfig" = { mode = "track" }
+"~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1" = { mode = "track", variants = [
+  { os = "windows" },
+] }
+
+[dotfiles."dotfiles/vscode/snippets/"]
+mode = "copy"
+source = "dotfiles/vscode/snippets/"
+variants = [
+  { os = "macos", target = "~/Library/Application Support/Code/User/snippets/" },
+  { os = "linux", target = "~/.config/Code/User/snippets/" },
+  { os = "windows", target = "~/AppData/Roaming/Code/User/snippets/" },
+]
+
+[dotfiles."dotfiles/vscode/extensions-default.json"]
+mode = "copy"
+source = "dotfiles/vscode/extensions-default.json"
+variants = [
+  { os = "macos", target = "~/Library/Application Support/Code/User/extensions-default.json" },
+  { os = "linux", target = "~/.config/Code/User/extensions-default.json" },
+  { os = "windows", target = "~/AppData/Roaming/Code/User/extensions-default.json" },
+]
+
+[dotfiles."dotfiles/vscode/extensions-full.json"]
+mode = "copy"
+source = "dotfiles/vscode/extensions-full.json"
+variants = [
+  { os = "macos", target = "~/Library/Application Support/Code/User/extensions-full.json" },
+  { os = "linux", target = "~/.config/Code/User/extensions-full.json" },
+  { os = "windows", target = "~/AppData/Roaming/Code/User/extensions-full.json" },
+]
+
+[dotfiles."dotfiles/vscode/keybindings.json"]
+mode = "copy"
+source = "dotfiles/vscode/keybindings.json"
+variants = [
+  { os = "macos", target = "~/Library/Application Support/Code/User/keybindings.json" },
+  { os = "linux", target = "~/.config/Code/User/keybindings.json" },
+  { os = "windows", target = "~/AppData/Roaming/Code/User/keybindings.json" },
+]
+
+[dotfiles."dotfiles/vscode/settings.json"]
+mode = "copy"
+source = "dotfiles/vscode/settings.json"
+variants = [
+  { os = "macos", target = "~/Library/Application Support/Code/User/settings.json" },
+  { os = "linux", target = "~/.config/Code/User/settings.json" },
+  { os = "windows", target = "~/AppData/Roaming/Code/User/settings.json" },
+]
+
+[dotfiles."dotfiles/herdr/config.toml"]
+mode = "copy"
+source = "dotfiles/herdr/config.toml"
+variants = [
+  { os = "unix", target = "~/.config/herdr/config.toml" },
+  { os = "windows", target = "~/AppData/Roaming/herdr/config.toml" },
+]
+
+[dotfiles."dotfiles/rime/default.custom.yaml"]
+mode = "copy"
+source = "dotfiles/rime/default.custom.yaml"
+variants = [
+  { os = "macos", target = "~/Library/Rime/default.custom.yaml" },
+  { os = "linux", target = "~/.config/ibus/rime/default.custom.yaml" },
+  # If you are using fcitx5 instead of ibus.
+  # { os = "linux", target = "~/.local/shared/fcitx5/rime/default.custom.yaml" },
+  { os = "windows", target = "~/AppData/Roaming/Rime/default.custom.yaml" },
+]
+
+[dotfiles."dotfiles/rime/double_pinyin_flypy.custom.yaml"]
+mode = "copy"
+source = "dotfiles/rime/default.custom.yaml"
+variants = [
+  { os = "macos", target = "~/Library/Rime/double_pinyin_flypy.custom.yaml" },
+  { os = "linux", target = "~/.config/ibus/rime/double_pinyin_flypy.custom.yaml" },
+  # If you are using fcitx5 instead of ibus.
+  # { os = "linux", target = "~/.local/shared/fcitx5/rime/double_pinyin_flypy.custom.yaml" },
+  { os = "windows", target = "~/AppData/Roaming/Rime/double_pinyin_flypy.custom.yaml" },
+]
+
+[dotfiles."dotfiles/rime/weasel.custom.yaml"]
+mode = "copy"
+source = "dotfiles/rime/default.custom.yaml"
+variants = [
+  { os = "macos", target = "~/Library/Rime/weasel.custom.yaml" },
+  { os = "linux", target = "~/.config/ibus/rime/weasel.custom.yaml" },
+  # If you are using fcitx5 instead of ibus.
+  # { os = "linux", target = "~/.local/shared/fcitx5/rime/weasel.custom.yaml" },
+  { os = "windows", target = "~/AppData/Roaming/Rime/weasel.custom.yaml" },
+]
+
+[dotfiles."dotfiles/clash-verge-rev/dns_config.yaml"]
+mode = "copy"
+source = "dotfiles/clash-verge-rev/dns_config.yaml"
+variants = [
+  { os = "macos", target = "~/Library/Application Support/io.github.clash-verge-rev.clash-verge-rev/dns_config.yaml" },
+  { os = "linux", target = "~/.local/share/io.github.clash-verge-rev.clash-verge-rev/dns_config.yaml" },
+  { os = "windows", target = "~/AppData/Roaming/io.github.clash-verge-rev.clash-verge-rev/dns_config.yaml" },
+]
+
+[dotfiles."dotfiles/clash-verge-rev/profiles/Script.js"]
+mode = "copy"
+source = "dotfiles/clash-verge-rev/profiles/Script.js"
+variants = [
+  { os = "macos", target = "~/Library/Application Support/io.github.clash-verge-rev.clash-verge-rev/profiles/Script.js" },
+  { os = "linux", target = "~/.local/share/io.github.clash-verge-rev.clash-verge-rev/profiles/Script.js" },
+  { os = "windows", target = "~/AppData/Roaming/io.github.clash-verge-rev.clash-verge-rev/profiles/Script.js" },
+]
+
+[dotfiles."dotfiles/nushell/aliases/"]
+mode = "copy"
+source = "dotfiles/nushell/aliases/"
+variants = [
+  { os = "macos", target = "~/Library/Application Support/nushell/aliases/" },
+  { os = "linux", target = "~/.config/nushell/aliases/" },
+  { os = "windows", target = "~/AppData/Roaming/nushell/aliases/" },
+]
+
+[dotfiles."dotfiles/nushell/env.nu"]
+mode = "copy"
+source = "dotfiles/nushell/env.nu"
+variants = [
+  { os = "macos", target = "~/Library/Application Support/nushell/env.nu" },
+  { os = "linux", target = "~/.config/nushell/env.nu" },
+  { os = "windows", target = "~/AppData/Roaming/nushell/env.nu" },
+]
+
+[dotfiles."dotfiles/nushell/config.nu"]
+mode = "copy"
+source = "dotfiles/nushell/config.nu"
+variants = [
+  { os = "macos", target = "~/Library/Application Support/nushell/config.nu" },
+  { os = "linux", target = "~/.config/nushell/config.nu" },
+  { os = "windows", target = "~/AppData/Roaming/nushell/config.nu" },
+]
+
+[dotfiles."dotfiles/zed/extensions.json"]
+mode = "copy"
+source = "dotfiles/zed/extensions.json"
+variants = [
+  { os = "macos", target = "~/Library/Application Support/Zed/extensions.json" },
+  { os = "linux", target = "~/.config/Zed/extensions.json" },
+  { os = "windows", target = "~/AppData/Roaming/Zed/extensions.json" },
+]
+
+[dotfiles."dotfiles/zed/keymap.json"]
+mode = "copy"
+source = "dotfiles/zed/keymap.json"
+variants = [
+  { os = "macos", target = "~/Library/Application Support/Zed/keymap.json" },
+  { os = "linux", target = "~/.config/Zed/keymap.json" },
+  { os = "windows", target = "~/AppData/Roaming/Zed/keymap.json" },
+]
+
+[dotfiles."dotfiles/zed/settings.json"]
+mode = "copy"
+source = "dotfiles/zed/settings.json"
+variants = [
+  { os = "macos", target = "~/Library/Application Support/Zed/settings.json" },
+  { os = "linux", target = "~/.config/Zed/settings.json" },
+  { os = "windows", target = "~/AppData/Roaming/Zed/settings.json" },
+]
+
+[dotfiles."dotfiles/nvim/"]
+mode = "copy"
+source = "dotfiles/nvim/"
+variants = [
+  { os = "unix", target = "~/.config/nvim/" },
+  { os = "windows", target = "~/AppData/Local/nvim/" },
+]
+
+[tasks.bootstrap]
+run = '''
+#!/usr/bin/env bun
+
+import { $ } from "bun"
+import path from "node:path"
+import os from "node:os"
+
+const COMMANDS = [
+  // Setting up Clash Verge Rev
+  ['bun', path.resolve(os.homedir(), '.config/mise/scripts/clash-verge-rev/patch_config.yaml.ts')],
+  ['bun', path.resolve(os.homedir(), '.config/mise/scripts/clash-verge-rev/patch_verge.yaml.ts')],
+
+  // Setting up Worktrunk for Nushell
+  ['wt', 'config', 'shell', 'install', 'nu'],
+
+{% if os() == "windows" %}
+  // Setting up Windows Terminal
+  ['bun', path.resolve(os.homedir(), '.config/mise/scripts/windows-terminal/patch_settings.json.ts')],
+  ['bun', path.resolve(os.homedir(), '.config/mise/scripts/windows-terminal-preview/patch_settings.json.ts')],
+
+  // Setting up Windows
+  ['cmd', '/c', path.resolve(os.homedir(), '.config/mise/scripts/disable_ctrl_space.cmd')],
+  ['cmd', '/c', path.resolve(os.homedir(), '.config/mise/scripts/set_cc_cxx.cmd')],
+  ['cmd', '/c', path.resolve(os.homedir(), '.config/mise/scripts/set_yazi_file_one.cmd')],
+  ['cmd', '/c', path.resolve(os.homedir(), '.local/bin/set_cjk-font-fallback.cmd')],
+{% endif %}
+]
+
+for (const CMD of COMMANDS) {
+  await $`${CMD}`
+}
+'''
