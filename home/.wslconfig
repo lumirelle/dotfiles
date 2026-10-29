@@ -1,6 +1,5 @@
 [wsl2]
 networkingMode=Mirrored
-autoProxy=false
 
 [experimental]
 hostAddressLoopback=true
