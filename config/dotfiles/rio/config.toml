@@ -12,7 +12,7 @@ trail-cursor = true
 
 [fonts]
 family = "Aporetic Serif Mono"
-size = 18
+size = 16
 hinting = false
 
 [shell]
