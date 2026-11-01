@@ -37,7 +37,7 @@ lockfile = true
 "winget:wez.wezterm.nightly" = "latest"
 "winget:Nushell.Nushell" = "latest"
 "winget:Starship.Starship" = "latest"
-"winget:Herdr.Herdr.Preview" = "latest"
+# TODO: Install TUIOS here...
 # Development on Windows
 "winget:Neovim.Neovim" = "latest"
 "winget:ZedIndustries.Zed" = "latest"
@@ -75,7 +75,7 @@ lockfile = true
 # Terminal & Shell on Archlinux
 "pacman:nushell" = "latest"
 "pacman:starship" = "latest"
-"aur:herdr-bin" = "latest"
+"aur:tuios-bin" = "latest"
 # Development on Archlinux
 "pacman:neovim" = "latest"
 "aur:pi-coding-agent-bin" = "latest"
