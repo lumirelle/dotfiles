@@ -3,12 +3,6 @@
 use ($nu.default-config-dir | path join mise.nu)
 let autoload = $nu.data-dir | path join "vendor/autoload"
 mkdir $autoload
-if ($"($env.HOME?)/bin" | path exists) {
-  $env.PATH = ($env.PATH | prepend $"($env.HOME)/bin")
-}
-if ($"($env.HOME?)/.local/bin" | path exists) {
-  $env.PATH = ($env.PATH | prepend $"($env.HOME)/.local/bin")
-}
 # Starship, https://starship.rs/
 starship init nu | save -f ($autoload | path join "starship.nu")
 ## Zoxide, https://github.com/ajeetdsouza/zoxide
