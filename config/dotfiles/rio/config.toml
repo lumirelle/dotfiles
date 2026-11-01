@@ -10,3 +10,4 @@ trail-cursor = true
 
 [fonts]
 family = "Aporetic Serif Mono"
+hinting = false
