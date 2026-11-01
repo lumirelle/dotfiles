@@ -1,0 +1,6 @@
+[editor]
+program = "nvim"
+
+[cursor]
+shape = 'beam'
+blinking = true

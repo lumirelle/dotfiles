@@ -295,6 +295,14 @@ variants = [
   { os = "windows", target = "~/AppData/Local/nvim/" },
 ]
 
+[dotfiles."dotfiles/rio/config.toml"]
+mode = "copy"
+source = "dotfiles/rio/config.toml"
+variants = [
+  { os = "unix", target = "~/.config/rio/config.toml" },
+  { os = "windows", target = "~/AppData/Local/rio/config.toml" },
+]
+
 [tasks.bootstrap]
 run = '''
 #!/usr/bin/env bun
