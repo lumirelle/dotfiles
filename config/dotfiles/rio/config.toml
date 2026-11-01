@@ -4,3 +4,6 @@ program = "nvim"
 [cursor]
 shape = 'beam'
 blinking = true
+
+[effect]
+trail-cursor = true
