@@ -1,3 +1,5 @@
+working-dir = "~"
+
 [editor]
 program = "nvim"
 
@@ -11,3 +13,7 @@ trail-cursor = true
 [fonts]
 family = "Aporetic Serif Mono"
 hinting = false
+
+[shell]
+program = "nu"
+args = ["--login"]
