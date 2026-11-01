@@ -34,7 +34,7 @@ lockfile = true
 "winget:OBSProject.OBSStudio" = "latest"
 "winget:9NBLGGH5R558" = "latest" # Microsoft To Do
 # Terminal & Shell on Windows
-"winget:wez.wezterm.nightly" = "latest"
+"winget:raphamorim.rio" = "latest"
 "winget:Nushell.Nushell" = "latest"
 "winget:Starship.Starship" = "latest"
 # TODO: Install TUIOS here...
@@ -73,6 +73,7 @@ lockfile = true
 "pacman:lazygit" = "latest"
 "pacman:yazi" = "latest"
 # Terminal & Shell on Archlinux
+"pacman:rio" = "latest"
 "pacman:nushell" = "latest"
 "pacman:starship" = "latest"
 "aur:tuios-bin" = "latest"
