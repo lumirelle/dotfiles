@@ -5,6 +5,12 @@ fi
 if [ -d "$HOME/.local/bin" ]; then
   PATH="$HOME/.local/bin:$PATH"
 fi
+if [ -d "$USERPROFILE/bin" ]; then
+  PATH="$USERPROFILE/bin:$PATH"
+fi
+if [ -d "$USERPROFILE/.local/bin" ]; then
+  PATH="$USERPROFILE/.local/bin:$PATH"
+fi
 ## Mise, https://mise.jdx.dev/
 eval "$(mise activate bash)"
 ## Starship, https://starship.rs/
