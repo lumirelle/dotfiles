@@ -1,5 +1,3 @@
-working-dir = "~"
-
 [editor]
 program = "nvim"
 
