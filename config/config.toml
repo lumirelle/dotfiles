@@ -21,7 +21,9 @@ lockfile = true
 "winget:tree-sitter.tree-sitter-cli" = "latest"
 "winget:ImageMagick.ImageMagick" = "latest"
 # Windows UX Enhance
-"winget:Rime.Weasel" = "latest"
+# XXX: Please install Rime Nightly Build from GitHub Release: https://github.com/rime/weasel/releases/tag/latest
+# My configuration requires librime v1.14.0+, and the latest stable version still uses librime v1.13.1.
+# "winget:Rime.Weasel" = "latest"
 "winget:Wox.Wox" = "latest"
 "winget:Brave.Brave" = "latest"
 "winget:PixPin.PixPin" = "latest"
@@ -327,4 +329,8 @@ const COMMANDS = [
 for (const CMD of COMMANDS) {
   await $`${CMD}`
 }
+
+{% if os() == "windows" %}
+console.warn('⚠️ Please install Rime Nightly Build from GitHub Release: https://github.com/rime/weasel/releases/tag/latest. My configuration requires librime v1.14.0+, and the latest stable version still uses librime v1.13.1.')
+{% endif %}
 '''
