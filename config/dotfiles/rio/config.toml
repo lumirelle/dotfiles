@@ -7,3 +7,6 @@ blinking = true
 
 [effect]
 trail-cursor = true
+
+[fonts]
+family = "Aporetic Serif"
