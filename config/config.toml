@@ -39,11 +39,14 @@ lockfile = true
 "winget:raphamorim.rio" = "latest"
 "winget:Nushell.Nushell" = "latest"
 "winget:Starship.Starship" = "latest"
-# TODO: Install TUIOS here...
+# XXX: Please install TUIOS from GitHub Release: https://github.com/Gaurav-Gosain/tuios/releases
+# It hasn't been added to the Winget package registry yet. 
 # Development on Windows
 "winget:Neovim.Neovim" = "latest"
 "winget:ZedIndustries.Zed" = "latest"
 "winget:Microsoft.VisualStudioCode" = "latest"
+"winget:Anthropic.ClaudeCode" = "latest"
+"winget:farion1231.CC-Switch" = "latest"
 "winget:EarendilWorks.pi" = "latest"
 "winget:t8y2.DBX" = "latest"
 "winget:sharkdp.hyperfine" = "latest"
@@ -81,6 +84,8 @@ lockfile = true
 "aur:tuios-bin" = "latest"
 # Development on Archlinux
 "pacman:neovim" = "latest"
+"aur:claude-code" = "latest"
+"aur:cc-switch-bin" = "latest"
 "aur:pi-coding-agent-bin" = "latest"
 "pacman:hyperfine" = "latest"
 
