@@ -13,9 +13,7 @@
 "aur:visual-studio-code-bin" = "latest"
 "pacman:zed" = "latest"
 "aur:dbx-bin" = "latest"
-# Ibus Rime is not declared in config.toml today. Uncomment to let mise manage
-# it on non-WSL Linux:
-# "pacman:ibus-rime" = "latest"
+"pacman:ibus-rime" = "latest"
 
 [dotfiles."dotfiles/vscode/snippets/"]
 mode = "copy"
