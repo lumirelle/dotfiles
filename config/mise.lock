@@ -52,75 +52,64 @@ checksum = "sha256:0f20ce6674d4f2dbcc8c5d59fdf99f7ba45f8c3b367e0f5781cbfa30a1c78
 url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-windows-x64-baseline.zip"
 
 [[tools.fnox]]
-version = "1.43.0"
+version = "1.45.0"
 backend = "packslip:github.com/jdx/fnox"
 specifiers = ["latest"]
 
 [tools.fnox."platforms.linux-arm64"]
-checksum = "sha256:5d2e407d0e681c4c377dbe34a16c0fb0f553dc113a90986f507ebe98322a0f00"
-url = "https://github.com/jdx/fnox/releases/download/v1.43.0/fnox-aarch64-unknown-linux-gnu.tar.gz"
+checksum = "sha256:dd7c2ec8b7478b210b31000ec47073953ed5137716fe3d759f559de2ce3cb6e5"
+url = "https://github.com/jdx/fnox/releases/download/v1.45.0/fnox-aarch64-unknown-linux-gnu.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
-repository_ids = { repository = "1078762196" }
 
 [tools.fnox."platforms.linux-arm64-musl"]
-checksum = "sha256:e84f1eadc00ee0ec3a19e31ab5e149e597bf3ad2f88647b1b28a3b7801d2f927"
-url = "https://github.com/jdx/fnox/releases/download/v1.43.0/fnox-aarch64-unknown-linux-musl.tar.gz"
+checksum = "sha256:fb246769d0e97a3ebab25ff2f4c8e0d709205625df8416191a9cb9b8dd68ec38"
+url = "https://github.com/jdx/fnox/releases/download/v1.45.0/fnox-aarch64-unknown-linux-musl.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
-repository_ids = { repository = "1078762196" }
 
 [tools.fnox."platforms.linux-x64"]
-checksum = "sha256:6f18dfc22f94e9b6cfd9bb5ed6400abd22cdbd319e7188e586cbc2262d031f16"
-url = "https://github.com/jdx/fnox/releases/download/v1.43.0/fnox-x86_64-unknown-linux-gnu.tar.gz"
+checksum = "sha256:e57ec74dad34ef5413c839c0c48ad5be1ff01cc5a6d5312ddabf95927790a43e"
+url = "https://github.com/jdx/fnox/releases/download/v1.45.0/fnox-x86_64-unknown-linux-gnu.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
-repository_ids = { repository = "1078762196" }
 
 [tools.fnox."platforms.linux-x64-baseline"]
-checksum = "sha256:6f18dfc22f94e9b6cfd9bb5ed6400abd22cdbd319e7188e586cbc2262d031f16"
-url = "https://github.com/jdx/fnox/releases/download/v1.43.0/fnox-x86_64-unknown-linux-gnu.tar.gz"
+checksum = "sha256:e57ec74dad34ef5413c839c0c48ad5be1ff01cc5a6d5312ddabf95927790a43e"
+url = "https://github.com/jdx/fnox/releases/download/v1.45.0/fnox-x86_64-unknown-linux-gnu.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
-repository_ids = { repository = "1078762196" }
 
 [tools.fnox."platforms.linux-x64-musl"]
-checksum = "sha256:3d221a6439957f3e425410a4614a45ec02b278e9c20d5838eb7d6d3b3748ac19"
-url = "https://github.com/jdx/fnox/releases/download/v1.43.0/fnox-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:35322430811eb15498df368e197ec2c572a6b63d65c58eeb77bff2104bda7ad7"
+url = "https://github.com/jdx/fnox/releases/download/v1.45.0/fnox-x86_64-unknown-linux-musl.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
-repository_ids = { repository = "1078762196" }
 
 [tools.fnox."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:3d221a6439957f3e425410a4614a45ec02b278e9c20d5838eb7d6d3b3748ac19"
-url = "https://github.com/jdx/fnox/releases/download/v1.43.0/fnox-x86_64-unknown-linux-musl.tar.gz"
+checksum = "sha256:35322430811eb15498df368e197ec2c572a6b63d65c58eeb77bff2104bda7ad7"
+url = "https://github.com/jdx/fnox/releases/download/v1.45.0/fnox-x86_64-unknown-linux-musl.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
-repository_ids = { repository = "1078762196" }
 
 [tools.fnox."platforms.macos-arm64"]
-checksum = "sha256:34e69cd24a7605c00ee0e9edce39d8f32b6e68c857c05ad4bb376716c598e66d"
-url = "https://github.com/jdx/fnox/releases/download/v1.43.0/fnox-aarch64-apple-darwin.tar.gz"
+checksum = "sha256:e851212b2f7319ab88ab7784e008bfb091ccee91f2696a328684fc8ce80e4263"
+url = "https://github.com/jdx/fnox/releases/download/v1.45.0/fnox-aarch64-apple-darwin.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
-repository_ids = { repository = "1078762196" }
 
 [tools.fnox."platforms.macos-x64"]
-checksum = "sha256:fb980e9ba0441cba43102d4664d28b00b7a2fe6f2ba95460d2e903cde21eb718"
-url = "https://github.com/jdx/fnox/releases/download/v1.43.0/fnox-x86_64-apple-darwin.tar.gz"
+checksum = "sha256:3a77acef94f82a27f6d4a3f42c396b2efb1779f4b6b96c8b7b3465a86c69f2b1"
+url = "https://github.com/jdx/fnox/releases/download/v1.45.0/fnox-x86_64-apple-darwin.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
-repository_ids = { repository = "1078762196" }
 
 [tools.fnox."platforms.macos-x64-baseline"]
-checksum = "sha256:fb980e9ba0441cba43102d4664d28b00b7a2fe6f2ba95460d2e903cde21eb718"
-url = "https://github.com/jdx/fnox/releases/download/v1.43.0/fnox-x86_64-apple-darwin.tar.gz"
+checksum = "sha256:3a77acef94f82a27f6d4a3f42c396b2efb1779f4b6b96c8b7b3465a86c69f2b1"
+url = "https://github.com/jdx/fnox/releases/download/v1.45.0/fnox-x86_64-apple-darwin.tar.gz"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
-repository_ids = { repository = "1078762196" }
 
 [tools.fnox."platforms.windows-x64"]
-checksum = "sha256:4b07a5a1764f6a7da5e473b845392ae52140634db4dec52a386e89c85c112c0c"
-url = "https://github.com/jdx/fnox/releases/download/v1.43.0/fnox-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:4f8d09da1e1ecb0180d61a4f5d38b1aa6f5a42019b2b085db3931b3a248d50c9"
+url = "https://github.com/jdx/fnox/releases/download/v1.45.0/fnox-x86_64-pc-windows-msvc.zip"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
-repository_ids = { repository = "1078762196" }
 
 [tools.fnox."platforms.windows-x64-baseline"]
-checksum = "sha256:4b07a5a1764f6a7da5e473b845392ae52140634db4dec52a386e89c85c112c0c"
-url = "https://github.com/jdx/fnox/releases/download/v1.43.0/fnox-x86_64-pc-windows-msvc.zip"
+checksum = "sha256:4f8d09da1e1ecb0180d61a4f5d38b1aa6f5a42019b2b085db3931b3a248d50c9"
+url = "https://github.com/jdx/fnox/releases/download/v1.45.0/fnox-x86_64-pc-windows-msvc.zip"
 signer = "sigstore-oidc:https://github.com/jdx/fnox/.github/workflows/release.yml"
-repository_ids = { repository = "1078762196" }
 
 [[tools."github:SyrianTurk/SyrianSegoe"]]
 version = "0.5"
@@ -138,64 +127,64 @@ url = "https://github.com/SyrianTurk/SyrianSegoe/releases/download/v0.5/SyrianSe
 url_api = "https://api.github.com/repos/SyrianTurk/SyrianSegoe/releases/assets/432493905"
 
 [[tools."github:vercel-labs/agent-browser"]]
-version = "0.40.0"
+version = "0.41.0"
 backend = "github:vercel-labs/agent-browser"
 specifiers = ["latest"]
 
 [tools."github:vercel-labs/agent-browser"."platforms.linux-arm64"]
-checksum = "sha256:f33b4dd9bd7707ad952125937f9de18f93548c5d51283b18092fe21ced6b9e53"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-arm64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935171"
+checksum = "sha256:e196e9cabe6cb1b01bd5912973628361b9f40a332683a12426abad007f0d3589"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.41.0/agent-browser-linux-arm64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/687153004"
 
 [tools."github:vercel-labs/agent-browser"."platforms.linux-arm64-musl"]
-checksum = "sha256:3d4352c0b39f173896aa12af0e63d5905ac8ce7c95575fe6f1f93ce21f9b9e26"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-musl-arm64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935167"
+checksum = "sha256:77d0dd11dd5e2e9b30e4987603960c2a3f9b4794af782292259a90f3cc1010a1"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.41.0/agent-browser-linux-musl-arm64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/687153006"
 
 [tools."github:vercel-labs/agent-browser"."platforms.linux-x64"]
-checksum = "sha256:da26cc8029c004325b960fa955951063380cb61e622cc580fd5adf3aa89e4676"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935274"
+checksum = "sha256:399c7e9f06bd29aa933fdf25c0bd958eea06927fc0ce6f536ba6347aabd64628"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.41.0/agent-browser-linux-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/687153056"
 
 [tools."github:vercel-labs/agent-browser"."platforms.linux-x64-baseline"]
-checksum = "sha256:da26cc8029c004325b960fa955951063380cb61e622cc580fd5adf3aa89e4676"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935274"
+checksum = "sha256:399c7e9f06bd29aa933fdf25c0bd958eea06927fc0ce6f536ba6347aabd64628"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.41.0/agent-browser-linux-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/687153056"
 
 [tools."github:vercel-labs/agent-browser"."platforms.linux-x64-musl"]
-checksum = "sha256:aeebf976eb429064efb10179ccdf737ec7d798c019bae7067ce2751c9c6e176a"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-musl-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935170"
+checksum = "sha256:9585897e9453517683a4ca42f3c3f8d8376282f3160268d911ed219b2e0ad62a"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.41.0/agent-browser-linux-musl-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/687153010"
 
 [tools."github:vercel-labs/agent-browser"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:aeebf976eb429064efb10179ccdf737ec7d798c019bae7067ce2751c9c6e176a"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-musl-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935170"
+checksum = "sha256:9585897e9453517683a4ca42f3c3f8d8376282f3160268d911ed219b2e0ad62a"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.41.0/agent-browser-linux-musl-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/687153010"
 
 [tools."github:vercel-labs/agent-browser"."platforms.macos-arm64"]
-checksum = "sha256:b064c9107a0431c76d8916e47c2c8ac322f49c2b2720d6c9036ab538ec1ed911"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-darwin-arm64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935174"
+checksum = "sha256:a402fef2489c221b17522aa21f103ca5dc47f00ff5879d4a72c39881544730ab"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.41.0/agent-browser-darwin-arm64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/687153002"
 
 [tools."github:vercel-labs/agent-browser"."platforms.macos-x64"]
-checksum = "sha256:478cba056938c5cde286fbeea3994a8b8144f2e18f054684b93abb80c0340d25"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-darwin-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935172"
+checksum = "sha256:f108d4aa02f41eee05d6b1b05817475fd5d576d802826783ef80800da16f33e2"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.41.0/agent-browser-darwin-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/687153011"
 
 [tools."github:vercel-labs/agent-browser"."platforms.macos-x64-baseline"]
-checksum = "sha256:478cba056938c5cde286fbeea3994a8b8144f2e18f054684b93abb80c0340d25"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-darwin-x64"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935172"
+checksum = "sha256:f108d4aa02f41eee05d6b1b05817475fd5d576d802826783ef80800da16f33e2"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.41.0/agent-browser-darwin-x64"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/687153011"
 
 [tools."github:vercel-labs/agent-browser"."platforms.windows-x64"]
-checksum = "sha256:b142ca8946efda2d506e0947b232596e7949f08296e6b953b57f63eb50fee751"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-win32-x64.exe"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935281"
+checksum = "sha256:dee86b78071cbe7217f71ec1c9df6a50efa73cd44d64a18877bb36556fc8e270"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.41.0/agent-browser-win32-x64.exe"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/687153057"
 
 [tools."github:vercel-labs/agent-browser"."platforms.windows-x64-baseline"]
-checksum = "sha256:b142ca8946efda2d506e0947b232596e7949f08296e6b953b57f63eb50fee751"
-url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-win32-x64.exe"
-url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935281"
+checksum = "sha256:dee86b78071cbe7217f71ec1c9df6a50efa73cd44d64a18877bb36556fc8e270"
+url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.41.0/agent-browser-win32-x64.exe"
+url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/687153057"
 
 [[tools.go]]
 version = "1.27.3"
