@@ -129,13 +129,11 @@ specifiers = ["latest"]
 
 [tools."github:SyrianTurk/SyrianSegoe"."platforms.windows-x64"]
 checksum = "sha256:f3c0813f8194f31ad91b3492ba50861de2fa3799832c145a93754d3bda1d16a3"
-checksum_source = "mise-versions"
 url = "https://github.com/SyrianTurk/SyrianSegoe/releases/download/v0.5/SyrianSegoe.exe"
 url_api = "https://api.github.com/repos/SyrianTurk/SyrianSegoe/releases/assets/432493905"
 
 [tools."github:SyrianTurk/SyrianSegoe"."platforms.windows-x64-baseline"]
 checksum = "sha256:f3c0813f8194f31ad91b3492ba50861de2fa3799832c145a93754d3bda1d16a3"
-checksum_source = "mise-versions"
 url = "https://github.com/SyrianTurk/SyrianSegoe/releases/download/v0.5/SyrianSegoe.exe"
 url_api = "https://api.github.com/repos/SyrianTurk/SyrianSegoe/releases/assets/432493905"
 
@@ -146,67 +144,56 @@ specifiers = ["latest"]
 
 [tools."github:vercel-labs/agent-browser"."platforms.linux-arm64"]
 checksum = "sha256:f33b4dd9bd7707ad952125937f9de18f93548c5d51283b18092fe21ced6b9e53"
-checksum_source = "mise-versions"
 url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-arm64"
 url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935171"
 
 [tools."github:vercel-labs/agent-browser"."platforms.linux-arm64-musl"]
 checksum = "sha256:3d4352c0b39f173896aa12af0e63d5905ac8ce7c95575fe6f1f93ce21f9b9e26"
-checksum_source = "mise-versions"
 url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-musl-arm64"
 url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935167"
 
 [tools."github:vercel-labs/agent-browser"."platforms.linux-x64"]
 checksum = "sha256:da26cc8029c004325b960fa955951063380cb61e622cc580fd5adf3aa89e4676"
-checksum_source = "mise-versions"
 url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-x64"
 url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935274"
 
 [tools."github:vercel-labs/agent-browser"."platforms.linux-x64-baseline"]
 checksum = "sha256:da26cc8029c004325b960fa955951063380cb61e622cc580fd5adf3aa89e4676"
-checksum_source = "mise-versions"
 url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-x64"
 url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935274"
 
 [tools."github:vercel-labs/agent-browser"."platforms.linux-x64-musl"]
 checksum = "sha256:aeebf976eb429064efb10179ccdf737ec7d798c019bae7067ce2751c9c6e176a"
-checksum_source = "mise-versions"
 url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-musl-x64"
 url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935170"
 
 [tools."github:vercel-labs/agent-browser"."platforms.linux-x64-musl-baseline"]
 checksum = "sha256:aeebf976eb429064efb10179ccdf737ec7d798c019bae7067ce2751c9c6e176a"
-checksum_source = "mise-versions"
 url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-linux-musl-x64"
 url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935170"
 
 [tools."github:vercel-labs/agent-browser"."platforms.macos-arm64"]
 checksum = "sha256:b064c9107a0431c76d8916e47c2c8ac322f49c2b2720d6c9036ab538ec1ed911"
-checksum_source = "mise-versions"
 url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-darwin-arm64"
 url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935174"
 
 [tools."github:vercel-labs/agent-browser"."platforms.macos-x64"]
 checksum = "sha256:478cba056938c5cde286fbeea3994a8b8144f2e18f054684b93abb80c0340d25"
-checksum_source = "mise-versions"
 url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-darwin-x64"
 url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935172"
 
 [tools."github:vercel-labs/agent-browser"."platforms.macos-x64-baseline"]
 checksum = "sha256:478cba056938c5cde286fbeea3994a8b8144f2e18f054684b93abb80c0340d25"
-checksum_source = "mise-versions"
 url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-darwin-x64"
 url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935172"
 
 [tools."github:vercel-labs/agent-browser"."platforms.windows-x64"]
 checksum = "sha256:b142ca8946efda2d506e0947b232596e7949f08296e6b953b57f63eb50fee751"
-checksum_source = "mise-versions"
 url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-win32-x64.exe"
 url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935281"
 
 [tools."github:vercel-labs/agent-browser"."platforms.windows-x64-baseline"]
 checksum = "sha256:b142ca8946efda2d506e0947b232596e7949f08296e6b953b57f63eb50fee751"
-checksum_source = "mise-versions"
 url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-win32-x64.exe"
 url_api = "https://api.github.com/repos/vercel-labs/agent-browser/releases/assets/682935281"
 
