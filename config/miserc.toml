@@ -1,0 +1,4 @@
+# Config environments are selected before config files are loaded.
+# Non-WSL machines use "default"; WSL overrides this in
+# ~/.config/mise/miserc.local.toml with env = ["wsl"].
+env = ["default"]

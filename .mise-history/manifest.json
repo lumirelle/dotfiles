@@ -2,6 +2,12 @@
   "format": 1,
   "enrollment": [
     {
+      "path": "config/config.default.toml",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "config/config.toml",
       "autosave": true,
       "encrypt": false,
@@ -15,6 +21,12 @@
     },
     {
       "path": "config/mise.lock",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "config/miserc.toml",
       "autosave": true,
       "encrypt": false,
       "variants": []
@@ -45,12 +57,6 @@
     },
     {
       "path": "home/.config/starship.toml",
-      "autosave": true,
-      "encrypt": false,
-      "variants": []
-    },
-    {
-      "path": "home/.config/worktrunk/config.toml",
       "autosave": true,
       "encrypt": false,
       "variants": []
@@ -159,7 +165,15 @@
       "path": "home/.wslconfig",
       "autosave": true,
       "encrypt": false,
-      "variants": []
+      "variants": [
+        {
+          "os": [
+            "windows"
+          ],
+          "profile": null,
+          "default": false
+        }
+      ]
     },
     {
       "path": "home/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
