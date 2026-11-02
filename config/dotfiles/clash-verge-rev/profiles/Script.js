@@ -268,6 +268,7 @@ function genRulesAndProviders() {
     'GEOSITE,youtube,Just Proxy',
     'GEOSITE,netflix,Just Proxy',
     'DOMAIN,zig.mirror.mschae23.de,Just Proxy',
+    'DOMAIN-SUFFIX,exa.ai,Just Proxy',
 
     'DOMAIN-SUFFIX,rockstargames.com,Just Direct',
     'DOMAIN-SUFFIX,lspdfrcn.net,Just Direct',
