@@ -67,24 +67,31 @@ lockfile = true
 "pacman:glab" = "latest"
 "pacman:tree-sitter-cli" = "latest"
 "pacman:imagemagick" = "latest"
-"pacman:chromium" = "latest" # Used to setup dependencies for Playwright
 # Archlinux UX Enhance
+"aur:wox-bin" = "latest"
+"aur:brave-bin" = "latest"
+# XXX: PixPin has no alternative on Linux currently.
 "pacman:zoxide" = "latest"
 "pacman:fd" = "latest"
 "pacman:fzf" = "latest"
 "pacman:ripgrep" = "latest"
 "pacman:lazygit" = "latest"
 "pacman:yazi" = "latest"
+"pacman:obs-studio" = "latest"
 # Terminal & Shell on Archlinux
+# XXX: Microsoft To Do has no alternative on Linux currently.
 "pacman:rio" = "latest"
 "pacman:nushell" = "latest"
 "pacman:starship" = "latest"
 "aur:tuios-bin" = "latest"
 # Development on Archlinux
 "pacman:neovim" = "latest"
+"pacman:zed" = "latest"
+"aur:visual-studio-code-bin" = "latest"
 "aur:claude-code" = "latest"
 "aur:cc-switch-bin" = "latest"
 "aur:pi-coding-agent-bin" = "latest"
+"aur:dbx-bin" = "latest"
 "pacman:hyperfine" = "latest"
 
 [bootstrap.files]
