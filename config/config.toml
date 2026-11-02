@@ -183,14 +183,6 @@ variants = [
   { os = "windows", target = "~/AppData/Roaming/Code/User/settings.json" },
 ]
 
-[dotfiles."dotfiles/herdr/config.toml"]
-mode = "copy"
-source = "dotfiles/herdr/config.toml"
-variants = [
-  { os = "unix", target = "~/.config/herdr/config.toml" },
-  { os = "windows", target = "~/AppData/Roaming/herdr/config.toml" },
-]
-
 [dotfiles."dotfiles/rime/default.custom.yaml"]
 mode = "copy"
 source = "dotfiles/rime/default.custom.yaml"
