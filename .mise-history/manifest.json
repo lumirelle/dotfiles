@@ -153,7 +153,15 @@
       "path": "home/.wslconfig",
       "autosave": true,
       "encrypt": false,
-      "variants": []
+      "variants": [
+        {
+          "os": [
+            "windows"
+          ],
+          "profile": null,
+          "default": false
+        }
+      ]
     },
     {
       "path": "home/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",

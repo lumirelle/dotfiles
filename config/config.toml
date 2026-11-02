@@ -133,7 +133,7 @@ zig = "latest"
 "~/.pi/agent/models.json" = { mode = "track" }
 "~/.pi/agent/settings.json" = { mode = "track" }
 "~/.profile" = { mode = "track" }
-"~/.wslconfig" = { mode = "track" }
+"~/.wslconfig" = { mode = "track", variants = [{ os = "windows" }] }
 "~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1" = { mode = "track", variants = [
   { os = "windows" },
 ] }
