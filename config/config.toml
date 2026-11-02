@@ -14,7 +14,6 @@ lockfile = true
 # Windows Environment/Infrastructure
 "winget:BrechtSanders.WinLibs.POSIX.UCRT" = "latest"
 "winget:FiloSottile.age" = "latest"
-"winget:max-sixty.worktrunk" = "latest"
 "winget:jj-vcs.jj" = "latest"
 "winget:GitHub.cli" = "latest"
 "winget:GLab.GLab" = "latest"
@@ -63,7 +62,6 @@ lockfile = true
 "pacman:fontconfig" = "latest"
 "pacman:noto-fonts-cjk" = "latest"
 "pacman:age" = "latest"
-"pacman:worktrunk" = "latest"
 "pacman:jujutsu" = "latest"
 "pacman:github-cli" = "latest"
 "pacman:glab" = "latest"
@@ -330,11 +328,6 @@ const COMMANDS = [
   ['cmd', '/c', path.resolve(os.homedir(), '.config/mise/scripts/set_cc_cxx.cmd')],
   ['cmd', '/c', path.resolve(os.homedir(), '.config/mise/scripts/set_yazi_file_one.cmd')],
   ['cmd', '/c', path.resolve(os.homedir(), '.local/bin/set_cjk-font-fallback.cmd')],
-
-  // Setting up Worktrunk for Nushell
-  ['git-wt', 'config', 'shell', 'install', 'nu', '--yes'],
-{% else %}
-  ['wt', 'config', 'shell', 'install', 'nu', '--yes'],
 {% endif %}
 ]
 
