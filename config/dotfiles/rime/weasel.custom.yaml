@@ -1,4 +1,0 @@
-patch:
-  app_options/nvim.exe:
-    ascii_mode: true
-    vim_mode: true
