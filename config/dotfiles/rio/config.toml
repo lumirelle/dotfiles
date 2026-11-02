@@ -1,0 +1,23 @@
+# 1. Disguise as Kitty, deceive Snacks.nvim.
+# Rio currently supports Kitty Graphic Protocol, but does not being added to the terminal whitelist of Snacks.nvim.
+# 2. Set TERM to fit the prerequisite of TUIOS.
+env-vars = ["SNACKS_KITTY=true", "TERM=xterm-256color"]
+
+[editor]
+program = "nvim"
+
+[cursor]
+shape = 'beam'
+blinking = true
+
+[effect]
+trail-cursor = true
+
+[fonts]
+family = "Aporetic Serif Mono"
+size = 16
+hinting = false
+
+[shell]
+program = "nu"
+args = ["--login"]

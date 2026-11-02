@@ -21,7 +21,9 @@ lockfile = true
 "winget:tree-sitter.tree-sitter-cli" = "latest"
 "winget:ImageMagick.ImageMagick" = "latest"
 # Windows UX Enhance
-"winget:Rime.Weasel" = "latest"
+# XXX: Please install Rime Nightly Build from GitHub Release: https://github.com/rime/weasel/releases/tag/latest
+# My configuration requires librime v1.14.0+, and the latest stable version still uses librime v1.13.1.
+# "winget:Rime.Weasel" = "latest"
 "winget:Wox.Wox" = "latest"
 "winget:Brave.Brave" = "latest"
 "winget:PixPin.PixPin" = "latest"
@@ -34,14 +36,17 @@ lockfile = true
 "winget:OBSProject.OBSStudio" = "latest"
 "winget:9NBLGGH5R558" = "latest" # Microsoft To Do
 # Terminal & Shell on Windows
-"winget:wez.wezterm.nightly" = "latest"
+"winget:raphamorim.rio" = "latest"
 "winget:Nushell.Nushell" = "latest"
 "winget:Starship.Starship" = "latest"
-"winget:Herdr.Herdr.Preview" = "latest"
+# XXX: Please install TUIOS from GitHub Release: https://github.com/Gaurav-Gosain/tuios/releases
+# It hasn't been added to the Winget package registry yet. 
 # Development on Windows
 "winget:Neovim.Neovim" = "latest"
 "winget:ZedIndustries.Zed" = "latest"
 "winget:Microsoft.VisualStudioCode" = "latest"
+"winget:Anthropic.ClaudeCode" = "latest"
+"winget:farion1231.CC-Switch" = "latest"
 "winget:EarendilWorks.pi" = "latest"
 "winget:t8y2.DBX" = "latest"
 "winget:sharkdp.hyperfine" = "latest"
@@ -73,11 +78,14 @@ lockfile = true
 "pacman:lazygit" = "latest"
 "pacman:yazi" = "latest"
 # Terminal & Shell on Archlinux
+"pacman:rio" = "latest"
 "pacman:nushell" = "latest"
 "pacman:starship" = "latest"
-"aur:herdr-bin" = "latest"
+"aur:tuios-bin" = "latest"
 # Development on Archlinux
 "pacman:neovim" = "latest"
+"aur:claude-code" = "latest"
+"aur:cc-switch-bin" = "latest"
 "aur:pi-coding-agent-bin" = "latest"
 "pacman:hyperfine" = "latest"
 
@@ -121,7 +129,6 @@ zig = "latest"
 "~/.pi/agent/models.json" = { mode = "track" }
 "~/.pi/agent/settings.json" = { mode = "track" }
 "~/.profile" = { mode = "track" }
-"~/.wezterm.lua" = { mode = "track" }
 "~/.wslconfig" = { mode = "track" }
 "~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1" = { mode = "track", variants = [
   { os = "windows" },
@@ -293,6 +300,14 @@ variants = [
   { os = "windows", target = "~/AppData/Local/nvim/" },
 ]
 
+[dotfiles."dotfiles/rio/config.toml"]
+mode = "copy"
+source = "dotfiles/rio/config.toml"
+variants = [
+  { os = "unix", target = "~/.config/rio/config.toml" },
+  { os = "windows", target = "~/AppData/Local/rio/config.toml" },
+]
+
 [tasks.bootstrap]
 run = '''
 #!/usr/bin/env bun
@@ -327,4 +342,8 @@ const COMMANDS = [
 for (const CMD of COMMANDS) {
   await $`${CMD}`
 }
+
+{% if os() == "windows" %}
+console.warn('⚠️ Please install Rime Nightly Build from GitHub Release: https://github.com/rime/weasel/releases/tag/latest. My configuration requires librime v1.14.0+, and the latest stable version still uses librime v1.13.1.')
+{% endif %}
 '''

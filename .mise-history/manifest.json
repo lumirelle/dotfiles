@@ -156,12 +156,6 @@
       "variants": []
     },
     {
-      "path": "home/.wezterm.lua",
-      "autosave": true,
-      "encrypt": false,
-      "variants": []
-    },
-    {
       "path": "home/.wslconfig",
       "autosave": true,
       "encrypt": false,
