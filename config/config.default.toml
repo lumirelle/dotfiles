@@ -6,14 +6,33 @@
 # of WSL, and leaves the bootstrap task undefined in WSL.
 
 [bootstrap.packages]
-# Desktop / GUI packages: not wanted in WSL
-"aur:wox-bin" = "latest"
-"pacman:obs-studio" = "latest"
-"pacman:rio" = "latest"
-"aur:visual-studio-code-bin" = "latest"
-"pacman:zed" = "latest"
-"aur:dbx-bin" = "latest"
+# Windows UX Enhance
+# XXX: Please install Rime Nightly Build from GitHub Release: https://github.com/rime/weasel/releases/tag/latest
+# My configuration requires librime v1.14.0+, and the latest stable version still uses librime v1.13.1.
+# "winget:Rime.Weasel" = "latest"
+"winget:Wox.Wox" = "latest"
+"winget:PixPin.PixPin" = "latest"
+"winget:9NBLGGH5R558" = "latest" # Microsoft To Do
+"winget:OBSProject.OBSStudio" = "latest"
+# Terminal & Shell on Windows
+"winget:raphamorim.rio" = "latest"
+# Development on Windows
+"winget:ZedIndustries.Zed" = "latest"
+"winget:Microsoft.VisualStudioCode" = "latest"
+"winget:t8y2.DBX" = "latest"
+
+# Archlinux UX Enhance
 "pacman:ibus-rime" = "latest"
+"aur:wox-bin" = "latest"
+# XXX: PixPin has no alternative on Linux currently.
+# XXX: Microsoft To Do has no alternative on Linux currently.
+"pacman:obs-studio" = "latest"
+# Terminal & Shell on Windows
+"pacman:rio" = "latest"
+# Development on Archlinux
+"pacman:zed" = "latest"
+"aur:visual-studio-code-bin" = "latest"
+"aur:dbx-bin" = "latest"
 
 [dotfiles."dotfiles/vscode/snippets/"]
 mode = "copy"
