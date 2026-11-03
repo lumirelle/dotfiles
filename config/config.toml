@@ -98,7 +98,18 @@ zig = "latest"
 "~/.config/mise/config.toml" = { mode = "track" }
 "~/.config/mise/config.default.toml" = { mode = "track" }
 "~/.config/mise/miserc.toml" = { mode = "track" }
-"~/.config/mise/dotfiles" = { mode = "track" }
+# Narrow entries rather than the whole dotfiles directory: the desktop-only
+# sources are scoped to the "default" environment (the one that loads
+# config.default.toml), so the "wsl" environment neither saves nor deletes
+# them. A blanket directory entry would capture them in every environment and
+# let a WSL bootstrap publish their absence as a deletion.
+"~/.config/mise/dotfiles/nushell" = { mode = "track" }
+"~/.config/mise/dotfiles/nvim" = { mode = "track" }
+"~/.config/mise/dotfiles/clash-verge-rev" = { mode = "track", variants = [{ profile = "default" }] }
+"~/.config/mise/dotfiles/rio" = { mode = "track", variants = [{ profile = "default" }] }
+"~/.config/mise/dotfiles/rime" = { mode = "track", variants = [{ profile = "default" }] }
+"~/.config/mise/dotfiles/vscode" = { mode = "track", variants = [{ profile = "default" }] }
+"~/.config/mise/dotfiles/zed" = { mode = "track", variants = [{ profile = "default" }] }
 "~/.config/mise/mise.lock" = { mode = "track" }
 "~/.config/mise/scripts" = { mode = "track" }
 "~/.config/rpiv-web-tools/config.json" = { mode = "track" }
