@@ -21,34 +21,23 @@ lockfile = true
 "winget:tree-sitter.tree-sitter-cli" = "latest"
 "winget:ImageMagick.ImageMagick" = "latest"
 # Windows UX Enhance
-# XXX: Please install Rime Nightly Build from GitHub Release: https://github.com/rime/weasel/releases/tag/latest
-# My configuration requires librime v1.14.0+, and the latest stable version still uses librime v1.13.1.
-# "winget:Rime.Weasel" = "latest"
-"winget:Wox.Wox" = "latest"
 "winget:Brave.Brave" = "latest"
-"winget:PixPin.PixPin" = "latest"
 "winget:ajeetdsouza.zoxide" = "latest"
 "winget:sharkdp.fd" = "latest"
 "winget:junegunn.fzf" = "latest"
 "winget:BurntSushi.ripgrep.MSVC" = "latest"
 "winget:JesseDuffield.lazygit" = "latest"
 "winget:sxyazi.yazi" = "latest"
-"winget:OBSProject.OBSStudio" = "latest"
-"winget:9NBLGGH5R558" = "latest" # Microsoft To Do
 # Terminal & Shell on Windows
-"winget:raphamorim.rio" = "latest"
 "winget:Nushell.Nushell" = "latest"
 "winget:Starship.Starship" = "latest"
 # XXX: Please install TUIOS from GitHub Release: https://github.com/Gaurav-Gosain/tuios/releases
 # It hasn't been added to the Winget package registry yet. 
 # Development on Windows
 "winget:Neovim.Neovim" = "latest"
-"winget:ZedIndustries.Zed" = "latest"
-"winget:Microsoft.VisualStudioCode" = "latest"
 "winget:Anthropic.ClaudeCode" = "latest"
 "winget:farion1231.CC-Switch" = "latest"
 "winget:EarendilWorks.pi" = "latest"
-"winget:t8y2.DBX" = "latest"
 "winget:sharkdp.hyperfine" = "latest"
 
 # Archlinux Operator System Manager
@@ -70,7 +59,6 @@ lockfile = true
 "pacman:imagemagick" = "latest"
 # Archlinux UX Enhance
 "aur:brave-bin" = "latest"
-# XXX: PixPin has no alternative on Linux currently.
 "pacman:zoxide" = "latest"
 "pacman:fd" = "latest"
 "pacman:fzf" = "latest"
@@ -78,7 +66,6 @@ lockfile = true
 "pacman:lazygit" = "latest"
 "pacman:yazi" = "latest"
 # Terminal & Shell on Archlinux
-# XXX: Microsoft To Do has no alternative on Linux currently.
 "pacman:nushell" = "latest"
 "pacman:starship" = "latest"
 "aur:tuios-bin" = "latest"
@@ -111,7 +98,18 @@ zig = "latest"
 "~/.config/mise/config.toml" = { mode = "track" }
 "~/.config/mise/config.default.toml" = { mode = "track" }
 "~/.config/mise/miserc.toml" = { mode = "track" }
-"~/.config/mise/dotfiles" = { mode = "track" }
+# Narrow entries rather than the whole dotfiles directory: the desktop-only
+# sources are scoped to the "default" environment (the one that loads
+# config.default.toml), so the "wsl" environment neither saves nor deletes
+# them. A blanket directory entry would capture them in every environment and
+# let a WSL bootstrap publish their absence as a deletion.
+"~/.config/mise/dotfiles/nushell" = { mode = "track" }
+"~/.config/mise/dotfiles/nvim" = { mode = "track" }
+"~/.config/mise/dotfiles/clash-verge-rev" = { mode = "track", variants = [{ profile = "default" }] }
+"~/.config/mise/dotfiles/rio" = { mode = "track", variants = [{ profile = "default" }] }
+"~/.config/mise/dotfiles/rime" = { mode = "track", variants = [{ profile = "default" }] }
+"~/.config/mise/dotfiles/vscode" = { mode = "track", variants = [{ profile = "default" }] }
+"~/.config/mise/dotfiles/zed" = { mode = "track", variants = [{ profile = "default" }] }
 "~/.config/mise/mise.lock" = { mode = "track" }
 "~/.config/mise/scripts" = { mode = "track" }
 "~/.config/rpiv-web-tools/config.json" = { mode = "track" }

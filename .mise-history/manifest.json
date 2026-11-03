@@ -14,10 +14,76 @@
       "variants": []
     },
     {
-      "path": "config/dotfiles",
+      "path": "config/dotfiles/clash-verge-rev",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [],
+          "profile": "default",
+          "default": false
+        }
+      ]
+    },
+    {
+      "path": "config/dotfiles/nushell",
       "autosave": true,
       "encrypt": false,
       "variants": []
+    },
+    {
+      "path": "config/dotfiles/nvim",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "config/dotfiles/rime",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [],
+          "profile": "default",
+          "default": false
+        }
+      ]
+    },
+    {
+      "path": "config/dotfiles/rio",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [],
+          "profile": "default",
+          "default": false
+        }
+      ]
+    },
+    {
+      "path": "config/dotfiles/vscode",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [],
+          "profile": "default",
+          "default": false
+        }
+      ]
+    },
+    {
+      "path": "config/dotfiles/zed",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [],
+          "profile": "default",
+          "default": false
+        }
+      ]
     },
     {
       "path": "config/mise.lock",

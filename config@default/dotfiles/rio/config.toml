@@ -7,7 +7,6 @@ env-vars = ["SNACKS_KITTY=true", "TERM=xterm-256color"]
 program = "nvim"
 
 [cursor]
-shape = 'beam'
 blinking = true
 
 [effect]
@@ -21,3 +20,8 @@ hinting = false
 [shell]
 program = "nu"
 args = ["--login"]
+
+[window]
+width = 1200
+height = 800
+blur = true
