@@ -6,6 +6,11 @@ return {
   "AstroNvim/astrolsp",
   ---@param opts AstroLSPOpts
   opts = function(_, opts)
+    -- Never autoformat on save; format manually with <Leader>lf (or toggle back with <Leader>uF).
+    opts.formatting = vim.tbl_deep_extend("force", opts.formatting or {}, {
+      format_on_save = { enabled = false },
+    })
+
     -- AstroNvim enables Mason-installed servers from its mason-lspconfig config, but that path is wrapped in
     -- `vim.schedule_wrap`, so it runs just *after* the FileType event of the session's first buffer and that buffer
     -- never gets a client (symptom: `is_enabled=true` but `clients=0`, and `:e` fixes it). `opts.servers` is enabled
