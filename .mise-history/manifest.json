@@ -134,6 +134,12 @@
       "variants": []
     },
     {
+      "path": "home/.local/bin/ai",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/.local/bin/ai.cmd",
       "autosave": true,
       "encrypt": false,
