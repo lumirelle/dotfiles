@@ -151,7 +151,15 @@
       "path": "home/.local/bin/ai.sh",
       "autosave": true,
       "encrypt": false,
-      "variants": []
+      "variants": [
+        {
+          "os": [
+            "unix"
+          ],
+          "profile": null,
+          "default": false
+        }
+      ]
     },
     {
       "path": "home/.local/bin/reset_cjk-font-fallback.cmd",

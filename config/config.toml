@@ -116,7 +116,7 @@ zig = "latest"
 "~/.config/starship.toml" = { mode = "track" }
 "~/.gitconfig" = { mode = "track" }
 "~/.local/bin/ai.cmd" = { mode = "track", variants = [{ os = "windows" }] }
-"~/.local/bin/ai.sh" = { mode = "track" }
+"~/.local/bin/ai.sh" = { mode = "track", variants = [{ os = "unix" }] }
 "~/.local/bin/reset_cjk-font-fallback.cmd" = { mode = "track", variants = [{ os = "windows" }] }
 "~/.local/bin/set_cjk-font-fallback.cmd" = { mode = "track", variants = [{ os = "windows" }] }
 "~/.pi/agent/APPEND_SYSTEM.md" = { mode = "track" }
