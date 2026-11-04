@@ -148,20 +148,6 @@
       ]
     },
     {
-      "path": "home/.local/bin/ai.sh",
-      "autosave": true,
-      "encrypt": false,
-      "variants": [
-        {
-          "os": [
-            "unix"
-          ],
-          "profile": null,
-          "default": false
-        }
-      ]
-    },
-    {
       "path": "home/.local/bin/reset_cjk-font-fallback.cmd",
       "autosave": true,
       "encrypt": false,
