@@ -14,10 +14,76 @@
       "variants": []
     },
     {
-      "path": "config/dotfiles",
+      "path": "config/dotfiles/clash-verge-rev",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [],
+          "profile": "default",
+          "default": false
+        }
+      ]
+    },
+    {
+      "path": "config/dotfiles/nushell",
       "autosave": true,
       "encrypt": false,
       "variants": []
+    },
+    {
+      "path": "config/dotfiles/nvim",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
+      "path": "config/dotfiles/rime",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [],
+          "profile": "default",
+          "default": false
+        }
+      ]
+    },
+    {
+      "path": "config/dotfiles/rio",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [],
+          "profile": "default",
+          "default": false
+        }
+      ]
+    },
+    {
+      "path": "config/dotfiles/vscode",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [],
+          "profile": "default",
+          "default": false
+        }
+      ]
+    },
+    {
+      "path": "config/dotfiles/zed",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [],
+          "profile": "default",
+          "default": false
+        }
+      ]
     },
     {
       "path": "config/mise.lock",
@@ -66,6 +132,34 @@
       "autosave": true,
       "encrypt": false,
       "variants": []
+    },
+    {
+      "path": "home/.local/bin/ai",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [
+            "unix"
+          ],
+          "profile": null,
+          "default": false
+        }
+      ]
+    },
+    {
+      "path": "home/.local/bin/ai.cmd",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [
+            "windows"
+          ],
+          "profile": null,
+          "default": false
+        }
+      ]
     },
     {
       "path": "home/.local/bin/reset_cjk-font-fallback.cmd",

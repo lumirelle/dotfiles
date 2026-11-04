@@ -1,0 +1,44 @@
+{
+  // Extension Count: 20 + $DEFAULT_VSCODE = 54
+  "recommendations": [
+    // #region Appearance / Editor
+    // Lens
+    "yoavbls.pretty-ts-errors",
+    // Hint
+    "ruban-s.fast-import-cost",
+    "antfu.pnpm-catalog-lens",
+    "antfu.iconify",
+    // #endregion
+
+    // #region Behavior / Dev Experience
+    // Zig
+    "ziglang.vscode-zig",
+    // Rust
+    "rust-lang.rust-analyzer",
+    // Go
+    "golang.go",
+    // JavaScript / TypeScript
+    "johnsoncodehk.vscode-tsconfig-helper",
+    "npmx-dev.vscode-npmx",
+    // Vue
+    "vue.volar",
+    "nuxtr.nuxtr-vscode",
+    "alimozdemir.vscode-nuxt-dx-tools",
+    "antfu.goto-alias", // F12
+    "antfu.slidev",
+    // Atomic CSS Frameworks
+    "antfu.unocss",
+    "bradlc.vscode-tailwindcss",
+    // Testing
+    "vitest.explorer",
+    // I18n
+    "lokalise.i18n-ally",
+    // REST Client
+    "humao.rest-client",
+    // #endregion
+
+    // #region Behavior / Lint
+    "dbaeumer.vscode-eslint"
+    // #endregion
+  ]
+}

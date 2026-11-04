@@ -92,7 +92,7 @@ variants = [
 
 [dotfiles."dotfiles/rime/double_pinyin_flypy.custom.yaml"]
 mode = "copy"
-source = "dotfiles/rime/default.custom.yaml"
+source = "dotfiles/rime/double_pinyin_flypy.custom.yaml"
 variants = [
   { os = "macos", target = "~/Library/Rime/double_pinyin_flypy.custom.yaml" },
   { os = "linux", target = "~/.config/ibus/rime/double_pinyin_flypy.custom.yaml" },
@@ -103,7 +103,7 @@ variants = [
 
 [dotfiles."dotfiles/rime/weasel.custom.yaml"]
 mode = "copy"
-source = "dotfiles/rime/default.custom.yaml"
+source = "dotfiles/rime/weasel.custom.yaml"
 variants = [
   { os = "macos", target = "~/Library/Rime/weasel.custom.yaml" },
   { os = "linux", target = "~/.config/ibus/rime/weasel.custom.yaml" },

@@ -1,0 +1,136 @@
+{
+  "Commnet Todo": {
+    "prefix": "todo",
+    "description": "Commnet Todo",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,scss,java,go,python,c,cpp,rust,jsonc,zig",
+    "body": ["// TODO(Lumirelle): $0"],
+  },
+  "Commnet Todo in HTML": {
+    "prefix": "todo",
+    "description": "Commnet Todo in HTML",
+    "scope": "html,markdown",
+    "body": ["<!-- TODO(Lumirelle): $0 -->"],
+  },
+  "Commnet Todo in CSS": {
+    "prefix": "todo",
+    "description": "Commnet Todo in CSS",
+    "scope": "css",
+    "body": ["/* TODO(Lumirelle): $0 */"],
+  },
+  "Commnet Todo Block": {
+    "prefix": "todoblock",
+    "description": "Commnet Todo Block",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,java,go,python,c,cpp,rust,jsonc",
+    "body": ["/**", " * TODO(Lumirelle): $0", " */"],
+  },
+  "Commnet Todo Block With ///": {
+    "prefix": "todoblock",
+    "description": "Commnet Todo Block With ///",
+    "scope": "scss,zig",
+    "body": ["///", "/// TODO(Lumirelle): $0", "///"],
+},
+"Comment XXX": {
+	"prefix": "xxx",
+	"description": "Comment XXX",
+	"scope": "javascript,javascriptreact,typescript,typescriptreact,scss,java,go,python,c,cpp,rust,jsonc,zig",
+	"body": [
+		"// XXX(Lumirelle): $0"
+	]
+},
+"Commnet XXX in HTML": {
+	"prefix": "xxx",
+	"description": "Commnet XXX in HTML",
+	"scope": "html,markdown",
+	"body": [
+		"<!-- BUG(Lumirelle): $0 -->"
+	]
+},
+"Commnet XXX in CSS": {
+	"prefix": "xxx",
+	"description": "Commnet XXX in CSS",
+	"scope": "css",
+	"body": [
+		"/* XXX(Lumirelle): $0 */"
+	]
+},
+"Commnet XXX Block": {
+	"prefix": "xxxblock",
+	"description": "Commnet XXX Block",
+	"scope": "javascript,javascriptreact,typescript,typescriptreact,java,go,python,c,cpp,rust",
+	"body": [
+		"/**",
+		" * XXX(Lumirelle): $0",
+		" */"
+	]
+},
+"Commnet XXX Block With ///": {
+	"prefix": "xxxblock",
+	"description": "Commnet XXX Block With ///",
+	"scope": "scss,zig",
+	"body": [
+		"///",
+		"/// XXX(Lumirelle): $0",
+		"///"
+	]
+},
+  "Commnet Fixme": {
+    "prefix": "fxm",
+    "description": "Commnet Fixme",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,scss,java,go,python,c,cpp,rust,jsonc,zig",
+    "body": ["// FIXME(Lumirelle): $0"],
+  },
+  "Commnet Fixme in HTML": {
+    "prefix": "fxm",
+    "description": "Commnet fixme in HTML",
+    "scope": "html,markdown",
+    "body": ["<!-- FIXME(Lumirelle): $0 -->"],
+  },
+  "Commnet Fixme in CSS": {
+    "prefix": "fxm",
+    "description": "Commnet Fixme in CSS",
+    "scope": "css",
+    "body": ["/* FIXME(Lumirelle): $0 */"],
+  },
+  "Commnet Fixme Block": {
+    "prefix": "fxmblock",
+    "description": "Commnet Fixme Block",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,java,go,python,c,cpp,rust",
+    "body": ["/**", " * FIXME(Lumirelle): $0", " */"],
+  },
+  "Commnet Fixme Block With ///": {
+    "prefix": "fxmblock",
+    "description": "Commnet Fixme Block With ///",
+    "scope": "scss,zig",
+    "body": ["///", "/// FIXME(Lumirelle): $0", "///"],
+},
+  "Commnet Note": {
+    "prefix": "note",
+    "description": "Commnet Note",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,scss,java,go,python,c,cpp,rust,jsonc,zig",
+    "body": ["// NOTE(Lumirelle): $0"],
+  },
+  "Commnet Note in HTML": {
+    "prefix": "note",
+    "description": "Commnet Note in HTML",
+    "scope": "html,markdown",
+    "body": ["<!-- NOTE(Lumirelle): $0 -->"],
+  },
+  "Commnet Note in CSS": {
+    "prefix": "note",
+    "description": "Commnet Note in CSS",
+    "scope": "css",
+    "body": ["/* NOTE(Lumirelle): $0 */"],
+  },
+  "Commnet Note Block": {
+    "prefix": "noteblock",
+    "description": "Commnet Note Block",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact,java,go,python,c,cpp,rust",
+    "body": ["/**", " * NOTE(Lumirelle): $0", " */"],
+  },
+  "Commnet Note Block With ///": {
+    "prefix": "noteblock",
+    "description": "Commnet Note Block With ///",
+    "scope": "scss,zig",
+    "body": ["///", "/// NOTE(Lumirelle): $0", "///"],
+  },
+}
