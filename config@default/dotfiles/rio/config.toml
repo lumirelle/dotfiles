@@ -14,8 +14,6 @@ trail-cursor = true
 
 [fonts]
 family = "Geist Mono"
-size = 16
-hinting = false
 
 [shell]
 program = "nu"
