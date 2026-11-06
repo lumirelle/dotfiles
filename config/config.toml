@@ -107,6 +107,7 @@ zig = "latest"
 "~/.config/mise/dotfiles/nvim" = { mode = "track" }
 "~/.config/mise/dotfiles/rime" = { mode = "track", variants = [{ profile = "default" }] }
 "~/.config/mise/dotfiles/rio" = { mode = "track", variants = [{ profile = "default" }] }
+"~/.config/mise/dotfiles/tuios" = { mode = "track" }
 "~/.config/mise/dotfiles/vscode" = { mode = "track", variants = [{ profile = "default" }] }
 "~/.config/mise/dotfiles/zed" = { mode = "track", variants = [{ profile = "default" }] }
 "~/.config/mise/mise.lock" = { mode = "track" }
