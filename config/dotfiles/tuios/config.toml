@@ -1,0 +1,6 @@
+[startup]
+tiled = true
+daemon = true
+
+[appearance]
+preferred_shell = "nu"

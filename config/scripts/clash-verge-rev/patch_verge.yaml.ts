@@ -34,7 +34,7 @@ const DESIRED: Record<string, unknown> = {
   env_type: 'nushell',
   enable_auto_launch: true,
   enable_silent_start: true,
-  theme_setting: { font_family: '\'Aporetic Serif\', \'Zhuque Fangsong (technical preview)\', \'Symbols Nerd Font\'' },
+  theme_setting: { font_family: '\'Geist\', \'Resource Han Rounded CN\'' },
 }
 
 const APP = 'io.github.clash-verge-rev.clash-verge-rev'

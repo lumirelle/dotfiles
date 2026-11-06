@@ -86,7 +86,7 @@ const BASELINE = String.raw`{
       "backgroundImageOpacity": 0.24,
       "colorScheme": "Vercel Dark",
       "font": {
-        "face": "'Aporetic Serif Mono', 'Zhuque Fangsong A1050', 'Symbols Nerd Font Mono'"
+        "face": "'GeistMono Nerd Font', 'Maple Mono CN'"
       },
       "intenseTextStyle": "all",
       "opacity": 100,

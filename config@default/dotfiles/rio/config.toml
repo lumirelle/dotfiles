@@ -1,5 +1,7 @@
-# 1. Set TERM to fit the prerequisite of TUIOS.
-env-vars = ["TERM=xterm-256color"]
+# 1. Disguise as Kitty, deceive Snacks.nvim.
+# Rio currently supports Kitty Graphic Protocol, but does not being added to the terminal whitelist of Snacks.nvim.
+# 2. Set TERM to fit the prerequisite of TUIOS.
+env-vars = ["TERM=xterm-256color", "SNAKS_KITTY=true", "WSLENV=TERM_PROGRAM:TERM_PROGRAM_VERSION:COLORTERM:TERM:SNAKS_KITTY"]
 
 [editor]
 program = "nvim"
@@ -11,9 +13,8 @@ blinking = true
 trail-cursor = true
 
 [fonts]
-family = "Aporetic Serif Mono"
+family = "GeistMono Nerd Font"
 size = 16
-hinting = false
 
 [shell]
 program = "nu"
