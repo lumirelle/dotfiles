@@ -1,7 +1,8 @@
 @echo off
 
-@REM Manually restore the default Windows system UI font
-@REM Counterpart of `run_onchange_ui.cmd`, run it by hand when the custom UI font breaks the system
+@REM Restore the default Windows system UI font links
+@REM Counterpart of `set_cjk-font-fallback.cmd`, run it by hand when the custom UI font breaks the system
 
-sudo reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink" /v "Aporetic Serif" /f
-sudo reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink" /v "Aporetic Serif Bold" /f
+sudo reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink" /v "Segoe UI" /t REG_MULTI_SZ /s "|" /d "TAHOMA.TTF,Tahoma|MEIRYO.TTC,Meiryo UI,128,96|MEIRYO.TTC,Meiryo UI|MSGOTHIC.TTC,MS UI Gothic|MSJH.TTC,Microsoft JhengHei UI,128,96|MSJH.TTC,Microsoft JhengHei UI|MSYH.TTC,Microsoft YaHei UI,128,96|MSYH.TTC,Microsoft YaHei UI|MALGUN.TTF,Malgun Gothic,128,96|MALGUN.TTF,Malgun Gothic|MINGLIU.TTC,PMingLiU|SIMSUN.TTC,SimSun|GULIM.TTC,Gulim|YUGOTHM.TTC,Yu Gothic UI,128,96|YUGOTHM.TTC,Yu Gothic UI|SEGUISYM.TTF,Segoe UI Symbol" /f
+sudo reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink" /v "Segoe UI Light" /t REG_MULTI_SZ /s "|" /d "MEIRYO.TTC,Meiryo UI,128,96|MEIRYO.TTC,Meiryo UI|MSJHL.TTC,Microsoft JhengHei UI Light,128,96|MSJHL.TTC,Microsoft JhengHei UI Light|MSYHL.TTC,Microsoft YaHei UI Light,128,96|MSYHL.TTC,Microsoft YaHei UI Light|MALGUNSL.TTF,Malgun Gothic Semilight,128,96|MALGUNSL.TTF,Malgun Gothic Semilight|YUGOTHL.TTC,Yu Gothic UI Light,128,96|YUGOTHL.TTC,Yu Gothic UI Light|SEGUISYM.TTF,Segoe UI Symbol" /f
+sudo reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink" /v "Segoe UI Bold" /t REG_MULTI_SZ /s "|" /d "MEIRYOB.TTC,Meiryo UI Bold,128,96|MEIRYOB.TTC,Meiryo UI Bold|MSJHBD.TTC,Microsoft JhengHei UI Bold,128,96|MSJHBD.TTC,Microsoft JhengHei UI Bold|MSYHBD.TTC,Microsoft YaHei UI Bold,128,96|MSYHBD.TTC,Microsoft YaHei UI Bold|MALGUNBD.TTF,Malgun Gothic Bold,128,96|MALGUNBD.TTF,Malgun Gothic Bold|YUGOTHB.TTC,Yu Gothic UI Bold,128,96|YUGOTHB.TTC,Yu Gothic UI Bold|SEGUISYM.TTF,Segoe UI Symbol" /f

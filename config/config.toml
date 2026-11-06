@@ -170,3 +170,10 @@ variants = [
   { os = "windows", target = "~/AppData/Local/nvim/" },
 ]
 
+[dotfiles."dotfiles/tuios/config.toml"]
+mode = "copy"
+source = "dotfiles/tuios/config.toml"
+variants = [
+  { os = "unix", target = "~/.config/tuios/config.toml" },
+  { os = "windows", target = "~/AppData/Local/tuios/config.toml" },
+]
