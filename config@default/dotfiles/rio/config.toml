@@ -13,7 +13,19 @@ blinking = true
 trail-cursor = true
 
 [fonts]
-family = "Geist Mono"
+size = 16
+
+[fonts.regular]
+family = "Geist Mono Regular"
+
+[fonts.italic]
+family = "Geist Mono Italic"
+
+[fonts.bold]
+family = "Geist Bold"
+
+[fonts.bold-italic]
+family = "Geist Bold Italic"
 
 [shell]
 program = "nu"
