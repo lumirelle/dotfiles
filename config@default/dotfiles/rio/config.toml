@@ -16,16 +16,20 @@ trail-cursor = true
 size = 16
 
 [fonts.regular]
-family = "Geist Mono Regular"
+family = "Geist Mono"
+style = "Regular"
 
 [fonts.italic]
-family = "Geist Mono Italic"
+family = "Geist Mono"
+style = "Italic"
 
 [fonts.bold]
-family = "Geist Bold"
+family = "Geist Mono"
+style = "Bold"
 
 [fonts.bold-italic]
-family = "Geist Bold Italic"
+family = "Geist Mono"
+style = "Bold Italic"
 
 [shell]
 program = "nu"
