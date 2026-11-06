@@ -293,8 +293,8 @@
   "editor.cursorSmoothCaretAnimation": "on",
   // #endregion
   // #region Appearance / Font
-  "custom-ui-style.font.sansSerif": "'Geist', 'Maple Mono CN', sans-serif",
-  "markdown.preview.fontFamily": "'Geist Serif', 'Maple Mono CN', monospace",
+  "custom-ui-style.font.sansSerif": "'Geist', 'Resource Han Rounded CN', sans-serif",
+  "markdown.preview.fontFamily": "'Geist Serif', 'Resource Han Rounded CN', monospace",
   "editor.fontFamily": "'GeistMono Nerd Font', 'Maple Mono CN', monospace",
   "custom-ui-style.font.monospace": "'GeistMono Nerd Font', 'Maple Mono CN'", // Will falls back to editor's font silently
   "markdown.preview.fontSize": 14,
