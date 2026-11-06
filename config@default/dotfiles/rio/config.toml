@@ -16,6 +16,12 @@ trail-cursor = true
 family = "Geist Mono"
 size = 16
 
+[fonts.bold]
+weight = 700
+
+[fonts.bold-italic]
+weight = 700
+
 [shell]
 program = "nu"
 args = ["--login"]
