@@ -25,7 +25,7 @@ style = "Italic"
 
 [fonts.bold]
 family = "Geist Mono"
-style = "Bold"
+style = "default"
 
 [fonts.bold-italic]
 family = "Geist Mono"
