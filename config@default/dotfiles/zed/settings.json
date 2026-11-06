@@ -24,14 +24,12 @@
   // Font
   "ui_font_family": "Geist",
   "ui_font_fallbacks": [
-    "Zhuque Fangsong (technical preview)",
-    "Symbols Nerd Font"
+    "Zhuque Fangsong (technical preview)"
   ],
   "ui_font_size": 16,
-  "buffer_font_family": "Geist Mono",
+  "buffer_font_family": "GeistMono Nerd Font",
   "buffer_font_fallbacks": [
-    "Zhuque Fangsong A1050",
-    "Symbols Nerd Font"
+    "Zhuque Fangsong A1050"
   ],
   "buffer_font_size": 16,
   "buffer_font_features": {

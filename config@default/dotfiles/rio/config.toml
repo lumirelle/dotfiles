@@ -13,7 +13,7 @@ blinking = true
 trail-cursor = true
 
 [fonts]
-family = "Geist Mono"
+family = "GeistMono Nerd Font"
 size = 16
 
 [shell]
