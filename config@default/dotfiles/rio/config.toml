@@ -25,11 +25,11 @@ style = "Italic"
 
 [fonts.bold]
 family = "Geist Mono"
-weight = "600"
+weight = 600
 
 [fonts.bold-italic]
 family = "Geist Mono"
-style = "Bold Italic"
+weight = 600
 
 [shell]
 program = "nu"
