@@ -270,20 +270,6 @@
       ]
     },
     {
-      "path": "home/AppData/Local/tuios/config.toml",
-      "autosave": true,
-      "encrypt": false,
-      "variants": [
-        {
-          "os": [
-            "windows"
-          ],
-          "profile": null,
-          "default": false
-        }
-      ]
-    },
-    {
       "path": "home/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
       "autosave": true,
       "encrypt": false,
