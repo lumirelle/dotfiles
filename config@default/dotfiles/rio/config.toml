@@ -25,7 +25,7 @@ style = "Italic"
 
 [fonts.bold]
 family = "Geist Mono"
-style = "default"
+weight = "600"
 
 [fonts.bold-italic]
 family = "Geist Mono"
