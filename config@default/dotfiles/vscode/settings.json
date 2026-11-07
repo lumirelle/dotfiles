@@ -293,10 +293,10 @@
   "editor.cursorSmoothCaretAnimation": "on",
   // #endregion
   // #region Appearance / Font
-  "custom-ui-style.font.sansSerif": "'Aporetic Serif', 'Zhuque Fangsong (technical preview)', 'Symbols Nerd Font', sans-serif",
-  "markdown.preview.fontFamily": "'Aporetic Serif', 'Zhuque Fangsong (technical preview)', 'Symbols Nerd Font', monospace",
-  "editor.fontFamily": "'Aporetic Serif Mono', 'Zhuque Fangsong A1050', 'Symbols Nerd Font Mono', monospace",
-  "custom-ui-style.font.monospace": "'Aporetic Serif Mono', 'Zhuque Fangsong A1050', 'Symbols Nerd Font Mono'", // Will falls back to editor's font silently
+  "custom-ui-style.font.sansSerif": "'Geist', 'Resource Han Rounded CN', sans-serif",
+  "markdown.preview.fontFamily": "'Geist Serif', 'Resource Han Rounded CN', monospace",
+  "editor.fontFamily": "'GeistMono Nerd Font', 'Maple Mono CN', monospace",
+  "custom-ui-style.font.monospace": "'GeistMono Nerd Font', 'Maple Mono CN'", // Will falls back to editor's font silently
   "markdown.preview.fontSize": 14,
   "editor.fontSize": 16,
   "terminal.integrated.fontSize": 14,

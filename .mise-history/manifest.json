@@ -62,6 +62,12 @@
       ]
     },
     {
+      "path": "config/dotfiles/tuios",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "config/dotfiles/vscode",
       "autosave": true,
       "encrypt": false,
