@@ -1,5 +1,7 @@
 -- Generate `.gitignore` files from the templates in https://github.com/github/gitignore.
 --
+-- TODO: Create a seperate repo for this plugin.
+--
 -- The template list comes from the GitHub trees API and is cached for a day, so the picker opens
 -- instantly after the first fetch. Every `.gitignore` in the repo is offered, including the
 -- `Global/` and `community/` folders (shown as a dim path hint), and templates are identified by
