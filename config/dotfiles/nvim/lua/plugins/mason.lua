@@ -12,16 +12,14 @@ return {
   },
 
   -- Use mason-tool-installer for automatically installing Mason packages.
-  -- {
-  --   "WhoIsSethDaniel/mason-tool-installer.nvim",
-  --   opts = {
-  --     -- Make sure to use the names found in `:Mason`
-  --     ensure_installed = {
-  --       "lua-language-server",
-  --       "stylua",
-  --       "debugpy",
-  --       "tree-sitter-cli",
-  --     },
-  --   },
-  -- },
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    opts = {
+      -- Make sure to use the names found in `:Mason`.
+      -- `oxfmt` is a Prettier-compatible formatter; mason-lspconfig maps it to the `oxfmt` LSP.
+      ensure_installed = {
+        "oxfmt",
+      },
+    },
+  },
 }

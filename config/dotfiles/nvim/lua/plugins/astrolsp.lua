@@ -9,6 +9,18 @@ return {
     -- Never autoformat on save; format manually with <Leader>lf (or toggle back with <Leader>uF).
     opts.formatting = vim.tbl_deep_extend("force", opts.formatting or {}, {
       format_on_save = { enabled = false },
+      -- oxfmt runs as an LSP (`oxfmt --lsp`) and covers the same filetypes as vtsls,
+      -- jsonls, yamlls, taplo, ... which also advertise document formatting.
+      -- `vim.lsp.buf.format` applies every matching client in sequence, so prefer
+      -- oxfmt whenever it is attached and keep the buffer from being formatted twice.
+      filter = function(client)
+        if client.name == "oxfmt" then return true end
+        return #vim.lsp.get_clients({
+          bufnr = vim.api.nvim_get_current_buf(),
+          name = "oxfmt",
+          method = "textDocument/formatting",
+        }) == 0
+      end,
     })
 
     -- AstroNvim enables Mason-installed servers from its mason-lspconfig config, but that path is wrapped in
