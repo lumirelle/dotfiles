@@ -20,6 +20,7 @@ lockfile = true
 "winget:GLab.GLab" = "latest"
 "winget:tree-sitter.tree-sitter-cli" = "latest"
 "winget:ImageMagick.ImageMagick" = "latest"
+"winget:Orange-OpenSource.Hurl" = "latest"
 "winget:WiresharkFoundation.Wireshark" = "latest"
 # Windows UX Enhance
 "winget:Brave.Brave" = "latest"
@@ -59,6 +60,7 @@ lockfile = true
 "pacman:tree-sitter-cli" = "latest"
 "pacman:imagemagick" = "latest"
 "pacman:wireshark-cli" = "latest"
+"pacman:hurl" = "latest"
 # Archlinux UX Enhance
 "aur:brave-bin" = "latest"
 "pacman:zoxide" = "latest"
