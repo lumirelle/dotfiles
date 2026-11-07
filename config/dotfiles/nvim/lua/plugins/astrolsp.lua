@@ -15,10 +15,16 @@ return {
       -- oxfmt whenever it is attached and keep the buffer from being formatted twice.
       filter = function(client)
         if client.name == "oxfmt" then return true end
+        -- Mirror vim.lsp.buf.format: a visual selection formats the range, otherwise
+        -- the whole buffer. Checking the same method keeps range formatting working
+        -- when oxfmt only supports full-document formatting.
+        local mode = vim.api.nvim_get_mode().mode
+        local method = (mode == "v" or mode == "V") and "textDocument/rangeFormatting"
+          or "textDocument/formatting"
         return #vim.lsp.get_clients({
           bufnr = vim.api.nvim_get_current_buf(),
           name = "oxfmt",
-          method = "textDocument/formatting",
+          method = method,
         }) == 0
       end,
     })
