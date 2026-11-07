@@ -137,6 +137,77 @@ checksum = "sha256:f3c0813f8194f31ad91b3492ba50861de2fa3799832c145a93754d3bda1d1
 url = "https://github.com/SyrianTurk/SyrianSegoe/releases/download/v0.5/SyrianSegoe.exe"
 url_api = "https://api.github.com/repos/SyrianTurk/SyrianSegoe/releases/assets/432493905"
 
+[[tools."github:gcla/termshark"]]
+version = "2.4.0"
+backend = "github:gcla/termshark"
+specifiers = ["latest"]
+
+[tools."github:gcla/termshark"."platforms.linux-arm64"]
+checksum = "sha256:6dc3003a48291c463f057d0151727e0d21e295d804f082f3d35d72fd94d0a56e"
+checksum_source = "mise-versions"
+url = "https://github.com/gcla/termshark/releases/download/v2.4.0/termshark_2.4.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/gcla/termshark/releases/assets/71274415"
+
+[tools."github:gcla/termshark"."platforms.linux-arm64-musl"]
+checksum = "sha256:6dc3003a48291c463f057d0151727e0d21e295d804f082f3d35d72fd94d0a56e"
+checksum_source = "mise-versions"
+url = "https://github.com/gcla/termshark/releases/download/v2.4.0/termshark_2.4.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/gcla/termshark/releases/assets/71274415"
+
+[tools."github:gcla/termshark"."platforms.linux-x64"]
+checksum = "sha256:a28b2ab534ba8bf2297bbe9846281e62aa0010832b75773369e0d48912acef74"
+checksum_source = "mise-versions"
+url = "https://github.com/gcla/termshark/releases/download/v2.4.0/termshark_2.4.0_linux_x64.tar.gz"
+url_api = "https://api.github.com/repos/gcla/termshark/releases/assets/71274409"
+
+[tools."github:gcla/termshark"."platforms.linux-x64-baseline"]
+checksum = "sha256:a28b2ab534ba8bf2297bbe9846281e62aa0010832b75773369e0d48912acef74"
+checksum_source = "mise-versions"
+url = "https://github.com/gcla/termshark/releases/download/v2.4.0/termshark_2.4.0_linux_x64.tar.gz"
+url_api = "https://api.github.com/repos/gcla/termshark/releases/assets/71274409"
+
+[tools."github:gcla/termshark"."platforms.linux-x64-musl"]
+checksum = "sha256:a28b2ab534ba8bf2297bbe9846281e62aa0010832b75773369e0d48912acef74"
+checksum_source = "mise-versions"
+url = "https://github.com/gcla/termshark/releases/download/v2.4.0/termshark_2.4.0_linux_x64.tar.gz"
+url_api = "https://api.github.com/repos/gcla/termshark/releases/assets/71274409"
+
+[tools."github:gcla/termshark"."platforms.linux-x64-musl-baseline"]
+checksum = "sha256:a28b2ab534ba8bf2297bbe9846281e62aa0010832b75773369e0d48912acef74"
+checksum_source = "mise-versions"
+url = "https://github.com/gcla/termshark/releases/download/v2.4.0/termshark_2.4.0_linux_x64.tar.gz"
+url_api = "https://api.github.com/repos/gcla/termshark/releases/assets/71274409"
+
+[tools."github:gcla/termshark"."platforms.macos-arm64"]
+checksum = "sha256:440e2e3968df66a6c71317b00e3de816d2aa4469097218fcf17fabcea0b28480"
+checksum_source = "mise-versions"
+url = "https://github.com/gcla/termshark/releases/download/v2.4.0/termshark_2.4.0_macOS_arm64.tar.gz"
+url_api = "https://api.github.com/repos/gcla/termshark/releases/assets/71274413"
+
+[tools."github:gcla/termshark"."platforms.macos-x64"]
+checksum = "sha256:fbbe6232aeac6aeafbfb439629270437a2dc307f6346bc225c37df7f5645f842"
+checksum_source = "mise-versions"
+url = "https://github.com/gcla/termshark/releases/download/v2.4.0/termshark_2.4.0_macOS_x64.tar.gz"
+url_api = "https://api.github.com/repos/gcla/termshark/releases/assets/71274417"
+
+[tools."github:gcla/termshark"."platforms.macos-x64-baseline"]
+checksum = "sha256:fbbe6232aeac6aeafbfb439629270437a2dc307f6346bc225c37df7f5645f842"
+checksum_source = "mise-versions"
+url = "https://github.com/gcla/termshark/releases/download/v2.4.0/termshark_2.4.0_macOS_x64.tar.gz"
+url_api = "https://api.github.com/repos/gcla/termshark/releases/assets/71274417"
+
+[tools."github:gcla/termshark"."platforms.windows-x64"]
+checksum = "sha256:f6cb1628e7630ae4707f0438a12a1f64c7eda57d4d6ada636a7c44e3d54b1e68"
+checksum_source = "mise-versions"
+url = "https://github.com/gcla/termshark/releases/download/v2.4.0/termshark_2.4.0_windows_x64.zip"
+url_api = "https://api.github.com/repos/gcla/termshark/releases/assets/71274419"
+
+[tools."github:gcla/termshark"."platforms.windows-x64-baseline"]
+checksum = "sha256:f6cb1628e7630ae4707f0438a12a1f64c7eda57d4d6ada636a7c44e3d54b1e68"
+checksum_source = "mise-versions"
+url = "https://github.com/gcla/termshark/releases/download/v2.4.0/termshark_2.4.0_windows_x64.zip"
+url_api = "https://api.github.com/repos/gcla/termshark/releases/assets/71274419"
+
 [[tools."github:vercel-labs/agent-browser"]]
 version = "0.41.0"
 backend = "github:vercel-labs/agent-browser"

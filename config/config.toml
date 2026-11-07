@@ -85,6 +85,7 @@ lockfile = true
 fnox = "latest"
 "github:vercel-labs/agent-browser" = "latest"
 "github:vercel-labs/agent-desktop" = "latest"
+"github:gcla/termshark" = "latest"
 # Environment/Infrastructure
 node = { version = "latest", postinstall = "npm install -g degit" }
 bun = "latest"
