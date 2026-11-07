@@ -179,3 +179,6 @@ variants = [
   { os = "unix", target = "~/.config/tuios/config.toml" },
   { os = "windows", target = "~/AppData/Local/tuios/config.toml" },
 ]
+
+[bootstrap.hooks.final]
+run = "tuios integration install claude pi"
