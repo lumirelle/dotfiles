@@ -12,14 +12,18 @@ return {
   -- @see https://astronvim.github.io/astrocommunity/#mini-surround
   { import = "astrocommunity.motion.mini-surround" },
 
+  -- -- GIT --
+  -- @see https://astronvim.github.io/astrocommunity/#diffview-plus-nvim
+  { import = "astrocommunity.git.diffview-plus-nvim" },
+
   -- -- LANGUAGE PACK --
   { import = "astrocommunity.pack.bash" },
-  { import = "astrocommunity.pack.chezmoi" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.eslint" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.html-css" },
+  { import = "astrocommunity.pack.hurl" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.mdx" },
@@ -30,8 +34,7 @@ return {
   { import = "astrocommunity.pack.ps1" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.rust" },
-  -- Disabled, it requires global installation of Go language.
-  -- { import = "astrocommunity.pack.sql" },
+  { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.vue" },
