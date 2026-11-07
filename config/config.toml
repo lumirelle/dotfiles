@@ -84,6 +84,7 @@ lockfile = true
 "github:SyrianTurk/SyrianSegoe" = { os = "windows", version = "latest" } # Replace Windows system (Latin) font
 fnox = "latest"
 "github:vercel-labs/agent-browser" = "latest"
+"github:vercel-labs/agent-desktop" = "latest"
 # Environment/Infrastructure
 node = { version = "latest", postinstall = "npm install -g degit" }
 bun = "latest"
