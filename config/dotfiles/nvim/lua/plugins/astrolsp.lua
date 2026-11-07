@@ -6,9 +6,10 @@ return {
   "AstroNvim/astrolsp",
   ---@param opts AstroLSPOpts
   opts = function(_, opts)
-    -- Never autoformat on save; format manually with <Leader>lf (or toggle back with <Leader>uF).
     opts.formatting = vim.tbl_deep_extend("force", opts.formatting or {}, {
+      -- Never autoformat on save; format manually with <Leader>lf (or toggle back with <Leader>uF).
       format_on_save = { enabled = false },
+
       -- oxfmt runs as an LSP (`oxfmt --lsp`) and covers the same filetypes as vtsls,
       -- jsonls, yamlls, taplo, ... which also advertise document formatting.
       -- `vim.lsp.buf.format` applies every matching client in sequence, so prefer
