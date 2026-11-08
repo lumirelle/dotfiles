@@ -1,9 +1,7 @@
 # User information
 [user]
 name = Lumirelle
-email = lumirelle@outlook.com
-[credential "https://gitee.com"]
-provider = generic
+email = github@lumirelle.me
 
 # Core
 [core]
