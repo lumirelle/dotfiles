@@ -261,34 +261,34 @@ function genRulesAndProviders() {
     // Domain
     'RULE-SET,reject,Just Reject',
 
-    'GEOSITE,openai,Chat GPT',
-    'GEOSITE,anthropic,Claude Code',
-
-    'GEOSITE,google,Just Proxy',
-    'GEOSITE,youtube,Just Proxy',
-    'GEOSITE,netflix,Just Proxy',
-    'DOMAIN,zig.mirror.mschae23.de,Just Proxy',
-    'DOMAIN-SUFFIX,exa.ai,Just Proxy',
-
+    'DOMAIN,downloads.claude.ai,Just Direct',
     'DOMAIN-SUFFIX,rockstargames.com,Just Direct',
     'DOMAIN-SUFFIX,lspdfrcn.net,Just Direct',
     'DOMAIN-SUFFIX,test-ipv6.com,Just Direct',
-    'RULE-SET,private,Just Direct',
-    'RULE-SET,direct,Just Direct',
     'GEOSITE,category-games@cn,Just Direct',
     'GEOSITE,steam@cn,Just Direct',
     'GEOSITE,microsoft@cn,Just Direct',
     'GEOSITE,onedrive,Just Direct',
     'GEOSITE,apple-cn,Just Direct',
+    'RULE-SET,private,Just Direct',
+    'RULE-SET,direct,Just Direct',
 
+    'GEOSITE,openai,Chat GPT',
+    'GEOSITE,anthropic,Claude Code',
+
+    'DOMAIN,zig.mirror.mschae23.de,Just Proxy',
+    'DOMAIN-SUFFIX,exa.ai,Just Proxy',
+    'GEOSITE,google,Just Proxy',
+    'GEOSITE,youtube,Just Proxy',
+    'GEOSITE,netflix,Just Proxy',
     'RULE-SET,proxy,Just Proxy',
 
     // CIDR
-    'RULE-SET,telegramcidr,Just Proxy',
     'RULE-SET,lancidr,Just Direct',
     'RULE-SET,cncidr,Just Direct',
+    'RULE-SET,telegramcidr,Just Proxy',
 
-    // GEO
+    // IP
     'GEOIP,LAN,Just Direct',
     'GEOIP,CN,Just Direct',
 

@@ -17,6 +17,7 @@ $env.config.buffer_editor = 'nvim'
 # -- ALIASES --
 source aliases/sudo.nu
 source aliases/built-in.nu
+source aliases/ai.nu
 source aliases/cwd-file-exts.nu
 source aliases/lazygit.nu
 source aliases/chezmoi.nu

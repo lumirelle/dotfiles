@@ -6,9 +6,28 @@ return {
   "AstroNvim/astrolsp",
   ---@param opts AstroLSPOpts
   opts = function(_, opts)
-    -- Never autoformat on save; format manually with <Leader>lf (or toggle back with <Leader>uF).
     opts.formatting = vim.tbl_deep_extend("force", opts.formatting or {}, {
+      -- Never autoformat on save; format manually with <Leader>lf (or toggle back with <Leader>uF).
       format_on_save = { enabled = false },
+
+      -- oxfmt runs as an LSP (`oxfmt --lsp`) and covers the same filetypes as vtsls,
+      -- jsonls, yamlls, taplo, ... which also advertise document formatting.
+      -- `vim.lsp.buf.format` applies every matching client in sequence, so prefer
+      -- oxfmt whenever it is attached and keep the buffer from being formatted twice.
+      filter = function(client)
+        if client.name == "oxfmt" then return true end
+        -- Mirror vim.lsp.buf.format: a visual selection formats the range, otherwise
+        -- the whole buffer. Checking the same method keeps range formatting working
+        -- when oxfmt only supports full-document formatting.
+        local mode = vim.api.nvim_get_mode().mode
+        local method = (mode == "v" or mode == "V") and "textDocument/rangeFormatting"
+          or "textDocument/formatting"
+        return #vim.lsp.get_clients({
+          bufnr = vim.api.nvim_get_current_buf(),
+          name = "oxfmt",
+          method = method,
+        }) == 0
+      end,
     })
 
     -- AstroNvim enables Mason-installed servers from its mason-lspconfig config, but that path is wrapped in
