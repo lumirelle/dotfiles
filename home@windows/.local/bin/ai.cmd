@@ -7,8 +7,8 @@ setlocal
 
 set "GH_CONFIG_DIR=%USERPROFILE%\.config\gh-ai"
 set "GIT_SSH_COMMAND=ssh -o IdentitiesOnly=yes -i %USERPROFILE:\=/%/.ssh/id_ed25519_ai"
-set "GIT_AUTHOR_NAME=Lumirelle Bot"
-set "GIT_COMMITTER_NAME=Lumirelle Bot"
+set "GIT_AUTHOR_NAME=Lumirelle's Bot"
+set "GIT_COMMITTER_NAME=Lumirelle's Bot"
 set "GIT_AUTHOR_EMAIL=githubbot@lumirelle.me"
 set "GIT_COMMITTER_EMAIL=githubbot@lumirelle.me"
 

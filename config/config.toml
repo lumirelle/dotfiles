@@ -20,6 +20,8 @@ lockfile = true
 "winget:GLab.GLab" = "latest"
 "winget:tree-sitter.tree-sitter-cli" = "latest"
 "winget:ImageMagick.ImageMagick" = "latest"
+"winget:Orange-OpenSource.Hurl" = "latest"
+"winget:WiresharkFoundation.Wireshark" = "latest"
 # Windows UX Enhance
 "winget:Brave.Brave" = "latest"
 "winget:ajeetdsouza.zoxide" = "latest"
@@ -57,6 +59,8 @@ lockfile = true
 "pacman:glab" = "latest"
 "pacman:tree-sitter-cli" = "latest"
 "pacman:imagemagick" = "latest"
+"pacman:wireshark-cli" = "latest"
+"pacman:hurl" = "latest"
 # Archlinux UX Enhance
 "aur:brave-bin" = "latest"
 "pacman:zoxide" = "latest"
@@ -84,6 +88,8 @@ lockfile = true
 "github:SyrianTurk/SyrianSegoe" = { os = "windows", version = "latest" } # Replace Windows system (Latin) font
 fnox = "latest"
 "github:vercel-labs/agent-browser" = "latest"
+"github:vercel-labs/agent-desktop" = "latest"
+"github:gcla/termshark" = "latest"
 # Environment/Infrastructure
 node = { version = "latest", postinstall = "npm install -g degit" }
 bun = "latest"
@@ -118,6 +124,7 @@ zig = "latest"
 "~/.gitconfig" = { mode = "track" }
 "~/.local/bin/ai" = { mode = "track", variants = [{ os = "unix" }] }
 "~/.local/bin/ai.cmd" = { mode = "track", variants = [{ os = "windows" }] }
+"~/.local/bin/ai.nu" = { mode = "track" }
 "~/.local/bin/reset_cjk-font-fallback.cmd" = { mode = "track", variants = [{ os = "windows" }] }
 "~/.local/bin/set_cjk-font-fallback.cmd" = { mode = "track", variants = [{ os = "windows" }] }
 "~/.pi/agent/APPEND_SYSTEM.md" = { mode = "track" }
@@ -178,3 +185,6 @@ variants = [
   { os = "unix", target = "~/.config/tuios/config.toml" },
   { os = "windows", target = "~/AppData/Local/tuios/config.toml" },
 ]
+
+[bootstrap.hooks.final]
+run = "tuios integration install claude pi"
