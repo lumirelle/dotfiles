@@ -11,9 +11,8 @@ ignorecase = false
 # See https://git-scm.com/docs/git-config#Documentation/git-config.txt-featuremanyFiles.
 manyFiles = true
 
-# Include additional configuration files based on the current repository path.
-[includeIf "gitdir:~/work/"]
-path = .gitconfig-work
+[include]
+path = .local.gitconfig
 
 [init]
 defaultBranch = main
