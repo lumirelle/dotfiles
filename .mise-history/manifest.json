@@ -180,6 +180,20 @@
       "variants": []
     },
     {
+      "path": "home/.local/bin/build-pyyaml.cmd",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [
+            "windows"
+          ],
+          "profile": null,
+          "default": false
+        }
+      ]
+    },
+    {
       "path": "home/.local/bin/reset_cjk-font-fallback.cmd",
       "autosave": true,
       "encrypt": false,
