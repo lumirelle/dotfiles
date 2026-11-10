@@ -2,10 +2,6 @@
 os:
   editPreset: 'nvim-remote'
 {%- if os() == "windows" %}
-
-  # Windows 专有覆盖：lazygit 在 Windows 上固定用 `cmd /s /c "<命令>"` 执行编辑命令，
-  # 平台 shell 写死为 cmd；而内置 nvim-remote 预设会依据 FISH_VERSION / NU_VERSION
-  # 选择 fish/nushell 语法模板，cmd 无法解析（报 "| was unexpected at this time."）。
   edit: '{% raw %}if defined NVIM (nvim --server "%NVIM%" --remote-send "q" & nvim --server "%NVIM%" --remote-tab {{filename}}) else (nvim -- {{filename}}){% endraw %}'
   editAtLine: '{% raw %}if defined NVIM (nvim --server "%NVIM%" --remote-send "q" & nvim --server "%NVIM%" --remote-tab {{filename}} & nvim --server "%NVIM%" --remote-send ":{{line}}<CR>") else (nvim +{{line}} -- {{filename}}){% endraw %}'
   openDirInEditor: '{% raw %}if defined NVIM (nvim --server "%NVIM%" --remote-send "q" & nvim --server "%NVIM%" --remote-tab {{dir}}) else (nvim -- {{dir}}){% endraw %}'
