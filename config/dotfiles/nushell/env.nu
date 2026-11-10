@@ -1,4 +1,6 @@
 # -- ENVIRONMENT --
+$env.EDITOR = 'nvim'
+$env.VISUAL = 'nvim'
 if ($"($nu.home-dir)/bin" | path exists) {
   $env.PATH = ($env.PATH | prepend $"($nu.home-dir)/bin")
 }
