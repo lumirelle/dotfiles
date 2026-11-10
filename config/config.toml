@@ -139,6 +139,7 @@ zig = "latest"
 "~/.pi/agent/settings.json" = { mode = "track" }
 "~/.profile" = { mode = "track" }
 "~/.wslconfig" = { mode = "track", variants = [{ os = "windows" }] }
+"~/AppData/Local/lazygit/config.yml" = { mode = "track" }
 "~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1" = { mode = "track", variants = [
   { os = "windows" },
 ] }
