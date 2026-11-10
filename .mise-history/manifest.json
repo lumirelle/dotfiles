@@ -152,20 +152,6 @@
       "variants": []
     },
     {
-      "path": "home/.local/bin/build-pyyaml.cmd",
-      "autosave": true,
-      "encrypt": false,
-      "variants": [
-        {
-          "os": [
-            "windows"
-          ],
-          "profile": null,
-          "default": false
-        }
-      ]
-    },
-    {
       "path": "home/.local/bin/build-pyyaml.nu",
       "autosave": true,
       "encrypt": false,
