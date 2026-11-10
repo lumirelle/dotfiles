@@ -144,6 +144,15 @@ zig = "latest"
   { os = "windows" },
 ] }
 
+[dotfiles."dotfiles/lazygit/"]
+mode = "copy"
+source = "dotfiles/lazygit/"
+variants = [
+  { os = "macos", target = "~/Library/Application Support/lazygit/" },
+  { os = "linux", target = "~/.config/lazygit/" },
+  { os = "windows", target = "~/AppData/Local/lazygit/" },
+]
+
 [dotfiles."dotfiles/nushell/aliases/"]
 mode = "copy"
 source = "dotfiles/nushell/aliases/"
