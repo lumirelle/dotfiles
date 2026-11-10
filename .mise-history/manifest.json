@@ -180,6 +180,12 @@
       "variants": []
     },
     {
+      "path": "home/.local/bin/build-pyyaml",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/.local/bin/build-pyyaml.cmd",
       "autosave": true,
       "encrypt": false,

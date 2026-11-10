@@ -1,0 +1,18 @@
+#!/bin/sh
+# build-pyyaml - build a PyYAML wheel for the active interpreter into the local
+# pip wheelhouse, for Pythons that have no prebuilt PyYAML wheel yet.
+# The work lives in build-pyyaml.py so the cmd and nushell front ends share it.
+
+set -eu
+
+here=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+
+if [ -n "${PYTHON:-}" ]; then
+  python=$PYTHON
+elif command -v python3 >/dev/null 2>&1; then
+  python=python3
+else
+  python=python
+fi
+
+exec "$python" "$here/build-pyyaml.py"
