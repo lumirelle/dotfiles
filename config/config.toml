@@ -101,7 +101,6 @@ zig = "latest"
 [dotfiles]
 "~/.bashrc" = { mode = "track" }
 "~/.config/jj/config.toml" = { mode = "track" }
-"~/.config/lazygit/config.yml" = { mode = "track" }
 "~/.config/mise/config.default.toml" = { mode = "track" }
 "~/.config/mise/config.toml" = { mode = "track" }
 "~/.config/mise/dotfiles/clash-verge-rev" = { mode = "track", variants = [{ profile = "default" }] }
