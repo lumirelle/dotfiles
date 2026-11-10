@@ -27,3 +27,22 @@ New-Alias -Name touch -Value New-Item
 New-Alias -Name lzg -Value lazygit
 New-Alias -Name ch -Value chezmoi
 
+
+# -- WSL --
+## Open WSL in the Linux user's home dir instead of the translated Windows cwd
+## (C:\Users\me -> /mnt/c/Users/me). Management invocations such as `wsl -l` or
+## `wsl --shutdown` are passed through untouched.
+function wsl {
+  $management = @(
+    '-l', '--list', '--status', '--version', '-v', '--help', '-h',
+    '--shutdown', '--terminate', '-t', '--update', '--uninstall',
+    '--import', '--import-in-place', '--export', '--unregister',
+    '--install', '--mount', '--unmount', '--manage', '--set-default', '-s',
+    '--set-default-version', '--set-version', '--debug-shell', '--cd'
+  )
+  if ($args | Where-Object { $management -contains $_ }) {
+    wsl.exe @args
+  } else {
+    wsl.exe --cd '~' @args
+  }
+}
