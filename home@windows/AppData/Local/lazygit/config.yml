@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+os:
+  editPreset: 'nvim-remote'
+
+  # 下面三行是 Windows 专有覆盖，同步到 macOS/Linux 时应删掉。
+  # 原因：lazygit 在 Windows 上固定用 `cmd /s /c "<命令>"` 执行编辑命令，且平台
+  # shell 写死为 cmd；而内置 nvim-remote 预设只依据 FISH_VERSION / NU_VERSION
+  # 环境变量挑选 fish/nushell 语法模板（Windows 上 nushell 会设置 NU_VERSION），
+  # cmd 解析失败并报 "| was unexpected at this time."。故用 cmd 语法覆盖模板。
+  edit: 'if defined NVIM (nvim --server "%NVIM%" --remote-send "q" & nvim --server "%NVIM%" --remote-tab {{filename}}) else (nvim -- {{filename}})'
+  editAtLine: 'if defined NVIM (nvim --server "%NVIM%" --remote-send "q" & nvim --server "%NVIM%" --remote-tab {{filename}} & nvim --server "%NVIM%" --remote-send ":{{line}}<CR>") else (nvim +{{line}} -- {{filename}})'
+  openDirInEditor: 'if defined NVIM (nvim --server "%NVIM%" --remote-send "q" & nvim --server "%NVIM%" --remote-tab {{dir}}) else (nvim -- {{dir}})'
