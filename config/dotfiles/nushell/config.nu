@@ -16,7 +16,7 @@ $env.config.show_banner = 'short'
 # -- ALIASES --
 source aliases/sudo.nu
 source aliases/built-in.nu
-source aliases/ai.nu
+source aliases/scripts.nu
 source aliases/cwd-file-exts.nu
 source aliases/lazygit.nu
 source aliases/tuios.nu
