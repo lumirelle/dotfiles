@@ -20,5 +20,6 @@ source aliases/built-in.nu
 source aliases/ai.nu
 source aliases/cwd-file-exts.nu
 source aliases/lazygit.nu
+source aliases/tuios.nu
 source aliases/winget.nu
 source aliases/pacman.nu
