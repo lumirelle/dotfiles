@@ -1,0 +1,123 @@
+#!/usr/bin/env sh
+# Build wheels for packages that have no prebuilt wheel for the active Python,
+# and drop them into the local pip wheelhouse.
+#
+# Usage: build-pip-wheel [package[@version] ...]     (default: pyyaml)
+#
+# Why: mason runs `pip install --ignore-installed`, so a dependency without a
+# wheel for the current interpreter is compiled from source -- and that fails
+# on machines with no C toolchain (a fresh `mise install python@latest` is
+# usually ahead of the wheels published on PyPI). Pointing pip at a local
+# wheelhouse via --find-links (see lua/plugins/mason.lua) sidesteps the build.
+#
+# Compiler handling:
+#   - Windows: setuptools always looks for MSVC; when gcc is on PATH the build
+#     is steered to the MinGW toolchain through setup.cfg.
+#   - macOS/Linux: the default toolchain (cc/clang) is used as is.
+#   - Many projects (PyYAML included) fall back to a pure-Python build when
+#     the C extension cannot be compiled; that wheel still installs fine.
+#
+# Environment: PYTHON overrides the interpreter, PIP_WHEELHOUSE the output dir.
+set -eu
+
+DEST=${PIP_WHEELHOUSE:-"$HOME/.local/share/pip-wheelhouse"}
+
+case "$(uname -s 2>/dev/null || echo unknown)" in
+  MINGW* | MSYS* | CYGWIN* | Windows*) is_windows=1 ;;
+  *) is_windows=0 ;;
+esac
+
+if [ "${PYTHON:-}" != "" ]; then
+  PY=$PYTHON
+elif [ "$is_windows" -eq 1 ]; then
+  # Match mason's own lookup order (python, then python3) so the wheel fits the
+  # interpreter mason will actually use.
+  PY=$(command -v python 2>/dev/null || command -v python3 2>/dev/null || true)
+else
+  PY=$(command -v python3 2>/dev/null || command -v python 2>/dev/null || true)
+fi
+[ -n "$PY" ] || { echo "build-pip-wheel: no Python interpreter found" >&2; exit 1; }
+
+[ "$#" -gt 0 ] || set -- pyyaml
+
+mkdir -p "$DEST"
+tmp=$(mktemp -d)
+trap 'rm -rf "$tmp"' EXIT HUP INT TERM
+
+status=0
+for spec in "$@"; do
+  echo "==> $spec"
+
+  # Upstream already ships a compatible wheel: pip can fetch it by itself.
+  if "$PY" -m pip download --quiet --disable-pip-version-check \
+      --only-binary=:all: --no-deps --dest "$tmp/official" "$spec" >/dev/null 2>&1; then
+    echo "    a prebuilt wheel is available for this interpreter, nothing to do"
+    continue
+  fi
+
+  # Fetch and unpack the sdist ourselves: `pip download --no-binary` insists on
+  # building metadata first, which is exactly the step that fails here.
+  echo "    no wheel available; fetching sdist from PyPI"
+  srcdir=$("$PY" - "$spec" "$tmp" <<'PY'
+import json
+import os
+import sys
+import tarfile
+import urllib.request
+import zipfile
+
+spec, out = sys.argv[1], sys.argv[2]
+name, _, version = spec.partition("@")
+base = f"https://pypi.org/pypi/{name}/{version}/json" if version else f"https://pypi.org/pypi/{name}/json"
+with urllib.request.urlopen(base) as response:
+    data = json.load(response)
+
+sdists = [entry for entry in data["urls"] if entry["packagetype"] == "sdist"]
+if not sdists:
+    sys.exit(f"build-pip-wheel: no sdist published for {name}")
+
+archive = os.path.join(out, os.path.basename(sdists[0]["url"]))
+urllib.request.urlretrieve(sdists[0]["url"], archive)
+
+srcdir = os.path.join(out, "src")
+os.makedirs(srcdir, exist_ok=True)
+if archive.endswith(".zip"):
+    with zipfile.ZipFile(archive) as zf:
+        zf.extractall(srcdir)
+else:
+    with tarfile.open(archive) as tf:
+        try:
+            tf.extractall(srcdir, filter="data")
+        except TypeError:  # Python < 3.12 has no extraction filters
+            tf.extractall(srcdir)
+
+entries = [e for e in os.listdir(srcdir) if os.path.isdir(os.path.join(srcdir, e))]
+if len(entries) != 1:
+    sys.exit(f"build-pip-wheel: unexpected sdist layout: {entries}")
+print(os.path.join(srcdir, entries[0]))
+PY
+)
+
+  if [ "$is_windows" -eq 1 ] && [ -f "$srcdir/setup.py" ]; then
+    if command -v gcc >/dev/null 2>&1; then
+      if ! grep -qs '^\[build_ext\]' "$srcdir/setup.cfg" 2>/dev/null; then
+        printf '\n[build_ext]\ncompiler = mingw32\n' >>"$srcdir/setup.cfg"
+      fi
+    else
+      echo "    warning: no gcc on PATH; setuptools will look for MSVC" >&2
+    fi
+  fi
+
+  if "$PY" -m pip wheel --disable-pip-version-check --no-deps \
+      --wheel-dir "$DEST" "$srcdir" >"$tmp/build.log" 2>&1; then
+    built=$(ls -1t "$DEST"/*.whl | head -n 1)
+    echo "    built $built"
+  else
+    echo "    build failed; last lines of the log:" >&2
+    tail -n 15 "$tmp/build.log" >&2
+    status=1
+  fi
+done
+
+[ "$status" -eq 0 ] || { echo "build-pip-wheel: some wheels could not be built" >&2; exit "$status"; }
+echo "wheelhouse: $DEST"

@@ -180,6 +180,12 @@
       "variants": []
     },
     {
+      "path": "home/.local/bin/build-pip-wheel",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "home/.local/bin/reset_cjk-font-fallback.cmd",
       "autosave": true,
       "encrypt": false,
