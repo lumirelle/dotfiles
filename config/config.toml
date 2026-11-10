@@ -140,7 +140,6 @@ zig = "latest"
 "~/.pi/agent/settings.json" = { mode = "track" }
 "~/.profile" = { mode = "track" }
 "~/.wslconfig" = { mode = "track", variants = [{ os = "windows" }] }
-"~/AppData/Local/lazygit/config.yml" = { mode = "track", variants = [{ os = "windows" }] }
 "~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1" = { mode = "track", variants = [
   { os = "windows" },
 ] }
@@ -181,11 +180,12 @@ variants = [
 ]
 
 [dotfiles."dotfiles/lazygit/config.yml"]
-mode = "copy"
+mode = "template"
 source = "dotfiles/lazygit/config.yml"
 variants = [
   { os = "linux", target = "~/.config/lazygit/config.yml" },
   { os = "macos", target = "~/Library/Application Support/lazygit/config.yml" },
+  { os = "windows", target = "~/AppData/Local/lazygit/config.yml" },
 ]
 
 [dotfiles."dotfiles/tuios/config.toml"]
