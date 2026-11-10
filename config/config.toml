@@ -124,7 +124,6 @@ zig = "latest"
 "~/.config/starship.toml" = { mode = "track" }
 "~/.gitconfig" = { mode = "track" }
 "~/.local/bin/ai.nu" = { mode = "track" }
-"~/.local/bin/build-pyyaml" = { mode = "track" }
 "~/.local/bin/build-pyyaml.cmd" = { mode = "track", variants = [{ os = "windows" }] }
 "~/.local/bin/build-pyyaml.nu" = { mode = "track" }
 "~/.local/bin/build-pyyaml.py" = { mode = "track" }
