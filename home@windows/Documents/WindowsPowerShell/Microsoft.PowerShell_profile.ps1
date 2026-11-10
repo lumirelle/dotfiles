@@ -2,6 +2,8 @@
 $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = [Text.Encoding]::UTF8
 
 # -- ENVIRONMENT --
+$env:EDITOR = "nvim"
+$env:VISUAL = "nvim"
 if (Test-Path "$env:USERPROFILE\bin") {
   $env:PATH = "$env:USERPROFILE\bin;$env:PATH"
 }

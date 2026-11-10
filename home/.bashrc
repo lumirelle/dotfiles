@@ -1,4 +1,6 @@
 # -- ENVIRONMENT SETUP --
+$EDITOR='nvim'
+$VISUAL='nvim'
 if [ -d "$HOME/bin" ]; then
   PATH="$HOME/bin:$PATH"
 fi
