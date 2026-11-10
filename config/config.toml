@@ -101,10 +101,10 @@ zig = "latest"
 [dotfiles]
 "~/.bashrc" = { mode = "track" }
 "~/.config/jj/config.toml" = { mode = "track" }
-"~/.config/lazygit/config.yml" = { mode = "track", variants = [{ os = "linux" }] }
 "~/.config/mise/config.default.toml" = { mode = "track" }
 "~/.config/mise/config.toml" = { mode = "track" }
 "~/.config/mise/dotfiles/clash-verge-rev" = { mode = "track", variants = [{ profile = "default" }] }
+"~/.config/mise/dotfiles/lazygit" = { mode = "track" }
 # Narrow entries rather than the whole dotfiles directory: the desktop-only
 # sources are scoped to the "default" environment (the one that loads
 # config.default.toml), so the "wsl" environment neither saves nor deletes
@@ -144,7 +144,6 @@ zig = "latest"
 "~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1" = { mode = "track", variants = [
   { os = "windows" },
 ] }
-"~/Library/Application Support/lazygit/config.yml" = { mode = "track", variants = [{ os = "macos" }] }
 
 [dotfiles."dotfiles/nushell/aliases/"]
 mode = "copy"
@@ -179,6 +178,14 @@ source = "dotfiles/nvim/"
 variants = [
   { os = "unix", target = "~/.config/nvim/" },
   { os = "windows", target = "~/AppData/Local/nvim/" },
+]
+
+[dotfiles."dotfiles/lazygit/config.yml"]
+mode = "copy"
+source = "dotfiles/lazygit/config.yml"
+variants = [
+  { os = "linux", target = "~/.config/lazygit/config.yml" },
+  { os = "macos", target = "~/Library/Application Support/lazygit/config.yml" },
 ]
 
 [dotfiles."dotfiles/tuios/config.toml"]

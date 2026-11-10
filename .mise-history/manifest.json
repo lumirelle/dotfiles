@@ -26,6 +26,12 @@
       ]
     },
     {
+      "path": "config/dotfiles/lazygit",
+      "autosave": true,
+      "encrypt": false,
+      "variants": []
+    },
+    {
       "path": "config/dotfiles/nushell",
       "autosave": true,
       "encrypt": false,
@@ -120,20 +126,6 @@
       "autosave": true,
       "encrypt": false,
       "variants": []
-    },
-    {
-      "path": "home/.config/lazygit/config.yml",
-      "autosave": true,
-      "encrypt": false,
-      "variants": [
-        {
-          "os": [
-            "linux"
-          ],
-          "profile": null,
-          "default": false
-        }
-      ]
     },
     {
       "path": "home/.config/rpiv-web-tools/config.json",
@@ -317,20 +309,6 @@
         {
           "os": [
             "windows"
-          ],
-          "profile": null,
-          "default": false
-        }
-      ]
-    },
-    {
-      "path": "home/Library/Application Support/lazygit/config.yml",
-      "autosave": true,
-      "encrypt": false,
-      "variants": [
-        {
-          "os": [
-            "macos"
           ],
           "profile": null,
           "default": false
