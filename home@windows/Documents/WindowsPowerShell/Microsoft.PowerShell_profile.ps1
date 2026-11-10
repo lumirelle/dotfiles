@@ -26,3 +26,4 @@ New-Alias -Name touch -Value New-Item
 
 New-Alias -Name lzg -Value lazygit
 New-Alias -Name ch -Value chezmoi
+
