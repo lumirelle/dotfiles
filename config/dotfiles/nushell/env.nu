@@ -18,23 +18,25 @@ let mise_nu = $nu.default-config-dir | path join mise.nu
 # alias. The file is only rewritten when its contents change.
 let script_bin = $nu.home-dir | path join '.local' 'bin'
 let script_commands = $nu.default-config-dir | path join 'aliases' 'scripts.nu'
-if ($script_bin | path exists) {
-  let entries = (
+let script_entries = (
+  if ($script_bin | path exists) {
     ls $script_bin
     | where {|entry| ($entry.name | path basename) =~ '^[^.].*[.]nu$' }
     | sort-by name
-  )
-  let header = '# Generated from ~/.local/bin/*.nu by env.nu. Do not edit.'
-  let body = (
-    [$header]
-    ++ ($entries | each {|entry|
-        let stem = ($entry.name | path parse | get stem)
-        let path = $entry.name
-        $"export def --wrapped ($stem) [...args: string] {\n  ^nu '($path)' ...\$args\n}"
-      })
-  ) | str join "\n\n"
-  let current = if ($script_commands | path exists) { open --raw $script_commands } else { '' }
-  if $current != $body {
-    $body | save --force $script_commands
+  } else {
+    []
   }
+)
+let script_header = '# Generated from ~/.local/bin/*.nu by env.nu. Do not edit.'
+let script_body = (
+  [$script_header]
+  ++ ($script_entries | each {|entry|
+      let stem = ($entry.name | path parse | get stem)
+      let path = $entry.name
+      $"export def --wrapped ($stem) [...args: string] {\n  ^nu '($path)' ...\$args\n}"
+    })
+) | str join "\n\n"
+let script_current = if ($script_commands | path exists) { open --raw $script_commands } else { '' }
+if $script_current != $script_body {
+  $script_body | save --force $script_commands
 }
