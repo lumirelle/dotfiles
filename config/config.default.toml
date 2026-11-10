@@ -175,8 +175,8 @@ import os from "node:os"
 
 const COMMANDS = [
   // Setting up Clash Verge Rev
-  ['bun', path.resolve(os.homedir(), '.config/mise/scripts/clash-verge-rev/patch_config.yaml.ts')],
-  ['bun', path.resolve(os.homedir(), '.config/mise/scripts/clash-verge-rev/patch_verge.yaml.ts')],
+  ['nu', path.resolve(os.homedir(), '.config/mise/scripts/clash-verge-rev/patch-config.yaml.nu')],
+  ['nu', path.resolve(os.homedir(), '.config/mise/scripts/clash-verge-rev/patch-verge.yaml.nu')],
 
 {% if os() == "windows" %}
   // Setting up Windows Terminal
@@ -184,11 +184,11 @@ const COMMANDS = [
   ['bun', path.resolve(os.homedir(), '.config/mise/scripts/windows-terminal-preview/patch_settings.json.ts')],
 
   // Setting up Windows
-  ['cmd', '/c', path.resolve(os.homedir(), '.config/mise/scripts/disable_ctrl_space.cmd')],
-  ['cmd', '/c', path.resolve(os.homedir(), '.config/mise/scripts/set_cc_cxx.cmd')],
-  ['cmd', '/c', path.resolve(os.homedir(), '.config/mise/scripts/set_editor_visual.cmd')],
-  ['cmd', '/c', path.resolve(os.homedir(), '.config/mise/scripts/set_yazi_file_one.cmd')],
-  ['cmd', '/c', path.resolve(os.homedir(), '.local/bin/set_cjk-font-fallback.cmd')],
+  ['nu', path.resolve(os.homedir(), '.config/mise/scripts/disable-ctrl-space.nu')],
+  ['nu', path.resolve(os.homedir(), '.config/mise/scripts/set-cc-cxx.nu')],
+  ['nu', path.resolve(os.homedir(), '.config/mise/scripts/set-editor-visual.nu')],
+  ['nu', path.resolve(os.homedir(), '.config/mise/scripts/set-yazi-file-one.nu')],
+  ['nu', path.resolve(os.homedir(), '.local/bin/set-cjk-font-fallback.nu')],
 {% endif %}
 ]
 
