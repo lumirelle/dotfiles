@@ -26,12 +26,6 @@
       ]
     },
     {
-      "path": "config/dotfiles/lazygit",
-      "autosave": true,
-      "encrypt": false,
-      "variants": []
-    },
-    {
       "path": "config/dotfiles/nushell",
       "autosave": true,
       "encrypt": false,
