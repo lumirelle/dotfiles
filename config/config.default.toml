@@ -171,10 +171,16 @@ run = '''
 
 def run-script [script: path] {
   print $'==> ($script)'
-  ^nu $script
-  if $env.LAST_EXIT_CODE != 0 {
-    print -e $'bootstrap: ($script) failed with exit code ($env.LAST_EXIT_CODE)'
-    exit $env.LAST_EXIT_CODE
+  let ok = (try {
+    ^nu $script
+    true
+  } catch {
+    false
+  })
+  if not $ok {
+    let code = ($env.LAST_EXIT_CODE? | default 1)
+    print -e $'bootstrap: ($script) failed with exit code ($code)'
+    exit $code
   }
 }
 

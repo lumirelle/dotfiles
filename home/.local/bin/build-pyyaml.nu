@@ -11,6 +11,12 @@
 # On Windows, setuptools is steered to MinGW's gcc when MSVC is not installed;
 # if the C extension still cannot be built (PyYAML needs libyaml headers) the
 # build falls back to a pure-Python wheel, which installs fine.
+#
+# The script exits early, with a report, when a compatible wheel is already in
+# the wheelhouse or when upstream now publishes one for this interpreter.
+# `--force` skips both checks and rebuilds anyway.
+#
+# Usage: build-pyyaml.nu [--force]
 
 const package = 'pyyaml'
 
@@ -22,7 +28,7 @@ def pick-python [] {
   } else {
     ['python3' 'python']
   }
-  let found = ($candidates | where {|candidate| (which $candidate | is-not-empty) } | get -i 0)
+  let found = ($candidates | where {|candidate| (which $candidate | is-not-empty) } | get --optional 0)
   if $found == null {
     print -e 'build-pyyaml: no Python interpreter found'
     exit 1
@@ -30,16 +36,33 @@ def pick-python [] {
   $found
 }
 
+def python-version [python: string] {
+  let raw = (^$python -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')
+  $raw | str trim
+}
+
 def wheelhouse [] {
   $env.PIP_WHEELHOUSE? | default ($nu.home-dir | path join '.local' 'share' 'pip-wheelhouse')
 }
 
-def official-wheel-exists [python: string, tmp: path] {
-  let result = (
-    ^$python -m pip download --quiet --disable-pip-version-check --only-binary=:all:
-      --no-deps --dest ($tmp | path join 'official') $package | complete
-  )
-  $result.exit_code == 0
+# Name of a wheel pip considers installable for this interpreter, or null.
+# With `local_dir`, only that directory is searched (no index).
+def compatible-wheel [python: string, tmp: path, local_dir: path = ''] {
+  let out = ($tmp | path join $"scan-(random uuid)")
+  let args = if $local_dir == '' {
+    [-m pip download --quiet --disable-pip-version-check --only-binary=:all: --no-deps --dest $out $package]
+  } else {
+    [-m pip download --quiet --disable-pip-version-check --no-index --find-links $local_dir --only-binary=:all: --no-deps --dest $out $package]
+  }
+  let result = (^$python ...$args | complete)
+  if $result.exit_code != 0 {
+    return null
+  }
+  let found = (try { ls $out } catch { [] })
+  if ($found | is-empty) {
+    return null
+  }
+  $found | get name | last | path basename
 }
 
 def fetch-sdist [tmp: path] {
@@ -81,20 +104,33 @@ def use-mingw-when-msvc-is-missing [srcdir: path] {
   }
 }
 
-def build [python: string, dest: path, tmp: path] {
-  if (official-wheel-exists $python $tmp) {
-    print $"($package): a prebuilt wheel exists for this interpreter, nothing to do"
-    return 0
+def build [python: string, version: string, dest: path, tmp: path, force: bool] {
+  if not $force {
+    let existing = (compatible-wheel $python $tmp $dest)
+    if $existing != null {
+      print $"($package): ($existing) is already built in ($dest) for Python ($version); nothing to do; pass --force to rebuild"
+      return 0
+    }
+    let upstream = (compatible-wheel $python $tmp)
+    if $upstream != null {
+      print $"($package): upstream now publishes ($upstream) for Python ($version); nothing to build; pass --force to build anyway"
+      return 0
+    }
   }
 
-  print $"($package): no prebuilt wheel for this interpreter, building from source"
+  print $"($package): building from source for Python ($version)"
   let srcdir = (fetch-sdist $tmp)
   use-mingw-when-msvc-is-missing $srcdir
 
-  ^$python -m pip wheel --disable-pip-version-check --no-deps --wheel-dir $dest $srcdir
-  if $env.LAST_EXIT_CODE != 0 {
+  let built_ok = (try {
+    ^$python -m pip wheel --disable-pip-version-check --no-deps --wheel-dir $dest $srcdir
+    true
+  } catch {
+    false
+  })
+  if not $built_ok {
     print -e 'build-pyyaml: build failed'
-    return $env.LAST_EXIT_CODE
+    return 1
   }
 
   let wheels = (ls $dest | where name =~ 'pyyaml-.*[.]whl$' | sort-by modified)
@@ -104,8 +140,9 @@ def build [python: string, dest: path, tmp: path] {
   0
 }
 
-def main [] {
+def main [--force(-f)] {
   let python = (pick-python)
+  let version = (python-version $python)
   let dest = (wheelhouse)
   mkdir $dest
 
@@ -115,7 +152,7 @@ def main [] {
 
   let status = (
     try {
-      build $python $dest $tmp
+      build $python $version $dest $tmp $force
     } catch {|err|
       print -e $"build-pyyaml: ($err.msg)"
       1

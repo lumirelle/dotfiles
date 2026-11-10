@@ -192,3 +192,14 @@ variants = [
 
 [bootstrap.hooks.final]
 run = "tuios integration install claude pi"
+
+[tasks.build-pyyaml]
+description = "Build a PyYAML wheel for the active Python into the local pip wheelhouse"
+run = '''
+#!/usr/bin/env nu
+def main [--force(-f)] {
+  let script = ($nu.home-dir | path join '.local' 'bin' 'build-pyyaml.nu')
+  let args = if $force { ['--force'] } else { [] }
+  ^nu $script ...$args
+}
+'''
