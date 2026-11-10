@@ -12,7 +12,6 @@ mise exec -- fnox activate nu | save -f ($autoload | path join "fnox.nu")
 
 # -- CONFIG --
 $env.config.show_banner = 'short'
-$env.config.buffer_editor = 'nvim'
 
 # -- ALIASES --
 source aliases/sudo.nu
