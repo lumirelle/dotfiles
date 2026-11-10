@@ -186,6 +186,7 @@ const COMMANDS = [
   // Setting up Windows
   ['cmd', '/c', path.resolve(os.homedir(), '.config/mise/scripts/disable_ctrl_space.cmd')],
   ['cmd', '/c', path.resolve(os.homedir(), '.config/mise/scripts/set_cc_cxx.cmd')],
+  ['cmd', '/c', path.resolve(os.homedir(), '.config/mise/scripts/set_editor_visual.cmd')],
   ['cmd', '/c', path.resolve(os.homedir(), '.config/mise/scripts/set_yazi_file_one.cmd')],
   ['cmd', '/c', path.resolve(os.homedir(), '.local/bin/set_cjk-font-fallback.cmd')],
 {% endif %}
