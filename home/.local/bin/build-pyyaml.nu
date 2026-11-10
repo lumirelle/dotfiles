@@ -108,12 +108,12 @@ def build [python: string, version: string, dest: path, tmp: path, force: bool] 
   if not $force {
     let existing = (compatible-wheel $python $tmp $dest)
     if $existing != null {
-      print $"($package): ($existing) is already built in ($dest) for Python ($version); nothing to do; pass --force to rebuild"
+      print -e $"build-pyyaml: warning: ($existing) is already built in ($dest) for Python ($version); skipping, pass --force to rebuild"
       return 0
     }
     let upstream = (compatible-wheel $python $tmp)
     if $upstream != null {
-      print $"($package): upstream now publishes ($upstream) for Python ($version); nothing to build; pass --force to build anyway"
+      print -e $"build-pyyaml: warning: upstream now publishes ($upstream) for Python ($version); skipping the build, pass --force to build anyway"
       return 0
     }
   }

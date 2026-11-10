@@ -189,6 +189,9 @@ def main [] {
 
   # Run on every platform.
   let shared = [
+    # Builds the PyYAML wheel mason needs when no prebuilt wheel exists for the
+    # active Python; warns and skips when one is already built or published.
+    ($nu.home-dir | path join '.local' 'bin' 'build-pyyaml.nu')
     ($scripts_dir | path join 'clash-verge-rev' 'patch-config.yaml.nu')
     ($scripts_dir | path join 'clash-verge-rev' 'patch-verge.yaml.nu')
   ]
