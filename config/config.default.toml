@@ -167,36 +167,46 @@ variants = [
 
 [tasks.bootstrap]
 run = '''
-#!/usr/bin/env bun
+#!/usr/bin/env nu
 
-import { $ } from "bun"
-import path from "node:path"
-import os from "node:os"
-
-const COMMANDS = [
-  // Setting up Clash Verge Rev
-  ['nu', path.resolve(os.homedir(), '.config/mise/scripts/clash-verge-rev/patch-config.yaml.nu')],
-  ['nu', path.resolve(os.homedir(), '.config/mise/scripts/clash-verge-rev/patch-verge.yaml.nu')],
-
-{% if os() == "windows" %}
-  // Setting up Windows Terminal
-  ['bun', path.resolve(os.homedir(), '.config/mise/scripts/windows-terminal/patch_settings.json.ts')],
-  ['bun', path.resolve(os.homedir(), '.config/mise/scripts/windows-terminal-preview/patch_settings.json.ts')],
-
-  // Setting up Windows
-  ['nu', path.resolve(os.homedir(), '.config/mise/scripts/disable-ctrl-space.nu')],
-  ['nu', path.resolve(os.homedir(), '.config/mise/scripts/set-cc-cxx.nu')],
-  ['nu', path.resolve(os.homedir(), '.config/mise/scripts/set-editor-visual.nu')],
-  ['nu', path.resolve(os.homedir(), '.config/mise/scripts/set-yazi-file-one.nu')],
-  ['nu', path.resolve(os.homedir(), '.local/bin/set-cjk-font-fallback.nu')],
-{% endif %}
-]
-
-for (const CMD of COMMANDS) {
-  await $`${CMD}`
+def run-script [script: path] {
+  print $'==> ($script)'
+  ^nu $script
+  if $env.LAST_EXIT_CODE != 0 {
+    print -e $'bootstrap: ($script) failed with exit code ($env.LAST_EXIT_CODE)'
+    exit $env.LAST_EXIT_CODE
+  }
 }
 
-{% if os() == "windows" %}
-console.warn('⚠️ Please install Rime Nightly Build from GitHub Release: https://github.com/rime/weasel/releases/tag/latest. My configuration requires librime v1.14.0+, and the latest stable version still uses librime v1.13.1.')
-{% endif %}
+def main [] {
+  let scripts_dir = ($nu.home-dir | path join '.config' 'mise' 'scripts')
+
+  # Run on every platform.
+  let shared = [
+    ($scripts_dir | path join 'clash-verge-rev' 'patch-config.yaml.nu')
+    ($scripts_dir | path join 'clash-verge-rev' 'patch-verge.yaml.nu')
+  ]
+
+  # Windows-only setup.
+  let windows = [
+    ($scripts_dir | path join 'windows-terminal' 'patch-settings.json.nu')
+    ($scripts_dir | path join 'windows-terminal-preview' 'patch-settings.json.nu')
+    ($scripts_dir | path join 'disable-ctrl-space.nu')
+    ($scripts_dir | path join 'set-cc-cxx.nu')
+    ($scripts_dir | path join 'set-editor-visual.nu')
+    ($scripts_dir | path join 'set-yazi-file-one.nu')
+    ($nu.home-dir | path join '.local' 'bin' 'set-cjk-font-fallback.nu')
+  ]
+
+  for script in $shared {
+    run-script $script
+  }
+
+  if $nu.os-info.name == 'windows' {
+    for script in $windows {
+      run-script $script
+    }
+    print -e '⚠️ Please install Rime Nightly Build from GitHub Release: https://github.com/rime/weasel/releases/tag/latest. My configuration requires librime v1.14.0+, and the latest stable version still uses librime v1.13.1.'
+  }
+}
 '''
