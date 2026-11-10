@@ -10,7 +10,7 @@ return {
       opts.registries = { "lua:mason-registry-local", "github:mason-org/mason-registry" }
       -- mason runs pip with `--ignore-installed`, so any dependency without a
       -- prebuilt wheel for the current Python is built from source and fails
-      -- without a C toolchain. `build-pip-wheel` (~/.local/bin) fills this
+      -- without a C toolchain. `build-pyyaml` (~/.local/bin) fills this
       -- wheelhouse; pip silently ignores the flag when the directory is absent.
       opts.pip = opts.pip or {}
       opts.pip.install_args = vim.list_extend(
