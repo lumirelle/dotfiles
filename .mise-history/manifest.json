@@ -146,20 +146,6 @@
       "variants": []
     },
     {
-      "path": "home/.local/bin/ai",
-      "autosave": true,
-      "encrypt": false,
-      "variants": [
-        {
-          "os": [
-            "unix"
-          ],
-          "profile": null,
-          "default": false
-        }
-      ]
-    },
-    {
       "path": "home/.local/bin/ai.cmd",
       "autosave": true,
       "encrypt": false,
