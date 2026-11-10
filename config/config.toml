@@ -127,6 +127,7 @@ zig = "latest"
 "~/.local/bin/ai.cmd" = { mode = "track", variants = [{ os = "windows" }] }
 "~/.local/bin/ai.nu" = { mode = "track" }
 "~/.local/bin/build-pyyaml.cmd" = { mode = "track", variants = [{ os = "windows" }] }
+"~/.local/bin/build-pyyaml.nu" = { mode = "track" }
 "~/.local/bin/reset_cjk-font-fallback.cmd" = { mode = "track", variants = [{ os = "windows" }] }
 "~/.local/bin/set_cjk-font-fallback.cmd" = { mode = "track", variants = [{ os = "windows" }] }
 "~/.pi/agent/APPEND_SYSTEM.md" = { mode = "track" }
