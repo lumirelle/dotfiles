@@ -122,6 +122,20 @@
       "variants": []
     },
     {
+      "path": "home/.config/lazygit/config.yml",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [
+            "linux"
+          ],
+          "profile": null,
+          "default": false
+        }
+      ]
+    },
+    {
       "path": "home/.config/rpiv-web-tools/config.json",
       "autosave": true,
       "encrypt": false,
@@ -303,6 +317,20 @@
         {
           "os": [
             "windows"
+          ],
+          "profile": null,
+          "default": false
+        }
+      ]
+    },
+    {
+      "path": "home/Library/Application Support/lazygit/config.yml",
+      "autosave": true,
+      "encrypt": false,
+      "variants": [
+        {
+          "os": [
+            "macos"
           ],
           "profile": null,
           "default": false

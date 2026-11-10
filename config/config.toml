@@ -101,6 +101,7 @@ zig = "latest"
 [dotfiles]
 "~/.bashrc" = { mode = "track" }
 "~/.config/jj/config.toml" = { mode = "track" }
+"~/.config/lazygit/config.yml" = { mode = "track", variants = [{ os = "linux" }] }
 "~/.config/mise/config.default.toml" = { mode = "track" }
 "~/.config/mise/config.toml" = { mode = "track" }
 "~/.config/mise/dotfiles/clash-verge-rev" = { mode = "track", variants = [{ profile = "default" }] }
@@ -143,6 +144,7 @@ zig = "latest"
 "~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1" = { mode = "track", variants = [
   { os = "windows" },
 ] }
+"~/Library/Application Support/lazygit/config.yml" = { mode = "track", variants = [{ os = "macos" }] }
 
 [dotfiles."dotfiles/nushell/aliases/"]
 mode = "copy"
